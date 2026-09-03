@@ -2,6 +2,23 @@
 
 Ce dépôt est conçu pour produire des contenus d'enseignement sourcés. Ces règles s'appliquent à toute création ou révision de contenu substantiel.
 
+## Documents de référence extérieurs
+
+Trois documents antérieurs, rédigés pour le débunkage Aethonyx, font autorité
+ici et ne doivent pas être paraphrasés : les consulter directement.
+
+| Document | Ce qu'il fournit |
+| --- | --- |
+| `C:/débunkage Aethonyx/éditorial/_CHARTES_ET_METHODE/_CHARTE_MORSURES_30S_AETHONYX_v1.5.md` | L'architecture PACTE, le lexique probatoire, les objets-mémoire, les étiquettes d'image, la règle de solidarité de l'humour. |
+| `.../AUDIT_SCIENTIFIQUE_V1.5_ATTENTION_APPRENTISSAGE_MEMOIRE_2026-08-30.md` | L'appui expérimental de chaque mécanisme, **avec ses limites chiffrées**, et la hiérarchie des affirmations. |
+| `.../CHECKLIST_PRODUCTION_V1.5_MERVEILLEUX_SOUS_SCELLES.md` | Les contrôles avant écriture, avant mise en ligne et après délai de rappel. |
+
+Une précision qui a déjà causé une erreur dans ce fichier : l'audit ne
+proscrit pas les ressorts psychologiques. Il proscrit une **explication
+abusive** — « invoquer la dopamine pour expliquer un taux de rétention ». La
+règle est épistémique, pas technique. Ne pas la retranscrire en interdiction
+de procédé.
+
 ## Règle de travail
 
 1. Lire `knowledge-base/README.md`, puis utiliser `knowledge-base/rag/retrieve.py` pour une première récupération locale.
@@ -47,6 +64,51 @@ La ligne de partage n'est donc pas morale. Elle est mécanique, et vérifiable :
 - **Un classement n'est pas interdit : il est à régler.** Normaliser par niveau pour qu'un débutant investi puisse dépasser un ancien, et qu'aucun élève ne soit installé à demeure dans la moitié basse. Ce qui est proscrit, c'est le classement qui décourage, pas la visibilité du mérite.
 - **Deux dégâts documentés, à éviter nommément** : la rupture de série, qui fait décrocher l'élève au moment exact où il perd son compteur ; et l'effet de surjustification, où récompenser extrinsèquement une activité déjà intéressante finit par en détruire l'intérêt.
 - En cas de doute sur un dispositif, poser la question du critère : *cet élève aura-t-il, après, plus envie d'apprendre en dehors d'ici ?* Si la réponse n'est pas oui, le dispositif ne sert que la plateforme.
+
+## Architecture d'un module : PACTE
+
+Tout module suit la structure `Porte — Anticipation — Collision — Transformation — Extraction`,
+définie dans la charte v1.5. Le gabarit détaillé est dans
+`knowledge-base/pedagogie/gabarit-module-pacte.md`, et `H6-04` en est la
+première application.
+
+Avant d'écrire une ligne, poser l'**unité-cible** :
+
+> **Demain, l'élève doit pouvoir se rappeler que…**
+
+Elle contient la pièce ou la distinction centrale, **ce qu'elle permet de
+conclure**, et **ce qu'elle ne permet pas de conclure**. Tout ce qui ne sert ni
+cette cible, ni sa compréhension, ni sa récupération est coupé ou déplacé.
+
+**Transposition scolaire, à ne pas oublier.** La v1.5 s'adresse à un
+spectateur qui peut balayer l'écran. Un élève ne le peut pas : il est déjà là,
+le cours est obligatoire, il sera évalué. Deux conséquences :
+
+- la *Porte* n'a plus à gagner un regard, elle doit ouvrir un manque de savoir précis ;
+- l'*Extraction* pèse beaucoup plus lourd, parce qu'on peut réellement revenir à J+1 et J+7 — ce qu'une chaîne ne peut qu'espérer. Un module sans rappel différé programmé est incomplet.
+
+## Lexique probatoire canonique
+
+Les mêmes sept mots, de la 6e à la 3e, dans toutes les disciplines :
+
+`établi — probable — rapporté — possible — non acquis — réfuté — indéterminé`
+
+Ne pas les faire varier pour la prose : c'est une grille mentale, et c'est
+probablement ce qu'un élève retiendra le plus longtemps de ce cours. Les
+niveaux de confiance de `evidence/claims.jsonl` s'alignent sur ce lexique.
+
+Le **double verdict** est obligatoire à la Transformation : ce que la pièce
+autorise, puis le résidu, classé en `probatoire` (donnée inexpliquée et
+documentée), `archivistique` (pièce existante mais inaccessible) ou `réflexif`
+(le cas est expliqué, mais révèle une mécanique humaine ou institutionnelle).
+
+## Objets-mémoire
+
+Un objet visuel récurrent porte une règle, et une seule, stable d'un module à
+l'autre — repris de la charte v1.5 :
+
+`photocopieuse` récits dépendants · `balance` poids probatoire · `tampon` statut ·
+`train` chronologie · `guichet` source unique ou exigence administrative.
 
 ## Conception multimodale et accessible
 

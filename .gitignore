@@ -1,0 +1,7 @@
+# hub-college est un dépôt Git indépendant (starter Next.js).
+# Il ne doit pas être enregistré ici comme lien de sous-module.
+hub-college/
+
+# Résidus
+__pycache__/
+*.pyc

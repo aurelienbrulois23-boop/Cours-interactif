@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module — Cours interactif</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <nav class="service">
+    <a href="index.html">&larr; Les modules</a>
+    <span class="pousse"></span>
+    <button type="button" id="btnTheme" aria-pressed="false">Contraste</button>
+  </nav>
+
+  <main id="module" aria-live="polite">
+    <p class="chapeau">Chargement…</p>
+  </main>
+
+</div>
+
+<script type="module">
+import { moduleParId } from './modules.js';
+
+/* ---------------------------------------------------------------------------
+ * Rendu d'un module PACTE.
+ *
+ * Trois exigences de la charte commandent tout ce qui suit :
+ *
+ *  1. l'Anticipation doit être ENGAGÉE avant que la pièce apparaisse. Le
+ *     mécanisme n'opère que si l'élève a réellement pris parti (Brod et al.
+ *     2022) ; on verrouille donc la suite tant qu'il n'a pas choisi.
+ *  2. le statut probatoire reste visible PENDANT la lecture de la pièce, pas
+ *     en note de bas de page — d'où le bandeau collant.
+ *  3. l'Extraction vient APRÈS le verdict, et sa réponse n'apparaît qu'une
+ *     fois la sienne écrite. Sinon ce n'est pas une récupération, c'est une
+ *     lecture.
+ *
+ * Ce qui est conservé dans le navigateur : la réponse d'anticipation, les
+ * réponses d'extraction, la date d'achèvement. Rien d'autre. Aucun profil,
+ * aucune étiquette, aucune mesure de vitesse.
+ * ------------------------------------------------------------------------- */
+
+const CLE = 'ci_progres';
+
+function progres(){ try { return JSON.parse(localStorage.getItem(CLE) || '{}'); } catch (e) { return {}; } }
+function ecrire(p){ try { localStorage.setItem(CLE, JSON.stringify(p)); } catch (e) {} }
+function etat(id){ const p = progres(); return p[id] || {}; }
+function majEtat(id, champs){ const p = progres(); p[id] = Object.assign({}, p[id], champs); ecrire(p); }
+
+function el(html){ const d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstElementChild; }
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function jalon(lettre, nom, duree){
+  return `<div class="jalon"><span class="lettre">${lettre}</span>
+          <span class="nom">${nom}</span>
+          ${duree ? `<span class="duree">${esc(duree)}</span>` : ''}</div>`;
+}
+
+/* --- Construction des étapes --------------------------------------------- */
+
+function etapeCible(m){
+  return `<section class="etape">
+    <h1>${esc(m.titre)}</h1>
+    <p class="chapeau">${esc(m.niveau)} · ${esc(m.theme)} · ${esc(m.duree)}</p>
+    <div class="mission">
+      <strong>Demain, vous devez pouvoir vous rappeler que…</strong>
+      <p style="margin:.5rem 0 0">${m.cible.enonce}.</p>
+    </div>
+    <table>
+      <tr><th>La pièce</th><td>${m.cible.piece}</td></tr>
+      <tr><th>Ce qu'elle permet de conclure</th><td>${m.cible.permet}</td></tr>
+      <tr><th>Ce qu'elle ne permet pas</th><td>${m.cible.nePermetPas}</td></tr>
+    </table>
+  </section>`;
+}
+
+function etapeRappel(m){
+  const r = m.rappelEntrant;
+  if (!r) return '';
+  return `<section class="etape" id="e-rappel">
+    ${jalon('↺', 'Rappel', 'avant tout')}
+    <p class="fine">Sans rouvrir le cahier. Ce rappel porte sur le module ${esc(r.module)}.</p>
+    <p class="scene">${r.question}</p>
+    <div class="question">
+      <textarea id="txtRappel" aria-label="Votre réponse au rappel"></textarea>
+      <button class="bouton" id="btnRappel">J'ai répondu</button>
+      <div id="apresRappel" hidden>
+        <div class="attendu"><div class="titre-a">Ce qu'on attendait</div>${esc(r.attendu)}</div>
+        <p style="margin-top:1rem">${r.puis}</p>
+      </div>
+    </div>
+  </section>`;
+}
+
+function etapePorte(m){
+  const p = m.porte;
+  return `<section class="etape" id="e-porte" hidden>
+    ${jalon('P', 'Porte', p.duree)}
+    ${p.scene.map(s => `<p class="scene"><em>${esc(s)}</em></p>`).join('')}
+    <div class="cartel">${esc(p.cartel)}</div>
+    ${p.suite.map(s => `<p>${esc(s)}</p>`).join('')}
+    ${m.rappelEntrant ? `
+      <div class="rappel-de-soi">
+        <strong>${esc(m.rappelEntrant.echec)}</strong>
+        <p style="margin:.6rem 0 0">${esc(m.rappelEntrant.lecon)}</p>
+      </div>` : ''}
+    <div class="mission"><strong>Votre mission.</strong> ${p.mission}</div>
+    <p class="fine"><span class="etiquette">${esc(p.image.etiquette)}</span> ${esc(p.image.note)}</p>
+    <button class="bouton" data-va="e-anticipation">Continuer</button>
+  </section>`;
+}
+
+function etapeAnticipation(m){
+  const a = m.anticipation;
+  return `<section class="etape" id="e-anticipation" hidden>
+    ${jalon('A', 'Anticipation', a.duree)}
+    <p class="fine">${esc(a.consigne)}</p>
+    <p class="scene">${a.question}</p>
+    <div class="choix" id="choixAnticipation" role="group" aria-label="Votre réponse">
+      ${a.options.map(o => `<button type="button" data-cle="${esc(o.cle)}" aria-pressed="false">
+          <strong>${esc(o.cle)}.</strong> ${esc(o.texte)}</button>`).join('')}
+    </div>
+    <p>${a.relance}</p>
+    <div id="apresAnticipation" hidden>
+      <p class="fine" style="border-top:1px solid var(--filet);padding-top:.9rem">${esc(a.note)}</p>
+      <button class="bouton" data-va="e-collision">Voir la pièce</button>
+    </div>
+  </section>`;
+}
+
+function etapeCollision(m){
+  const c = m.collision, p = c.piece;
+  return `<section class="etape" id="e-collision" hidden>
+    ${jalon('C', 'Collision', c.duree)}
+    <div class="piece">
+      <div class="bandeau-statut">
+        <span class="etiquette">${esc(p.etiquette)}</span>
+        <span class="statut">statut : ${esc(p.statut)}</span>
+      </div>
+      <dl>
+        <dt>Nom</dt><dd>${esc(p.nom)}</dd>
+        <dt>Attribution</dt><dd>${esc(p.attribution)}</dd>
+        <dt>Où on la lit</dt><dd><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.ou)}</a> · <span class="fine">${esc(p.src)}</span></dd>
+      </dl>
+      <p style="margin-bottom:.6rem">${esc(p.contenu)}</p>
+      <p class="fine">${esc(p.note)}</p>
+    </div>
+    <p>${esc(c.taches.intro)}</p>
+    <div class="tableau-large"><table>
+      <tr><th>À faire</th><th>Consigne</th><th>Ce qu'on cherche</th></tr>
+      ${c.taches.lignes.map(l => `<tr><td><strong>${esc(l.titre)}</strong></td>
+          <td>${l.consigne}</td><td>${l.cherche}</td></tr>`).join('')}
+    </table></div>
+    <p>${esc(c.taches.apres)}</p>
+    <div class="outil">
+      <div class="nom">${esc(c.outil.nom)}</div>
+      <p style="margin:0">${c.outil.texte}</p>
+    </div>
+    ${c.garde ? `<p class="garde">${esc(c.garde)}</p>` : ''}
+    <button class="bouton" data-va="e-transformation">Le verdict</button>
+  </section>`;
+}
+
+function etapeTransformation(m){
+  const t = m.transformation;
+  return `<section class="etape" id="e-transformation" hidden>
+    ${jalon('T', 'Transformation', t.duree)}
+    <div id="votreParieRappel"></div>
+    <div class="verdict">
+      <div class="etablit"><div class="titre-v">Ce que la pièce établit</div>${t.etablit}</div>
+      <div class="netablit-pas"><div class="titre-v">Ce qu'elle n'établit pas</div>${t.netablitPas}</div>
+    </div>
+    <p>${t.bascule}</p>
+    <div class="residu">
+      <span class="categorie">résidu ${esc(t.residu.categorie)}</span>
+      <p style="margin:0">${t.residu.texte}</p>
+    </div>
+    <p class="garde">${esc(t.garde)}</p>
+    ${t.outils ? `
+      <p>${esc(t.outils.intro)}</p>
+      <div class="tableau-large"><table>
+        <tr><th>Outil</th><th>Quand il sert</th><th>Ce qu'il repère</th></tr>
+        ${t.outils.lignes.map(l => `<tr><td><strong>${esc(l.outil)}</strong></td>
+            <td>${esc(l.quand)}</td><td>${l.repere}</td></tr>`).join('')}
+      </table></div>
+      <p>${esc(t.outils.apres)}</p>` : ''}
+    <button class="bouton" data-va="e-extraction">Ce que j'en retiens</button>
+  </section>`;
+}
+
+function etapeExtraction(m){
+  const x = m.extraction;
+  return `<section class="etape" id="e-extraction" hidden>
+    ${jalon('E', 'Extraction', x.duree)}
+    <p class="fine">${esc(x.consigne)}</p>
+    ${x.questions.map((q, i) => `
+      <div class="question">
+        <div class="enonce"><strong>${i + 1}.</strong> ${esc(q.enonce)}</div>
+        <textarea id="rep${i}" aria-label="Votre réponse à la question ${i + 1}"></textarea>
+        <button class="bouton discret" data-repond="${i}">Comparer</button>
+        <div class="attendu" id="att${i}" hidden>
+          <div class="titre-a">Ce qu'on attendait</div>${esc(q.attendu)}</div>
+      </div>`).join('')}
+    <p class="garde" id="laVraie" hidden>${esc(x.laVraie)}</p>
+    <div id="finModule" hidden>
+      <hr class="filet">
+      <h3>À retenir</h3>
+      <p>${m.trace}</p>
+      <h3>Je réussis si…</h3>
+      <p>${esc(m.reussite)}</p>
+      <h3>Ce qui reviendra</h3>
+      <div class="tableau-large"><table>
+        <tr><th>Quand</th><th>Forme</th><th>L'indice</th></tr>
+        ${m.rappels.map(r => `<tr><td><strong>${esc(r.quand)}</strong></td>
+            <td>${esc(r.forme)}</td><td>${esc(r.indice)}</td></tr>`).join('')}
+      </table></div>
+      <p class="fine">Le rappel de demain vous attendra sur la page des modules. Il donnera un indice
+      et vous laissera reconstruire la réponse : il ne la redira pas.</p>
+      <a class="bouton" href="index.html">Terminer</a>
+    </div>
+  </section>`;
+}
+
+/* --- Assemblage ---------------------------------------------------------- */
+
+const id = new URLSearchParams(location.search).get('m') || 'H6-04';
+const m = moduleParId(id);
+const cible = document.getElementById('module');
+
+if (!m) {
+  cible.innerHTML = `<h1>Module introuvable</h1>
+    <p class="chapeau">Aucun module ne porte l'identifiant « ${esc(id)} ».</p>
+    <p><a href="index.html">Revenir à la liste</a></p>`;
+} else {
+  document.title = m.id + ' — ' + m.titre;
+  cible.innerHTML = etapeCible(m) + etapeRappel(m) + etapePorte(m) + etapeAnticipation(m)
+                  + etapeCollision(m) + etapeTransformation(m) + etapeExtraction(m);
+
+  // Sans rappel entrant, la Porte s'ouvre tout de suite.
+  if (!m.rappelEntrant) montrer('e-porte');
+
+  function montrer(idEtape){
+    const s = document.getElementById(idEtape);
+    if (!s) return;
+    s.hidden = false;
+    s.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+
+  // Boutons « continuer » d'une étape à l'autre.
+  cible.addEventListener('click', ev => {
+    const b = ev.target.closest('[data-va]');
+    if (b) { b.disabled = true; montrer(b.dataset.va); }
+  });
+
+  // Rappel entrant : on répond avant de voir l'attendu.
+  const btnRappel = document.getElementById('btnRappel');
+  if (btnRappel) btnRappel.addEventListener('click', () => {
+    const t = document.getElementById('txtRappel');
+    if (!t.value.trim()) { t.focus(); return; }
+    majEtat(m.id, { rappelEntrantFait: new Date().toISOString() });
+    // Le rappel entrant vaut aussi pour le module d'origine : il a été réactivé.
+    if (m.rappelEntrant) majEtat(m.rappelEntrant.module, { reactive: new Date().toISOString() });
+    document.getElementById('apresRappel').hidden = false;
+    btnRappel.disabled = true;
+    montrer('e-porte');
+  });
+
+  // Anticipation : le choix engage, et il est rendu à l'élève au verdict.
+  const choix = document.getElementById('choixAnticipation');
+  choix.addEventListener('click', ev => {
+    const b = ev.target.closest('button[data-cle]');
+    if (!b || b.disabled) return;
+    [...choix.querySelectorAll('button')].forEach(x => {
+      x.setAttribute('aria-pressed', String(x === b));
+      x.disabled = true;
+    });
+    majEtat(m.id, { anticipation: b.dataset.cle });
+    document.getElementById('apresAnticipation').hidden = false;
+  });
+
+  // Au verdict : on rend à l'élève le pari qu'il a pris, pour qu'il constate
+  // lui-même la confirmation ou la correction. C'est là qu'agit la prédiction.
+  const zoneParie = document.getElementById('votreParieRappel');
+  new MutationObserver(() => {
+    const s = document.getElementById('e-transformation');
+    if (s.hidden || zoneParie.dataset.fait) return;
+    const cle = etat(m.id).anticipation;
+    if (!cle) return;
+    const opt = m.anticipation.options.find(o => o.cle === cle);
+    zoneParie.dataset.fait = '1';
+    zoneParie.appendChild(el(`<div class="rappel-de-soi">
+      <strong>Vous aviez répondu ${esc(cle)} :</strong> « ${esc(opt.texte)} ».
+      Lisez la suite en gardant votre réponse en tête.</div>`));
+  }).observe(document.getElementById('e-transformation'), { attributes: true, attributeFilter: ['hidden'] });
+
+  // Extraction : l'attendu n'apparaît qu'après avoir écrit le sien.
+  cible.addEventListener('click', ev => {
+    const b = ev.target.closest('[data-repond]');
+    if (!b) return;
+    const i = b.dataset.repond;
+    const t = document.getElementById('rep' + i);
+    if (!t.value.trim()) { t.focus(); return; }
+    document.getElementById('att' + i).hidden = false;
+    b.disabled = true;
+    t.readOnly = true;
+
+    const reps = {};
+    m.extraction.questions.forEach((q, k) => {
+      const v = document.getElementById('rep' + k);
+      if (v && v.value.trim()) reps[k] = v.value.trim().slice(0, 600);
+    });
+    majEtat(m.id, { extraction: reps });
+
+    if (Object.keys(reps).length === m.extraction.questions.length) {
+      document.getElementById('laVraie').hidden = false;
+      document.getElementById('finModule').hidden = false;
+      majEtat(m.id, { fait: new Date().toISOString() });
+    }
+  });
+}
+
+/* --- Contraste ----------------------------------------------------------- */
+const btnTheme = document.getElementById('btnTheme');
+function appliqueTheme(){
+  const t = localStorage.getItem('ci_theme');
+  if (t) document.documentElement.setAttribute('data-theme', t);
+  btnTheme.setAttribute('aria-pressed', String(t === 'sombre'));
+}
+btnTheme.addEventListener('click', () => {
+  const actuel = document.documentElement.getAttribute('data-theme');
+  const neuf = actuel === 'sombre' ? 'clair' : 'sombre';
+  try { localStorage.setItem('ci_theme', neuf); } catch (e) {}
+  appliqueTheme();
+});
+try { appliqueTheme(); } catch (e) {}
+</script>
+</body>
+</html>

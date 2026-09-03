@@ -212,5 +212,14 @@
     "placement": "APRÈS le verdict, jamais avant. Une vidéo qui donne la réponse détruit l'Anticipation et la Collision."
    }
   ]
+ },
+ "rappelEntrant": {
+  "module": "H6-03",
+  "outil": "le tampon",
+  "question": "La dernière fois, un geste devait précéder l'usage de tout document : <strong>le tampon</strong>. Que fait-on, exactement, et sur quoi ?",
+  "attendu": "On marque ce que la source permet de conclure — établi, probable, rapporté, possible, non acquis, réfuté, indéterminé — et on le marque sur une question précise, pas sur le document entier.",
+  "puis": "Gardez-le : il va servir tout de suite, et il ne suffira pas.",
+  "echec": "Le tampon fonctionne parfaitement ici : le texte d'Aristote est « rapporté » sur les institutions qu'il décrit. Mais il ne dit rien de ce qui manque. Tamponner vous apprend ce que la source établit ; il ne vous apprend pas ce qu'elle <em>refuse de dire</em>.",
+  "lecon": "Toutes les réactivations ne sont pas des échecs. Celle-ci montre qu'un bon outil peut être insuffisant — ce qui n'est pas la même chose qu'inadapté."
  }
 }

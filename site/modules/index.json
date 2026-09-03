@@ -1,6 +1,42 @@
 {
  "modules": [
   {
+   "id": "H6-01",
+   "discipline": "histoire",
+   "titre": "Ce que le sol a bien voulu garder",
+   "niveau": "6e",
+   "theme": "Thème 1 — Les débuts de l'humanité",
+   "cible": "ce qu'on sait des débuts de l'humanité vient de traces <strong>inégalement conservées</strong> — et que l'absence d'une trace ne prouve jamais l'absence de la pratique",
+   "rappelJ1": "Le tamis. Que retient-il, et qu'est-ce qui passe à travers ?",
+   "fichier": "modules/H6-01.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "H6-02",
+   "discipline": "histoire",
+   "titre": "Un mot qui va trop vite",
+   "niveau": "6e",
+   "theme": "Thème 1 — La « révolution » néolithique",
+   "cible": "produire sa nourriture transforme profondément des sociétés, mais <strong>pas partout au même rythme ni de la même façon</strong> — et que le mot « révolution » dit bien l'ampleur en trompant sur la durée",
+   "rappelJ1": "Le sablier. Quelle question pose-t-on à un mot qui résume ?",
+   "fichier": "modules/H6-02.json",
+   "medias": 4,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "H6-03",
+   "discipline": "histoire",
+   "titre": "Qui a besoin d'écrire",
+   "niveau": "6e",
+   "theme": "Thème 1 — Premiers États, premières écritures",
+   "cible": "l'écriture apparaît là où un pouvoir a besoin d'<strong>enregistrer</strong> — et qu'une écriture de comptes renseigne surtout sur ce que ses producteurs ont choisi de compter",
+   "rappelJ1": "Le tampon. Sur quoi se pose-t-il : sur le document, ou sur la question ?",
+   "fichier": "modules/H6-03.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
    "id": "H6-04",
    "discipline": "histoire",
    "titre": "Qui décide dans une cité grecque ?",
@@ -21,6 +57,54 @@
    "cible": "un récit de fondation renseigne d'abord sur <strong>ceux qui le racontent</strong>",
    "rappelJ1": "Le train. Quel wagon un auteur ne peut-il jamais occuper ?",
    "fichier": "modules/H6-05.json",
+   "medias": 4,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "H6-06",
+   "discipline": "histoire",
+   "titre": "Ce qu'un manuscrit peut prouver",
+   "niveau": "6e",
+   "theme": "Thème 2 — La naissance du monothéisme juif dans un monde polythéiste",
+   "cible": "un texte religieux s'étudie comme une source sur des <strong>croyances et une transmission</strong> — et qu'un manuscrit prouve la transmission du texte, jamais les événements qu'il raconte",
+   "rappelJ1": "La photocopieuse. Que faut-il demander avant de compter des sources ?",
+   "fichier": "modules/H6-06.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "H6-07",
+   "discipline": "histoire",
+   "titre": "Ce qu'un aqueduc ne dit pas",
+   "niveau": "6e",
+   "theme": "Thème 3 — Conquêtes, paix romaine et romanisation",
+   "cible": "la romanisation désigne des transformations <strong>inégales et négociées</strong> — et qu'un monument renseigne d'abord sur ceux qui l'ont voulu, pas sur ceux qui vivaient autour",
+   "rappelJ1": "La vitrine. Sur qui un monument renseigne-t-il ?",
+   "fichier": "modules/H6-07.json",
+   "medias": 4,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "H6-08",
+   "discipline": "histoire",
+   "titre": "Entre la loi et la vie",
+   "niveau": "6e",
+   "theme": "Thème 3 — Des chrétiens dans l'Empire",
+   "cible": "le statut des chrétiens dans l'Empire <strong>change par décisions et varie selon les lieux</strong> — et qu'une frise de décisions ne décrit pas ce que vivent les gens",
+   "rappelJ1": "La balance. Que demande-t-on avant de comparer deux sources ?",
+   "fichier": "modules/H6-08.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "H6-09",
+   "discipline": "histoire",
+   "titre": "La ligne qui efface le chemin",
+   "niveau": "6e",
+   "theme": "Thème 3 — L'ancienne route de la soie et la Chine des Han",
+   "cible": "les relations entre l'Empire romain et la Chine des Han passent par des <strong>réseaux et des intermédiaires</strong> — et qu'une ligne tracée sur une carte efface précisément ce qui compte",
+   "rappelJ1": "Le trait de crayon. Que faut-il demander à une carte ?",
+   "fichier": "modules/H6-09.json",
    "medias": 4,
    "mediasRemplis": 0
   }

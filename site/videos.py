@@ -1,0 +1,192 @@
+# -*- coding: utf-8 -*-
+"""Branche les vidéos produites sur les modules qui les attendent.
+
+Usage :
+    python site/videos.py            # propose, n'écrit rien
+    python site/videos.py --ecrire   # écrit les URL dans les modules
+
+Le dossier maître est `production-video/vidéo/`. Le site le voit à travers
+une jonction `site/medias/video`, si bien qu'un fichier déposé dans le dossier
+maître est immédiatement servi, sans copie et sans duplication sur le disque.
+
+Association fichier → module, dans cet ordre :
+
+  1. Le nom du fichier commence par un identifiant de module (« H6-04 … »).
+     C'est explicite, c'est sans risque, et cela prime sur tout le reste.
+  2. Sinon, recouvrement de mots entre le nom du fichier et le module, pondéré
+     par la rareté de chaque mot dans l'ensemble des modules. Un mot présent
+     partout ne départage rien ; un mot présent dans un seul module tranche.
+
+Le script n'écrit une association que si le premier score dépasse nettement le
+second. Une hésitation est signalée, jamais tranchée en silence : renommer le
+fichier en le préfixant de l'identifiant du module règle définitivement le cas.
+"""
+import json, io, sys, os, re, glob, unicodedata
+from urllib.parse import quote
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODULES = os.path.join(RACINE, 'site', 'modules')
+MAITRE = os.path.join(RACINE, 'production-video', 'vidéo')
+URL_BASE = 'medias/video/'
+EXTENSIONS = ('.mp4', '.webm', '.ogv', '.m4v')
+ECART_MINIMAL = 1.6   # le premier doit valoir au moins 1,6 fois le second
+
+# Mots trop fréquents pour départager quoi que ce soit.
+VIDES = set("""a au aux avec ce ces dans de des du elle en et eux il ils je la
+le les leur lui ma mais me meme mes moi mon ne nos notre nous on ou par pas
+pour qu que qui sa se ses son sur ta te tes toi ton tu un une vos votre vous
+c d j l m n s t y est ete etre avoir sont etait quand comme plus tout tous
+video videos partie chapitre cours module final v1 v2 mix""".split())
+
+
+def mots(texte):
+    t = unicodedata.normalize('NFD', (texte or '').lower())
+    t = ''.join(c for c in t if unicodedata.category(c) != 'Mn')
+    bruts = re.split(r'[^a-z0-9]+', t)
+    sortie = set()
+    for m in bruts:
+        if len(m) < 3 or m in VIDES or m.isdigit():
+            continue
+        sortie.add(m)
+        if m.endswith('s') and len(m) > 3:
+            sortie.add(m[:-1])      # pluriels français les plus simples
+    return sortie
+
+
+def charger():
+    mods = {}
+    for f in sorted(glob.glob(os.path.join(MODULES, '*.json'))):
+        if os.path.basename(f) == 'index.json':
+            continue
+        d = json.load(open(f, encoding='utf-8'))
+        botte = ' '.join([
+            d.get('titre', ''), d.get('theme', ''),
+            (d.get('cible') or {}).get('enonce', ''),
+            d.get('trace', ''),
+            ((d.get('collision') or {}).get('outil') or {}).get('nom', ''),
+            (d.get('porte') or {}).get('cartel', ''),
+        ])
+        mods[d['id']] = {'chemin': f, 'donnees': d, 'mots': mots(botte)}
+    return mods
+
+
+def poids(mods):
+    """Rareté d'un mot : plus il est répandu, moins il départage."""
+    n = len(mods) or 1
+    freq = {}
+    for m in mods.values():
+        for w in m['mots']:
+            freq[w] = freq.get(w, 0) + 1
+    return {w: (n / float(c)) for w, c in freq.items()}
+
+
+def associer(nom, mods, p):
+    """Renvoie (identifiant, score, second_score, motif)."""
+    base = os.path.splitext(nom)[0]
+    explicite = re.match(r'^([A-Z]{1,3}\d-\d\d)\b', base.upper())
+    if explicite and explicite.group(1) in mods:
+        return explicite.group(1), None, None, 'préfixe explicite'
+
+    q = mots(base)
+    scores = []
+    for i, m in mods.items():
+        s = sum(p.get(w, 1.0) for w in (q & m['mots']))
+        scores.append((s, i))
+    scores.sort(reverse=True)
+    if not scores or scores[0][0] <= 0:
+        return None, 0, 0, 'aucun mot commun'
+    premier, second = scores[0], (scores[1] if len(scores) > 1 else (0, None))
+    if second[0] > 0 and premier[0] < second[0] * ECART_MINIMAL:
+        return None, premier[0], second[0], 'hésitation entre %s et %s' % (premier[1], second[1])
+    return premier[1], premier[0], second[0], 'recouvrement de mots'
+
+
+def poser(d, nom):
+    """Place l'URL dans le premier emplacement vidéo de la Transformation.
+    Renvoie un état : 'posee', 'deja', 'occupee', 'cree'."""
+    url = URL_BASE + quote(nom)
+    medias = d.setdefault('medias', {})
+    liste = medias.setdefault('transformation', [])
+    for s in liste:
+        if s.get('type') == 'video':
+            if s.get('url') == url:
+                return 'deja', url
+            if s.get('url'):
+                return 'occupee', s['url']
+            s['url'] = url
+            s.setdefault('alt', '')
+            if not s.get('alt'):
+                s['alt'] = "Vidéo de synthèse du module, à regarder après le verdict"
+            s['source'] = s.get('source') or "Production interne du collège"
+            s['licence'] = s.get('licence') or "Usage pédagogique interne"
+            return 'posee', url
+    liste.append({
+        'url': url, 'type': 'video', 'etiquette': 'AMBIANCE',
+        'alt': "Vidéo de synthèse du module, à regarder après le verdict",
+        'source': "Production interne du collège", 'licence': "Usage pédagogique interne",
+        'auteur': '', 'transcription': '',
+        'operation': "entendre une explication d'ensemble, après avoir conclu soi-même",
+        'brief': '', 'placement': "APRÈS le verdict.",
+    })
+    return 'cree', url
+
+
+def main():
+    ecrire = '--ecrire' in sys.argv
+    if not os.path.isdir(MAITRE):
+        print("Dossier maître introuvable : %s" % MAITRE)
+        return 1
+    jonction = os.path.join(RACINE, 'site', 'medias', 'video')
+    if not os.path.exists(jonction):
+        print("ATTENTION : %s n'existe pas.\n"
+              "  Le site ne pourra pas servir les fichiers. À créer une fois pour toutes :\n"
+              "  New-Item -ItemType Junction -Path \"%s\" -Target \"%s\"\n" % (jonction, jonction, MAITRE))
+
+    mods = charger()
+    p = poids(mods)
+    fichiers = sorted(f for f in os.listdir(MAITRE)
+                      if os.path.splitext(f)[1].lower() in EXTENSIONS)
+    if not fichiers:
+        print("Aucune vidéo dans %s" % MAITRE)
+        return 0
+
+    print("%d fichier(s), %d module(s)\n" % (len(fichiers), len(mods)))
+    ecrits, suspens = 0, []
+    for nom in fichiers:
+        ident, s1, s2, motif = associer(nom, mods, p)
+        taille = os.path.getsize(os.path.join(MAITRE, nom)) / 1048576.0
+        if not ident:
+            print("  ?  %-34s %6.1f Mo   %s" % (nom[:34], taille, motif))
+            suspens.append(nom)
+            continue
+        d = mods[ident]['donnees']
+        etat, url = poser(d, nom)
+        marque = {'posee': '->', 'cree': '+>', 'deja': '==', 'occupee': '!!'}[etat]
+        detail = motif if s1 is None else "%s, %.1f contre %.1f" % (motif, s1, s2)
+        print("  %s %-8s %-34s %6.1f Mo   %s" % (marque, ident, nom[:34], taille, detail))
+        if etat == 'occupee':
+            print("       emplacement déjà pris par %s — rien touché" % url)
+            continue
+        if etat in ('posee', 'cree') and ecrire:
+            json.dump(d, open(mods[ident]['chemin'], 'w', encoding='utf-8'),
+                      ensure_ascii=False, indent=1)
+            ecrits += 1
+        elif etat in ('posee', 'cree'):
+            ecrits += 1
+
+    print()
+    if suspens:
+        print("Non associés : %s" % ', '.join(suspens))
+        print("  Renommer le fichier en le préfixant de l'identifiant du module, "
+              "par exemple « H6-04 - %s », lève l'hésitation.\n" % suspens[0])
+    if ecrire:
+        print("%d module(s) mis à jour. Relancer `python site/construire.py`." % ecrits)
+    elif ecrits:
+        print("%d association(s) proposée(s). Relancer avec --ecrire pour les appliquer." % ecrits)
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

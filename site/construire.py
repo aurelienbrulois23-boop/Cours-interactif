@@ -109,32 +109,57 @@ def main():
 
     # La carte porte des DISCIPLINES. Une discipline sans aucun theme est
     # declaree quand meme : le site annonce ce qui viendra au lieu de le taire.
-    programme = {
-        'disciplines': [
-            {
-                'id': 'histoire',
-                'nom': 'Histoire',
-                'reference': 'Programme 2020, applicable en 2026-2027',
-                'source': 'knowledge-base/programmes-officiels/histoire-2026-2027.md',
-                'niveaux': niveaux,
-            },
-            {'id': 'geographie', 'nom': 'Geographie', 'reference': '', 'source': '', 'niveaux': []},
-            {'id': 'emc', 'nom': 'Enseignement moral et civique', 'reference': '', 'source': '', 'niveaux': []},
-        ],
-    }
+    #
+    # L'histoire derive sa carte du referentiel officiel, ou chaque sous-theme
+    # donne un module. Les sciences ne s'y pretent pas : le programme de cycle 3
+    # est commun a trois annees et ses unites sont trop fines pour un module.
+    # Leur carte est donc declaree a la main dans plan-sciences.json, ce qui ne
+    # change rien pour le site : un module a venir y figure de la meme facon.
+    disciplines = [
+        {
+            'id': 'histoire',
+            'nom': 'Histoire',
+            'reference': 'Programme 2020, applicable en 2026-2027',
+            'source': 'knowledge-base/programmes-officiels/histoire-2026-2027.md',
+            'niveaux': niveaux,
+        },
+    ]
+    plan = os.path.join(ICI, 'plan-sciences.json')
+    if os.path.exists(plan):
+        p = json.load(open(plan, encoding='utf-8'))
+        disciplines.append({
+            'id': p['discipline'], 'nom': p['nom'], 'reference': p['reference'],
+            'source': p.get('source', ''), 'avertissement': p.get('avertissement', ''),
+            'niveaux': p['niveaux'],
+        })
+    disciplines += [
+        {'id': 'geographie', 'nom': 'Géographie', 'reference': '', 'source': '', 'niveaux': []},
+        {'id': 'emc', 'nom': 'Enseignement moral et civique', 'reference': '', 'source': '', 'niveaux': []},
+    ]
+    programme = {'disciplines': disciplines}
     json.dump(programme, open(os.path.join(ICI, 'programme.json'), 'w', encoding='utf-8'),
               ensure_ascii=False, indent=1)
     json.dump({'modules': ecrits},
               open(os.path.join(DOSSIER_MODULES, 'index.json'), 'w', encoding='utf-8'),
               ensure_ascii=False, indent=1)
 
-    print("programme.json : %d modules declares sur %d niveaux" % (total, len(niveaux)))
+    tous = [m['id'] for d in disciplines for n in d['niveaux']
+            for t in n['themes'] for m in t['modules']]
+    print("programme.json : %d modules declares, %d disciplines" % (len(tous), len(disciplines)))
+    for d in disciplines:
+        ids = [m['id'] for n in d['niveaux'] for t in n['themes'] for m in t['modules']]
+        if not ids:
+            print("   %-12s carte a venir" % d['id']); continue
+        faits = [i for i in ids if i in connus]
+        print("   %-12s %2d prevus, %d ecrits" % (d['id'], len(ids), len(faits)))
+    print()
+    print("histoire, par niveau :")
     for n in niveaux:
         ids = [m['id'] for t in n['themes'] for m in t['modules']]
         faits = [i for i in ids if i in connus]
         print("   %-3s %2d prevus, %d ecrits%s" % (n['niveau'], len(ids), len(faits),
               ("  (" + ", ".join(faits) + ")") if faits else ""))
-    orphelins = sorted(connus - {m['id'] for n in niveaux for t in n['themes'] for m in t['modules']})
+    orphelins = sorted(connus - set(tous))
     if orphelins:
         print("\nATTENTION : modules ecrits hors carte :", ", ".join(orphelins))
     print("\nmodules/index.json : %d modules disponibles" % len(ecrits))

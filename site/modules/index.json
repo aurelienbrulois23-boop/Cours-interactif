@@ -46,7 +46,7 @@
    "rappelJ1": "Le guichet. Qu'est-ce qu'une source institutionnelle ne sait pas faire ?",
    "fichier": "modules/H6-04.json",
    "medias": 4,
-   "mediasRemplis": 0
+   "mediasRemplis": 1
   },
   {
    "id": "H6-05",
@@ -58,7 +58,7 @@
    "rappelJ1": "Le train. Quel wagon un auteur ne peut-il jamais occuper ?",
    "fichier": "modules/H6-05.json",
    "medias": 4,
-   "mediasRemplis": 0
+   "mediasRemplis": 1
   },
   {
    "id": "H6-06",
@@ -106,6 +106,138 @@
    "rappelJ1": "Le trait de crayon. Que faut-il demander à une carte ?",
    "fichier": "modules/H6-09.json",
    "medias": 4,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-01",
+   "discipline": "sciences",
+   "titre": "Ce qui disparaît sans partir",
+   "niveau": "6e",
+   "theme": "Thème 1 — Propriétés de la matière, masse et volume, mélanges",
+   "cible": "dissoudre n'est pas faire disparaître : la <strong>masse se conserve</strong> alors que l'aspect change, et un mélange n'est pas toujours ce qu'il paraît",
+   "rappelJ1": "Le bocal. Que demande-t-on devant une disparition ?",
+   "fichier": "modules/ST6-01.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-02",
+   "discipline": "sciences",
+   "titre": "Vite, par rapport à quoi ?",
+   "niveau": "6e",
+   "theme": "Thème 1 — Mouvements",
+   "cible": "un mouvement ne se décrit jamais sans dire <strong>par rapport à quoi</strong> — et qu'une vitesse se calcule à partir d'une distance et d'une durée",
+   "rappelJ1": "Le repère. Quelle question manque à « ça bouge » ?",
+   "fichier": "modules/ST6-02.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-03",
+   "discipline": "sciences",
+   "titre": "Personne ne fabrique d'énergie",
+   "niveau": "6e",
+   "theme": "Thème 1 — Conversions d'énergie",
+   "cible": "l'énergie ne se crée pas : elle se <strong>convertit</strong> et se transfère — et qu'une « source » d'énergie est toujours quelque chose qu'on prélève ailleurs",
+   "rappelJ1": "Le relais. Que cherche-t-on devant un appareil qui « produit » ?",
+   "fichier": "modules/ST6-03.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-04",
+   "discipline": "sciences",
+   "titre": "Le signal n'est pas le message",
+   "niveau": "6e",
+   "theme": "Thème 1 — Lumière, électricité et transmission de l'information",
+   "cible": "un signal — lumineux, sonore ou électrique — <strong>transporte</strong> une information sans la contenir : c'est un accord préalable qui lui donne son sens",
+   "rappelJ1": "Le messager. Que cherche-t-on devant un signal ?",
+   "fichier": "modules/ST6-04.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-05",
+   "discipline": "sciences",
+   "titre": "Ranger le vivant sans se tromper de critère",
+   "niveau": "6e",
+   "theme": "Thème 2 — Organisation des êtres vivants, classification, biodiversité",
+   "cible": "on classe les êtres vivants d'après ce qu'ils <strong>possèdent en commun</strong>, jamais d'après ce qui leur manque ni d'après leur ressemblance apparente",
+   "rappelJ1": "La clé. Range-t-on par ce qu'on a, ou par ce qui manque ?",
+   "fichier": "modules/ST6-05.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-06",
+   "discipline": "sciences",
+   "titre": "Ce qui travaille dans le pain",
+   "niveau": "6e",
+   "theme": "Thème 2 — Besoins alimentaires, production et conservation des aliments",
+   "cible": "des <strong>micro-organismes</strong> transforment et conservent nos aliments — et que ce qu'on ne voit pas peut être la cause de ce qu'on observe",
+   "rappelJ1": "Le levain. Que cherche-t-on devant un effet sans cause visible ?",
+   "fichier": "modules/ST6-06.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-07",
+   "discipline": "sciences",
+   "titre": "Voyager sans bouger",
+   "niveau": "6e",
+   "theme": "Thème 2 — Cycle de vie et reproduction",
+   "cible": "une plante fixée se reproduit en faisant <strong>porter son pollen par d'autres</strong> — et que la pollinisation s'établit par des observations et des données, non par une histoire plaisante",
+   "rappelJ1": "Le facteur. Que cherche-t-on devant un être fixé qui se reproduit ?",
+   "fichier": "modules/ST6-07.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-08",
+   "discipline": "sciences",
+   "titre": "À quelle question cet objet répond-il ?",
+   "niveau": "6e",
+   "theme": "Thème 3 — Besoins, fonctions techniques et fonctionnement des objets",
+   "cible": "un objet technique répond à un <strong>besoin</strong> par des <strong>fonctions techniques</strong> — et que décrire un objet, c'est retrouver la demande à laquelle il répondait",
+   "rappelJ1": "La commande. Que cherche-t-on derrière un objet fabriqué ?",
+   "fichier": "modules/ST6-08.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-09",
+   "discipline": "sciences",
+   "titre": "La machine ne devine rien",
+   "niveau": "6e",
+   "theme": "Thème 3 — Conception, programmation et algorithmes",
+   "cible": "un <strong>programme</strong> fait exactement ce qui est écrit, jamais ce qu'on voulait — et qu'un bogue se cherche dans les instructions, pas dans l'intention",
+   "rappelJ1": "Le somnambule. Où cherche-t-on un bogue ?",
+   "fichier": "modules/ST6-09.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-10",
+   "discipline": "sciences",
+   "titre": "Ce qu'on voit dépend de la fenêtre",
+   "niveau": "6e",
+   "theme": "Thème 4 — La Terre, une planète active qui abrite la vie",
+   "cible": "la Terre est une planète <strong>active</strong>, et qu'une tendance climatique ne se lit pas sur un jour ni sur une saison mais sur une longue série de mesures",
+   "rappelJ1": "La fenêtre. Que demande-t-on devant une courbe ?",
+   "fichier": "modules/ST6-10.json",
+   "medias": 3,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "ST6-11",
+   "discipline": "sciences",
+   "titre": "On dit chaîne, mais c'est un filet",
+   "niveau": "6e",
+   "theme": "Thème 4 — Écosystèmes et chaînes alimentaires",
+   "cible": "les êtres vivants d'un <strong>écosystème</strong> dépendent les uns des autres par bien plus qu'une chaîne : chacun tient plusieurs fils à la fois",
+   "rappelJ1": "Le nœud. Que suit-on quand on modifie un milieu ?",
+   "fichier": "modules/ST6-11.json",
+   "medias": 3,
    "mediasRemplis": 0
   }
  ]

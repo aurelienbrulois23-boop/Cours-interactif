@@ -331,7 +331,9 @@ button.mini:focus-visible, select.mini:focus-visible { outline: 2px solid var(--
 .media details summary { cursor: pointer; color: var(--appui); }
 .cadre-video { position: relative; padding-top: 56.25%; background: var(--papier-2);
   border: 1px solid var(--filet); border-radius: 4px; overflow: hidden; }
-.cadre-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.cadre-video iframe,
+.cadre-video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.cadre-video video { background: #000; object-fit: contain; }
 
 /* Emplacement vide : visible du seul auteur, jamais de l'élève. */
 .media.vide { border: 1px dashed var(--accent); border-radius: 5px;

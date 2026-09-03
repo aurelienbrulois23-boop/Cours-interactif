@@ -96,9 +96,16 @@ function unMedia(s){
     ${esc(s.source || '')}${s.auteur ? ' · ' + esc(s.auteur) : ''}${s.licence ? ' · ' + esc(s.licence) : ''}</div>`;
 
   if (s.type === 'video') {
+    /* Trois cas, du plus souhaitable au moins bon :
+       un fichier que nous servons nous-mêmes, une plateforme intégrable,
+       et le lien nu quand nous ne savons pas lire l'adresse. */
+    const local = /\.(mp4|webm|ogv|ogg|m4v)(\?|#|$)/i.test(s.url) && !/^https?:\/\//i.test(s.url);
     const integrable = /^https:\/\/(www\.youtube\.com|player\.vimeo\.com|www\.dailymotion\.com)/.test(s.url);
     return `<figure class="media">
-      ${integrable
+      ${local
+        ? `<div class="cadre-video"><video src="${esc(s.url)}" controls preload="metadata"
+             playsinline title="${esc(s.alt || s.operation)}"${s.poster ? ` poster="${esc(s.poster)}"` : ''}></video></div>`
+        : integrable
         ? `<div class="cadre-video"><iframe src="${esc(s.url)}" title="${esc(s.alt || s.operation)}"
              loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`
         : `<p><a href="${esc(s.url)}" target="_blank" rel="noopener">Ouvrir la vidéo</a></p>`}

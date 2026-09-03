@@ -94,6 +94,9 @@ def inventaire():
             'rappelJ1': next((r.get('indice') for r in d.get('rappels', [])
                               if r.get('quand') == 'J+1'), None),
             'fichier': 'modules/' + f,
+            'medias': sum(len(v) for v in (d.get('medias') or {}).values()),
+            'mediasRemplis': sum(1 for v in (d.get('medias') or {}).values()
+                                 for s in v if s.get('url')),
         })
     return ecrits
 

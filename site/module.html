@@ -66,6 +66,63 @@ function jalon(lettre, nom, duree){
           ${duree ? `<span class="duree">${esc(duree)}</span>` : ''}</div>`;
 }
 
+
+/* --- Médias -------------------------------------------------------------- *
+ * Un média rempli porte son étiquette, sa source et sa licence, au moment où
+ * il sert. Un emplacement vide n'existe qu'en mode auteur : l'élève ne voit
+ * pas les trous de production.
+ * Aucune lecture automatique, jamais.                                        */
+const MODE_AUTEUR = (() => {
+  try {
+    if (new URLSearchParams(location.search).has('auteur')) {
+      localStorage.setItem('ci_auteur', '1');
+    }
+    return localStorage.getItem('ci_auteur') === '1';
+  } catch (e) { return false; }
+})();
+
+function unMedia(s){
+  if (!s.url) {
+    if (!MODE_AUTEUR) return '';
+    return `<div class="media vide">
+      <span class="etiquette">${esc(s.etiquette)}</span>
+      <span class="etiquette">${esc(s.type)}</span>
+      <div class="op">${esc(s.operation)}</div>
+      <p class="fine">${esc(s.brief)}</p>
+      <p class="fine" style="font-style:italic">Placement : ${esc(s.placement || '—')}</p>
+    </div>`;
+  }
+  const credit = `<div class="credit"><span class="etiquette">${esc(s.etiquette)}</span>
+    ${esc(s.source || '')}${s.auteur ? ' · ' + esc(s.auteur) : ''}${s.licence ? ' · ' + esc(s.licence) : ''}</div>`;
+
+  if (s.type === 'video') {
+    const integrable = /^https:\/\/(www\.youtube\.com|player\.vimeo\.com|www\.dailymotion\.com)/.test(s.url);
+    return `<figure class="media">
+      ${integrable
+        ? `<div class="cadre-video"><iframe src="${esc(s.url)}" title="${esc(s.alt || s.operation)}"
+             loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`
+        : `<p><a href="${esc(s.url)}" target="_blank" rel="noopener">Ouvrir la vidéo</a></p>`}
+      <figcaption>${esc(s.alt || s.operation)}
+        ${s.transcription
+          ? `<details><summary>Transcription</summary><p>${esc(s.transcription)}</p></details>`
+          : `<span class="fine" style="color:var(--accent)"> — transcription manquante</span>`}
+      </figcaption>
+      ${credit}
+    </figure>`;
+  }
+  return `<figure class="media">
+    <img src="${esc(s.url)}" alt="${esc(s.alt)}" loading="lazy">
+    ${s.alt ? `<figcaption>${esc(s.alt)}</figcaption>`
+            : `<figcaption class="fine" style="color:var(--accent)">Alternative textuelle manquante</figcaption>`}
+    ${credit}
+  </figure>`;
+}
+
+function medias(m, etape){
+  const l = (m.medias && m.medias[etape]) || [];
+  return l.map(unMedia).join('');
+}
+
 /* --- Construction des étapes --------------------------------------------- */
 
 function etapeCible(m){
@@ -106,6 +163,7 @@ function etapePorte(m){
   const p = m.porte;
   return `<section class="etape" id="e-porte" hidden>
     ${jalon('P', 'Porte', p.duree)}
+    ${medias(m, 'porte')}
     ${p.scene.map(s => `<p class="scene"><em>${esc(s)}</em></p>`).join('')}
     <div class="cartel">${esc(p.cartel)}</div>
     ${p.suite.map(s => `<p>${esc(s)}</p>`).join('')}
@@ -158,6 +216,7 @@ function etapeCollision(m, proposee){
   return `<section class="etape" id="e-collision" hidden>
     ${jalon('C', 'Collision', c.duree)}
     ${blocDifferenciation(m, proposee)}
+    ${medias(m, 'collision')}
     <div class="piece">
       <div class="bandeau-statut">
         <span class="etiquette">${esc(p.etiquette)}</span>
@@ -202,6 +261,7 @@ function etapeTransformation(m){
       <p style="margin:0">${t.residu.texte}</p>
     </div>
     <p class="garde">${esc(t.garde)}</p>
+    ${medias(m, 'transformation')}
     ${t.outils ? `
       <p>${esc(t.outils.intro)}</p>
       <div class="tableau-large"><table>

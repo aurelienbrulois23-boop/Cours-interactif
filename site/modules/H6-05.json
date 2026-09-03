@@ -183,5 +183,65 @@
     "texte": "Chercher, dans une source citable, l'écart entre le temps raconté et le temps de Tite-Live, et l'ajouter au dossier AVEC sa référence. Puis formuler une hypothèse sur ce que ce récit servait à dire aux Romains de son temps."
    }
   ]
+ },
+ "medias": {
+  "porte": [
+   {
+    "url": "",
+    "alt": "",
+    "source": "",
+    "licence": "",
+    "auteur": "",
+    "transcription": "",
+    "type": "image",
+    "etiquette": "AMBIANCE",
+    "operation": "planter la scène et rappeler la salle précédente",
+    "brief": "Deuxième salle du même musée, ou un cartel isolé. Continuité visuelle avec H6-04 : c'est la même visite.",
+    "placement": "En ouverture, juste avant le cartel."
+   }
+  ],
+  "collision": [
+   {
+    "url": "",
+    "alt": "",
+    "source": "",
+    "licence": "",
+    "auteur": "",
+    "transcription": "",
+    "type": "image",
+    "etiquette": "PIÈCE",
+    "operation": "observer le document tel qu'on le consulte réellement",
+    "brief": "Capture de la page Perseus, Histoire romaine livre I chapitre 7, adresse visible. Signaler visuellement qu'il s'agit d'une traduction.",
+    "placement": "Avec la pièce. Le statut « rapporté » reste lisible à côté."
+   },
+   {
+    "url": "",
+    "alt": "",
+    "source": "",
+    "licence": "",
+    "auteur": "",
+    "transcription": "",
+    "type": "image",
+    "etiquette": "MÉTAPHORE",
+    "operation": "manipuler une relation — la distance entre les trois temps",
+    "brief": "Schéma du train à trois wagons : temps raconté, temps de l'auteur, temps de l'historien, dans cet ordre, avec une flèche unique vers la droite. Sobre, lisible en noir et blanc. À dessiner : c'est un objet-mémoire du cours, il reviendra tel quel dans les modules suivants.",
+    "placement": "Avec l'outil, au moment où on l'introduit. Le même dessin devra réapparaître à l'identique partout ailleurs."
+   }
+  ],
+  "transformation": [
+   {
+    "url": "",
+    "alt": "",
+    "source": "",
+    "licence": "",
+    "auteur": "",
+    "transcription": "",
+    "type": "video",
+    "etiquette": "AMBIANCE",
+    "operation": "entendre une explication d'ensemble, après avoir conclu soi-même",
+    "brief": "Documentaire sur la fondation de Rome traitant du rapport entre le récit et l'archéologie. Chaîne officielle, intégration autorisée. Écarter tout ce qui présente Romulus comme un personnage historique établi.",
+    "placement": "APRÈS le verdict."
+   }
+  ]
  }
 }

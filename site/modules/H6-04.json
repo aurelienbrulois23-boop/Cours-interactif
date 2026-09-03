@@ -152,5 +152,65 @@
     "texte": "Confronter le texte institutionnel à une source qui évoque les métèques ou l'esclavage, et expliquer d'où vient la différence de perspective — non pas « qui a raison », mais « qui écrit, pour qui, à quelle occasion »."
    }
   ]
+ },
+ "medias": {
+  "porte": [
+   {
+    "url": "",
+    "alt": "",
+    "source": "",
+    "licence": "",
+    "auteur": "",
+    "transcription": "",
+    "type": "image",
+    "etiquette": "AMBIANCE",
+    "operation": "planter la scène",
+    "brief": "Une salle d'exposition, cartels lisibles, sans public. Photographie libre de droits ou prise sur place. Aucune valeur probatoire : elle ne montre rien d'Athènes, elle installe le lieu du problème.",
+    "placement": "En ouverture. Elle ne doit contenir aucun indice de réponse."
+   }
+  ],
+  "collision": [
+   {
+    "url": "",
+    "alt": "",
+    "source": "",
+    "licence": "",
+    "auteur": "",
+    "transcription": "",
+    "type": "image",
+    "etiquette": "PIÈCE",
+    "operation": "observer le document tel qu'on le consulte réellement",
+    "brief": "Capture de la page Perseus du chapitre 43, adresse visible dans la barre. Montrer que la « pièce » est une page web d'une bibliothèque universitaire, pas un parchemin : c'est une partie du cours.",
+    "placement": "Avec la pièce, jamais avant. Le statut « rapporté » doit rester lisible à côté."
+   },
+   {
+    "url": "",
+    "alt": "",
+    "source": "",
+    "licence": "",
+    "auteur": "",
+    "transcription": "",
+    "type": "image",
+    "etiquette": "CARTE",
+    "operation": "localiser",
+    "brief": "Carte de la Méditerranée orientale situant Athènes et l'Attique. Fond sobre, sans frontières modernes. Wikimedia Commons ou fond de carte académique.",
+    "placement": "Au début de la Collision : on situe avant de lire."
+   }
+  ],
+  "transformation": [
+   {
+    "url": "",
+    "alt": "",
+    "source": "",
+    "licence": "",
+    "auteur": "",
+    "transcription": "",
+    "type": "video",
+    "etiquette": "AMBIANCE",
+    "operation": "entendre une explication d'ensemble, après avoir conclu soi-même",
+    "brief": "Documentaire scolaire sur la démocratie athénienne, traitant explicitement des exclusions. Chaîne OFFICIELLE du producteur uniquement, intégration autorisée. Vérifier que la vidéo ne présente pas la démocratie athénienne comme l'ancêtre direct de la nôtre — sinon elle contredit le module.",
+    "placement": "APRÈS le verdict, jamais avant. Une vidéo qui donne la réponse détruit l'Anticipation et la Collision."
+   }
+  ]
  }
 }

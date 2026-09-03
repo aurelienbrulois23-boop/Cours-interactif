@@ -1,0 +1,243 @@
+{
+ "discipline": "Histoire",
+ "reference": "Programme 2020, applicable en 2026-2027",
+ "source": "knowledge-base/programmes-officiels/histoire-2026-2027.md",
+ "niveaux": [
+  {
+   "niveau": "6e",
+   "themes": [
+    {
+     "rang": 1,
+     "intitule": "La longue histoire de l'humanité et des migrations",
+     "modules": [
+      {
+       "id": "H6-01",
+       "sous_theme": "Les débuts de l'humanité"
+      },
+      {
+       "id": "H6-02",
+       "sous_theme": "La « révolution » néolithique"
+      },
+      {
+       "id": "H6-03",
+       "sous_theme": "Premiers États, premières écritures"
+      }
+     ]
+    },
+    {
+     "rang": 2,
+     "intitule": "Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.",
+     "modules": [
+      {
+       "id": "H6-04",
+       "sous_theme": "Le monde des cités grecques"
+      },
+      {
+       "id": "H6-05",
+       "sous_theme": "Rome du mythe à l'histoire"
+      },
+      {
+       "id": "H6-06",
+       "sous_theme": "La naissance du monothéisme juif dans un monde polythéiste"
+      }
+     ]
+    },
+    {
+     "rang": 3,
+     "intitule": "L'Empire romain dans le monde antique",
+     "modules": [
+      {
+       "id": "H6-07",
+       "sous_theme": "Conquêtes, paix romaine et romanisation"
+      },
+      {
+       "id": "H6-08",
+       "sous_theme": "Des chrétiens dans l'Empire"
+      },
+      {
+       "id": "H6-09",
+       "sous_theme": "Les relations de l'Empire romain avec les autres mondes anciens : l'ancienne route de la soie et la Chine des Han"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "niveau": "5e",
+   "themes": [
+    {
+     "rang": 1,
+     "intitule": "Chrétientés et islam (VIe-XIIIe siècles), des mondes en contact",
+     "modules": [
+      {
+       "id": "H5-01",
+       "sous_theme": "Byzance et l'Europe carolingienne"
+      },
+      {
+       "id": "H5-02",
+       "sous_theme": "De la naissance de l'islam à la prise de Bagdad par les Mongols : pouvoirs, sociétés, cultures"
+      }
+     ]
+    },
+    {
+     "rang": 2,
+     "intitule": "Société, Église et pouvoir politique dans l'Occident féodal (XIe-XVe siècles)",
+     "modules": [
+      {
+       "id": "H5-03",
+       "sous_theme": "L'ordre seigneurial : la formation et la domination des campagnes"
+      },
+      {
+       "id": "H5-04",
+       "sous_theme": "L'émergence d'une nouvelle société urbaine"
+      },
+      {
+       "id": "H5-05",
+       "sous_theme": "L'affirmation de l'État monarchique dans le Royaume des Capétiens et des Valois"
+      }
+     ]
+    },
+    {
+     "rang": 3,
+     "intitule": "Transformations de l'Europe et ouverture sur le monde aux XVIe et XVIIe siècles",
+     "modules": [
+      {
+       "id": "H5-06",
+       "sous_theme": "Le monde au temps de Charles Quint et Soliman le Magnifique"
+      },
+      {
+       "id": "H5-07",
+       "sous_theme": "Humanisme, réformes et conflits religieux"
+      },
+      {
+       "id": "H5-08",
+       "sous_theme": "Du Prince de la Renaissance au roi absolu (François Ier, Henri IV, Louis XIV)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "niveau": "4e",
+   "themes": [
+    {
+     "rang": 1,
+     "intitule": "Le XVIIIe siècle : expansions, Lumières et révolutions",
+     "modules": [
+      {
+       "id": "H4-01",
+       "sous_theme": "Bourgeoisies marchandes, négoces internationaux, traites négrières et esclavage au XVIIIe siècle"
+      },
+      {
+       "id": "H4-02",
+       "sous_theme": "L'Europe des Lumières : circulation des idées, despotisme éclairé et contestation de l'absolutisme"
+      },
+      {
+       "id": "H4-03",
+       "sous_theme": "La Révolution française et l'Empire : nouvel ordre politique et société révolutionnée en France et en Europe"
+      }
+     ]
+    },
+    {
+     "rang": 2,
+     "intitule": "L'Europe et le monde au XIXe siècle",
+     "modules": [
+      {
+       "id": "H4-04",
+       "sous_theme": "L'Europe de la « révolution industrielle »"
+      },
+      {
+       "id": "H4-05",
+       "sous_theme": "Conquêtes et sociétés coloniales"
+      }
+     ]
+    },
+    {
+     "rang": 3,
+     "intitule": "Société, culture et politique dans la France du XIXe siècle",
+     "modules": [
+      {
+       "id": "H4-06",
+       "sous_theme": "Une difficile conquête : voter de 1815 à 1870"
+      },
+      {
+       "id": "H4-07",
+       "sous_theme": "La Troisième République"
+      },
+      {
+       "id": "H4-08",
+       "sous_theme": "Conditions féminines dans une société en mutation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "niveau": "3e",
+   "themes": [
+    {
+     "rang": 1,
+     "intitule": "L'Europe, un théâtre majeur des guerres totales (1914-1945)",
+     "modules": [
+      {
+       "id": "H3-01",
+       "sous_theme": "Civils et militaires dans la Première Guerre mondiale"
+      },
+      {
+       "id": "H3-02",
+       "sous_theme": "Démocraties fragilisées et expériences totalitaires dans l'Europe de l'entre-deux-guerres"
+      },
+      {
+       "id": "H3-03",
+       "sous_theme": "La Deuxième Guerre mondiale, une guerre d'anéantissement"
+      },
+      {
+       "id": "H3-04",
+       "sous_theme": "La France défaite et occupée : régime de Vichy, collaboration, Résistance"
+      }
+     ]
+    },
+    {
+     "rang": 2,
+     "intitule": "Le monde depuis 1945",
+     "modules": [
+      {
+       "id": "H3-05",
+       "sous_theme": "Indépendances et construction de nouveaux États"
+      },
+      {
+       "id": "H3-06",
+       "sous_theme": "Un monde bipolaire au temps de la guerre froide"
+      },
+      {
+       "id": "H3-07",
+       "sous_theme": "Affirmation et mise en œuvre du projet européen"
+      },
+      {
+       "id": "H3-08",
+       "sous_theme": "Enjeux et conflits dans le monde après 1989"
+      }
+     ]
+    },
+    {
+     "rang": 3,
+     "intitule": "Françaises et Français dans une République repensée",
+     "modules": [
+      {
+       "id": "H3-09",
+       "sous_theme": "1944-1947 : refonder la République, redéfinir la démocratie"
+      },
+      {
+       "id": "H3-10",
+       "sous_theme": "La Ve République, de la République gaullienne à l'alternance et à la cohabitation"
+      },
+      {
+       "id": "H3-11",
+       "sous_theme": "Femmes et hommes dans la société des années 1950 aux années 1980 : nouveaux enjeux sociaux et culturels, réponses politiques"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

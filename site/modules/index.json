@@ -1,0 +1,22 @@
+{
+ "modules": [
+  {
+   "id": "H6-04",
+   "titre": "Qui décide dans une cité grecque ?",
+   "niveau": "6e",
+   "theme": "Thème 2 — Le monde des cités grecques",
+   "cible": "le mot <em>démocratie</em>, à Athènes, désigne une participation politique réelle mais réservée aux citoyens",
+   "rappelJ1": "Le guichet. Qu'est-ce qu'une source institutionnelle ne sait pas faire ?",
+   "fichier": "modules/H6-04.json"
+  },
+  {
+   "id": "H6-05",
+   "titre": "Quand une ville raconte ses origines",
+   "niveau": "6e",
+   "theme": "Thème 2 — Rome du mythe à l'histoire",
+   "cible": "un récit de fondation renseigne d'abord sur <strong>ceux qui le racontent</strong>",
+   "rappelJ1": "Le train. Quel wagon un auteur ne peut-il jamais occuper ?",
+   "fichier": "modules/H6-05.json"
+  }
+ ]
+}

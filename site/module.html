@@ -24,7 +24,7 @@
 </div>
 
 <script type="module">
-import { moduleParId } from './modules.js';
+import { poserLecture, poserMarge } from './lecture.js';
 
 /* ---------------------------------------------------------------------------
  * Rendu d'un module PACTE.
@@ -229,8 +229,15 @@ function etapeExtraction(m){
 /* --- Assemblage ---------------------------------------------------------- */
 
 const id = new URLSearchParams(location.search).get('m') || 'H6-04';
-const m = moduleParId(id);
 const cible = document.getElementById('module');
+
+// Le module est un fichier de donnees : en ajouter un ne demande de modifier
+// aucune page. Voir construire.py.
+let m = null;
+try {
+  const r = await fetch('modules/' + encodeURIComponent(id) + '.json');
+  if (r.ok) m = await r.json();
+} catch (e) { m = null; }
 
 if (!m) {
   cible.innerHTML = `<h1>Module introuvable</h1>
@@ -240,6 +247,19 @@ if (!m) {
   document.title = m.id + ' — ' + m.titre;
   cible.innerHTML = etapeCible(m) + etapeRappel(m) + etapePorte(m) + etapeAnticipation(m)
                   + etapeCollision(m) + etapeTransformation(m) + etapeExtraction(m);
+
+  // Commandes de lecture sur chaque etape. Jamais de lecture automatique.
+  cible.querySelectorAll('.etape').forEach(sec => {
+    const j = sec.querySelector('.jalon');
+    if (j) poserLecture(sec, j);
+  });
+
+  // Marge suit l'eleve : elle sait a quelle etape il en est.
+  poserMarge(document.querySelector('.page'), m.id, () => {
+    const ordre = ['e-extraction','e-transformation','e-collision','e-anticipation','e-porte'];
+    const ouverte = ordre.find(i => { const e = document.getElementById(i); return e && !e.hidden; });
+    return (ouverte || 'e-porte').replace('e-', '');
+  });
 
   // Sans rappel entrant, la Porte s'ouvre tout de suite.
   if (!m.rappelEntrant) montrer('e-porte');

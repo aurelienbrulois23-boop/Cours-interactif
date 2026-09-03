@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cours interactif — les modules</title>
+<title>Cours interactif — histoire au collège</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -14,17 +14,19 @@
   <nav class="service">
     <span>Cours interactif</span>
     <span class="pousse"></span>
+    <button type="button" id="btnNiveau" hidden></button>
     <button type="button" id="btnTheme" aria-pressed="false">Contraste</button>
   </nav>
 
-  <h1>Les modules</h1>
+  <h1>Histoire au collège</h1>
   <p class="chapeau">Chaque module suit le même chemin : une porte, un pari, une pièce,
   un verdict, et ce qu'on en retient. Il n'y a ni score, ni classement, ni compteur de série.</p>
 
   <div id="rappels"></div>
-  <div id="liste"></div>
+  <div id="carte"><p class="chapeau">Chargement de la carte…</p></div>
 
   <hr class="filet">
+  <p class="fine" id="compte"></p>
   <p class="fine">Votre avancement est conservé dans ce navigateur seulement. Rien n'est envoyé
   nulle part, aucun profil n'est constitué. <button type="button" id="btnOubli"
   style="font:inherit;background:none;border:0;color:var(--accent);cursor:pointer;padding:0;text-decoration:underline">Tout effacer</button></p>
@@ -32,70 +34,76 @@
 </div>
 
 <script type="module">
-import { MODULES } from './modules.js';
-
 /* ---------------------------------------------------------------------------
- * Le hub, et le retour des rappels différés.
+ * Le hub connaît les modules qui n'existent pas encore.
  *
- * Un module promet une réactivation à J+1. Encore faut-il que quelque chose la
- * ramène : sans cela, c'est une ligne dans un tableau. Cette page vérifie, à
- * chaque visite, si un module achevé la veille attend son rappel, et le pose
- * en tête — avec l'indice seul. La réponse ne s'affiche qu'après avoir été
- * cherchée.
+ * Deux fichiers, produits par construire.py :
+ *   programme.json      la carte déclarée des quatre années — 36 modules,
+ *                       identifiants compris, qu'ils soient écrits ou non ;
+ *   modules/index.json  ce qui existe réellement dans le dossier.
  *
- * Rien n'est stocké qui ressemble à un profil : une date d'achèvement, les
- * réponses écrites par l'élève, et le fait qu'un rappel a été fait.
+ * Le hub croise les deux. Un module à venir s'affiche en attente avec son
+ * sous-thème officiel ; le jour où son fichier est déposé, il s'allume sans
+ * qu'aucune page soit modifiée. Aucune liste n'est écrite en dur ici.
+ *
+ * Il ramène aussi les rappels différés : un module achevé la veille pose son
+ * indice en tête de page — l'indice seul, jamais la réponse.
  * ------------------------------------------------------------------------- */
 
 const CLE = 'ci_progres';
-const HEURES_AVANT_RAPPEL = 20;   // « demain », sans exiger 24 h pile
+const HEURES_AVANT_RAPPEL = 20;      // « demain », sans exiger 24 h pile
 
 function progres(){ try { return JSON.parse(localStorage.getItem(CLE) || '{}'); } catch (e) { return {}; } }
 function ecrire(p){ try { localStorage.setItem(CLE, JSON.stringify(p)); } catch (e) {} }
 function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function heuresDepuis(iso){ return (Date.now() - new Date(iso).getTime()) / 3600000; }
 
-/* --- Rappels dus --------------------------------------------------------- */
+let PROGRAMME = null, ECRITS = new Map();
+
+async function charger(){
+  const [pr, ix] = await Promise.all([
+    fetch('programme.json').then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch('modules/index.json').then(r => r.ok ? r.json() : null).catch(() => null)
+  ]);
+  PROGRAMME = pr;
+  (ix && ix.modules || []).forEach(m => ECRITS.set(m.id, m));
+}
+
+/* --- Rappels dus ---------------------------------------------------------- */
 
 function rappelsDus(){
   const p = progres();
-  return MODULES
+  return [...ECRITS.values()]
     .filter(m => {
       const e = p[m.id];
-      if (!e || !e.fait || e.rappelJ1) return false;
-      return heuresDepuis(e.fait) >= HEURES_AVANT_RAPPEL;
-    })
-    .map(m => ({ module: m, indice: (m.rappels.find(r => r.quand === 'J+1') || {}).indice }))
-    .filter(r => r.indice);
+      return e && e.fait && !e.rappelJ1 && m.rappelJ1 && heuresDepuis(e.fait) >= HEURES_AVANT_RAPPEL;
+    });
 }
 
 function afficheRappels(){
   const zone = document.getElementById('rappels');
-  const dus = rappelsDus();
   zone.innerHTML = '';
-  if (!dus.length) return;
-
-  dus.forEach(({ module, indice }) => {
+  rappelsDus().forEach(m => {
     const bloc = document.createElement('div');
     bloc.className = 'avis';
     bloc.innerHTML = `
       <h2>Un rappel vous attend</h2>
-      <p class="fine">${esc(module.id)} — ${esc(module.titre)}. Répondez de mémoire :
+      <p class="fine">${esc(m.id)} — ${esc(m.titre)}. Répondez de mémoire :
       c'est l'effort de retrouver qui fait tenir, pas la relecture.</p>
-      <p class="scene" style="margin-top:.8rem"><strong>${esc(indice)}</strong></p>
+      <p class="scene" style="margin-top:.8rem"><strong>${esc(m.rappelJ1)}</strong></p>
       <div class="question" style="border:0;padding:0;margin-top:.6rem">
         <textarea aria-label="Votre réponse au rappel"></textarea>
         <button class="bouton" type="button">J'ai répondu</button>
-        <button class="bouton discret" type="button" data-plus-tard>Plus tard</button>
+        <button class="bouton discret" type="button">Plus tard</button>
       </div>`;
 
-    const [valider, plusTard] = bloc.querySelectorAll('button');
+    const [valider, plusTard] = bloc.querySelectorAll('.question button');
     const texte = bloc.querySelector('textarea');
 
     valider.addEventListener('click', () => {
       if (!texte.value.trim()) { texte.focus(); return; }
       const p = progres();
-      p[module.id] = Object.assign({}, p[module.id], {
+      p[m.id] = Object.assign({}, p[m.id], {
         rappelJ1: new Date().toISOString(),
         rappelJ1Reponse: texte.value.trim().slice(0, 600)
       });
@@ -106,45 +114,94 @@ function afficheRappels(){
         là qu'on verra si l'outil sert vraiment.</p>`;
       setTimeout(dessine, 1600);
     });
-
-    plusTard.addEventListener('click', () => { bloc.remove(); });
+    plusTard.addEventListener('click', () => bloc.remove());
     zone.appendChild(bloc);
   });
 }
 
-/* --- Liste des modules ---------------------------------------------------- */
+/* --- La carte des quatre années ------------------------------------------- */
 
 function dessine(){
   afficheRappels();
   const p = progres();
-  const liste = document.getElementById('liste');
-  liste.innerHTML = '';
+  const carte = document.getElementById('carte');
+  carte.innerHTML = '';
 
-  const parNiveau = {};
-  MODULES.forEach(m => { (parNiveau[m.niveau] = parNiveau[m.niveau] || []).push(m); });
+  if (!PROGRAMME) {
+    carte.innerHTML = `<div class="avis"><h2>Carte indisponible</h2>
+      <p class="fine">Le fichier <code>programme.json</code> n'a pas pu être lu.
+      Relancez <code>python site/construire.py</code>.</p></div>`;
+    return;
+  }
 
-  Object.keys(parNiveau).sort().forEach(niveau => {
-    liste.appendChild(Object.assign(document.createElement('h2'),
-      { textContent: 'Histoire — ' + niveau, style: 'margin-top:1.8rem' }));
+  const filtre = localStorage.getItem('ci_niveau') || '';
+  let prevus = 0, ecrits = 0;
 
-    parNiveau[niveau].forEach(m => {
-      const e = p[m.id] || {};
-      let etat = '';
-      if (e.fait) etat = 'Achevé' + (e.rappelJ1 ? ' · rappel fait' : '');
-      else if (e.anticipation) etat = 'Commencé';
+  PROGRAMME.niveaux.forEach(n => {
+    n.themes.forEach(t => t.modules.forEach(mo => {
+      prevus++; if (ECRITS.has(mo.id)) ecrits++;
+    }));
+    if (filtre && filtre !== n.niveau) return;
 
-      const a = document.createElement('a');
-      a.className = 'carte';
-      a.href = 'module.html?m=' + encodeURIComponent(m.id);
-      a.innerHTML = `
-        <span class="code">${esc(m.id)} · ${esc(m.theme)}</span>
-        <div class="titre-c">${esc(m.titre)}</div>
-        <div class="cible">Ce qu'on doit pouvoir se rappeler demain : ${m.cible.enonce}.</div>
-        ${etat ? `<div class="etat">${esc(etat)}</div>` : ''}`;
-      liste.appendChild(a);
+    const h = document.createElement('h2');
+    h.textContent = n.niveau;
+    h.style.marginTop = '2.2rem';
+    carte.appendChild(h);
+
+    n.themes.forEach(t => {
+      const th = document.createElement('h3');
+      th.innerHTML = `<span class="fine" style="font-family:var(--mono);font-size:.7rem">
+        THÈME ${t.rang}</span><br>${esc(t.intitule)}`;
+      carte.appendChild(th);
+
+      t.modules.forEach(mo => {
+        const dispo = ECRITS.get(mo.id);
+        if (dispo) {
+          const e = p[mo.id] || {};
+          let etat = '';
+          if (e.fait) etat = 'Achevé' + (e.rappelJ1 ? ' · rappel fait' : '');
+          else if (e.anticipation) etat = 'Commencé';
+
+          const a = document.createElement('a');
+          a.className = 'carte';
+          a.href = 'module.html?m=' + encodeURIComponent(mo.id);
+          a.innerHTML = `
+            <span class="code">${esc(mo.id)} · ${esc(mo.sous_theme)}</span>
+            <div class="titre-c">${esc(dispo.titre)}</div>
+            <div class="cible">Ce qu'on doit pouvoir se rappeler demain : ${dispo.cible}.</div>
+            ${etat ? `<div class="etat">${esc(etat)}</div>` : ''}`;
+          carte.appendChild(a);
+        } else {
+          const d = document.createElement('div');
+          d.className = 'carte attente';
+          d.innerHTML = `
+            <span class="code">${esc(mo.id)}</span>
+            <div class="titre-c">${esc(mo.sous_theme)}</div>
+            <div class="cible">Module à venir. Le sous-thème est au programme ;
+            le cours n'est pas encore écrit.</div>`;
+          carte.appendChild(d);
+        }
+      });
     });
   });
+
+  document.getElementById('compte').textContent =
+    `${ecrits} module${ecrits > 1 ? 's' : ''} disponible${ecrits > 1 ? 's' : ''} sur ${prevus} prévus — `
+    + `${PROGRAMME.reference}.`;
+
+  const bn = document.getElementById('btnNiveau');
+  bn.hidden = false;
+  bn.textContent = filtre ? ('Niveau : ' + filtre) : 'Tous les niveaux';
 }
+
+document.getElementById('btnNiveau').addEventListener('click', () => {
+  const niveaux = PROGRAMME ? PROGRAMME.niveaux.map(n => n.niveau) : [];
+  const actuel = localStorage.getItem('ci_niveau') || '';
+  const suite = ['', ...niveaux];
+  const i = suite.indexOf(actuel);
+  try { localStorage.setItem('ci_niveau', suite[(i + 1) % suite.length]); } catch (e) {}
+  dessine();
+});
 
 document.getElementById('btnOubli').addEventListener('click', () => {
   if (!confirm("Effacer votre avancement dans ce navigateur ? Cette action ne peut pas être annulée.")) return;
@@ -152,6 +209,7 @@ document.getElementById('btnOubli').addEventListener('click', () => {
   dessine();
 });
 
+await charger();
 dessine();
 
 /* --- Contraste ------------------------------------------------------------ */

@@ -26,7 +26,8 @@
 </div>
 
 <script type="module">
-import { charger, esc, poserRappels, avancement, proposerAuDela,
+import { charger, esc, poserRappels, avancement, avancementNiveau,
+         niveauxDeclares, proposerAuDelaNiveau,
          choisirNiveau, poserContraste } from './socle.js';
 
 /* Le hub de niveau. Il montre les disciplines telles qu'elles se presentent
@@ -41,8 +42,7 @@ const params = new URLSearchParams(location.search);
 const niveau = params.get('n') || '6e';
 const { programme, ecrits } = await charger();
 
-const hist = (programme.disciplines || []).find(d => d.id === 'histoire');
-const tousNiveaux = hist ? hist.niveaux.map(n => n.niveau) : [];
+const tousNiveaux = niveauxDeclares(programme);
 
 if (!tousNiveaux.includes(niveau)) {
   document.getElementById('contenu').innerHTML =
@@ -57,7 +57,7 @@ if (!tousNiveaux.includes(niveau)) {
 
 function dessine(){
   poserRappels(document.getElementById('rappels'), ecrits, dessine);
-  const a = avancement(hist, niveau, ecrits);
+  const a = avancementNiveau(programme, niveau, ecrits);
   const zone = document.getElementById('contenu');
 
   document.getElementById('chapeau').textContent =
@@ -85,7 +85,7 @@ function dessine(){
   /* --- Aller plus loin ---------------------------------------------------- */
   const i = tousNiveaux.indexOf(niveau);
   const suivant = tousNiveaux[i + 1];
-  const propose = proposerAuDela(hist, niveau, ecrits);
+  const propose = proposerAuDelaNiveau(programme, niveau, ecrits);
 
   if (propose && suivant) {
     html += `<div class="avis" style="margin-top:2rem">
@@ -106,7 +106,7 @@ function dessine(){
     <div class="grille">`;
   tousNiveaux.forEach(nv => {
     if (nv === niveau) return;
-    const av = avancement(hist, nv, ecrits);
+    const av = avancementNiveau(programme, nv, ecrits);
     html += `<a class="carte tuile" href="niveau.html?n=${encodeURIComponent(nv)}">
       <div class="tuile-niveau">${esc(nv)}</div>
       <div class="cible">${av.disponibles} ouvert${av.disponibles > 1 ? 's' : ''} sur ${av.declares}</div></a>`;

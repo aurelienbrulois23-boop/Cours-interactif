@@ -82,6 +82,38 @@ export function avancement(disc, niveau, ecrits) {
 }
 
 /**
+ * Le meme calcul, mais sur TOUTES les disciplines d'un niveau.
+ *
+ * Le hub de niveau parlait de « votre annee » en ne comptant que l'histoire :
+ * tant qu'elle etait seule, l'erreur ne se voyait pas. Elle se voit des la
+ * deuxieme discipline, et elle se reverra a chaque fois qu'on en ajoutera une.
+ */
+export function avancementNiveau(programme, niveau, ecrits) {
+  const total = { declares: 0, disponibles: 0, acheves: 0, rappelsFaits: 0, reste: [] };
+  (programme && programme.disciplines || []).forEach(d => {
+    const a = avancement(d, niveau, ecrits);
+    total.declares += a.declares;
+    total.disponibles += a.disponibles;
+    total.acheves += a.acheves;
+    total.rappelsFaits += a.rappelsFaits;
+    total.reste = total.reste.concat(a.reste);
+  });
+  return total;
+}
+
+/**
+ * Les niveaux declares, toutes disciplines confondues, dans l'ordre ou la
+ * carte les presente. Aucune discipline ne sert de reference aux autres.
+ */
+export function niveauxDeclares(programme) {
+  const vus = [];
+  (programme && programme.disciplines || []).forEach(d => {
+    (d.niveaux || []).forEach(n => { if (!vus.includes(n.niveau)) vus.push(n.niveau); });
+  });
+  return vus;
+}
+
+/**
  * Faut-il PROPOSER d'aller au-dela ?
  *
  * Condition : avoir termine tout ce qui existe a son niveau, et avoir fait au
@@ -91,9 +123,17 @@ export function avancement(disc, niveau, ecrits) {
  * Ce n'est jamais un verrou : le niveau superieur reste accessible sans cela.
  * C'est une proposition, calculee, et qui disparait si les faits changent.
  */
-export function proposerAuDela(disc, niveau, ecrits) {
-  const a = avancement(disc, niveau, ecrits);
+function tourFait(a) {
   return a.disponibles > 0 && a.acheves === a.disponibles && a.rappelsFaits >= 1;
+}
+
+export function proposerAuDela(disc, niveau, ecrits) {
+  return tourFait(avancement(disc, niveau, ecrits));
+}
+
+/** La meme regle, mais sur l'annee entiere plutot que sur une seule matiere. */
+export function proposerAuDelaNiveau(programme, niveau, ecrits) {
+  return tourFait(avancementNiveau(programme, niveau, ecrits));
 }
 
 /**

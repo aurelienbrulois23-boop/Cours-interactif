@@ -44,7 +44,7 @@
 
 <script type="module">
 import { charger, progres, esc, poserRappels, niveauChoisi, choisirNiveau,
-         avancement, poserContraste } from './socle.js';
+         avancementNiveau, niveauxDeclares, poserContraste } from './socle.js';
 
 /* Le super hub. Il ne liste pas les modules : il oriente vers un niveau, et
  * ramène ce qui est dû — les rappels d'abord, la reprise ensuite. */
@@ -70,11 +70,11 @@ function dessine(){
     </div>` : '';
 
   /* --- Les quatre niveaux ------------------------------------------------- */
-  const hist = (programme.disciplines || []).find(d => d.id === 'histoire');
   const zoneN = document.getElementById('niveaux');
   zoneN.innerHTML = '';
-  (hist ? hist.niveaux : []).forEach(n => {
-    const a = avancement(hist, n.niveau, ecrits);
+  niveauxDeclares(programme).forEach(nv => {
+    const n = { niveau: nv };
+    const a = avancementNiveau(programme, nv, ecrits);
     const lien = document.createElement('a');
     lien.className = 'carte tuile' + (choisi === n.niveau ? ' choisi' : '');
     lien.href = 'niveau.html?n=' + encodeURIComponent(n.niveau);

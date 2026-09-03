@@ -162,5 +162,26 @@
   }
  ],
  "trace": "Les récits de Romulus et Rémus sont des <strong>récits fondateurs</strong> de Rome. Tite-Live les écrit longtemps après les origines qu'il raconte : il occupe le <strong>temps de l'auteur</strong>, pas le <strong>temps raconté</strong>. Son texte est une source importante pour étudier la mémoire et les valeurs romaines, et il ne permet pas d'établir seul les faits des origines. Un récit peut compter beaucoup pour une société sans prouver ce qu'il raconte.",
- "reussite": "Je ne confonds pas ancienneté, vérité et intérêt historique ; je place correctement les trois temps ; et je sais dire pourquoi le guichet ne servait pas ici."
+ "reussite": "Je ne confonds pas ancienneté, vérité et intérêt historique ; je place correctement les trois temps ; et je sais dire pourquoi le guichet ne servait pas ici.",
+ "discipline": "histoire",
+ "differenciation": {
+  "intro": "Même verdict, même extraction, étayage différent. Chacun peut changer d'entrée.",
+  "entrees": [
+   {
+    "cle": "reperes",
+    "nom": "Avec repères",
+    "texte": "Les trois wagons déjà dessinés et étiquetés ; le vocabulaire récit / source / preuve illustré ; le rappel du guichet donné en amorce à compléter."
+   },
+   {
+    "cle": "guidee",
+    "nom": "Enquête guidée",
+    "texte": "L'extrait balisé et le tableau des cinq questions."
+   },
+   {
+    "cle": "approfondissement",
+    "nom": "Approfondissement",
+    "texte": "Chercher, dans une source citable, l'écart entre le temps raconté et le temps de Tite-Live, et l'ajouter au dossier AVEC sa référence. Puis formuler une hypothèse sur ce que ce récit servait à dire aux Romains de son temps."
+   }
+  ]
+ }
 }

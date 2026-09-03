@@ -131,5 +131,26 @@
   }
  ],
  "trace": "Dans la Grèce antique, les cités sont des communautés politiques distinctes. À Athènes, des <strong>citoyens</strong> participent aux institutions par des procédures réglées, dont le tirage au sort. Tous les habitants ne sont pas citoyens : cette démocratie est <strong>limitée</strong>. Le texte qui nous renseigne décrit très bien les règles du Conseil et ne dit rien de ceux qui n'y siègent pas — c'est un guichet. Le silence d'une source nous renseigne sur la source avant de nous renseigner sur le monde.",
- "reussite": "Je situe une cité, j'explique une institution avec le bon vocabulaire, je distingue habitants, citoyens et exclus de la participation, et je sais dire ce que ma source ne prouve pas."
+ "reussite": "Je situe une cité, j'explique une institution avec le bon vocabulaire, je distingue habitants, citoyens et exclus de la participation, et je sais dire ce que ma source ne prouve pas.",
+ "discipline": "histoire",
+ "differenciation": {
+  "intro": "Trois entrées vers le même verdict et la même extraction. Ce qui change est l'appui, jamais l'exigence. Vous passez de l'une à l'autre quand vous voulez.",
+  "entrees": [
+   {
+    "cle": "reperes",
+    "nom": "Avec repères",
+    "texte": "Plan légendé, pictogrammes de statuts et phrase à trous pour la distinction habitant / citoyen. Le « silence » du texte se cherche à deux, avec la liste des catégories fournie."
+   },
+   {
+    "cle": "guidee",
+    "nom": "Enquête guidée",
+    "texte": "L'extrait, le tableau des statuts, et les trois étiquettes à remplir vous-même."
+   },
+   {
+    "cle": "approfondissement",
+    "nom": "Approfondissement",
+    "texte": "Confronter le texte institutionnel à une source qui évoque les métèques ou l'esclavage, et expliquer d'où vient la différence de perspective — non pas « qui a raison », mais « qui écrit, pour qui, à quelle occasion »."
+   }
+  ]
+ }
 }

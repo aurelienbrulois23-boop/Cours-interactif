@@ -25,6 +25,11 @@
 
 <script type="module">
 import { poserLecture, poserMarge } from './lecture.js';
+import { entreeProposee, charger } from './socle.js';
+
+// Marge attend : le site doit d'abord fonctionner sans elle. Passer a true
+// une fois le Worker deploye et MISTRAL_API_KEY posee en Secret chiffre.
+const MARGE_ACTIVE = false;
 
 /* ---------------------------------------------------------------------------
  * Rendu d'un module PACTE.
@@ -133,10 +138,26 @@ function etapeAnticipation(m){
   </section>`;
 }
 
-function etapeCollision(m){
+function blocDifferenciation(m, proposee){
+  const d = m.differenciation;
+  if (!d) return '';
+  return `<div class="etayage">
+    <div class="titre-e">Par où entrer</div>
+    <p class="fine">${esc(d.intro)}</p>
+    <div class="choix-etayage" role="group" aria-label="Entree dans la piece">
+      ${d.entrees.map(e => `<button type="button" data-entree="${esc(e.cle)}"
+        aria-pressed="${String(e.cle === proposee)}">${esc(e.nom)}</button>`).join('')}
+    </div>
+    ${d.entrees.map(e => `<p class="texte-entree" data-pour="${esc(e.cle)}"
+      ${e.cle === proposee ? '' : 'hidden'}>${esc(e.texte)}</p>`).join('')}
+  </div>`;
+}
+
+function etapeCollision(m, proposee){
   const c = m.collision, p = c.piece;
   return `<section class="etape" id="e-collision" hidden>
     ${jalon('C', 'Collision', c.duree)}
+    ${blocDifferenciation(m, proposee)}
     <div class="piece">
       <div class="bandeau-statut">
         <span class="etiquette">${esc(p.etiquette)}</span>
@@ -245,8 +266,24 @@ if (!m) {
     <p><a href="index.html">Revenir à la liste</a></p>`;
 } else {
   document.title = m.id + ' — ' + m.titre;
+  // L'entree proposee est RECALCULEE a partir des modules deja acheves : rien
+  // n'est enregistre, aucune etiquette n'existe, et les trois restent ouvertes.
+  const { ecrits } = await charger();
+  const proposee = entreeProposee(ecrits);
+
   cible.innerHTML = etapeCible(m) + etapeRappel(m) + etapePorte(m) + etapeAnticipation(m)
-                  + etapeCollision(m) + etapeTransformation(m) + etapeExtraction(m);
+                  + etapeCollision(m, proposee) + etapeTransformation(m) + etapeExtraction(m);
+
+  // Bascule d'etayage : libre, a tout moment, sans consequence enregistree.
+  cible.addEventListener('click', ev => {
+    const b = ev.target.closest('[data-entree]');
+    if (!b) return;
+    const boite = b.closest('.etayage');
+    boite.querySelectorAll('[data-entree]').forEach(x =>
+      x.setAttribute('aria-pressed', String(x === b)));
+    boite.querySelectorAll('.texte-entree').forEach(t =>
+      { t.hidden = t.dataset.pour !== b.dataset.entree; });
+  });
 
   // Commandes de lecture sur chaque etape. Jamais de lecture automatique.
   cible.querySelectorAll('.etape').forEach(sec => {
@@ -255,7 +292,7 @@ if (!m) {
   });
 
   // Marge suit l'eleve : elle sait a quelle etape il en est.
-  poserMarge(document.querySelector('.page'), m.id, () => {
+  if (MARGE_ACTIVE) poserMarge(document.querySelector('.page'), m.id, () => {
     const ordre = ['e-extraction','e-transformation','e-collision','e-anticipation','e-porte'];
     const ouverte = ordre.find(i => { const e = document.getElementById(i); return e && !e.hidden; });
     return (ouverte || 'e-porte').replace('e-', '');

@@ -86,6 +86,7 @@ def inventaire():
         d = json.load(open(os.path.join(DOSSIER_MODULES, f), encoding='utf-8'))
         ecrits.append({
             'id': d['id'],
+            'discipline': d.get('discipline', 'histoire'),
             'titre': d.get('titre', ''),
             'niveau': d.get('niveau', ''),
             'theme': d.get('theme', ''),
@@ -103,11 +104,20 @@ def main():
     ecrits = inventaire()
     connus = {e['id'] for e in ecrits}
 
+    # La carte porte des DISCIPLINES. Une discipline sans aucun theme est
+    # declaree quand meme : le site annonce ce qui viendra au lieu de le taire.
     programme = {
-        'discipline': 'Histoire',
-        'reference': 'Programme 2020, applicable en 2026-2027',
-        'source': 'knowledge-base/programmes-officiels/histoire-2026-2027.md',
-        'niveaux': niveaux,
+        'disciplines': [
+            {
+                'id': 'histoire',
+                'nom': 'Histoire',
+                'reference': 'Programme 2020, applicable en 2026-2027',
+                'source': 'knowledge-base/programmes-officiels/histoire-2026-2027.md',
+                'niveaux': niveaux,
+            },
+            {'id': 'geographie', 'nom': 'Geographie', 'reference': '', 'source': '', 'niveaux': []},
+            {'id': 'emc', 'nom': 'Enseignement moral et civique', 'reference': '', 'source': '', 'niveaux': []},
+        ],
     }
     json.dump(programme, open(os.path.join(ICI, 'programme.json'), 'w', encoding='utf-8'),
               ensure_ascii=False, indent=1)

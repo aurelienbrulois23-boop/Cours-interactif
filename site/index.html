@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cours interactif — histoire au collège</title>
+<title>Cours interactif — accueil</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -14,16 +14,23 @@
   <nav class="service">
     <span>Cours interactif</span>
     <span class="pousse"></span>
-    <button type="button" id="btnNiveau" hidden></button>
     <button type="button" id="btnTheme" aria-pressed="false">Contraste</button>
   </nav>
 
-  <h1>Histoire au collège</h1>
-  <p class="chapeau">Chaque module suit le même chemin : une porte, un pari, une pièce,
-  un verdict, et ce qu'on en retient. Il n'y a ni score, ni classement, ni compteur de série.</p>
+  <h1>Cours interactif</h1>
+  <p class="chapeau">Un chemin par module : une porte, un pari, une pièce, un verdict,
+  et ce qu'on en retient. Ni score, ni classement, ni compteur de série.</p>
 
   <div id="rappels"></div>
-  <div id="carte"><p class="chapeau">Chargement de la carte…</p></div>
+  <div id="reprendre"></div>
+
+  <h2 style="margin-top:2rem">Votre année</h2>
+  <p class="fine">Choisissez votre niveau. Vous pourrez en changer à tout moment, et rien
+  ne vous empêchera d'aller voir ailleurs.</p>
+  <div id="niveaux" class="grille"></div>
+
+  <h2 style="margin-top:2.4rem">Les disciplines</h2>
+  <div id="disciplines"></div>
 
   <hr class="filet">
   <p class="fine" id="compte"></p>
@@ -34,198 +41,89 @@
 </div>
 
 <script type="module">
-/* ---------------------------------------------------------------------------
- * Le hub connaît les modules qui n'existent pas encore.
- *
- * Deux fichiers, produits par construire.py :
- *   programme.json      la carte déclarée des quatre années — 36 modules,
- *                       identifiants compris, qu'ils soient écrits ou non ;
- *   modules/index.json  ce qui existe réellement dans le dossier.
- *
- * Le hub croise les deux. Un module à venir s'affiche en attente avec son
- * sous-thème officiel ; le jour où son fichier est déposé, il s'allume sans
- * qu'aucune page soit modifiée. Aucune liste n'est écrite en dur ici.
- *
- * Il ramène aussi les rappels différés : un module achevé la veille pose son
- * indice en tête de page — l'indice seul, jamais la réponse.
- * ------------------------------------------------------------------------- */
+import { charger, progres, esc, poserRappels, niveauChoisi, choisirNiveau,
+         avancement, poserContraste } from './socle.js';
 
-const CLE = 'ci_progres';
-const HEURES_AVANT_RAPPEL = 20;      // « demain », sans exiger 24 h pile
+/* Le super hub. Il ne liste pas les modules : il oriente vers un niveau, et
+ * ramène ce qui est dû — les rappels d'abord, la reprise ensuite. */
 
-function progres(){ try { return JSON.parse(localStorage.getItem(CLE) || '{}'); } catch (e) { return {}; } }
-function ecrire(p){ try { localStorage.setItem(CLE, JSON.stringify(p)); } catch (e) {} }
-function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-function heuresDepuis(iso){ return (Date.now() - new Date(iso).getTime()) / 3600000; }
-
-let PROGRAMME = null, ECRITS = new Map();
-
-async function charger(){
-  const [pr, ix] = await Promise.all([
-    fetch('programme.json').then(r => r.ok ? r.json() : null).catch(() => null),
-    fetch('modules/index.json').then(r => r.ok ? r.json() : null).catch(() => null)
-  ]);
-  PROGRAMME = pr;
-  (ix && ix.modules || []).forEach(m => ECRITS.set(m.id, m));
-}
-
-/* --- Rappels dus ---------------------------------------------------------- */
-
-function rappelsDus(){
-  const p = progres();
-  return [...ECRITS.values()]
-    .filter(m => {
-      const e = p[m.id];
-      return e && e.fait && !e.rappelJ1 && m.rappelJ1 && heuresDepuis(e.fait) >= HEURES_AVANT_RAPPEL;
-    });
-}
-
-function afficheRappels(){
-  const zone = document.getElementById('rappels');
-  zone.innerHTML = '';
-  rappelsDus().forEach(m => {
-    const bloc = document.createElement('div');
-    bloc.className = 'avis';
-    bloc.innerHTML = `
-      <h2>Un rappel vous attend</h2>
-      <p class="fine">${esc(m.id)} — ${esc(m.titre)}. Répondez de mémoire :
-      c'est l'effort de retrouver qui fait tenir, pas la relecture.</p>
-      <p class="scene" style="margin-top:.8rem"><strong>${esc(m.rappelJ1)}</strong></p>
-      <div class="question" style="border:0;padding:0;margin-top:.6rem">
-        <textarea aria-label="Votre réponse au rappel"></textarea>
-        <button class="bouton" type="button">J'ai répondu</button>
-        <button class="bouton discret" type="button">Plus tard</button>
-      </div>`;
-
-    const [valider, plusTard] = bloc.querySelectorAll('.question button');
-    const texte = bloc.querySelector('textarea');
-
-    valider.addEventListener('click', () => {
-      if (!texte.value.trim()) { texte.focus(); return; }
-      const p = progres();
-      p[m.id] = Object.assign({}, p[m.id], {
-        rappelJ1: new Date().toISOString(),
-        rappelJ1Reponse: texte.value.trim().slice(0, 600)
-      });
-      ecrire(p);
-      bloc.innerHTML = `<h2>Rappel fait</h2>
-        <p class="fine">Votre réponse est gardée dans ce navigateur. La prochaine
-        réactivation viendra dans un autre module, sur une autre matière — c'est
-        là qu'on verra si l'outil sert vraiment.</p>`;
-      setTimeout(dessine, 1600);
-    });
-    plusTard.addEventListener('click', () => bloc.remove());
-    zone.appendChild(bloc);
-  });
-}
-
-/* --- La carte des quatre années ------------------------------------------- */
+const { programme, ecrits } = await charger();
 
 function dessine(){
-  afficheRappels();
+  poserRappels(document.getElementById('rappels'), ecrits, dessine);
+
   const p = progres();
-  const carte = document.getElementById('carte');
-  carte.innerHTML = '';
+  const choisi = niveauChoisi();
 
-  if (!PROGRAMME) {
-    carte.innerHTML = `<div class="avis"><h2>Carte indisponible</h2>
-      <p class="fine">Le fichier <code>programme.json</code> n'a pas pu être lu.
-      Relancez <code>python site/construire.py</code>.</p></div>`;
-    return;
-  }
+  /* --- Reprendre où l'on en était ---------------------------------------- */
+  const zoneR = document.getElementById('reprendre');
+  const encours = [...ecrits.values()]
+    .filter(m => { const e = p[m.id] || {}; return e.anticipation && !e.fait; });
+  zoneR.innerHTML = encours.length ? `
+    <div class="avis">
+      <h2>Vous étiez ici</h2>
+      <p class="fine">${esc(encours[0].id)} — ${esc(encours[0].titre)}, commencé et non terminé.</p>
+      <a class="bouton" href="module.html?m=${encodeURIComponent(encours[0].id)}"
+         style="display:inline-block;text-decoration:none;margin-top:.5rem">Reprendre</a>
+    </div>` : '';
 
-  const filtre = localStorage.getItem('ci_niveau') || '';
-  let prevus = 0, ecrits = 0;
-
-  PROGRAMME.niveaux.forEach(n => {
-    n.themes.forEach(t => t.modules.forEach(mo => {
-      prevus++; if (ECRITS.has(mo.id)) ecrits++;
-    }));
-    if (filtre && filtre !== n.niveau) return;
-
-    const h = document.createElement('h2');
-    h.textContent = n.niveau;
-    h.style.marginTop = '2.2rem';
-    carte.appendChild(h);
-
-    n.themes.forEach(t => {
-      const th = document.createElement('h3');
-      th.innerHTML = `<span class="fine" style="font-family:var(--mono);font-size:.7rem">
-        THÈME ${t.rang}</span><br>${esc(t.intitule)}`;
-      carte.appendChild(th);
-
-      t.modules.forEach(mo => {
-        const dispo = ECRITS.get(mo.id);
-        if (dispo) {
-          const e = p[mo.id] || {};
-          let etat = '';
-          if (e.fait) etat = 'Achevé' + (e.rappelJ1 ? ' · rappel fait' : '');
-          else if (e.anticipation) etat = 'Commencé';
-
-          const a = document.createElement('a');
-          a.className = 'carte';
-          a.href = 'module.html?m=' + encodeURIComponent(mo.id);
-          a.innerHTML = `
-            <span class="code">${esc(mo.id)} · ${esc(mo.sous_theme)}</span>
-            <div class="titre-c">${esc(dispo.titre)}</div>
-            <div class="cible">Ce qu'on doit pouvoir se rappeler demain : ${dispo.cible}.</div>
-            ${etat ? `<div class="etat">${esc(etat)}</div>` : ''}`;
-          carte.appendChild(a);
-        } else {
-          const d = document.createElement('div');
-          d.className = 'carte attente';
-          d.innerHTML = `
-            <span class="code">${esc(mo.id)}</span>
-            <div class="titre-c">${esc(mo.sous_theme)}</div>
-            <div class="cible">Module à venir. Le sous-thème est au programme ;
-            le cours n'est pas encore écrit.</div>`;
-          carte.appendChild(d);
-        }
-      });
-    });
+  /* --- Les quatre niveaux ------------------------------------------------- */
+  const hist = (programme.disciplines || []).find(d => d.id === 'histoire');
+  const zoneN = document.getElementById('niveaux');
+  zoneN.innerHTML = '';
+  (hist ? hist.niveaux : []).forEach(n => {
+    const a = avancement(hist, n.niveau, ecrits);
+    const lien = document.createElement('a');
+    lien.className = 'carte tuile' + (choisi === n.niveau ? ' choisi' : '');
+    lien.href = 'niveau.html?n=' + encodeURIComponent(n.niveau);
+    lien.innerHTML = `
+      <div class="tuile-niveau">${esc(n.niveau)}</div>
+      <div class="cible">${a.disponibles} module${a.disponibles > 1 ? 's' : ''} ouvert${a.disponibles > 1 ? 's' : ''}
+        sur ${a.declares} prévus${a.acheves ? ` · ${a.acheves} achevé${a.acheves > 1 ? 's' : ''}` : ''}</div>`;
+    lien.addEventListener('click', () => choisirNiveau(n.niveau));
+    zoneN.appendChild(lien);
   });
 
+  /* --- Les disciplines ---------------------------------------------------- */
+  const zoneD = document.getElementById('disciplines');
+  zoneD.innerHTML = '';
+  (programme.disciplines || []).forEach(d => {
+    const prevus = d.niveaux.reduce((s, n) =>
+      s + n.themes.reduce((t, th) => t + th.modules.length, 0), 0);
+    const ouverts = [...ecrits.values()].filter(m => m.discipline === d.id).length;
+    if (!prevus) {
+      const div = document.createElement('div');
+      div.className = 'carte attente';
+      div.innerHTML = `<div class="titre-c">${esc(d.nom)}</div>
+        <div class="cible">Discipline à venir. Sa carte n'est pas encore construite.</div>`;
+      zoneD.appendChild(div);
+      return;
+    }
+    const cible = choisi || (d.niveaux[0] && d.niveaux[0].niveau);
+    const a = document.createElement('a');
+    a.className = 'carte';
+    a.href = `discipline.html?d=${encodeURIComponent(d.id)}&n=${encodeURIComponent(cible)}`;
+    a.innerHTML = `
+      <div class="titre-c">${esc(d.nom)}</div>
+      <div class="cible">${ouverts} module${ouverts > 1 ? 's' : ''} écrit${ouverts > 1 ? 's' : ''}
+        sur ${prevus} prévus, de la 6e à la 3e. ${esc(d.reference)}</div>`;
+    zoneD.appendChild(a);
+  });
+
+  const totalPrevus = (programme.disciplines || []).reduce((s, d) =>
+    s + d.niveaux.reduce((x, n) => x + n.themes.reduce((t, th) => t + th.modules.length, 0), 0), 0);
   document.getElementById('compte').textContent =
-    `${ecrits} module${ecrits > 1 ? 's' : ''} disponible${ecrits > 1 ? 's' : ''} sur ${prevus} prévus — `
-    + `${PROGRAMME.reference}.`;
-
-  const bn = document.getElementById('btnNiveau');
-  bn.hidden = false;
-  bn.textContent = filtre ? ('Niveau : ' + filtre) : 'Tous les niveaux';
+    `${ecrits.size} module${ecrits.size > 1 ? 's' : ''} disponible${ecrits.size > 1 ? 's' : ''} sur ${totalPrevus} prévus.`;
 }
-
-document.getElementById('btnNiveau').addEventListener('click', () => {
-  const niveaux = PROGRAMME ? PROGRAMME.niveaux.map(n => n.niveau) : [];
-  const actuel = localStorage.getItem('ci_niveau') || '';
-  const suite = ['', ...niveaux];
-  const i = suite.indexOf(actuel);
-  try { localStorage.setItem('ci_niveau', suite[(i + 1) % suite.length]); } catch (e) {}
-  dessine();
-});
 
 document.getElementById('btnOubli').addEventListener('click', () => {
   if (!confirm("Effacer votre avancement dans ce navigateur ? Cette action ne peut pas être annulée.")) return;
-  try { localStorage.removeItem(CLE); } catch (e) {}
+  try { localStorage.removeItem('ci_progres'); } catch (e) {}
   dessine();
 });
 
-await charger();
 dessine();
-
-/* --- Contraste ------------------------------------------------------------ */
-const btnTheme = document.getElementById('btnTheme');
-function appliqueTheme(){
-  const t = localStorage.getItem('ci_theme');
-  if (t) document.documentElement.setAttribute('data-theme', t);
-  btnTheme.setAttribute('aria-pressed', String(t === 'sombre'));
-}
-btnTheme.addEventListener('click', () => {
-  const actuel = document.documentElement.getAttribute('data-theme');
-  const neuf = actuel === 'sombre' ? 'clair' : 'sombre';
-  try { localStorage.setItem('ci_theme', neuf); } catch (e) {}
-  appliqueTheme();
-});
-try { appliqueTheme(); } catch (e) {}
+poserContraste(document.getElementById('btnTheme'));
 </script>
 </body>
 </html>

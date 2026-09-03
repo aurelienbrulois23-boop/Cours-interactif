@@ -1,0 +1,185 @@
+/* Socle commun aux trois hubs.
+ *
+ * Une seule source pour : la carte, l'inventaire, l'avancement, et le calcul
+ * de ce qu'on propose a l'eleve.
+ *
+ * PRINCIPE DE L'ADAPTATION — il vaut la peine d'etre ecrit ici, en haut.
+ * Rien de ce qui ressemble a un profil n'est enregistre. Ce que le navigateur
+ * garde, ce sont des FAITS : tel module acheve tel jour, telle reponse ecrite,
+ * tel rappel fait. Ce qu'on propose a l'eleve se RECALCULE a chaque visite a
+ * partir de ces faits. Un profil enregistre survit a l'eleve qui a change ;
+ * un calcul le suit.
+ *
+ * Et l'adaptation oriente, elle ne restreint jamais : tout niveau, toute
+ * discipline et toute entree de differenciation restent accessibles d'un clic,
+ * meme quand le site en propose une autre en premier.
+ */
+
+const CLE = 'ci_progres';
+
+export function progres() {
+  try { return JSON.parse(localStorage.getItem(CLE) || '{}'); } catch (e) { return {}; }
+}
+export function ecrire(p) {
+  try { localStorage.setItem(CLE, JSON.stringify(p)); } catch (e) {}
+}
+export function majEtat(id, champs) {
+  const p = progres();
+  p[id] = Object.assign({}, p[id], champs);
+  ecrire(p);
+}
+export function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"]/g,
+    c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+export function heuresDepuis(iso) {
+  return (Date.now() - new Date(iso).getTime()) / 3600000;
+}
+
+/* --- Chargement de la carte et de l'inventaire ---------------------------- */
+
+let CACHE = null;
+
+export async function charger(prefixe = '') {
+  if (CACHE) return CACHE;
+  const [pr, ix] = await Promise.all([
+    fetch(prefixe + 'programme.json').then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch(prefixe + 'modules/index.json').then(r => r.ok ? r.json() : null).catch(() => null)
+  ]);
+  const ecrits = new Map();
+  (ix && ix.modules || []).forEach(m => ecrits.set(m.id, m));
+  CACHE = { programme: pr, ecrits };
+  return CACHE;
+}
+
+export function discipline(programme, id) {
+  return (programme && programme.disciplines || []).find(d => d.id === id) || null;
+}
+
+/** Tous les identifiants declares d'une discipline pour un niveau donne. */
+export function idsDuNiveau(disc, niveau) {
+  const n = (disc && disc.niveaux || []).find(x => x.niveau === niveau);
+  if (!n) return [];
+  return n.themes.flatMap(t => t.modules.map(m => m.id));
+}
+
+/* --- Avancement, recalcule a chaque appel --------------------------------- */
+
+/** Ce que l'eleve a reellement fait dans un niveau : rien n'est stocke ici. */
+export function avancement(disc, niveau, ecrits) {
+  const p = progres();
+  const ids = idsDuNiveau(disc, niveau);
+  const disponibles = ids.filter(i => ecrits.has(i));
+  const acheves = disponibles.filter(i => (p[i] || {}).fait);
+  const rappels = acheves.filter(i => (p[i] || {}).rappelJ1);
+  return {
+    declares: ids.length,
+    disponibles: disponibles.length,
+    acheves: acheves.length,
+    rappelsFaits: rappels.length,
+    reste: disponibles.filter(i => !(p[i] || {}).fait),
+  };
+}
+
+/**
+ * Faut-il PROPOSER d'aller au-dela ?
+ *
+ * Condition : avoir termine tout ce qui existe a son niveau, et avoir fait au
+ * moins un rappel differe — parce qu'enchainer des modules sans jamais les
+ * reactiver ne montre pas qu'on a retenu, seulement qu'on a avance.
+ *
+ * Ce n'est jamais un verrou : le niveau superieur reste accessible sans cela.
+ * C'est une proposition, calculee, et qui disparait si les faits changent.
+ */
+export function proposerAuDela(disc, niveau, ecrits) {
+  const a = avancement(disc, niveau, ecrits);
+  return a.disponibles > 0 && a.acheves === a.disponibles && a.rappelsFaits >= 1;
+}
+
+/**
+ * Quelle entree de differenciation proposer EN PREMIER dans un module.
+ * Recalculee a partir des modules deja acheves — jamais enregistree, jamais
+ * affichee comme un jugement, et les trois entrees restent ouvertes.
+ */
+export function entreeProposee(ecrits) {
+  const p = progres();
+  const acheves = [...ecrits.keys()].filter(i => (p[i] || {}).fait);
+  const avecRappel = acheves.filter(i => (p[i] || {}).rappelJ1);
+  if (acheves.length >= 2 && avecRappel.length >= 1) return 'approfondissement';
+  if (acheves.length === 0) return 'guidee';
+  return 'guidee';
+}
+
+/* --- Rappels differes ----------------------------------------------------- */
+
+const HEURES_AVANT_RAPPEL = 20;   // « demain », sans exiger 24 h pile
+
+export function rappelsDus(ecrits) {
+  const p = progres();
+  return [...ecrits.values()].filter(m => {
+    const e = p[m.id];
+    return e && e.fait && !e.rappelJ1 && m.rappelJ1
+        && heuresDepuis(e.fait) >= HEURES_AVANT_RAPPEL;
+  });
+}
+
+/** Le bloc de rappel, identique dans tous les hubs : l'indice seul. */
+export function poserRappels(zone, ecrits, apres) {
+  zone.innerHTML = '';
+  rappelsDus(ecrits).forEach(m => {
+    const bloc = document.createElement('div');
+    bloc.className = 'avis';
+    bloc.innerHTML = `
+      <h2>Un rappel vous attend</h2>
+      <p class="fine">${esc(m.id)} — ${esc(m.titre)}. Répondez de mémoire :
+      c'est l'effort de retrouver qui fait tenir, pas la relecture.</p>
+      <p class="scene" style="margin-top:.8rem"><strong>${esc(m.rappelJ1)}</strong></p>
+      <div class="question" style="border:0;padding:0;margin-top:.6rem">
+        <textarea aria-label="Votre réponse au rappel"></textarea>
+        <button class="bouton" type="button">J'ai répondu</button>
+        <button class="bouton discret" type="button">Plus tard</button>
+      </div>`;
+    const [valider, plusTard] = bloc.querySelectorAll('.question button');
+    const texte = bloc.querySelector('textarea');
+    valider.addEventListener('click', () => {
+      if (!texte.value.trim()) { texte.focus(); return; }
+      majEtat(m.id, {
+        rappelJ1: new Date().toISOString(),
+        rappelJ1Reponse: texte.value.trim().slice(0, 600)
+      });
+      bloc.innerHTML = `<h2>Rappel fait</h2>
+        <p class="fine">Votre réponse est gardée dans ce navigateur. La prochaine
+        réactivation viendra dans un autre module, sur une autre matière — c'est
+        là qu'on verra si l'outil sert vraiment.</p>`;
+      if (apres) setTimeout(apres, 1600);
+    });
+    plusTard.addEventListener('click', () => bloc.remove());
+    zone.appendChild(bloc);
+  });
+}
+
+/* --- Niveau choisi -------------------------------------------------------- */
+
+export function niveauChoisi() {
+  try { return localStorage.getItem('ci_niveau') || ''; } catch (e) { return ''; }
+}
+export function choisirNiveau(n) {
+  try { n ? localStorage.setItem('ci_niveau', n) : localStorage.removeItem('ci_niveau'); } catch (e) {}
+}
+
+/* --- Contraste ------------------------------------------------------------ */
+
+export function poserContraste(bouton) {
+  function applique() {
+    const t = localStorage.getItem('ci_theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+    bouton.setAttribute('aria-pressed', String(t === 'sombre'));
+  }
+  bouton.addEventListener('click', () => {
+    const actuel = document.documentElement.getAttribute('data-theme');
+    const neuf = actuel === 'sombre' ? 'clair' : 'sombre';
+    try { localStorage.setItem('ci_theme', neuf); } catch (e) {}
+    applique();
+  });
+  try { applique(); } catch (e) {}
+}

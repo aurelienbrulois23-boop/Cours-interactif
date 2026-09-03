@@ -2,6 +2,7 @@
  "modules": [
   {
    "id": "H6-04",
+   "discipline": "histoire",
    "titre": "Qui décide dans une cité grecque ?",
    "niveau": "6e",
    "theme": "Thème 2 — Le monde des cités grecques",
@@ -11,6 +12,7 @@
   },
   {
    "id": "H6-05",
+   "discipline": "histoire",
    "titre": "Quand une ville raconte ses origines",
    "niveau": "6e",
    "theme": "Thème 2 — Rome du mythe à l'histoire",

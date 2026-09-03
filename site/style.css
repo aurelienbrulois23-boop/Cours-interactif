@@ -290,3 +290,34 @@ button.mini:focus-visible, select.mini:focus-visible { outline: 2px solid var(--
 .marge-bulle.marge .dit { display: block; padding-left: .8rem; border-left: 2px solid var(--appui); }
 
 @media print { .marge, .lecture { display: none; } }
+
+/* --- Tuiles de niveau ----------------------------------------------------- */
+.grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .8rem; }
+.carte.tuile { text-align: center; padding: 1.2rem .8rem; margin-bottom: 0; }
+.carte.tuile .tuile-niveau { font-family: var(--titre); font-size: 2rem; color: var(--accent); line-height: 1; }
+.carte.tuile.choisi { border-color: var(--appui); background: var(--appui-doux); }
+
+/* --- Aller plus loin ------------------------------------------------------ */
+.plus-loin { margin-top: 2.6rem; border-top: 1px solid var(--filet); padding-top: 1.2rem; }
+.plus-loin > summary {
+  font-family: var(--titre); font-size: 1.25rem; cursor: pointer;
+  color: var(--appui); margin-bottom: .8rem;
+}
+.plus-loin > summary:focus-visible { outline: 3px solid var(--appui); outline-offset: 3px; }
+.plus-loin h3 { color: var(--encre-2); font-size: 1rem; }
+
+/* --- Etayage : trois entrees, jamais une etiquette ------------------------ */
+.etayage { border: 1px dashed var(--filet); border-radius: 5px; padding: 1rem 1.15rem; margin-bottom: 1.4rem; }
+.etayage .titre-e { font-family: var(--mono); font-size: .7rem; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--encre-3); margin-bottom: .5rem; }
+.choix-etayage { display: flex; gap: .5rem; flex-wrap: wrap; margin: .7rem 0 .8rem; }
+.choix-etayage button {
+  font-family: var(--serif); font-size: .9rem; color: var(--encre-2);
+  background: var(--papier-2); border: 1px solid var(--filet);
+  border-radius: 20px; padding: .35rem 1rem; cursor: pointer;
+}
+.choix-etayage button[aria-pressed="true"] {
+  border-color: var(--appui); background: var(--appui-doux); color: var(--appui);
+}
+.choix-etayage button:focus-visible { outline: 3px solid var(--appui); outline-offset: 2px; }
+.texte-entree { font-size: .95rem; margin: 0; color: var(--encre-2); }

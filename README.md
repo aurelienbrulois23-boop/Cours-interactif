@@ -12,10 +12,15 @@ outils qui vérifient que l'un ne dit rien que l'autre n'établisse.
 
 | | |
 | --- | --- |
+| **Français CE2** | 10 modules, les cinq domaines du programme |
 | **Histoire 6e** | 9 modules, les trois thèmes du programme |
 | **Sciences et technologie 6e** | 11 modules, les quatre thèmes du programme |
 | Géographie, EMC | cartes de programme à établir |
 | Histoire 5e, 4e, 3e | 27 modules déclarés, non écrits |
+
+Une **voie « Pas à pas »** double chaque module : un pas à la fois, texte plus
+aéré, mots difficiles donnés avant, lecture à voix haute, et un suivi que
+l'élève tient lui-même. Voir plus bas.
 
 Les hubs connaissent les modules **avant** qu'ils soient écrits : la carte du
 programme (`site/programme.json`) déclare tout, l'index (`site/modules/index.json`)
@@ -75,6 +80,26 @@ possible, non acquis, réfuté, indéterminé*. Le programme officiel de science
 prescrit lui-même de « distinguer les savoirs scientifiques — qui reposent sur
 des faits éprouvés — des croyances ou de la simple opinion » : le lexique n'est
 pas un ajout, il répond à une demande du texte.
+
+## La voie « Pas à pas »
+
+Un bouton, dans la barre du haut, sur toutes les pages. Il change six choses :
+un pas à la fois à l'écran, la lecture à voix haute à la demande, un texte plus
+espacé et des lignes plus courtes, les mots difficiles donnés et découpés
+**avant** la lecture, un suivi que l'élève coche lui-même, et la consigne qui
+ne disparaît jamais pendant qu'on y répond.
+
+Chaque mécanisme est rattaché à une source, et trois choses très répandues sont
+écartées faute de preuve — dont les polices dites adaptées à la dyslexie, qui
+n'améliorent ni la vitesse ni l'exactitude de lecture. Le cahier des charges
+complet, avec ce qu'on ne sait pas, est dans
+[`knowledge-base/pedagogie/voie-adaptee-tdah-dyslexie.md`](knowledge-base/pedagogie/voie-adaptee-tdah-dyslexie.md).
+
+Trois points de principe, qui ne sont pas négociables :
+
+- **C'est un choix, pas une étiquette.** Le bouton est ouvert à tout le monde, réversible à tout instant. Le site ne devine jamais qui « en aurait besoin », ne le propose à personne en particulier, et ne conserve qu'une préférence d'affichage dans le navigateur — comme le contraste.
+- **Le contenu ne change pas.** Même pièce, même pari, même verdict, même exigence. Ce qui change est la présentation et le rythme.
+- **Aucun nom de trouble n'apparaît** — ni dans l'interface, ni dans le nom de la classe CSS, ni dans la clef de stockage. Ce n'est ni un diagnostic, ni un PAP, ni une trace qui pourrait servir à un dossier.
 
 ## Vidéos
 

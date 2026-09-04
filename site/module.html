@@ -14,6 +14,8 @@
   <nav class="service">
     <a href="index.html">&larr; Les modules</a>
     <span class="pousse"></span>
+    <button type="button" id="btnVoie" aria-pressed="false"
+            title="Un pas à la fois, texte plus aéré, mots difficiles donnés avant. Réversible à tout moment.">Pas à pas</button>
     <button type="button" id="btnTheme" aria-pressed="false">Contraste</button>
   </nav>
 
@@ -21,11 +23,13 @@
     <p class="chapeau">Chargement…</p>
   </main>
 
+  <div class="rappel-consigne" id="rappelConsigne" hidden></div>
+
 </div>
 
 <script type="module">
 import { poserLecture, poserMarge } from './lecture.js';
-import { entreeProposee, charger } from './socle.js';
+import { entreeProposee, charger, poserVoie } from './socle.js';
 
 // Marge attend : le site doit d'abord fonctionner sans elle. Passer a true
 // une fois le Worker deploye et MISTRAL_API_KEY posee en Secret chiffre.
@@ -60,10 +64,59 @@ function majEtat(id, champs){ const p = progres(); p[id] = Object.assign({}, p[i
 function el(html){ const d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstElementChild; }
 function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
+/* Le nom d'une étape peut être redit dans la langue du niveau : « Porte » ne
+ * parle pas à un élève de CE2, « Ce qu'on croit » si. La structure ne change
+ * pas — c'est le même dispositif, sous un nom que l'élève peut lire.
+ * Sans le champ « etiquettes », le module garde les noms d'origine. */
+let MOD = null;
+function nomEtape(cle, defaut){
+  return ((MOD && MOD.etiquettes) || {})[cle] || defaut;
+}
+
 function jalon(lettre, nom, duree){
   return `<div class="jalon"><span class="lettre">${lettre}</span>
-          <span class="nom">${nom}</span>
+          <span class="nom">${esc(nom)}</span>
           ${duree ? `<span class="duree">${esc(duree)}</span>` : ''}</div>`;
+}
+
+/* --- Voie « Pas à pas » : les trois pièces propres au module -------------- *
+ * Voir knowledge-base/pedagogie/voie-adaptee-tdah-dyslexie.md.
+ * Ces blocs sont toujours dans le document et masqués par la feuille de
+ * style hors de la voie : aucune page n'est reconstruite en basculant, donc
+ * on ne perd jamais ce qui a déjà été fait.                                 */
+
+function motsAvant(m){
+  const l = ((m.adapte || {}).mots) || [];
+  if (!l.length) return '';
+  return `<section class="mots-avant" aria-label="Les mots difficiles, avant de lire">
+    <h3>Les mots à lire avant</h3>
+    <p class="fine">Lis-les à voix haute, morceau par morceau. Ils reviendront dans le texte,
+    et tu les auras déjà rencontrés.</p>
+    <ul>${l.map(x => `<li>
+      <span class="mot">${esc(x.mot)}</span>
+      <span class="syl">${esc(x.syllabes)}</span>
+      ${x.sens ? `<span class="sens">${esc(x.sens)}</span>` : ''}
+    </li>`).join('')}</ul>
+  </section>`;
+}
+
+function suivi(m){
+  const etapes = [
+    m.rappelEntrant ? ['e-rappel', nomEtape('rappel', 'Rappel')] : null,
+    ['e-porte', nomEtape('porte', 'Porte')],
+    ['e-anticipation', nomEtape('anticipation', 'Anticipation')],
+    ['e-collision', nomEtape('collision', 'Collision')],
+    ['e-transformation', nomEtape('transformation', 'Transformation')],
+    ['e-extraction', nomEtape('extraction', 'Extraction')],
+  ].filter(Boolean);
+  return `<section class="suivi" aria-label="Ma progression">
+    <h3>Où j'en suis</h3>
+    <p class="fine">Tu coches toi-même. Personne d'autre ne le voit, et rien n'est envoyé nulle part.</p>
+    <ol>${etapes.map(([id, nom]) => `<li data-pour="${id}" hidden>
+      <label><input type="checkbox" data-suivi="${id}"><span>${esc(nom)}</span></label>
+    </li>`).join('')}</ol>
+    <span class="compte" id="suiviCompte"></span>
+  </section>`;
 }
 
 
@@ -152,7 +205,7 @@ function etapeRappel(m){
   const r = m.rappelEntrant;
   if (!r) return '';
   return `<section class="etape" id="e-rappel">
-    ${jalon('↺', 'Rappel', 'avant tout')}
+    ${jalon('↺', nomEtape('rappel','Rappel'), 'avant tout')}
     <p class="fine">Sans rouvrir le cahier. Ce rappel porte sur le module ${esc(r.module)}.</p>
     <p class="scene">${r.question}</p>
     <div class="question">
@@ -169,7 +222,7 @@ function etapeRappel(m){
 function etapePorte(m){
   const p = m.porte;
   return `<section class="etape" id="e-porte" hidden>
-    ${jalon('P', 'Porte', p.duree)}
+    ${jalon('P', nomEtape('porte','Porte'), p.duree)}
     ${medias(m, 'porte')}
     ${p.scene.map(s => `<p class="scene"><em>${esc(s)}</em></p>`).join('')}
     <div class="cartel">${esc(p.cartel)}</div>
@@ -188,7 +241,7 @@ function etapePorte(m){
 function etapeAnticipation(m){
   const a = m.anticipation;
   return `<section class="etape" id="e-anticipation" hidden>
-    ${jalon('A', 'Anticipation', a.duree)}
+    ${jalon('A', nomEtape('anticipation','Anticipation'), a.duree)}
     <p class="fine">${esc(a.consigne)}</p>
     <p class="scene">${a.question}</p>
     <div class="choix" id="choixAnticipation" role="group" aria-label="Votre réponse">
@@ -221,7 +274,7 @@ function blocDifferenciation(m, proposee){
 function etapeCollision(m, proposee){
   const c = m.collision, p = c.piece;
   return `<section class="etape" id="e-collision" hidden>
-    ${jalon('C', 'Collision', c.duree)}
+    ${jalon('C', nomEtape('collision','Collision'), c.duree)}
     ${blocDifferenciation(m, proposee)}
     ${medias(m, 'collision')}
     <div class="piece">
@@ -256,7 +309,7 @@ function etapeCollision(m, proposee){
 function etapeTransformation(m){
   const t = m.transformation;
   return `<section class="etape" id="e-transformation" hidden>
-    ${jalon('T', 'Transformation', t.duree)}
+    ${jalon('T', nomEtape('transformation','Transformation'), t.duree)}
     <div id="votreParieRappel"></div>
     <div class="verdict">
       <div class="etablit"><div class="titre-v">Ce que la pièce établit</div>${t.etablit}</div>
@@ -284,7 +337,7 @@ function etapeTransformation(m){
 function etapeExtraction(m){
   const x = m.extraction;
   return `<section class="etape" id="e-extraction" hidden>
-    ${jalon('E', 'Extraction', x.duree)}
+    ${jalon('E', nomEtape('extraction','Extraction'), x.duree)}
     <p class="fine">${esc(x.consigne)}</p>
     ${x.questions.map((q, i) => `
       <div class="question">
@@ -332,14 +385,90 @@ if (!m) {
     <p class="chapeau">Aucun module ne porte l'identifiant « ${esc(id)} ».</p>
     <p><a href="index.html">Revenir à la liste</a></p>`;
 } else {
+  MOD = m;
   document.title = m.id + ' — ' + m.titre;
   // L'entree proposee est RECALCULEE a partir des modules deja acheves : rien
   // n'est enregistre, aucune etiquette n'existe, et les trois restent ouvertes.
   const { ecrits } = await charger();
   const proposee = entreeProposee(ecrits);
 
-  cible.innerHTML = etapeCible(m) + etapeRappel(m) + etapePorte(m) + etapeAnticipation(m)
+  cible.innerHTML = etapeCible(m) + motsAvant(m) + suivi(m)
+                  + etapeRappel(m) + etapePorte(m) + etapeAnticipation(m)
                   + etapeCollision(m, proposee) + etapeTransformation(m) + etapeExtraction(m);
+
+  /* --- Voie « Pas à pas » : câblage ------------------------------------- *
+   * La bascule ne reconstruit rien : les blocs sont déjà là, la feuille de
+   * style les montre ou les cache. Basculer en cours de module ne fait donc
+   * perdre aucune réponse.                                                  */
+
+  function sansBalises(h){
+    const d = document.createElement('div'); d.innerHTML = String(h || '');
+    return d.textContent.replace(/\s+/g, ' ').trim();
+  }
+
+  // Ce que la barre du bas redit, étape par étape. Un module peut la
+  // remplacer par « adapte.consignes »; sinon on reprend ce qui est déjà écrit.
+  const CONSIGNES = Object.assign({
+    'e-rappel':         m.rappelEntrant ? sansBalises(m.rappelEntrant.question) : '',
+    'e-porte':          sansBalises(m.porte.mission),
+    'e-anticipation':   sansBalises(m.anticipation.question),
+    'e-collision':      sansBalises((m.collision.taches || {}).intro || m.collision.outil.nom),
+    'e-transformation': 'Compare avec ce que tu avais répondu tout à l’heure.',
+    'e-extraction':     sansBalises(m.extraction.consigne),
+  }, (m.adapte || {}).consignes || {});
+
+  const zoneConsigne = document.getElementById('rappelConsigne');
+
+  function poserRappelConsigne(idEtape){
+    const texte = CONSIGNES[idEtape];
+    if (!texte) { zoneConsigne.hidden = true; return; }
+    zoneConsigne.innerHTML = `<span class="quoi">Ce qu'il faut faire</span>${esc(texte)}`;
+    zoneConsigne.hidden = false;
+  }
+
+  // Le compteur que l'élève tient lui-même. Local, jamais transmis, et ce
+  // n'est ni un score ni une série : il n'y a rien à perdre en décochant.
+  function majCompte(){
+    const cases = [...cible.querySelectorAll('[data-suivi]')];
+    const vues = cases.filter(c => !c.closest('li').hidden);
+    const faites = vues.filter(c => c.checked).length;
+    const z = document.getElementById('suiviCompte');
+    if (z) z.textContent = vues.length
+      ? `${faites} sur ${vues.length} ${faites > 1 ? 'étapes cochées' : 'étape cochée'}`
+      : '';
+  }
+
+  function revelerSuivi(idEtape){
+    const li = cible.querySelector(`.suivi li[data-pour="${idEtape}"]`);
+    if (li) li.hidden = false;
+    majCompte();
+  }
+
+  // On restitue les cases déjà cochées : revenir sur un module ne les efface pas.
+  (function relireSuivi(){
+    const dejaFait = etat(m.id).suivi || {};
+    cible.querySelectorAll('[data-suivi]').forEach(c => {
+      if (dejaFait[c.dataset.suivi]) { c.checked = true; c.closest('li').classList.add('faite'); }
+    });
+  })();
+
+  cible.addEventListener('change', ev => {
+    const c = ev.target.closest('[data-suivi]');
+    if (!c) return;
+    c.closest('li').classList.toggle('faite', c.checked);
+    const d = Object.assign({}, etat(m.id).suivi || {});
+    if (c.checked) d[c.dataset.suivi] = true; else delete d[c.dataset.suivi];
+    majEtat(m.id, { suivi: d });
+    majCompte();
+  });
+
+  // Chaque mot difficile peut être entendu. Jamais automatiquement.
+  cible.querySelectorAll('.mots-avant li').forEach(li => {
+    const mot = li.querySelector('.mot');
+    if (mot) poserLecture(mot, li);   // on lit le mot, pas la fiche entiere
+  });
+
+  poserVoie(document.getElementById('btnVoie'));
 
   // Bascule d'etayage : libre, a tout moment, sans consequence enregistree.
   cible.addEventListener('click', ev => {
@@ -366,13 +495,16 @@ if (!m) {
   });
 
   // Sans rappel entrant, la Porte s'ouvre tout de suite.
-  if (!m.rappelEntrant) montrer('e-porte');
+  if (m.rappelEntrant) { revelerSuivi('e-rappel'); poserRappelConsigne('e-rappel'); }
+  else montrer('e-porte');
 
   function montrer(idEtape){
     const s = document.getElementById(idEtape);
     if (!s) return;
     s.hidden = false;
     s.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    revelerSuivi(idEtape);
+    poserRappelConsigne(idEtape);
   }
 
   // Boutons « continuer » d'une étape à l'autre.

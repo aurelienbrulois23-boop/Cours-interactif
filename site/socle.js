@@ -105,12 +105,22 @@ export function avancementNiveau(programme, niveau, ecrits) {
  * Les niveaux declares, toutes disciplines confondues, dans l'ordre ou la
  * carte les presente. Aucune discipline ne sert de reference aux autres.
  */
+const ORDRE_SCOLAIRE = ['CP', 'CE1', 'CE2', 'CM1', 'CM2', '6e', '5e', '4e', '3e'];
+
 export function niveauxDeclares(programme) {
   const vus = [];
   (programme && programme.disciplines || []).forEach(d => {
     (d.niveaux || []).forEach(n => { if (!vus.includes(n.niveau)) vus.push(n.niveau); });
   });
-  return vus;
+  // Une annee scolaire a un ordre, et ce n'est pas celui du fichier. Un niveau
+  // inconnu de la liste passe a la fin, dans l'ordre ou la carte l'a declare.
+  return vus.sort((a, b) => {
+    const ia = ORDRE_SCOLAIRE.indexOf(a), ib = ORDRE_SCOLAIRE.indexOf(b);
+    if (ia === -1 && ib === -1) return vus.indexOf(a) - vus.indexOf(b);
+    if (ia === -1) return 1;
+    if (ib === -1) return -1;
+    return ia - ib;
+  });
 }
 
 /**
@@ -208,6 +218,43 @@ export function choisirNiveau(n) {
 }
 
 /* --- Contraste ------------------------------------------------------------ */
+
+/**
+ * La voie « Pas a pas ».
+ *
+ * Un bouton, ouvert a tout le monde, reversible a tout instant. Ce n'est PAS
+ * un mode attribue a certains eleves : le site ne devine jamais qui en aurait
+ * besoin, ne le propose a personne en particulier, et n'enregistre rien
+ * d'autre qu'une preference d'affichage dans ce navigateur — exactement comme
+ * le contraste.
+ *
+ * Le contenu ne change pas : meme piece, meme pari, meme verdict, meme
+ * exigence. Ce qui change est la presentation et le rythme.
+ *
+ * Aucun nom de trouble n'apparait ici, ni dans la classe CSS, ni dans la clef
+ * de stockage. Voir knowledge-base/pedagogie/voie-adaptee-tdah-dyslexie.md.
+ */
+export function voieActive() {
+  try { return localStorage.getItem('ci_voie') === 'pasapas'; } catch (e) { return false; }
+}
+
+export function appliqueVoie() {
+  const on = voieActive();
+  document.documentElement.setAttribute('data-voie', on ? 'pasapas' : 'normale');
+  return on;
+}
+
+export function poserVoie(bouton, apres) {
+  function applique() {
+    bouton.setAttribute('aria-pressed', String(appliqueVoie()));
+  }
+  bouton.addEventListener('click', () => {
+    try { localStorage.setItem('ci_voie', voieActive() ? 'normale' : 'pasapas'); } catch (e) {}
+    applique();
+    if (apres) apres(voieActive());
+  });
+  try { applique(); } catch (e) {}
+}
 
 export function poserContraste(bouton) {
   function applique() {

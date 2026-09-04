@@ -14,6 +14,8 @@
   <nav class="service">
     <a href="index.html">&larr; Accueil</a>
     <span class="pousse"></span>
+    <button type="button" id="btnVoie" aria-pressed="false"
+            title="Texte plus aéré, lignes plus courtes. Réversible à tout moment.">Pas à pas</button>
     <button type="button" id="btnTheme" aria-pressed="false">Contraste</button>
   </nav>
 
@@ -28,7 +30,7 @@
 <script type="module">
 import { charger, esc, poserRappels, avancement, avancementNiveau,
          niveauxDeclares, proposerAuDelaNiveau,
-         choisirNiveau, poserContraste } from './socle.js';
+         choisirNiveau, poserContraste, poserVoie } from './socle.js';
 
 /* Le hub de niveau. Il montre les disciplines telles qu'elles se presentent
  * POUR CE NIVEAU, l'avancement reel, et — quand les faits le justifient — la
@@ -117,6 +119,7 @@ function dessine(){
 }
 
 poserContraste(document.getElementById('btnTheme'));
+poserVoie(document.getElementById('btnVoie'));
 </script>
 </body>
 </html>

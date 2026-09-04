@@ -14,6 +14,8 @@
   <nav class="service">
     <a href="index.html">&larr; Accueil</a>
     <span class="pousse"></span>
+    <button type="button" id="btnVoie" aria-pressed="false"
+            title="Texte plus aéré, lignes plus courtes. Réversible à tout moment.">Pas à pas</button>
     <button type="button" id="btnTheme" aria-pressed="false">Contraste</button>
   </nav>
 
@@ -56,7 +58,7 @@
 </div>
 
 <script type="module">
-import { charger, esc, poserContraste } from './socle.js';
+import { charger, esc, poserContraste, poserVoie } from './socle.js';
 
 /* Le tableau de bord des médias.
  *
@@ -114,6 +116,7 @@ document.getElementById('tableau').innerHTML =
    sur ${total}</strong> — ${total - remplis} à chercher.</p>` + html;
 
 poserContraste(document.getElementById('btnTheme'));
+poserVoie(document.getElementById('btnVoie'));
 </script>
 </body>
 </html>

@@ -340,3 +340,111 @@ button.mini:focus-visible, select.mini:focus-visible { outline: 2px solid var(--
   padding: .9rem 1.1rem; background: var(--accent-doux); }
 .media.vide .op { font-family: var(--titre); font-size: 1.05rem; color: var(--accent); margin: .4rem 0 .3rem; }
 .media.vide .fine { margin-bottom: .3rem; }
+
+
+/* ═══════════════════ VOIE « PAS À PAS » ═══════════════════════════════════ *
+ *
+ * Un réglage d'affichage, ouvert à tous, réversible, gardé dans ce navigateur.
+ * Ce n'est pas un mode attribué : rien n'est déduit, rien n'est transmis,
+ * aucun nom de trouble n'apparaît — ni ici, ni dans la clef de stockage.
+ * Cahier des charges : knowledge-base/pedagogie/voie-adaptee-tdah-dyslexie.md
+ *
+ * AUCUNE POLICE SPÉCIALE. Les polices dites adaptées à la dyslexie n'améliorent
+ * ni la vitesse ni l'exactitude de lecture (CLM-BEP-003). Ce qui est rapporté
+ * comme utile est l'ESPACEMENT — c'est donc lui, et lui seul, qu'on augmente.
+ *
+ * Les valeurs ci-dessous ne sont fondées sur aucune mesure. Ce sont des choix
+ * raisonnables. Les modifier ne trahit rien.                                 */
+
+:root[data-voie="pasapas"] {
+  --pap-lettre:  .045em;   /* espacement entre lettres */
+  --pap-mot:     .18em;    /* espacement entre mots */
+  --pap-ligne:   1.9;      /* interligne */
+  --pap-largeur: 34rem;    /* longueur de ligne : lignes plus courtes */
+}
+
+/* Mécanisme 3 — le texte respire. */
+:root[data-voie="pasapas"] body {
+  letter-spacing: var(--pap-lettre);
+  word-spacing: var(--pap-mot);
+  line-height: var(--pap-ligne);
+}
+:root[data-voie="pasapas"] .page { max-width: var(--pap-largeur); }
+:root[data-voie="pasapas"] p,
+:root[data-voie="pasapas"] li,
+:root[data-voie="pasapas"] td,
+:root[data-voie="pasapas"] .scene,
+:root[data-voie="pasapas"] .cartel { text-align: left; text-wrap: pretty; }
+:root[data-voie="pasapas"] p { margin: 1.1rem 0; }
+:root[data-voie="pasapas"] .etape { margin-bottom: 3.5rem; }
+
+/* Les titres n'ont pas besoin du même traitement : ils sont courts, et trop
+ * d'espacement les casse en morceaux. */
+:root[data-voie="pasapas"] h1,
+:root[data-voie="pasapas"] h2,
+:root[data-voie="pasapas"] h3 { letter-spacing: .01em; word-spacing: normal; line-height: 1.3; }
+
+/* Cibles plus grandes : la précision du pointage n'a pas à être une épreuve. */
+:root[data-voie="pasapas"] .choix button { padding: 1.05rem 1.1rem; font-size: 1.05rem; }
+:root[data-voie="pasapas"] .bouton { padding: .85rem 1.3rem; font-size: 1rem; }
+:root[data-voie="pasapas"] .question textarea { min-height: 6rem; font-size: 1.02rem; }
+
+/* Mécanisme 4 — les mots difficiles, AVANT le texte.
+ * Seul mécanisme de la liste qui enseigne au lieu d'accommoder : c'est
+ * l'enseignement de l'identification des mots qui améliore la lecture
+ * (CLM-BEP-001). Masqué hors de la voie : il n'est pas un lexique. */
+.mots-avant { display: none; }
+:root[data-voie="pasapas"] .mots-avant {
+  display: block; border: 2px solid var(--appui); border-radius: 6px;
+  background: var(--appui-doux); padding: 1.1rem 1.2rem; margin: 1.4rem 0;
+}
+.mots-avant h3 { margin: 0 0 .2rem; font-size: 1.2rem; color: var(--appui); }
+.mots-avant > p.fine { margin: 0 0 .9rem; }
+.mots-avant ul { list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: .75rem; }
+.mots-avant li { background: var(--papier); border: 1px solid var(--filet);
+  border-radius: 5px; padding: .7rem .85rem; }
+.mots-avant .mot { font-size: 1.25rem; font-weight: 600; }
+.mots-avant .syl { font-family: var(--mono); font-size: 1.05rem; color: var(--appui);
+  letter-spacing: .08em; display: block; margin: .25rem 0; }
+.mots-avant .sens { font-size: .95rem; color: var(--encre-2); display: block; }
+.mots-avant button.mini { margin-top: .45rem; }
+
+/* Mécanisme 5 — le compteur que l'élève tient lui-même.
+ * Auto-observation (CLM-BEP-001, CLM-BEP-005). Ni score, ni classement, ni
+ * série : personne d'autre ne le voit, rien n'est envoyé nulle part. */
+.suivi { display: none; }
+:root[data-voie="pasapas"] .suivi {
+  display: block; border: 1px solid var(--filet); border-radius: 6px;
+  background: var(--papier-2); padding: .9rem 1.1rem; margin: 1.4rem 0 2rem;
+}
+.suivi h3 { margin: 0 0 .15rem; font-size: 1.1rem; }
+.suivi > p.fine { margin: 0 0 .7rem; }
+.suivi ol { list-style: none; margin: 0; padding: 0; }
+.suivi li { display: flex; align-items: center; gap: .7rem; padding: .4rem 0; }
+.suivi label { display: flex; align-items: center; gap: .7rem; cursor: pointer; flex: 1; }
+.suivi input[type="checkbox"] { width: 1.5rem; height: 1.5rem; accent-color: var(--ok); flex: none; }
+.suivi li.faite label { color: var(--encre-3); text-decoration: line-through; }
+.suivi li[hidden] { display: none; }
+.suivi .compte { font-family: var(--mono); font-size: .78rem; color: var(--encre-2);
+  letter-spacing: .04em; margin-top: .6rem; display: block; }
+
+/* Mécanisme 6 — la consigne ne disparaît pas pendant qu'on y répond.
+ * Rien à retenir de tête (SRC-PED-007). */
+.rappel-consigne { display: none; }
+:root[data-voie="pasapas"] .rappel-consigne {
+  display: block; position: sticky; bottom: 0; z-index: 5;
+  background: var(--papier); border-top: 2px solid var(--appui);
+  padding: .7rem 1rem; margin: 0 -1.25rem; font-size: .95rem;
+  box-shadow: 0 -6px 14px -12px rgba(0,0,0,.5);
+}
+.rappel-consigne .quoi { font-family: var(--mono); font-size: .7rem; letter-spacing: .06em;
+  color: var(--appui); display: block; margin-bottom: .15rem; }
+
+/* Le bouton de bascule, dans la barre de service. */
+.service button[aria-pressed="true"] { border-color: var(--appui); background: var(--appui-doux); }
+
+/* Rien de tout cela n'a de sens à l'impression. */
+@media print {
+  .mots-avant, .suivi, .rappel-consigne { display: none !important; }
+}

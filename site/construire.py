@@ -18,7 +18,7 @@ absent du poste.
 
 Usage :  python site/construire.py
 """
-import json, os, re, io, sys
+import json, os, re, io, sys, glob
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 ICI = os.path.dirname(os.path.abspath(__file__))
@@ -124,9 +124,14 @@ def main():
             'niveaux': niveaux,
         },
     ]
-    plan = os.path.join(ICI, 'plan-sciences.json')
-    if os.path.exists(plan):
-        p = json.load(open(plan, encoding='utf-8'))
+    # Toute carte declaree a la main est un fichier plan-*.json. En deposer un
+    # suffit : aucune ligne a ajouter ici. Le champ « rang » decide de l'ordre
+    # d'affichage, faute de quoi la discipline passe apres les autres.
+    plans = []
+    for chemin in sorted(glob.glob(os.path.join(ICI, 'plan-*.json'))):
+        plans.append(json.load(open(chemin, encoding='utf-8')))
+    plans.sort(key=lambda p: (p.get('rang', 50), p.get('nom', '')))
+    for p in plans:
         disciplines.append({
             'id': p['discipline'], 'nom': p['nom'], 'reference': p['reference'],
             'source': p.get('source', ''), 'avertissement': p.get('avertissement', ''),

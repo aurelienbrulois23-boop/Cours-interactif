@@ -15,6 +15,8 @@
     <a href="index.html">Accueil</a>
     <a id="lienNiveau" href="#">&larr; Mon année</a>
     <span class="pousse"></span>
+    <button type="button" id="btnVoie" aria-pressed="false"
+            title="Texte plus aéré, lignes plus courtes. Réversible à tout moment.">Pas à pas</button>
     <button type="button" id="btnTheme" aria-pressed="false">Contraste</button>
   </nav>
 
@@ -28,7 +30,7 @@
 
 <script type="module">
 import { charger, progres, esc, poserRappels, avancement, proposerAuDela,
-         poserContraste } from './socle.js';
+         poserContraste, poserVoie } from './socle.js';
 
 /* Le hub disciplinaire, filtre par niveau.
  *
@@ -133,6 +135,7 @@ function dessine(){
 }
 
 poserContraste(document.getElementById('btnTheme'));
+poserVoie(document.getElementById('btnVoie'));
 </script>
 </body>
 </html>

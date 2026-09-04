@@ -14,6 +14,8 @@
   <nav class="service">
     <span>Cours interactif</span>
     <span class="pousse"></span>
+    <button type="button" id="btnVoie" aria-pressed="false"
+            title="Texte plus aéré, lignes plus courtes. Réversible à tout moment.">Pas à pas</button>
     <button type="button" id="btnTheme" aria-pressed="false">Contraste</button>
   </nav>
 
@@ -44,7 +46,7 @@
 
 <script type="module">
 import { charger, progres, esc, poserRappels, niveauChoisi, choisirNiveau,
-         avancementNiveau, niveauxDeclares, poserContraste } from './socle.js';
+         avancementNiveau, niveauxDeclares, poserContraste, poserVoie } from './socle.js';
 
 /* Le super hub. Il ne liste pas les modules : il oriente vers un niveau, et
  * ramène ce qui est dû — les rappels d'abord, la reprise ensuite. */
@@ -126,6 +128,7 @@ document.getElementById('btnOubli').addEventListener('click', () => {
 
 dessine();
 poserContraste(document.getElementById('btnTheme'));
+poserVoie(document.getElementById('btnVoie'));
 </script>
 </body>
 </html>

@@ -144,5 +144,19 @@ la valeur vit dans les Secrets chiffrés du Worker, jamais dans un fichier.
 
 ## Licence
 
-À définir. En attendant, tous droits réservés — les pièces citées dans les
-modules restent la propriété de leurs auteurs et sont créditées dans chaque page.
+**[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr)**
+— identifiant SPDX `CC-BY-NC-SA-4.0`, texte intégral dans [`LICENSE`](LICENSE).
+
+Vous pouvez reprendre, adapter et diffuser ces modules, à trois conditions :
+en **citer la source**, ne pas en faire d'**usage commercial**, et partager vos
+adaptations sous la **même licence**. Un collègue qui veut s'en servir en classe
+n'a donc rien à demander.
+
+GitHub affiche « Other » : les variantes non commerciales de Creative Commons
+ne figurent pas dans sa liste de licences reconnues. La licence n'en est pas
+moins celle-ci.
+
+Deux réserves. Les **pièces citées** dans les modules — textes, images, vidéos —
+restent la propriété de leurs auteurs, sont créditées à l'endroit où elles
+servent, et ne sont pas couvertes par cette licence. Les **programmes officiels**
+cités relèvent du régime des textes réglementaires français.

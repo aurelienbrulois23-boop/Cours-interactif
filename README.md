@@ -138,8 +138,24 @@ python site/videos.py            # propose une association, n'écrit rien
 python site/videos.py --ecrire   # applique
 ```
 
-Les fichiers vidéo sont **hors du dépôt** — vingt mégaoctets pièce. Le site les
-sert par une jonction `site/medias/video`. Voir `production-video/LISEZ-MOI.md`.
+Pour une vidéo hébergée ailleurs — YouTube en non répertoriée, Vimeo :
+
+```bash
+python site/videos.py --lien=H6-04=https://youtu.be/xxxxxxxxxxx --ecrire
+```
+
+Les fichiers vidéo sont **hors du dépôt** — vingt mégaoctets pièce. Le site
+sert les fichiers locaux par une jonction `site/medias/video`, et n'héberge
+rien de ce qui est sur une plateforme. Le fichier maître reste dans
+`production-video/vidéo/` : une plateforme est un canal de diffusion, jamais
+une sauvegarde. Voir `production-video/LISEZ-MOI.md`.
+
+**Aucune requête avant le clic.** Une intégration YouTube posée dans la page
+contacte Google dès l'ouverture du module, avant que l'élève ait rien demandé.
+Le site affiche donc une façade locale : rien ne part tant que personne n'a
+cliqué, et l'adresse employée est `youtube-nocookie.com` avec `rel=0`. Cela
+réduit le pistage ; cela ne l'annule pas, et aucune notice ne doit prétendre
+le contraire.
 
 ## Vérifier la base de connaissances
 

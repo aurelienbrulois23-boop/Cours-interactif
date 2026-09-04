@@ -337,6 +337,24 @@ button.mini:focus-visible, select.mini:focus-visible { outline: 2px solid var(--
 .cadre-video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .cadre-video video { background: #000; object-fit: contain; }
 
+/* Façade : rien n'est demandé à la plateforme avant que l'élève clique. */
+.cadre-video.facade { background: var(--papier-2); }
+.cadre-video .lance-video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: .5rem; cursor: pointer; border: 0; background: transparent;
+  font-family: var(--serif); color: var(--encre);
+}
+.cadre-video .lance-video:hover .triangle { border-left-color: var(--accent); }
+.cadre-video .lance-video:focus-visible { outline: 3px solid var(--appui); outline-offset: -4px; }
+.cadre-video .triangle {
+  width: 0; height: 0; border-style: solid; border-width: 18px 0 18px 30px;
+  border-color: transparent transparent transparent var(--appui);
+}
+.cadre-video .quoi { font-size: 1.05rem; }
+.cadre-video .ou { font-size: .8rem; color: var(--encre-2); text-align: center;
+  max-width: 26rem; padding: 0 1rem; }
+
 /* Emplacement vide : visible du seul auteur, jamais de l'élève. */
 .media.vide { border: 1px dashed var(--accent); border-radius: 5px;
   padding: .9rem 1.1rem; background: var(--accent-doux); }

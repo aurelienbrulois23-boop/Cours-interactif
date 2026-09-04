@@ -133,8 +133,58 @@ def poser(d, nom):
     return 'cree', url
 
 
+def poser_lien(ident, url, ecrire):
+    """Associe une vidéo hébergée ailleurs — YouTube, Vimeo — à un module.
+
+    C'est la voie recommandée dès qu'il y a plus de deux ou trois vidéos : le
+    dépôt reste léger, la lecture s'adapte au débit du téléphone, et rien ne
+    pèse sur l'hébergement du site. En contrepartie la vidéo ne nous appartient
+    plus : le fichier maître reste dans production-video/vidéo/, qui est
+    l'archive. Une plateforme est un canal de diffusion, pas une sauvegarde."""
+    chemin = os.path.join(MODULES, ident + '.json')
+    if not os.path.exists(chemin):
+        print("  !  %s : module inconnu" % ident)
+        return False
+    d = json.load(open(chemin, encoding='utf-8'))
+    liste = d.setdefault('medias', {}).setdefault('transformation', [])
+    cible = next((s for s in liste if s.get('type') == 'video'), None)
+    if cible is None:
+        cible = {'type': 'video', 'etiquette': 'AMBIANCE', 'auteur': '', 'transcription': '',
+                 'brief': '', 'placement': "APRÈS le verdict.",
+                 'operation': "entendre une explication d'ensemble, après avoir conclu soi-même"}
+        liste.append(cible)
+    ancienne = cible.get('url', '')
+    cible['url'] = url
+    cible['alt'] = cible.get('alt') or "Vidéo de synthèse du module, à regarder après le verdict"
+    cible['source'] = cible.get('source') or "Production interne du collège"
+    cible['licence'] = cible.get('licence') or "Usage pédagogique interne"
+    print("  -> %-9s %s%s" % (ident, url, ("   (remplace %s)" % ancienne) if ancienne else ""))
+    if not cible.get('transcription'):
+        print("       transcription à renseigner — le lecteur la signalera manquante")
+    if ecrire:
+        json.dump(d, open(chemin, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    return True
+
+
 def main():
     ecrire = '--ecrire' in sys.argv
+
+    # Mode « lien » : python site/videos.py --lien H6-04=https://youtu.be/xxxx
+    paires = []
+    for i, a in enumerate(sys.argv[1:]):
+        if a == '--lien' and i + 2 < len(sys.argv):
+            v = sys.argv[i + 2]
+            if '=' in v:
+                paires.append(v.split('=', 1))
+        elif a.startswith('--lien=') and '=' in a[7:]:
+            paires.append(a[7:].split('=', 1))
+    if paires:
+        print("%d lien(s) à poser\n" % len(paires))
+        n = sum(1 for ident, url in paires if poser_lien(ident.strip(), url.strip(), ecrire))
+        print()
+        print("%d module(s) %s. Relancer `python site/construire.py`."
+              % (n, "mis à jour" if ecrire else "à mettre à jour — relancer avec --ecrire"))
+        return 0
     if not os.path.isdir(MAITRE):
         print("Dossier maître introuvable : %s" % MAITRE)
         return 1

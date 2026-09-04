@@ -214,6 +214,48 @@ const MODE_AUTEUR = (() => {
   } catch (e) { return false; }
 })();
 
+/* --- Vidéos hébergées ailleurs ------------------------------------------- *
+ *
+ * Deux exigences, et elles ne sont pas décoratives quand le public est
+ * mineur.
+ *
+ * 1. AUCUNE REQUÊTE AVANT LE CLIC. Une iframe YouTube posée dans la page
+ *    contacte Google dès l'ouverture du module, avant que l'élève ait
+ *    demandé quoi que ce soit. On affiche donc une façade locale : rien ne
+ *    part tant que personne n'a cliqué. C'est le seul moyen honnête de dire
+ *    qu'on ne dépose rien à l'insu de l'élève.
+ *
+ * 2. LE DOMAINE SANS COOKIE. youtube-nocookie.com au lieu de youtube.com, et
+ *    rel=0 pour que la fin de la vidéo ne propose pas la moitié d'internet.
+ *    Cela réduit le pistage ; cela ne l'annule pas. Ne pas prétendre le
+ *    contraire dans une notice RGPD.
+ *
+ * On accepte le lien tel que la plateforme le donne — watch?v=, youtu.be,
+ * /embed/ — et on le normalise. Personne n'a à retenir une forme d'URL.    */
+function normaliseVideo(url){
+  if (!url) return null;
+  let m = /^https?:\/\/(?:www\.)?youtube(?:-nocookie)?\.com\/(?:watch\?v=|embed\/|live\/|shorts\/)([\w-]{6,})/.exec(url)
+       || /^https?:\/\/youtu\.be\/([\w-]{6,})/.exec(url);
+  if (m) return { hote: 'YouTube',
+                  src: 'https://www.youtube-nocookie.com/embed/' + m[1] + '?rel=0&modestbranding=1' };
+  m = /^https?:\/\/(?:player\.)?vimeo\.com\/(?:video\/)?(\d+)/.exec(url);
+  if (m) return { hote: 'Vimeo', src: 'https://player.vimeo.com/video/' + m[1] + '?dnt=1' };
+  m = /^https?:\/\/(?:www\.)?dailymotion\.com\/(?:video|embed\/video)\/([\w]+)/.exec(url);
+  if (m) return { hote: 'Dailymotion', src: 'https://www.dailymotion.com/embed/video/' + m[1] };
+  return null;
+}
+
+function facadeVideo(cadre, s){
+  const titre = s.alt || s.operation || 'Vidéo du module';
+  return `<div class="cadre-video facade" data-src="${esc(cadre.src)}" data-titre="${esc(titre)}">
+    <button type="button" class="lance-video">
+      <span class="triangle" aria-hidden="true"></span>
+      <span class="quoi">Lancer la vidéo</span>
+      <span class="ou">hébergée sur ${esc(cadre.hote)} — rien n'est envoyé avant ce clic</span>
+    </button>
+  </div>`;
+}
+
 function unMedia(s){
   if (!s.url) {
     if (!MODE_AUTEUR) return '';
@@ -233,14 +275,13 @@ function unMedia(s){
        un fichier que nous servons nous-mêmes, une plateforme intégrable,
        et le lien nu quand nous ne savons pas lire l'adresse. */
     const local = /\.(mp4|webm|ogv|ogg|m4v)(\?|#|$)/i.test(s.url) && !/^https?:\/\//i.test(s.url);
-    const integrable = /^https:\/\/(www\.youtube\.com|player\.vimeo\.com|www\.dailymotion\.com)/.test(s.url);
+    const cadre = normaliseVideo(s.url);
     return `<figure class="media">
       ${local
         ? `<div class="cadre-video"><video src="${esc(s.url)}" controls preload="metadata"
              playsinline title="${esc(s.alt || s.operation)}"${s.poster ? ` poster="${esc(s.poster)}"` : ''}></video></div>`
-        : integrable
-        ? `<div class="cadre-video"><iframe src="${esc(s.url)}" title="${esc(s.alt || s.operation)}"
-             loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`
+        : cadre
+        ? facadeVideo(cadre, s)
         : `<p><a href="${esc(s.url)}" target="_blank" rel="noopener">Ouvrir la vidéo</a></p>`}
       <figcaption>${esc(s.alt || s.operation)}
         ${s.transcription
@@ -572,6 +613,22 @@ if (!m) {
   cible.querySelectorAll('.mots-avant li').forEach(li => {
     const mot = li.querySelector('.mot');
     if (mot) poserLecture(mot, li);   // on lit le mot, pas la fiche entiere
+  });
+
+  // La façade ne se lève qu'au clic de l'élève. Avant, aucune requête.
+  cible.addEventListener('click', ev => {
+    const b = ev.target.closest('.lance-video');
+    if (!b) return;
+    const c = b.closest('.facade');
+    const f = document.createElement('iframe');
+    f.src = c.dataset.src;
+    f.title = c.dataset.titre;
+    f.allow = 'fullscreen; picture-in-picture';
+    f.setAttribute('allowfullscreen', '');
+    f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    c.classList.remove('facade');
+    c.innerHTML = '';
+    c.appendChild(f);
   });
 
   poserVoie(document.getElementById('btnVoie'));

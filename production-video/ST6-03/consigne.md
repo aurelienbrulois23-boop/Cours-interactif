@@ -37,9 +37,18 @@ Emplacement `medias.transformation` du module ST6-03 — donc **après le verdic
 Une vidéo qui explique la réponse ne peut pas précéder la Collision : elle
 donnerait le verdict avant que l'élève ait parié.
 
-Une fois la vidéo publiée, renseigner dans `site/modules/ST6-03.json` :
-`url`, `alt`, `source`, `licence`, `auteur` et `transcription`.
-NotebookLM fournit le texte : la transcription n'a pas à être retapée.
+Déposer le fichier dans `production-video/vidéo/`, puis :
+
+```
+python site/videos.py            # propose, n'écrit rien
+python site/videos.py --ecrire   # applique
+```
+
+Le script associe le fichier au bon module et renseigne `url`, `source`
+et `licence`. Il ne peut pas deviner la **transcription** : elle reste à
+renseigner à la main dans `site/modules/ST6-03.json`. NotebookLM fournit le
+texte, elle n'a donc pas à être retapée — mais sans elle, le lecteur
+affiche « transcription manquante », et il a raison de le faire.
 
 ## À relire avant de publier
 

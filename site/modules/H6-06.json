@@ -193,21 +193,6 @@
     "placement": "En ouverture."
    }
   ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "manipuler la relation de dépendance entre sources",
-    "brief": "Schéma de la photocopieuse : un original, dix copies qui en descendent, contre trois sources réellement indépendantes. À dessiner. Objet-mémoire.",
-    "placement": "Avec l'outil."
-   }
-  ],
   "transformation": [
    {
     "url": "",

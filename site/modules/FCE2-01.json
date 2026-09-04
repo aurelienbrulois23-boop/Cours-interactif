@@ -199,21 +199,6 @@
     "brief": "Un livre ouvert sur une table, un doigt d'enfant posé sur une ligne. Rien d'autre.",
     "placement": "En ouverture, avant la phrase."
    }
-  ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "rendre l'outil manipulable",
-    "brief": "Dessin de « le doigt posé sur une ligne d'un livre ». Très simple, lisible en noir et blanc, sans texte. Objet-mémoire : il reviendra à l'identique.",
-    "placement": "Avec l'outil."
-   }
   ]
  }
 }

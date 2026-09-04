@@ -265,21 +265,6 @@
     "brief": "Des enfants assis en cercle, quelques mains levées, vus de dos. Aucun visage identifiable.",
     "placement": "En ouverture, avant la phrase."
    }
-  ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "rendre l'outil manipulable",
-    "brief": "Dessin de « une balle qui rebondit d'une bulle de parole à l'autre ». Très simple, lisible en noir et blanc, sans texte. Objet-mémoire : il reviendra à l'identique.",
-    "placement": "Avec l'outil."
-   }
   ]
  }
 }

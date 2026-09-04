@@ -197,21 +197,6 @@
     "placement": "En ouverture, avec le cartel."
    }
   ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "rappeler le geste de tamponner",
-    "brief": "Sept tampons alignés portant les sept mots du lexique. À dessiner. Objet-mémoire majeur : il reviendra dans tous les modules de la scolarité.",
-    "placement": "Avec l'outil."
-   }
-  ],
   "transformation": [
    {
     "url": "",

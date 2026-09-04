@@ -205,19 +205,6 @@
     "operation": "localiser et mesurer l'étendue",
     "brief": "Carte de l'Empire romain avec ses provinces. La carte doit porter sa période : une carte sans date contredirait le cours.",
     "placement": "Au début de la Collision."
-   },
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "manipuler la relation entre un objet et ce qu'il prouve",
-    "brief": "Schéma de la vitrine : devant, ce qui est montré ; derrière, qui l'a voulu ; à côté, ceux qui passent et qu'on ne voit pas. À dessiner. Objet-mémoire.",
-    "placement": "Avec l'outil."
    }
   ],
   "transformation": [

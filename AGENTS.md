@@ -110,6 +110,46 @@ l'autre — repris de la charte v1.5 :
 `photocopieuse` récits dépendants · `balance` poids probatoire · `tampon` statut ·
 `train` chronologie · `guichet` source unique ou exigence administrative.
 
+**Chaque objet-mémoire est dessiné, une fois, dans `site/schemas-outils.json`,
+et ce dessin est le seul qui existe.** Le module qui l'introduit l'affiche ;
+celui qui le réactive affiche exactement le même. C'est ce que « revenir à
+l'identique » veut dire : pas une variante, pas une redite — le même fichier.
+Ne jamais redessiner un outil déjà dessiné.
+
+## Les visuels : ce qui entre, ce qui ne rentre pas
+
+Trois catégories, et une seule est sûre.
+
+**Le schéma** rend visible une **relation** que le texte énonce déjà. C'est la
+catégorie la plus solide, et la seule qui puisse être ajoutée sans hésiter.
+Un schéma qui n'exprime aucune relation est un ornement déguisé.
+
+**La pièce et la carte** portent une valeur probatoire. Elles servent le
+raisonnement et elles doivent être créditées, datées, sourcées.
+
+**L'image d'ambiance** plante la situation. C'est la catégorie fragile :
+elle ne porte aucune relation, et elle est proche de ce que la recherche
+appelle un détail séduisant — intéressant et hors sujet — dont l'effet mesuré
+est négatif (g = −0,33, [CLM-TYP-003](knowledge-base/evidence/claims.jsonl)).
+Elle n'est donc admise que si elle montre **exactement** la scène décrite,
+sans rien de plus accrocheur. Une image plus intéressante que le cours nuit
+au cours.
+
+Réserve de périmètre, à ne pas escamoter : cette mesure porte sur le détail
+séduisant, pas sur toute décoration, et elle ne dit rien du bénéfice d'un bon
+schéma — cela relève d'une autre littérature
+([CLM-TYP-004](knowledge-base/evidence/claims.jsonl)). On ne cumule pas les
+deux pour se donner raison deux fois.
+
+**Règles de fabrication d'un schéma**, sans exception :
+
+- Il déclare `montre` **et** `neMontrePas`. Les deux s'affichent. Un schéma qui ne dit pas sa limite n'entre pas.
+- Il ne quantifie **jamais** ce que sa source ne quantifie pas. Un camembert inventé a l'air pédagogique et trahit la méthode.
+- Aucune couleur écrite en dur : uniquement les classes `trait`, `mince`, `plein`, `appui`, `appui-plein`, `alerte`, `alerte-plein`, `pointille`, et pour le texte `petit`, `cle`, `rouge`. Le dessin doit suivre le thème clair et sombre.
+- `viewBox` obligatoire, `width`/`height` interdits — le dessin doit rester fluide.
+- Un `<title>` relié par `aria-labelledby`. Un dessin muet pour un lecteur d'écran est un dessin qui exclut.
+- Vingt libellés au maximum. Un schéma qui parle trop est redevenu du texte, en moins lisible.
+
 ## Conception multimodale et accessible
 
 - Avant d'ajouter une image, un audio, une vidéo, une animation ou une manipulation, nommer l'opération d'apprentissage qu'il rend possible : localiser, observer, comparer, entendre une formulation, manipuler une relation, rappeler ou expliquer. Un média décoratif est retiré.

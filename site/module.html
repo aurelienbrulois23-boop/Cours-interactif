@@ -142,6 +142,23 @@ function schemas(m, etape){
   return l.map(unSchema).join('');
 }
 
+/* Le registre partage des objets-memoire.
+ *
+ * La charte demande qu'un objet-memoire « revienne a l'identique ». Tant que
+ * le dessin vivait dans le module qui l'introduit, il ne pouvait pas revenir :
+ * il n'existait qu'a un endroit. Sorti dans schemas-outils.json, il se
+ * reaffiche tel quel dans le module qui le reactive — le meme dessin, au pixel
+ * pres. C'est la promesse tenue, pas illustree. */
+let OUTILS = {};
+
+function schemaOutil(idModule, rappel){
+  const o = OUTILS[idModule];
+  if (!o) return '';
+  return unSchema(rappel
+    ? Object.assign({}, o, { titre: o.nom + " — le même dessin que la dernière fois" })
+    : o);
+}
+
 /* --- Voie « Pas à pas » : les trois pièces propres au module -------------- *
  * Voir knowledge-base/pedagogie/voie-adaptee-tdah-dyslexie.md.
  * Ces blocs sont toujours dans le document et masqués par la feuille de
@@ -276,6 +293,7 @@ function etapeRappel(m){
       <button class="bouton" id="btnRappel">J'ai répondu</button>
       <div id="apresRappel" hidden>
         <div class="attendu"><div class="titre-a">Ce qu'on attendait</div>${esc(r.attendu)}</div>
+        ${schemaOutil(r.module, true)}
         <p style="margin-top:1rem">${r.puis}</p>
       </div>
     </div>
@@ -366,6 +384,7 @@ function etapeCollision(m, proposee){
       <div class="nom">${esc(c.outil.nom)}</div>
       <p style="margin:0">${c.outil.texte}</p>
     </div>
+    ${schemaOutil(m.id)}
     ${c.garde ? `<p class="garde">${esc(c.garde)}</p>` : ''}
     <button class="bouton" data-va="e-transformation">Le verdict</button>
   </section>`;
@@ -460,6 +479,10 @@ if (!m) {
   // n'est enregistre, aucune etiquette n'existe, et les trois restent ouvertes.
   const { ecrits } = await charger();
   const proposee = entreeProposee(ecrits);
+  try {
+    const ro = await fetch('schemas-outils.json');
+    if (ro.ok) OUTILS = await ro.json();
+  } catch (e) { OUTILS = {}; }   // sans registre, le module reste entier
 
   cible.innerHTML = etapeCible(m) + filJalons(m) + motsAvant(m) + suivi(m)
                   + etapeRappel(m) + etapePorte(m) + etapeAnticipation(m)

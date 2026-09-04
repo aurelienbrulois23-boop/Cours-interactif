@@ -168,21 +168,6 @@
     "placement": "En ouverture, avant le cartel."
    }
   ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "manipuler la relation entre ce qui reste et ce qui a disparu",
-    "brief": "Schéma du tamis : au-dessus, tout ce qu'une société fabrique ; au-dessous, le peu qui reste. Sobre, à dessiner. Objet-mémoire : il reviendra à l'identique.",
-    "placement": "Avec l'outil."
-   }
-  ],
   "transformation": [
    {
     "url": "",

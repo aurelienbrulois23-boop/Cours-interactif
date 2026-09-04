@@ -224,31 +224,6 @@
     "brief": "Un parapluie ouvert, seul, fond neutre. AUCUNE pluie sur l'image : elle donnerait la réponse.",
     "placement": "En ouverture, avant la phrase."
    }
-  ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "rendre l'outil manipulable",
-    "brief": "Dessin de « un pont posé sur ses deux rives ». Très simple, lisible en noir et blanc, sans texte. Objet-mémoire : il reviendra à l'identique.",
-    "placement": "Avec l'outil."
-   }
-  ]
- },
- "schemas": {
-  "collision": [
-   {
-    "titre": "Un pont a besoin de ses deux rives",
-    "svg": "<svg viewBox=\"0 0 640 310\" role=\"img\" aria-labelledby=\"t-pont\">\n<title id=\"t-pont\">Un pont posé sur deux rives, puis le même pont auquel il manque une rive</title>\n<text class=\"cle\" x=\"20\" y=\"22\">QUAND LE PONT TIENT</text>\n<rect class=\"trait\" x=\"20\" y=\"95\" width=\"150\" height=\"55\" rx=\"3\"/>\n<text x=\"34\" y=\"118\">un parapluie ouvert</text>\n<text class=\"petit\" x=\"34\" y=\"138\">c'est écrit dans le texte</text>\n<rect class=\"trait\" x=\"470\" y=\"95\" width=\"150\" height=\"55\" rx=\"3\"/>\n<text x=\"484\" y=\"118\">on l'ouvre s'il pleut</text>\n<text class=\"petit\" x=\"484\" y=\"138\">tu le sais déjà</text>\n<line class=\"appui\" x1=\"170\" y1=\"95\" x2=\"470\" y2=\"95\"/>\n<line class=\"mince\" x1=\"200\" y1=\"95\" x2=\"200\" y2=\"120\"/>\n<line class=\"mince\" x1=\"270\" y1=\"95\" x2=\"270\" y2=\"120\"/>\n<line class=\"mince\" x1=\"340\" y1=\"95\" x2=\"340\" y2=\"120\"/>\n<line class=\"mince\" x1=\"410\" y1=\"95\" x2=\"410\" y2=\"120\"/>\n<text class=\"cle\" x=\"238\" y=\"82\">il pleut sans doute</text>\n<line class=\"mince\" x1=\"20\" y1=\"175\" x2=\"620\" y2=\"175\"/>\n<text class=\"rouge\" x=\"20\" y=\"205\">QUAND IL S'ÉCROULE</text>\n<rect class=\"trait\" x=\"20\" y=\"240\" width=\"150\" height=\"55\" rx=\"3\"/>\n<text x=\"34\" y=\"263\">un parapluie ouvert</text>\n<text class=\"petit\" x=\"34\" y=\"283\">sur une plage</text>\n<rect class=\"pointille\" x=\"470\" y=\"240\" width=\"150\" height=\"55\" rx=\"3\"/>\n<text class=\"petit rouge\" x=\"484\" y=\"270\">rien de ce côté</text>\n<line class=\"pointille\" x1=\"170\" y1=\"240\" x2=\"430\" y2=\"298\"/>\n<text class=\"rouge\" x=\"212\" y=\"232\">il pleut ?</text>\n</svg>",
-    "montre": "Que la même chose écrite — un parapluie ouvert — mène à une conclusion quand elle rencontre ce que tu sais, et ne mène nulle part quand cette seconde rive manque.",
-    "neMontrePas": "Il ne dit pas quelles conclusions sont vraies. Un pont qui tient peut quand même arriver au mauvais endroit : c'est ce qui se passe sur la plage."
-   }
   ]
  }
 }

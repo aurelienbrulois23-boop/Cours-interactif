@@ -198,21 +198,6 @@
     "placement": "En ouverture."
    }
   ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "manipuler la relation entre deux sources de nature différente",
-    "brief": "Schéma de la balance : sur un plateau une décision, sur l'autre un témoignage, et deux questions distinctes suspendues au-dessus. À dessiner. Objet-mémoire.",
-    "placement": "Avec l'outil."
-   }
-  ],
   "transformation": [
    {
     "url": "",

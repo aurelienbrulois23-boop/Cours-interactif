@@ -192,21 +192,6 @@
     "placement": "En ouverture, avant le cartel."
    }
   ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "manipuler la relation que l'outil rend visible",
-    "brief": "Schéma de « le levain : l'effet visible, la cause invisible ». À dessiner, sobre, lisible en noir et blanc. Objet-mémoire : il devra revenir à l'identique.",
-    "placement": "Avec l'outil."
-   }
-  ],
   "transformation": [
    {
     "url": "",

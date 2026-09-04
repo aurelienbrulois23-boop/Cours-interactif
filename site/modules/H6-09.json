@@ -240,19 +240,6 @@
     "operation": "comparer deux représentations du même espace",
     "brief": "Carte en réseau : villes, oasis, ports, segments multiples, terrestres et maritimes. À mettre en regard de celle de la Porte. La comparaison EST l'opération d'apprentissage.",
     "placement": "Au milieu de la Collision, après le relevé « qui est au milieu »."
-   },
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "manipuler la relation entre un dessin et ce qu'il supprime",
-    "brief": "Schéma du trait de crayon : à gauche un trait droit entre deux points ; à droite le semis de points et de liaisons qu'il a remplacé. À dessiner. Objet-mémoire.",
-    "placement": "Avec l'outil."
    }
   ],
   "transformation": [

@@ -208,31 +208,6 @@
     "brief": "Un tableau d'école avec une phrase à la craie. Pas de correction visible.",
     "placement": "En ouverture, avant la phrase."
    }
-  ],
-  "collision": [
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "rendre l'outil manipulable",
-    "brief": "Dessin de « un écho : le nom crie, les mots autour répètent en silence ». Très simple, lisible en noir et blanc, sans texte. Objet-mémoire : il reviendra à l'identique.",
-    "placement": "Avec l'outil."
-   }
-  ]
- },
- "schemas": {
-  "collision": [
-   {
-    "titre": "Le nom crie, les autres répètent en silence",
-    "svg": "<svg viewBox=\"0 0 640 230\" role=\"img\" aria-labelledby=\"t-echo\">\n<title id=\"t-echo\">Le nom commande le pluriel, les mots autour le répètent en silence</title>\n<text class=\"cle\" x=\"255\" y=\"46\">plusieurs !</text>\n<path class=\"appui\" d=\"M248 56 q-14 6 -20 16 q14 -2 22 -6\"/>\n<rect class=\"appui\" x=\"238\" y=\"76\" width=\"120\" height=\"52\" rx=\"4\"/>\n<text x=\"258\" y=\"110\" style=\"font-size:20px\">chat<tspan class=\"rouge\">s</tspan></text>\n<text class=\"petit cle\" x=\"252\" y=\"146\">le nom commande</text>\n<rect class=\"trait\" x=\"40\" y=\"76\" width=\"150\" height=\"52\" rx=\"4\"/>\n<text x=\"70\" y=\"110\" style=\"font-size:20px\">le<tspan class=\"rouge\">s</tspan></text>\n<rect class=\"trait\" x=\"410\" y=\"40\" width=\"190\" height=\"52\" rx=\"4\"/>\n<text x=\"432\" y=\"74\" style=\"font-size:20px\">petit<tspan class=\"rouge\">s</tspan></text>\n<rect class=\"trait\" x=\"410\" y=\"112\" width=\"190\" height=\"52\" rx=\"4\"/>\n<text x=\"432\" y=\"146\" style=\"font-size:20px\">noir<tspan class=\"rouge\">s</tspan></text>\n<path class=\"appui\" d=\"M238 102 q-24 0 -46 0\"/>\n<path class=\"appui\" d=\"M358 92 q30 -14 50 -22\"/>\n<path class=\"appui\" d=\"M358 116 q30 12 50 20\"/>\n<text class=\"petit rouge\" x=\"40\" y=\"196\">Les quatre s sont écrits. Aucun des quatre ne s'entend.</text>\n<text class=\"petit\" x=\"40\" y=\"216\">L'oreille ne prévient donc jamais qu'il en manque un.</text>\n</svg>",
-    "montre": "Que le pluriel part du nom et se pose aussi sur les mots qui l'entourent, et que ces marques s'écrivent sans jamais s'entendre.",
-    "neMontrePas": "Il ne montre pas les pluriels qui s'entendent — cheval devient chevaux — ni le féminin. Ce sont d'autres cas, et ils sont plus faciles."
-   }
   ]
  }
 }

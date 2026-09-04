@@ -213,19 +213,6 @@
     "operation": "observer le document tel qu'on le consulte réellement",
     "brief": "Capture de la page Perseus, Histoire romaine livre I chapitre 7, adresse visible. Signaler visuellement qu'il s'agit d'une traduction.",
     "placement": "Avec la pièce. Le statut « rapporté » reste lisible à côté."
-   },
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "manipuler une relation — la distance entre les trois temps",
-    "brief": "Schéma du train à trois wagons : temps raconté, temps de l'auteur, temps de l'historien, dans cet ordre, avec une flèche unique vers la droite. Sobre, lisible en noir et blanc. À dessiner : c'est un objet-mémoire du cours, il reviendra tel quel dans les modules suivants.",
-    "placement": "Avec l'outil, au moment où on l'introduit. Le même dessin devra réapparaître à l'identique partout ailleurs."
    }
   ],
   "transformation": [

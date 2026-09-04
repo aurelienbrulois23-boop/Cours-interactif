@@ -50,6 +50,8 @@ Il régénère la carte et l'index depuis les fichiers présents.
 | `site/` | Le site. `index.html` → `niveau.html` → `discipline.html` → `module.html`. |
 | `site/modules/*.json` | Un module par fichier. C'est là qu'est le contenu. |
 | `site/socle.js` | Progression, rappels différés, différenciation. Rien n'est envoyé nulle part. |
+| `site/schemas-outils.json` | Les trente objets-mémoire dessinés. Un outil, un dessin, réaffiché à l'identique. |
+| `site/verifier.py` | Contrôle structurel des modules et des schémas. À relancer après toute retouche. |
 | `site/worker.js` | Marge, la compagne conversationnelle. Non déployée. |
 | `knowledge-base/sources/` | Registre bibliographique : autorité, périmètre, date de consultation. |
 | `knowledge-base/evidence/` | Registre d'affirmations : preuve, inférence autorisée, limite, confiance. |
@@ -82,6 +84,12 @@ des faits éprouvés — des croyances ou de la simple opinion » : le lexique n
 pas un ajout, il répond à une demande du texte.
 
 ## Schémas, et typographie par cycle
+
+**Chaque module a son objet-mémoire dessiné** — trente schémas, un par outil,
+dans `site/schemas-outils.json`. Le module qui introduit l'outil affiche le
+dessin ; celui qui le réactive affiche **exactement le même**. C'est ce que
+« revenir à l'identique » veut dire, et c'était jusqu'ici une promesse sans
+mise en œuvre.
 
 Un schéma n'entre dans un module que s'il rend visible une **relation** que le
 texte énonce. Chacun déclare ce qu'il montre **et ce qu'il ne montre pas** —

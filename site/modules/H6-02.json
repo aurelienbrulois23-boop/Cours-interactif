@@ -205,19 +205,6 @@
     "operation": "localiser, et voir la pluralité des foyers",
     "brief": "Carte des foyers d'apparition de l'agriculture, avec périodes indiquées. IMPÉRATIF : la carte doit porter ses dates et ses espaces, sinon elle contredit le cours.",
     "placement": "Au début de la Collision."
-   },
-   {
-    "url": "",
-    "alt": "",
-    "source": "",
-    "licence": "",
-    "auteur": "",
-    "transcription": "",
-    "type": "image",
-    "etiquette": "MÉTAPHORE",
-    "operation": "manipuler la relation entre un mot et une durée",
-    "brief": "Schéma du sablier : le mot en haut, la durée réelle en bas. À dessiner. Objet-mémoire.",
-    "placement": "Avec l'outil."
    }
   ],
   "transformation": [

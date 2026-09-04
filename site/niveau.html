@@ -30,7 +30,7 @@
 <script type="module">
 import { charger, esc, poserRappels, avancement, avancementNiveau,
          niveauxDeclares, proposerAuDelaNiveau,
-         choisirNiveau, poserContraste, poserVoie } from './socle.js';
+         choisirNiveau, poserContraste, poserVoie, appliqueCycle } from './socle.js';
 
 /* Le hub de niveau. Il montre les disciplines telles qu'elles se presentent
  * POUR CE NIVEAU, l'avancement reel, et — quand les faits le justifient — la
@@ -120,6 +120,8 @@ function dessine(){
 
 poserContraste(document.getElementById('btnTheme'));
 poserVoie(document.getElementById('btnVoie'));
+// La page d'un niveau se lit dans la typographie de ce niveau. CLM-TYP-001.
+appliqueCycle(niveau);
 </script>
 </body>
 </html>

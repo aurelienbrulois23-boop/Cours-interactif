@@ -106,6 +106,27 @@ export function avancementNiveau(programme, niveau, ecrits) {
  * carte les presente. Aucune discipline ne sert de reference aux autres.
  */
 const ORDRE_SCOLAIRE = ['CP', 'CE1', 'CE2', 'CM1', 'CM2', '6e', '5e', '4e', '3e'];
+const PRIMAIRE = ['CP', 'CE1', 'CE2', 'CM1', 'CM2'];
+
+/**
+ * Un enfant de huit ans et un de douze ne lisent pas la meme page.
+ *
+ * Katzir, Hershko & Halamish (2013) : reduire la taille de police de 20 %
+ * fait chuter la comprehension des jeunes lecteurs et ameliore celle des
+ * plus ages — l'interaction avec l'age est significative. Allonger la ligne
+ * de 20 % fait chuter les jeunes lecteurs, sans effet chez les plus ages.
+ *
+ * CE QUE L'ETUDE NE DONNE PAS : aucune valeur absolue. Elle compare deux
+ * references differentes (20 pt et 13 pt), en hebreu, sur 90 enfants, sans
+ * discuter la transferabilite a une autre ecriture. Les valeurs posees dans
+ * style.css sont donc des CHOIX qui suivent une direction, pas des mesures.
+ * Voir CLM-TYP-001 et CLM-TYP-002.
+ */
+export function appliqueCycle(niveau) {
+  const c = PRIMAIRE.includes(niveau) ? 'primaire' : 'college';
+  document.documentElement.setAttribute('data-cycle', c);
+  return c;
+}
 
 export function niveauxDeclares(programme) {
   const vus = [];

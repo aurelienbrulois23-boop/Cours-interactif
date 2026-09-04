@@ -222,5 +222,15 @@
     "placement": "APRÈS le verdict."
    }
   ]
+ },
+ "schemas": {
+  "collision": [
+   {
+    "titre": "Le témoin passe de main en main",
+    "svg": "<svg viewBox=\"0 0 640 220\" role=\"img\" aria-labelledby=\"t-relais\">\n<title id=\"t-relais\">Une chaîne de conversions, avec de la chaleur qui s'échappe à chaque passage</title>\n<text class=\"petit\" x=\"20\" y=\"24\">le maillon d'avant</text>\n<line class=\"mince\" x1=\"20\" y1=\"40\" x2=\"70\" y2=\"40\"/>\n<line class=\"mince\" x1=\"60\" y1=\"34\" x2=\"70\" y2=\"40\"/>\n<line class=\"mince\" x1=\"60\" y1=\"46\" x2=\"70\" y2=\"40\"/>\n<rect class=\"appui\" x=\"75\" y=\"90\" width=\"140\" height=\"60\" rx=\"4\"/>\n<text x=\"92\" y=\"118\">votre bras</text>\n<text class=\"petit\" x=\"92\" y=\"138\">mouvement</text>\n<rect class=\"appui\" x=\"250\" y=\"90\" width=\"140\" height=\"60\" rx=\"4\"/>\n<text x=\"277\" y=\"118\">la dynamo</text>\n<text class=\"petit\" x=\"277\" y=\"138\">électricité</text>\n<rect class=\"appui\" x=\"425\" y=\"90\" width=\"140\" height=\"60\" rx=\"4\"/>\n<text x=\"450\" y=\"118\">l'ampoule</text>\n<text class=\"petit\" x=\"450\" y=\"138\">lumière</text>\n<line class=\"trait\" x1=\"215\" y1=\"120\" x2=\"248\" y2=\"120\"/>\n<line class=\"trait\" x1=\"238\" y1=\"113\" x2=\"248\" y2=\"120\"/>\n<line class=\"trait\" x1=\"238\" y1=\"127\" x2=\"248\" y2=\"120\"/>\n<line class=\"trait\" x1=\"390\" y1=\"120\" x2=\"423\" y2=\"120\"/>\n<line class=\"trait\" x1=\"413\" y1=\"113\" x2=\"423\" y2=\"120\"/>\n<line class=\"trait\" x1=\"413\" y1=\"127\" x2=\"423\" y2=\"120\"/>\n<path class=\"alerte\" d=\"M232 88 q6 -14 12 -22 q6 -8 4 -18\"/>\n<path class=\"alerte\" d=\"M407 88 q6 -14 12 -22 q6 -8 4 -18\"/>\n<path class=\"alerte\" d=\"M560 88 q6 -14 12 -22 q6 -8 4 -18\"/>\n<text class=\"petit rouge\" x=\"212\" y=\"38\">chaleur</text>\n<text class=\"petit rouge\" x=\"387\" y=\"38\">chaleur</text>\n<text class=\"petit rouge\" x=\"540\" y=\"38\">chaleur</text>\n<text class=\"petit\" x=\"75\" y=\"185\">Rien n'est créé à aucune de ces trois cases.</text>\n<text class=\"petit\" x=\"75\" y=\"205\">Chacune convertit ce que la précédente lui a passé.</text>\n</svg>",
+    "montre": "Que l'énergie traverse une suite de conversions, et qu'à chaque passage une part s'échappe en chaleur. Aucune case ne fabrique quoi que ce soit.",
+    "neMontrePas": "Il ne dit pas combien s'échappe. Le programme demande d'identifier les formes d'énergie, pas d'en faire le bilan chiffré — et rien ici n'autorise à en donner un."
+   }
+  ]
  }
 }

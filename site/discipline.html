@@ -30,7 +30,7 @@
 
 <script type="module">
 import { charger, progres, esc, poserRappels, avancement, proposerAuDela,
-         poserContraste, poserVoie } from './socle.js';
+         poserContraste, poserVoie, appliqueCycle } from './socle.js';
 
 /* Le hub disciplinaire, filtre par niveau.
  *
@@ -136,6 +136,8 @@ function dessine(){
 
 poserContraste(document.getElementById('btnTheme'));
 poserVoie(document.getElementById('btnVoie'));
+// La page d'un niveau se lit dans la typographie de ce niveau. CLM-TYP-001.
+appliqueCycle(niveau);
 </script>
 </body>
 </html>

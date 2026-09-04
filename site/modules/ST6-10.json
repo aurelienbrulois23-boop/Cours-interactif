@@ -223,5 +223,15 @@
     "placement": "APRÈS le verdict."
    }
   ]
+ },
+ "schemas": {
+  "collision": [
+   {
+    "titre": "La largeur de la fenêtre décide de ce qu'on voit",
+    "svg": "<svg viewBox=\"0 0 640 260\" role=\"img\" aria-labelledby=\"t-fenetre\">\n<title id=\"t-fenetre\">La même courbe agitée, regardée par une fenêtre étroite puis par une fenêtre large</title>\n<line class=\"mince\" x1=\"60\" y1=\"30\" x2=\"60\" y2=\"180\"/>\n<line class=\"mince\" x1=\"60\" y1=\"180\" x2=\"610\" y2=\"180\"/>\n<text class=\"petit\" x=\"18\" y=\"36\">mesure</text>\n<text class=\"petit\" x=\"560\" y=\"200\">temps</text>\n<polyline class=\"trait\" points=\"70,150 96,120 122,158 148,128 174,150 200,112 226,144 252,104 278,138 304,96 330,128 356,88 382,120 408,78 434,110 460,70 486,102 512,62 538,96 564,54 590,86\"/>\n<rect class=\"alerte\" x=\"188\" y=\"86\" width=\"52\" height=\"86\" rx=\"3\"/>\n<text class=\"petit rouge\" x=\"150\" y=\"222\">fenêtre étroite :</text>\n<text class=\"petit rouge\" x=\"150\" y=\"240\">on ne voit que du désordre</text>\n<rect class=\"appui\" x=\"66\" y=\"44\" width=\"530\" height=\"130\" rx=\"3\"/>\n<text class=\"cle\" x=\"372\" y=\"222\">fenêtre large :</text>\n<text class=\"cle\" x=\"372\" y=\"240\">une pente apparaît</text>\n<line class=\"pointille\" x1=\"70\" y1=\"146\" x2=\"590\" y2=\"66\"/>\n</svg>",
+    "montre": "Que la même courbe agitée n'a pas la même allure selon la durée qu'on regarde : du désordre par une fenêtre étroite, une pente par une fenêtre large.",
+    "neMontrePas": "Ce n'est PAS une courbe de températures : c'est un dessin. Les axes n'ont volontairement aucune graduation, parce qu'aucun chiffre de ce module n'est établi par une source. Les vraies données viendront des documents de la classe, avec leur origine."
+   }
+  ]
  }
 }

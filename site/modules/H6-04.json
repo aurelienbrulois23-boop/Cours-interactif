@@ -221,5 +221,15 @@
   "puis": "Gardez-le : il va servir tout de suite, et il ne suffira pas.",
   "echec": "Le tampon fonctionne parfaitement ici : le texte d'Aristote est « rapporté » sur les institutions qu'il décrit. Mais il ne dit rien de ce qui manque. Tamponner vous apprend ce que la source établit ; il ne vous apprend pas ce qu'elle <em>refuse de dire</em>.",
   "lecon": "Toutes les réactivations ne sont pas des échecs. Celle-ci montre qu'un bon outil peut être insuffisant — ce qui n'est pas la même chose qu'inadapté."
+ },
+ "schemas": {
+  "collision": [
+   {
+    "titre": "Le guichet répond à une question, pas aux autres",
+    "svg": "<svg viewBox=\"0 0 640 300\" role=\"img\" aria-labelledby=\"t-guichet\">\n<title id=\"t-guichet\">Un guichet : une question passe, deux rebondissent</title>\n<rect class=\"trait\" x=\"300\" y=\"20\" width=\"26\" height=\"250\"/>\n<rect class=\"appui\" x=\"300\" y=\"96\" width=\"26\" height=\"54\"/>\n<text class=\"cle\" x=\"346\" y=\"52\">Constitution des</text>\n<text class=\"cle\" x=\"346\" y=\"72\">Athéniens, ch. 43</text>\n<text class=\"petit\" x=\"346\" y=\"96\">ce que ce guichet</text>\n<text class=\"petit\" x=\"346\" y=\"114\">a appris à répondre</text>\n<rect class=\"trait\" x=\"20\" y=\"96\" width=\"250\" height=\"54\" rx=\"3\"/>\n<text class=\"petit\" x=\"34\" y=\"118\">Comment siège-t-on</text>\n<text class=\"petit\" x=\"34\" y=\"138\">au Conseil ?</text>\n<line class=\"appui\" x1=\"270\" y1=\"123\" x2=\"298\" y2=\"123\"/>\n<line class=\"appui\" x1=\"288\" y1=\"116\" x2=\"298\" y2=\"123\"/>\n<line class=\"appui\" x1=\"288\" y1=\"130\" x2=\"298\" y2=\"123\"/>\n<text class=\"petit cle\" x=\"346\" y=\"140\">sections, rotation,</text>\n<text class=\"petit cle\" x=\"346\" y=\"158\">tirage au sort</text>\n<rect class=\"pointille\" x=\"14\" y=\"176\" width=\"262\" height=\"112\" rx=\"4\"/>\n<text class=\"petit rouge\" x=\"26\" y=\"198\">ce que ce chapitre ne permet pas d'établir</text>\n<text class=\"petit\" x=\"26\" y=\"226\">Quelle part des habitants</text>\n<text class=\"petit\" x=\"26\" y=\"244\">étaient citoyens ?</text>\n<text class=\"petit\" x=\"26\" y=\"272\">Que vivaient ceux qui n'y siégeaient pas ?</text>\n<path class=\"pointille\" d=\"M280 220 q22 -6 22 -22 q-14 12 -30 8\"/>\n<path class=\"pointille\" d=\"M280 264 q26 -10 24 -32 q-16 16 -32 12\"/>\n</svg>",
+    "montre": "Que ce chapitre répond très bien à la question qu'on lui a apprise — comment siège-t-on au Conseil — et renvoie les deux autres sans y toucher.",
+    "neMontrePas": "Aucune proportion, aucun effectif. Un camembert des parts de citoyens aurait l'air pédagogique et trahirait le module : le chapitre 43 ne compte personne. Ce qu'il ne permet pas d'établir est donc dessiné dans le cadre en pointillé, pas escamoté."
+   }
+  ]
  }
 }

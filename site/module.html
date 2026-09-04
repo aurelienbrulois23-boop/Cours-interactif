@@ -29,7 +29,7 @@
 
 <script type="module">
 import { poserLecture, poserMarge } from './lecture.js';
-import { entreeProposee, charger, poserVoie } from './socle.js';
+import { entreeProposee, charger, poserVoie, appliqueCycle } from './socle.js';
 
 // Marge attend : le site doit d'abord fonctionner sans elle. Passer a true
 // une fois le Worker deploye et MISTRAL_API_KEY posee en Secret chiffre.
@@ -73,10 +73,73 @@ function nomEtape(cle, defaut){
   return ((MOD && MOD.etiquettes) || {})[cle] || defaut;
 }
 
-function jalon(lettre, nom, duree){
+/* « Porte », « Collision » sont des mots du métier. On ne les remplace pas :
+ * c'est le vocabulaire commun de la méthode, et il sert d'un module à
+ * l'autre. On dit une fois ce qu'ils désignent, sous le nom. La glose ne
+ * s'affiche donc QUE là où le jargon est employé — un module qui a déjà
+ * traduit ses jalons en langage clair n'en a pas besoin. */
+const GLOSES = {
+  rappel:         "ce qu'on doit retrouver sans rouvrir le cahier",
+  porte:          "une affirmation ordinaire, qui a l'air juste",
+  anticipation:   "votre pari, pris avant de savoir",
+  collision:      "la pièce authentique, et le travail dessus",
+  transformation: "ce qu'elle établit, et ce qu'elle n'établit pas",
+  extraction:     "de mémoire, une fois le verdict rendu",
+};
+
+function jalon(lettre, cle, defaut, duree){
+  const nom = nomEtape(cle, defaut);
+  const traduit = !!((MOD && MOD.etiquettes) || {})[cle];
+  const glose = traduit ? '' : ((MOD && MOD.gloses) || GLOSES)[cle];
   return `<div class="jalon"><span class="lettre">${lettre}</span>
-          <span class="nom">${esc(nom)}</span>
+          <span class="nom">${esc(nom)}
+            ${glose ? `<span class="glose">${esc(glose)}</span>` : ''}</span>
           ${duree ? `<span class="duree">${esc(duree)}</span>` : ''}</div>`;
+}
+
+/* Le fil des jalons : où j'en suis. Une position, pas un score. */
+const ORDRE_ETAPES = [
+  ['e-rappel', 'rappel', 'Rappel'], ['e-porte', 'porte', 'Porte'],
+  ['e-anticipation', 'anticipation', 'Anticipation'], ['e-collision', 'collision', 'Collision'],
+  ['e-transformation', 'transformation', 'Transformation'], ['e-extraction', 'extraction', 'Extraction'],
+];
+
+function etapesDuModule(m){
+  return ORDRE_ETAPES.filter(([id]) => id !== 'e-rappel' || m.rappelEntrant);
+}
+
+function filJalons(m){
+  return `<ol class="fil-jalons" aria-label="Où j'en suis dans ce module">
+    ${etapesDuModule(m).map(([id, cle, def]) =>
+      `<li data-fil="${id}"><span class="pastille" aria-hidden="true"></span>${esc(nomEtape(cle, def))}</li>`
+    ).join('')}</ol>`;
+}
+
+/* --- Schémas ------------------------------------------------------------- *
+ * Un schéma rend visible une RELATION que le texte énonce. S'il n'en porte
+ * aucune, c'est un ornement, et l'ornement se paie : ajouter du matériel
+ * intéressant mais hors sujet dégrade les performances (CLM-TYP-003).
+ *
+ * Chaque schéma déclare ce qu'il montre ET ce qu'il ne montre pas. Un schéma
+ * qui quantifierait ce que la source ne quantifie pas trahirait la méthode
+ * tout en ayant l'air pédagogique.                                          */
+function unSchema(s){
+  if (!s || !s.svg) return '';
+  return `<figure class="schema">
+    ${s.titre ? `<div class="titre-s">${esc(s.titre)}</div>` : ''}
+    ${s.svg}
+    <figcaption>
+      <span class="montre">${esc(s.montre)}</span>
+      ${s.neMontrePas
+        ? `<span class="ne-montre-pas"><strong>Ce que ce schéma ne montre pas.</strong>
+             ${esc(s.neMontrePas)}</span>` : ''}
+    </figcaption>
+  </figure>`;
+}
+
+function schemas(m, etape){
+  const l = (m.schemas && m.schemas[etape]) || [];
+  return l.map(unSchema).join('');
 }
 
 /* --- Voie « Pas à pas » : les trois pièces propres au module -------------- *
@@ -205,7 +268,7 @@ function etapeRappel(m){
   const r = m.rappelEntrant;
   if (!r) return '';
   return `<section class="etape" id="e-rappel">
-    ${jalon('↺', nomEtape('rappel','Rappel'), 'avant tout')}
+    ${jalon('↺', 'rappel', 'Rappel', 'avant tout')}
     <p class="fine">Sans rouvrir le cahier. Ce rappel porte sur le module ${esc(r.module)}.</p>
     <p class="scene">${r.question}</p>
     <div class="question">
@@ -222,8 +285,9 @@ function etapeRappel(m){
 function etapePorte(m){
   const p = m.porte;
   return `<section class="etape" id="e-porte" hidden>
-    ${jalon('P', nomEtape('porte','Porte'), p.duree)}
+    ${jalon('P', 'porte', 'Porte', p.duree)}
     ${medias(m, 'porte')}
+    ${schemas(m, 'porte')}
     ${p.scene.map(s => `<p class="scene"><em>${esc(s)}</em></p>`).join('')}
     <div class="cartel">${esc(p.cartel)}</div>
     ${p.suite.map(s => `<p>${esc(s)}</p>`).join('')}
@@ -241,7 +305,7 @@ function etapePorte(m){
 function etapeAnticipation(m){
   const a = m.anticipation;
   return `<section class="etape" id="e-anticipation" hidden>
-    ${jalon('A', nomEtape('anticipation','Anticipation'), a.duree)}
+    ${jalon('A', 'anticipation', 'Anticipation', a.duree)}
     <p class="fine">${esc(a.consigne)}</p>
     <p class="scene">${a.question}</p>
     <div class="choix" id="choixAnticipation" role="group" aria-label="Votre réponse">
@@ -274,9 +338,10 @@ function blocDifferenciation(m, proposee){
 function etapeCollision(m, proposee){
   const c = m.collision, p = c.piece;
   return `<section class="etape" id="e-collision" hidden>
-    ${jalon('C', nomEtape('collision','Collision'), c.duree)}
+    ${jalon('C', 'collision', 'Collision', c.duree)}
     ${blocDifferenciation(m, proposee)}
     ${medias(m, 'collision')}
+    ${schemas(m, 'collision')}
     <div class="piece">
       <div class="bandeau-statut">
         <span class="etiquette">${esc(p.etiquette)}</span>
@@ -309,7 +374,7 @@ function etapeCollision(m, proposee){
 function etapeTransformation(m){
   const t = m.transformation;
   return `<section class="etape" id="e-transformation" hidden>
-    ${jalon('T', nomEtape('transformation','Transformation'), t.duree)}
+    ${jalon('T', 'transformation', 'Transformation', t.duree)}
     <div id="votreParieRappel"></div>
     <div class="verdict">
       <div class="etablit"><div class="titre-v">Ce que la pièce établit</div>${t.etablit}</div>
@@ -322,6 +387,7 @@ function etapeTransformation(m){
     </div>
     <p class="garde">${esc(t.garde)}</p>
     ${medias(m, 'transformation')}
+    ${schemas(m, 'transformation')}
     ${t.outils ? `
       <p>${esc(t.outils.intro)}</p>
       <div class="tableau-large"><table>
@@ -337,7 +403,7 @@ function etapeTransformation(m){
 function etapeExtraction(m){
   const x = m.extraction;
   return `<section class="etape" id="e-extraction" hidden>
-    ${jalon('E', nomEtape('extraction','Extraction'), x.duree)}
+    ${jalon('E', 'extraction', 'Extraction', x.duree)}
     <p class="fine">${esc(x.consigne)}</p>
     ${x.questions.map((q, i) => `
       <div class="question">
@@ -387,14 +453,31 @@ if (!m) {
 } else {
   MOD = m;
   document.title = m.id + ' — ' + m.titre;
+  // Un enfant de huit ans et un de douze ne lisent pas la meme page :
+  // corps, interligne et longueur de ligne suivent le cycle. CLM-TYP-001.
+  appliqueCycle(m.niveau);
   // L'entree proposee est RECALCULEE a partir des modules deja acheves : rien
   // n'est enregistre, aucune etiquette n'existe, et les trois restent ouvertes.
   const { ecrits } = await charger();
   const proposee = entreeProposee(ecrits);
 
-  cible.innerHTML = etapeCible(m) + motsAvant(m) + suivi(m)
+  cible.innerHTML = etapeCible(m) + filJalons(m) + motsAvant(m) + suivi(m)
                   + etapeRappel(m) + etapePorte(m) + etapeAnticipation(m)
                   + etapeCollision(m, proposee) + etapeTransformation(m) + etapeExtraction(m);
+
+  /* Le fil des jalons suit l'élève. Il dit une position, jamais une valeur :
+   * pas de pourcentage, pas de série, pas de compte à rebours. */
+  function majFil(idEtape){
+    const ordre = etapesDuModule(m).map(([id]) => id);
+    const rang = ordre.indexOf(idEtape);
+    cible.querySelectorAll('.fil-jalons li').forEach(li => {
+      const r = ordre.indexOf(li.dataset.fil);
+      li.classList.toggle('atteinte', r < rang);
+      li.classList.toggle('courante', r === rang);
+      if (r === rang) li.setAttribute('aria-current', 'step');
+      else li.removeAttribute('aria-current');
+    });
+  }
 
   /* --- Voie « Pas à pas » : câblage ------------------------------------- *
    * La bascule ne reconstruit rien : les blocs sont déjà là, la feuille de
@@ -495,7 +578,7 @@ if (!m) {
   });
 
   // Sans rappel entrant, la Porte s'ouvre tout de suite.
-  if (m.rappelEntrant) { revelerSuivi('e-rappel'); poserRappelConsigne('e-rappel'); }
+  if (m.rappelEntrant) { revelerSuivi('e-rappel'); poserRappelConsigne('e-rappel'); majFil('e-rappel'); }
   else montrer('e-porte');
 
   function montrer(idEtape){
@@ -505,6 +588,7 @@ if (!m) {
     s.scrollIntoView({ block: 'start', behavior: 'smooth' });
     revelerSuivi(idEtape);
     poserRappelConsigne(idEtape);
+    majFil(idEtape);
   }
 
   // Boutons « continuer » d'une étape à l'autre.

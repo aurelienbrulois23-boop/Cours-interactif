@@ -81,6 +81,22 @@ prescrit lui-même de « distinguer les savoirs scientifiques — qui reposent s
 des faits éprouvés — des croyances ou de la simple opinion » : le lexique n'est
 pas un ajout, il répond à une demande du texte.
 
+## Schémas, et typographie par cycle
+
+Un schéma n'entre dans un module que s'il rend visible une **relation** que le
+texte énonce. Chacun déclare ce qu'il montre **et ce qu'il ne montre pas** —
+la seconde phrase n'est pas une précaution, c'est la moitié du travail. Celui
+de ST6-10 porte des axes délibérément sans graduation, parce qu'aucun chiffre
+de ce module n'est établi par une source ; celui de H6-04 enferme dans un cadre
+en pointillé ce que le chapitre 43 ne permet pas d'établir.
+
+La typographie suit le cycle : corps plus grand et lignes plus courtes à
+l'école, réglage standard au collège. La direction vient de Katzir, Hershko &
+Halamish (2013) — mais **aucune des valeurs n'est mesurée** : l'étude porte sur
+90 enfants, en hébreu, et ne donne aucune valeur absolue. Ce sont des choix,
+faits pour être modifiés, et le commentaire de `style.css` le dit à l'endroit
+où quelqu'un les changera.
+
 ## La voie « Pas à pas »
 
 Un bouton, dans la barre du haut, sur toutes les pages. Il change six choses :

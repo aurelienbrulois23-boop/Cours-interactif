@@ -49,12 +49,14 @@ body {
   background: var(--papier);
   color: var(--encre);
   font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.72;
+  /* Corps, interligne et largeur sont poses par cycle, plus bas. Les valeurs
+     de repli servent aux pages qui n'annoncent aucun niveau. */
+  font-size: var(--corps, 18px);
+  line-height: var(--hauteur, 1.72);
   -webkit-text-size-adjust: 100%;
 }
 
-.page { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 6rem; }
+.page { max-width: var(--largeur, 46rem); margin: 0 auto; padding: 2rem 1.25rem 6rem; }
 
 h1, h2, h3 { font-family: var(--titre); font-weight: 600; line-height: 1.25; }
 h1 { font-size: 2.1rem; margin-bottom: .35rem; }
@@ -360,7 +362,7 @@ button.mini:focus-visible, select.mini:focus-visible { outline: 2px solid var(--
   --pap-lettre:  .045em;   /* espacement entre lettres */
   --pap-mot:     .18em;    /* espacement entre mots */
   --pap-ligne:   1.9;      /* interligne */
-  --pap-largeur: 34rem;    /* longueur de ligne : lignes plus courtes */
+  --pap-largeur: 34rem;    /* plafond de longueur de ligne, jamais un plancher */
 }
 
 /* Mécanisme 3 — le texte respire. */
@@ -369,7 +371,6 @@ button.mini:focus-visible, select.mini:focus-visible { outline: 2px solid var(--
   word-spacing: var(--pap-mot);
   line-height: var(--pap-ligne);
 }
-:root[data-voie="pasapas"] .page { max-width: var(--pap-largeur); }
 :root[data-voie="pasapas"] p,
 :root[data-voie="pasapas"] li,
 :root[data-voie="pasapas"] td,
@@ -448,3 +449,124 @@ button.mini:focus-visible, select.mini:focus-visible { outline: 2px solid var(--
 @media print {
   .mots-avant, .suivi, .rappel-consigne { display: none !important; }
 }
+
+
+/* ═══════════════════ TYPOGRAPHIE PAR CYCLE ════════════════════════════════ *
+ *
+ * Un enfant de huit ans et un de douze ne lisent pas la même page.
+ *
+ * Katzir, Hershko & Halamish (2013), 90 enfants : réduire la police de 20 %
+ * fait chuter la compréhension des jeunes lecteurs (87 → 79 %) et améliore
+ * celle des plus âgés (81 → 91 %). Allonger la ligne de 20 % fait chuter les
+ * jeunes lecteurs (87 → 74 %), sans effet chez les plus âgés.
+ *
+ * CE QUE L'ÉTUDE NE DONNE PAS, et il faut le lire avant de toucher aux
+ * valeurs ci-dessous : aucune mesure absolue. Elle compare deux références
+ * différentes selon l'âge, en hébreu, et ne discute pas la transférabilité à
+ * une autre écriture. Les nombres qui suivent sont des CHOIX qui suivent une
+ * direction établie — ils ne sont pas mesurés. CLM-TYP-001, CLM-TYP-002.
+ *
+ * Et la correction qui vaut d'être retenue : la longueur de ligne n'est PAS
+ * le facteur dominant, contrairement à ce que son écart brut laisse croire.
+ * Son interaction avec l'âge est marginale ; celle de la police est
+ * significative. On agit donc sur les deux, sans hiérarchie inventée.       */
+
+:root[data-cycle="primaire"] {
+  --corps:   20px;
+  --largeur: 32rem;
+  --hauteur: 1.8;
+}
+:root[data-cycle="college"], :root:not([data-cycle]) {
+  --corps:   18px;
+  --largeur: 46rem;
+  --hauteur: 1.72;
+}
+
+/* La voie « Pas à pas » raccourcit encore la ligne, sans jamais l'allonger :
+   aucun réglage d'accessibilité ne doit dégrader ce que le cycle a posé. */
+:root[data-voie="pasapas"] .page { max-width: min(var(--largeur, 46rem), var(--pap-largeur)); }
+:root[data-cycle="primaire"] h1 { font-size: 1.95rem; }
+
+/* ═══════════════════ LE FIL DES JALONS ════════════════════════════════════ *
+ *
+ * Où j'en suis dans le module. Une position, pas un score : ni pourcentage,
+ * ni série, ni compte à rebours — la charte écarte ces ressorts. On dit à
+ * l'élève où il est, ce qui est une information, pas une récompense.        */
+
+.fil-jalons { display: flex; flex-wrap: wrap; gap: .3rem; align-items: center;
+  margin: 0 0 1.6rem; padding: .55rem .7rem; border: 1px solid var(--filet);
+  border-radius: 5px; background: var(--papier-2); }
+.fil-jalons li { list-style: none; display: flex; align-items: center; gap: .3rem;
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--encre-3); }
+.fil-jalons li::after { content: "›"; margin-left: .3rem; color: var(--filet); }
+.fil-jalons li:last-child::after { content: ""; }
+.fil-jalons li .pastille { width: .55rem; height: .55rem; border-radius: 50%;
+  border: 1px solid var(--encre-3); flex: none; }
+.fil-jalons li.atteinte { color: var(--encre-2); }
+.fil-jalons li.atteinte .pastille { background: var(--encre-3); }
+.fil-jalons li.courante { color: var(--accent); font-weight: 600; }
+.fil-jalons li.courante .pastille { background: var(--accent); border-color: var(--accent); }
+:root[data-cycle="primaire"] .fil-jalons li { font-size: .74rem; text-transform: none;
+  letter-spacing: .01em; font-family: var(--serif); }
+
+/* La glose d'un jalon : « Porte » est un mot du métier, pas un mot d'élève.
+   On garde le nom — c'est le vocabulaire commun de la méthode — et on dit
+   une fois ce qu'il désigne. */
+.jalon .glose { display: block; font-family: var(--serif); font-size: .82rem;
+  text-transform: none; letter-spacing: normal; color: var(--encre-3);
+  font-style: italic; margin-top: .1rem; }
+.jalon { flex-wrap: wrap; }
+.jalon .nom { display: flex; flex-direction: column; }
+
+/* ═══════════════════ SCHÉMAS ══════════════════════════════════════════════ *
+ *
+ * Un schéma rend visible une RELATION que le texte énonce. S'il n'en porte
+ * aucune, c'est un ornement, et il saute : ajouter du matériel intéressant
+ * mais hors sujet dégrade les performances (g = −0,33, CLM-TYP-003).
+ *
+ * Réserve de périmètre, qui vaut d'être écrite ici : cette mesure porte sur
+ * le détail SÉDUISANT — intéressant ET hors sujet. Elle ne dit rien d'une
+ * image neutre, et elle ne dit rien non plus du bénéfice d'un bon schéma :
+ * cela relève d'une autre littérature (CLM-TYP-004). On ne cumule pas les
+ * deux pour se donner raison deux fois.
+ *
+ * Chaque schéma déclare ce qu'il montre ET ce qu'il ne montre pas. Un schéma
+ * qui quantifierait ce que la source ne quantifie pas trahirait la méthode
+ * tout en ayant l'air pédagogique.                                          */
+
+figure.schema { margin: 1.6rem 0; border: 1px solid var(--appui);
+  border-radius: 5px; background: var(--papier-2); padding: 1rem 1.1rem; }
+figure.schema svg { display: block; width: 100%; height: auto; max-width: 34rem;
+  margin: 0 auto .8rem; }
+figure.schema .titre-s { font-family: var(--titre); font-size: 1.1rem;
+  color: var(--appui); margin-bottom: .5rem; }
+figure.schema figcaption { font-size: .9rem; color: var(--encre-2); }
+figure.schema .montre { display: block; }
+figure.schema .ne-montre-pas { display: block; margin-top: .45rem;
+  padding-left: .7rem; border-left: 2px solid var(--accent); color: var(--encre-2); }
+
+/* Le schéma suit le thème : aucune couleur en dur dans le SVG. */
+figure.schema svg { color: var(--encre); }
+figure.schema svg .trait  { stroke: currentColor; fill: none; stroke-width: 2; }
+figure.schema svg .mince  { stroke: currentColor; fill: none; stroke-width: 1; opacity: .5; }
+figure.schema svg .plein  { fill: currentColor; stroke: none; }
+figure.schema svg .appui  { stroke: var(--appui); fill: none; stroke-width: 2.5; }
+figure.schema svg .appui-plein { fill: var(--appui); stroke: none; }
+figure.schema svg .alerte { stroke: var(--accent); fill: none; stroke-width: 2; }
+figure.schema svg .alerte-plein { fill: var(--accent); stroke: none; }
+figure.schema svg .pointille { stroke: var(--accent); fill: none; stroke-width: 1.5;
+  stroke-dasharray: 5 4; }
+figure.schema svg text { fill: currentColor; font-family: var(--serif); font-size: 16px; }
+figure.schema svg text.petit { font-size: 13px; opacity: .8; }
+figure.schema svg text.cle { fill: var(--appui); font-weight: 600; }
+figure.schema svg text.rouge, figure.schema svg tspan.rouge { fill: var(--accent); font-weight: 600; }
+
+/* Le cycle primaire raccourcit la colonne de texte — et un SVG qui s'y adapte
+   se retrouverait DEUX fois plus petit pour les lecteurs qui en ont le plus
+   besoin. On compense en unites de viewBox, ce que la mise a l'echelle du SVG
+   rend exact, et on laisse la figure deborder legerement la colonne. */
+:root[data-cycle="primaire"] figure.schema { margin-left: -.9rem; margin-right: -.9rem; }
+:root[data-cycle="primaire"] figure.schema svg { max-width: none; }
+:root[data-cycle="primaire"] figure.schema svg text { font-size: 21px; }
+:root[data-cycle="primaire"] figure.schema svg text.petit { font-size: 17px; }

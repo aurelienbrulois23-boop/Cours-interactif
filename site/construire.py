@@ -137,10 +137,14 @@ def main():
             'source': p.get('source', ''), 'avertissement': p.get('avertissement', ''),
             'niveaux': p['niveaux'],
         })
-    disciplines += [
+    # Les disciplines annoncees mais sans carte. Des qu'un plan-*.json en
+    # declare une, son repere « a venir » disparait tout seul : personne n'a a
+    # penser a le retirer, et la discipline ne peut pas figurer deux fois.
+    deja = {d['id'] for d in disciplines}
+    disciplines += [d for d in [
         {'id': 'geographie', 'nom': 'Géographie', 'reference': '', 'source': '', 'niveaux': []},
         {'id': 'emc', 'nom': 'Enseignement moral et civique', 'reference': '', 'source': '', 'niveaux': []},
-    ]
+    ] if d['id'] not in deja]
     programme = {'disciplines': disciplines}
     json.dump(programme, open(os.path.join(ICI, 'programme.json'), 'w', encoding='utf-8'),
               ensure_ascii=False, indent=1)

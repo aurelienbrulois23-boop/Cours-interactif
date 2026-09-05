@@ -168,10 +168,10 @@ function schemaOutil(idModule, rappel){
 function motsAvant(m){
   const l = ((m.adapte || {}).mots) || [];
   if (!l.length) return '';
+  const a = m.adapte || {};
   return `<section class="mots-avant" aria-label="Les mots difficiles, avant de lire">
-    <h3>Les mots à lire avant</h3>
-    <p class="fine">Lis-les à voix haute, morceau par morceau. Ils reviendront dans le texte,
-    et tu les auras déjà rencontrés.</p>
+    <h3>${esc(a.titre || 'Les mots à lire avant')}</h3>
+    <p class="fine">${esc(a.intro || "Lis-les à voix haute, morceau par morceau. Ils reviendront dans le texte, et tu les auras déjà rencontrés.")}</p>
     <ul>${l.map(x => `<li>
       <span class="mot">${esc(x.mot)}</span>
       <span class="syl">${esc(x.syllabes)}</span>

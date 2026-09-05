@@ -14,8 +14,9 @@ outils qui vérifient que l'un ne dit rien que l'autre n'établisse.
 | --- | --- |
 | **Français CE2** | 10 modules, les cinq domaines du programme |
 | **Histoire 6e** | 9 modules, les trois thèmes du programme |
+| **Géographie 6e** | 7 modules, les quatre thèmes du programme |
 | **Sciences et technologie 6e** | 11 modules, les quatre thèmes du programme |
-| Géographie, EMC | cartes de programme à établir |
+| EMC | carte de programme à établir |
 | Histoire 5e, 4e, 3e | 27 modules déclarés, non écrits |
 
 Une **voie « Pas à pas »** double chaque module : un pas à la fois, texte plus
@@ -58,6 +59,7 @@ Il régénère la carte et l'index depuis les fichiers présents.
 | `knowledge-base/rag/` | Index lexical en JSONL — versionnable et relisible, pas une base vectorielle opaque. |
 | `knowledge-base/programmes-officiels/` | Ce qui est réellement applicable en 2026-2027, avec les limites de chaque lecture. |
 | `AGENTS.md` | Les règles que suit quiconque écrit du contenu ici. À lire avant d'ajouter un module. |
+| `site/plan-*.json` | Une carte de programme déclarée à la main. En déposer une suffit : rien à modifier ailleurs. |
 | `production-video/` | Matière et consignes pour produire les vidéos. |
 
 ## Comment un module est fait

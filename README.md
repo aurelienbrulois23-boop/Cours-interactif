@@ -55,6 +55,7 @@ Il régénère la carte et l'index depuis les fichiers présents.
 | `site/modules/*.json` | Un module par fichier. C'est là qu'est le contenu. |
 | `site/socle.js` | Progression, rappels différés, différenciation. Rien n'est envoyé nulle part. |
 | `site/schemas-outils.json` | Les objets-mémoire dessinés, un par module. Un outil, un dessin, réaffiché à l'identique. |
+| `site/exercices.js` | Générateurs d'exercices, seuils de maîtrise, point de départ. Un générateur sans source n'y entre pas. |
 | `site/verifier.py` | Contrôle structurel des modules et des schémas. À relancer après toute retouche. |
 | `site/worker.js` | Marge, la compagne conversationnelle. Non déployée. |
 | `knowledge-base/sources/` | Registre bibliographique : autorité, périmètre, date de consultation. |
@@ -109,6 +110,45 @@ Halamish (2013) — mais **aucune des valeurs n'est mesurée** : l'étude porte 
 90 enfants, en hébreu, et ne donne aucune valeur absolue. Ce sont des choix,
 faits pour être modifiés, et le commentaire de `style.css` le dit à l'endroit
 où quelqu'un les changera.
+
+## Exercices générés et progression à la maîtrise
+
+Le programme de mathématiques demande des « activités rituelles de calcul » et
+**énumère nommément** les automatismes attendus en sixième. Une banque
+d'exercices s'épuise ; un générateur non — et il permet la reprise espacée.
+
+```bash
+site/entrainement.html?d=mathematiques&n=6e   # s'entraîner
+site/positionnement.html?d=mathematiques&n=6e # six questions, un point de départ
+```
+
+**Trois états, un seul chemin** : à travailler → *acquis* après cinq réussites
+d'affilée → *confirmé* après une reprise le lendemain. La reprise différée
+n'est pas un ornement : sans elle on mesure la mémoire de la minute, pas un
+automatisme. Rien ne redescend tout seul.
+
+**Le seuil est un choix, pas une mesure.** L'effet de l'apprentissage par
+maîtrise dépend de la sévérité du critère retenu, et il **coûte du temps
+d'enseignement** — les deux moitiés du résultat sont enregistrées
+([CLM-PED-025](knowledge-base/evidence/claims.jsonl)). Les valeurs sont
+regroupées en tête de `site/exercices.js` pour être discutées.
+
+**Ni score, ni classement, ni série, ni chronomètre.** Le programme donne
+lui-même le ressort : la maîtrise d'automatismes « produit souvent des progrès
+rapides, ce qui engage les élèves dans un cercle vertueux ».
+
+### Le positionnement n'est pas un profil
+
+Six questions par dichotomie déposent l'élève au premier palier où il y a
+quelque chose à travailler. C'est une **position dans une progression** : elle
+se recalcule à chaque exercice, elle n'est jamais transmise, et **l'élève peut
+la déplacer ou l'effacer lui-même**.
+
+Ce que le test ne fait pas, et ne fera pas : mesurer des « aptitudes » pour
+orienter vers un format supposé adapté. Apparier un enseignement à un style
+déclaré n'améliore pas les résultats
+([CLM-PED-026](knowledge-base/evidence/claims.jsonl)). Ce qui est recalculé,
+c'est ce avec quoi l'élève réussit réellement.
 
 ## La voie « Pas à pas »
 

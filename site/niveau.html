@@ -28,6 +28,7 @@
 </div>
 
 <script type="module">
+import { pourNiveau, avancementExercices } from './exercices.js';
 import { charger, esc, poserRappels, avancement, avancementNiveau,
          niveauxDeclares, proposerAuDelaNiveau,
          choisirNiveau, poserContraste, poserVoie, appliqueCycle } from './socle.js';
@@ -98,6 +99,27 @@ function dessine(){
       <a class="bouton" href="niveau.html?n=${encodeURIComponent(suivant)}"
          style="display:inline-block;text-decoration:none;margin-top:.5rem">Voir la ${esc(suivant)}</a>
     </div>`;
+  }
+
+  /* L'entrainement : la ou il existe des exercices generes pour ce niveau.
+   * Aucune liste codee en dur — on interroge le registre des generateurs. */
+  const NOMS_EX = { mathematiques: 'Mathématiques', francais: 'Français' };
+  const avecExos = Object.keys(NOMS_EX).filter(d => pourNiveau(d, niveau).length);
+  if (avecExos.length) {
+    html += `<h2 style="margin-top:2.4rem">S'entraîner</h2>
+      <p class="fine">Des exercices qui se renouvellent à chaque fois, et une progression
+      par paliers : cinq réussites d'affilée, puis une reprise le lendemain. Ni score,
+      ni classement, ni chronomètre.</p><div class="grille">`;
+    avecExos.forEach(d => {
+      const a = avancementExercices(d, niveau);
+      html += `<a class="carte" href="entrainement.html?d=${encodeURIComponent(d)}&n=${encodeURIComponent(niveau)}">
+        <div class="titre-c">${esc(NOMS_EX[d])}</div>
+        <div class="cible">${a.confirmes} palier${a.confirmes > 1 ? 's' : ''} confirmé${a.confirmes > 1 ? 's' : ''} sur ${a.total}</div>
+        <div class="etat">S'entraîner</div></a>`;
+    });
+    html += `</div><p class="fine" style="margin-top:.8rem">Vous ne savez pas par où commencer ?
+      ${avecExos.map(d => `<a href="positionnement.html?d=${encodeURIComponent(d)}&n=${encodeURIComponent(niveau)}">Se positionner en ${esc(NOMS_EX[d].toLowerCase())}</a>`).join(' · ')}.
+      Six questions, et un point de départ que vous pourrez déplacer.</p>`;
   }
 
   html += `<details class="plus-loin"${propose ? ' open' : ''}>

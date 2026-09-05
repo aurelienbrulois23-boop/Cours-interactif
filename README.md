@@ -150,6 +150,19 @@ rien de ce qui est sur une plateforme. Le fichier maître reste dans
 `production-video/vidéo/` : une plateforme est un canal de diffusion, jamais
 une sauvegarde. Voir `production-video/LISEZ-MOI.md`.
 
+Avant de brancher une vidéo, vérifier qu'elle est lisible ailleurs que dans VLC :
+
+```bash
+python site/videos.py --normaliser            # signale, ne touche à rien
+python site/videos.py --normaliser --ecrire   # écrit une version corrigée à côté
+```
+
+Le piège vient de la **chroma**. Certains exportateurs d'avatar rendent en
+H.264 « High 4:4:4 Predictive », chroma `yuv444p` : le fichier est parfaitement
+valide, il s'ouvre dans VLC, et il reste noir dans un navigateur comme dans le
+lecteur de Windows. Aucun message n'explique pourquoi. Le web ne lit en pratique
+qu'une chose : **H.264 en yuv420p**.
+
 **Aucune requête avant le clic.** Une intégration YouTube posée dans la page
 contacte Google dès l'ouverture du module, avant que l'élève ait rien demandé.
 Le site affiche donc une façade locale : rien ne part tant que personne n'a

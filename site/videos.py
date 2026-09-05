@@ -166,8 +166,92 @@ def poser_lien(ident, url, ecrire):
     return True
 
 
+def sonder(chemin):
+    """Ce qu'un lecteur verra du fichier. Renvoie None si ffprobe est absent."""
+    import subprocess
+    try:
+        r = subprocess.run(
+            ['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries',
+             'stream=codec_name,profile,pix_fmt,width,height', '-of', 'json', chemin],
+            capture_output=True, text=True, encoding='utf-8', timeout=30)
+        if r.returncode != 0:
+            return None
+        f = json.loads(r.stdout).get('streams', [{}])[0]
+        return {'codec': f.get('codec_name', '?'), 'profil': f.get('profile', '?'),
+                'chroma': f.get('pix_fmt', '?'),
+                'taille': '%sx%s' % (f.get('width', '?'), f.get('height', '?'))}
+    except Exception:
+        return None
+
+
+def normaliser(ecrire):
+    """Repère les fichiers qu'un navigateur ou Windows ne saura pas lire.
+
+    Le piège vient de la chroma. Un exportateur d'avatar peut rendre en
+    H.264 « High 4:4:4 Predictive », chroma yuv444p : le fichier est
+    parfaitement valide, il s'ouvre dans VLC, et il reste noir partout
+    ailleurs. Aucun message n'explique pourquoi, et on croit le
+    téléchargement raté — on le refait trois fois pour rien.
+
+    Le web ne lit en pratique qu'une chose : H.264 en yuv420p. On convertit
+    donc vers ça, sans jamais toucher à l'original : le fichier corrigé est
+    écrit à côté, et c'est vous qui décidez de remplacer.
+    """
+    import subprocess
+    fichiers = sorted(f for f in os.listdir(MAITRE)
+                      if os.path.splitext(f)[1].lower() in EXTENSIONS)
+    if not fichiers:
+        print("Aucune vidéo dans %s" % MAITRE)
+        return 0
+    if sonder(os.path.join(MAITRE, fichiers[0])) is None:
+        print("ffprobe est introuvable : impossible de sonder les fichiers.\n"
+              "  Installer FFmpeg, ou vérifier à la main que la chroma est yuv420p.")
+        return 1
+
+    a_corriger = []
+    for nom in fichiers:
+        d = sonder(os.path.join(MAITRE, nom))
+        souci = d and (d['chroma'] != 'yuv420p' or d['codec'] != 'h264')
+        print("  %s %-40s %s / %s / %s"
+              % ('!!' if souci else 'ok', nom[:40], d['codec'], d['profil'], d['chroma']))
+        if souci:
+            a_corriger.append(nom)
+
+    if not a_corriger:
+        print("\nToutes les vidéos sont lisibles partout.")
+        return 0
+
+    print("\n%d fichier(s) qu'un navigateur ne lira pas : %s"
+          % (len(a_corriger), ', '.join(a_corriger)))
+    if not ecrire:
+        print("Relancer avec --ecrire pour écrire une version corrigée à côté.")
+        return 0
+
+    for nom in a_corriger:
+        base, ext = os.path.splitext(nom)
+        sortie = os.path.join(MAITRE, base + ' (corrige)' + ext)
+        print("  conversion de %s …" % nom)
+        r = subprocess.run(
+            ['ffmpeg', '-y', '-v', 'error', '-i', os.path.join(MAITRE, nom),
+             '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p',
+             '-preset', 'medium', '-crf', '20',
+             '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', sortie],
+            capture_output=True, text=True, encoding='utf-8')
+        if r.returncode == 0:
+            d = sonder(sortie)
+            print("    -> %s   %s / %s / %s" % (os.path.basename(sortie),
+                                                d['codec'], d['profil'], d['chroma']))
+        else:
+            print("    ÉCHEC : %s" % (r.stderr or '').strip()[:200])
+    print("\nL'original n'a pas été touché. À vous de remplacer si le résultat convient.")
+    return 0
+
+
 def main():
     ecrire = '--ecrire' in sys.argv
+
+    if '--normaliser' in sys.argv:
+        return normaliser(ecrire)
 
     # Mode « lien » : python site/videos.py --lien H6-04=https://youtu.be/xxxx
     paires = []

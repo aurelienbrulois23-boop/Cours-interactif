@@ -1,6 +1,78 @@
 {
  "modules": [
   {
+   "id": "EMC6-01",
+   "discipline": "emc",
+   "titre": "Le délégué ne décide pas",
+   "niveau": "6e",
+   "theme": "Représenter les autres et servir l'intérêt général",
+   "cible": "un représentant <strong>porte la parole des autres</strong> et prend part à une délibération — il ne décide pas seul, et il ne parle pas en son nom",
+   "rappelJ1": "Le porte-voix. Que demande-t-on à qui parle « au nom de » ?",
+   "fichier": "modules/EMC6-01.json",
+   "medias": 2,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "EMC6-02",
+   "discipline": "emc",
+   "titre": "Ce qui est bon pour tous, et ce qui est bon pour moi",
+   "niveau": "6e",
+   "theme": "Représenter les autres et servir l'intérêt général",
+   "cible": "l'intérêt général est l'intérêt <strong>commun à tous</strong> — il n'est ni la somme des intérêts particuliers, ni l'avis de la majorité, et il peut s'opposer au mien",
+   "rappelJ1": "Le pot commun. Que demande-t-on devant une décision d'intérêt général ?",
+   "fichier": "modules/EMC6-02.json",
+   "medias": 2,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "EMC6-03",
+   "discipline": "emc",
+   "titre": "Un cadre n'est pas un tableau",
+   "niveau": "6e",
+   "theme": "Respecter des règles et en comprendre la finalité : l'exemple de la laïcité à l'École",
+   "cible": "la laïcité est un <strong>principe juridique</strong>, pas une opinion : elle garantit la liberté de croire, de ne pas croire et de changer",
+   "rappelJ1": "Le cadre. Cadre, ou tableau ?",
+   "fichier": "modules/EMC6-03.json",
+   "medias": 2,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "EMC6-04",
+   "discipline": "emc",
+   "titre": "La règle change au seuil",
+   "niveau": "6e",
+   "theme": "Respecter des règles et en comprendre la finalité : l'exemple de la laïcité à l'École",
+   "cible": "le principe de laïcité <strong>ne s'applique pas partout de la même façon</strong> : le programme distingue la sphère publique, l'espace public et la sphère privée, et fait de l'école un lieu particulier",
+   "rappelJ1": "Le seuil. Que demande-t-on à une règle énoncée sans lieu ni personne ?",
+   "fichier": "modules/EMC6-04.json",
+   "medias": 2,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "EMC6-05",
+   "discipline": "emc",
+   "titre": "Un droit qui s'appuie sur d'autres",
+   "niveau": "6e",
+   "theme": "Avoir des droits en tant que personne et respecter ceux des autres : l'exemple du droit à la vie privée",
+   "cible": "le droit au respect de la vie privée <strong>s'appuie sur d'autres droits</strong> — celui à la vie, au nom, à la nationalité — et il comprend le droit à l'intimité et à l'image",
+   "rappelJ1": "L'étai. Que demande-t-on devant un droit ?",
+   "fichier": "modules/EMC6-05.json",
+   "medias": 2,
+   "mediasRemplis": 0
+  },
+  {
+   "id": "EMC6-06",
+   "discipline": "emc",
+   "titre": "Une seconde pour publier, des mois pour effacer",
+   "niveau": "6e",
+   "theme": "Avoir des droits en tant que personne et respecter ceux des autres : l'exemple du droit à la vie privée",
+   "cible": "le <strong>droit à l'oubli existe</strong>, et le faire valoir est difficile : avoir un droit et pouvoir l'exercer sont deux choses",
+   "rappelJ1": "L'empreinte. Que demande-t-on avant de publier ?",
+   "fichier": "modules/EMC6-06.json",
+   "medias": 2,
+   "mediasRemplis": 0
+  },
+  {
    "id": "FCE2-01",
    "discipline": "francais",
    "titre": "Montre-moi où c'est écrit",

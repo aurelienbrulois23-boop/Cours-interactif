@@ -2,9 +2,11 @@
 
 **Usage :** décider ce qu'on construit, dans quel ordre, et ce qu'on refuse de construire.
 **État au 6 septembre 2026 :** l'épreuve est faite et jouable (`site/epreuve.html`,
-`site/epreuves.json`, deux séquences de géographie). Les **micro-jeux de rôle** le sont
-aussi (`site/microjdr.html`, `site/jdr/`), sous la forme arrêtée par l'utilisateur :
-courts, **pas identiques entre eux**, et **sans rapport avec Valdurne**.
+`site/epreuves.json`) — **huit séquences, 107 questions**, couvrant l'histoire, la
+géographie et les sciences de sixième. Les **micro-jeux de rôle** le sont aussi
+(`site/microjdr.html`, `site/jdr/`), **huit scènes**, sous la forme arrêtée par
+l'utilisateur : courtes, **pas identiques entre elles**, et **sans rapport avec
+Valdurne**.
 **Origine :** proposition de l'utilisateur, à partir des modules PIX-pHARe qu'il a écrits
 pour le Portail Vie Scolaire (`aethonyx_phénix/projet hub viesco/`).
 

@@ -244,6 +244,21 @@
           ],
           "juste": 1,
           "pourquoi": "Le tas voyage hors de la géographie : toute moyenne écrase une répartition. Deux quartiers à 2 100 € peuvent être l'un homogène, l'autre partagé entre 800 € et 6 000 €. Les trois autres questions sont utiles et légitimes ; aucune n'ouvre le tas."
+        },
+        {
+          "id": "EP-G6-A-12",
+          "palier": "discrimination",
+          "module": "G6-03",
+          "ref": "CLM-GEO-004",
+          "enonce": "Le programme demande de mettre en évidence les représentations dont ces espaces sont l'objet. Qu'est-ce que cette pièce ne permet pas ?",
+          "options": [
+            "De décrire comment des sociétés s'adaptent différemment à un même milieu.",
+            "De classer les milieux du plus facile au plus difficile à habiter.",
+            "De montrer qu'un même espace est vu autrement selon qui le regarde.",
+            "De relever ce qu'on dit couramment d'un désert ou d'une montagne."
+          ],
+          "juste": 1,
+          "pourquoi": "Les trois autres réponses sont exactement ce que la pièce demande. Le classement, lui, changerait avec le projet — c'est le gabarit — et ce serait donc un classement de projets déguisé en classement de milieux. Une pièce qui décrit des représentations ne délivre aucun palmarès."
         }
       ],
       "jdr": "jdr/JDR-G6-A.json"
@@ -450,6 +465,615 @@
         }
       ],
       "jdr": "jdr/JDR-G6-B.json"
+    },
+    {
+      "id": "EP-H6-A",
+      "discipline": "histoire",
+      "niveau": "6e",
+      "rang": 1,
+      "titre": "Ce que le sol garde, ce qu'un mot escamote, ce qu'un compte enregistre",
+      "sequence": "Thème 1 — La longue histoire de l'humanité et des migrations",
+      "modules": [
+        "H6-01",
+        "H6-02",
+        "H6-03"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-H6-A.json",
+      "items": [
+        {
+          "id": "EP-H6-A-01",
+          "palier": "rappel",
+          "module": "H6-01",
+          "ref": "CLM-H6-001",
+          "enonce": "Aucune trace de vêtement n'a été retrouvée sur un site préhistorique. Que peut-on en conclure ?",
+          "options": [
+            "Que ses habitants ne portaient pas de vêtements.",
+            "Rien : le tissu ne se conserve presque jamais.",
+            "Que le site a été fouillé trop vite.",
+            "Qu'ils portaient des peaux, qui se conservent mieux."
+          ],
+          "juste": 1,
+          "pourquoi": "Le tamis. Le sol laisse passer les tissus, les paniers, les cordes, les mots, et ne retient que le dur. L'absence d'une trace n'est jamais la trace d'une absence. La dernière réponse est le piège : les peaux ne se conservent pas davantage, et l'on vient de remplacer un silence par une invention."
+        },
+        {
+          "id": "EP-H6-A-02",
+          "palier": "rappel",
+          "module": "H6-02",
+          "ref": "CLM-H6-001",
+          "enonce": "Pourquoi dit-on que « révolution » néolithique est un mot qui va trop vite ?",
+          "options": [
+            "Parce que le changement fut moins important qu'on ne le dit.",
+            "Parce qu'il dit bien l'ampleur du changement et ment sur sa durée.",
+            "Parce qu'il n'y a eu aucun renversement politique.",
+            "Parce que le mot est trop récent pour cette période."
+          ],
+          "juste": 1,
+          "pourquoi": "Le sablier retourné trop vite. Produire sa nourriture a bien transformé profondément des sociétés : l'ampleur est réelle et le mot la dit bien. Ce qu'il escamote, c'est que cela a pris des siècles, et pas partout au même rythme ni dans le même ordre."
+        },
+        {
+          "id": "EP-H6-A-03",
+          "palier": "rappel",
+          "module": "H6-03",
+          "ref": "CLM-H6-002",
+          "enonce": "Une tablette de comptes d'un temple mésopotamien renseigne surtout sur :",
+          "options": [
+            "la vie quotidienne de la population,",
+            "ce que ses producteurs ont choisi de compter,",
+            "les croyances religieuses de l'époque,",
+            "le moment où l'histoire commence."
+          ],
+          "juste": 1,
+          "pourquoi": "L'écriture apparaît là où un pouvoir a besoin d'enregistrer. Une écriture de comptes dit avec précision ce qui entrait et ce qui sortait — et ne dit rien de ceux qui n'apparaissent jamais dans les comptes. La dernière réponse est une formule de manuel : l'histoire ne « commence » pas avec l'écriture, c'est notre documentation qui change de nature."
+        },
+        {
+          "id": "EP-H6-A-04",
+          "palier": "discrimination",
+          "module": "H6-01",
+          "ref": "CLM-H6-001",
+          "enonce": "Une reconstitution de médiation scientifique met en image une scène de chasse préhistorique. Qu'établit-elle ?",
+          "options": [
+            "Que la scène s'est déroulée ainsi.",
+            "Rien par elle-même : c'est une hypothèse mise en image, et il faut lui demander sur quelles traces elle repose.",
+            "Que les chercheurs sont d'accord entre eux.",
+            "Rien du tout : une reconstitution n'a aucune valeur."
+          ],
+          "juste": 1,
+          "pourquoi": "Une bonne reconstitution distingue explicitement la trace et ce qu'on en tire — c'est justement ce qui la rend utilisable. La dernière réponse est l'excès inverse : refuser en bloc, c'est se priver du travail déjà fait. On ne rejette pas une image, on lui demande ses appuis."
+        },
+        {
+          "id": "EP-H6-A-05",
+          "palier": "discrimination",
+          "module": "H6-03",
+          "ref": "CLM-H6-002",
+          "enonce": "On applique le tampon à une tablette de comptes. Que tamponne-t-on, exactement ?",
+          "options": [
+            "La sincérité du scribe.",
+            "Ce que ce document permet d'établir, et jusqu'où.",
+            "La qualité de la traduction.",
+            "L'importance historique du document."
+          ],
+          "juste": 1,
+          "pourquoi": "Tamponner, ce n'est pas juger la source : c'est dire ce qu'on peut en tirer. Une tablette peut être parfaitement sincère et n'établir rien sur la question posée ; elle peut être un document mineur et établir un point solide."
+        },
+        {
+          "id": "EP-H6-A-06",
+          "palier": "discrimination",
+          "module": "H6-02",
+          "ref": "CLM-H6-001",
+          "enonce": "Une synthèse scolaire décrit le Néolithique en Mésopotamie. Comment faut-il la lire ?",
+          "options": [
+            "Comme un témoignage de l'époque.",
+            "Comme une synthèse : elle rapporte un état du savoir, elle n'est pas une trace du passé.",
+            "Comme une source à écarter, puisqu'elle est récente.",
+            "Comme la preuve que le processus fut identique ailleurs."
+          ],
+          "juste": 1,
+          "pourquoi": "Une synthèse et un témoignage n'ont pas le même statut et ne répondent pas aux mêmes questions. La confondre avec un témoignage, c'est lui prêter une ancienneté qu'elle n'a pas ; l'écarter parce qu'elle est récente, c'est se priver du travail des chercheurs."
+        },
+        {
+          "id": "EP-H6-A-07",
+          "groupe": "H6-01-T",
+          "palier": "transfert",
+          "module": "H6-01",
+          "ref": "CLM-H6-001",
+          "enonce": "Dans l'épave d'un navire antique, on retrouve des amphores et pas une seule planche. Que dit le tamis ?",
+          "options": [
+            "Que le navire était fait d'amphores empilées.",
+            "Que la mer a gardé la terre cuite et rendu le bois : l'absence de coque n'est pas l'absence d'un navire.",
+            "Que la cargaison a été volée.",
+            "Que le navire a coulé à vide."
+          ],
+          "juste": 1,
+          "pourquoi": "Le tamis change de matière et garde sa forme : chaque milieu conserve certaines choses et en efface d'autres. Ici ce sont l'eau salée et les tarets, non le sol. La question, elle, ne bouge pas : qu'est-ce que ce milieu-là ne pouvait pas garder ?"
+        },
+        {
+          "id": "EP-H6-A-07b",
+          "groupe": "H6-01-T",
+          "palier": "transfert",
+          "module": "H6-01",
+          "ref": "CLM-H6-001",
+          "enonce": "D'une commune, les archives n'ont conservé que les registres fiscaux. Que dit le tamis ?",
+          "options": [
+            "Que la commune ne s'intéressait qu'à l'impôt.",
+            "Que ce qui a été gardé l'a été parce qu'on gardait cela — et que ce qui manque n'a pas forcément manqué.",
+            "Que les autres documents ont été détruits par accident.",
+            "Qu'on ne peut rien écrire sur cette commune."
+          ],
+          "juste": 1,
+          "pourquoi": "Le tamis n'est pas toujours un sol : c'est parfois une règle de conservation. Le fisc garde ses registres parce que c'est son métier ; les lettres, les affiches, les comptes d'une fabrique passent au travers. La dernière réponse renonce trop vite : on peut écrire beaucoup, à condition de dire depuis quel tamis."
+        },
+        {
+          "id": "EP-H6-A-08",
+          "groupe": "H6-02-T",
+          "palier": "transfert",
+          "module": "H6-02",
+          "ref": "CLM-H6-001",
+          "enonce": "Un titre annonce : « La révolution numérique a bouleversé le travail en dix ans. » Que fait le sablier ?",
+          "options": [
+            "Il confirme, puisque le changement est immense.",
+            "Il demande depuis quand et pour qui : l'ampleur est une chose, la durée et l'inégalité en sont deux autres.",
+            "Il rejette le mot « révolution ».",
+            "Il réclame le chiffre exact des emplois transformés."
+          ],
+          "juste": 1,
+          "pourquoi": "Le sablier ne conteste pas l'ampleur ; il conteste le « d'un coup » et le « partout ». Un caissier, un notaire et un éleveur n'ont pas rencontré la même décennie, ni au même moment."
+        },
+        {
+          "id": "EP-H6-A-08b",
+          "groupe": "H6-02-T",
+          "palier": "transfert",
+          "module": "H6-02",
+          "ref": "CLM-H6-001",
+          "enonce": "Un documentaire annonce : « L'agriculture a mis fin au nomadisme. » Que fait le sablier ?",
+          "options": [
+            "Il approuve : c'est bien ce qui s'est passé.",
+            "Il demande où et en combien de temps — des sociétés d'éleveurs nomades existent encore aujourd'hui.",
+            "Il rejette le mot « agriculture ».",
+            "Il réclame la date exacte de la fin du nomadisme."
+          ],
+          "juste": 1,
+          "pourquoi": "Le sablier ne conteste pas que l'agriculture ait tout changé là où elle s'est installée. Il conteste le « partout » et le « d'un coup ». Le nomadisme n'a pas pris fin : il a continué à côté, et parfois avec. La dernière réponse cherche la date d'un événement qui n'a pas eu lieu."
+        },
+        {
+          "id": "EP-H6-A-09",
+          "groupe": "H6-03-T",
+          "palier": "transfert",
+          "module": "H6-03",
+          "ref": "CLM-H6-002",
+          "enonce": "Une amie vous dit : « Je crois qu'il va pleuvoir demain. » Faut-il lui poser un tampon ?",
+          "options": [
+            "Oui : « possible ».",
+            "Non : le tampon sert à dire ce qu'un document établit dans une enquête, pas à noter les phrases de la vie courante.",
+            "Oui : « non acquis ».",
+            "Non : une parole ne peut pas être tamponnée."
+          ],
+          "juste": 1,
+          "pourquoi": "Un outil qu'on applique partout cesse de servir. Le tampon a été fait pour tenir un dossier : sept mots, toujours les mêmes, sur des documents qu'on confronte. L'appliquer à une conversation, c'est le vider — et rendre la conversation insupportable. La dernière réponse se trompe de raison : une parole est une très bonne source, quand c'est un témoignage recueilli."
+        },
+        {
+          "id": "EP-H6-A-09b",
+          "groupe": "H6-03-T",
+          "palier": "transfert",
+          "module": "H6-03",
+          "ref": "CLM-H6-002",
+          "enonce": "On retrouve le carnet de comptes d'une épicerie de 1930. Le tampon s'y applique-t-il ?",
+          "options": [
+            "Non : ce n'est pas assez ancien.",
+            "Oui, exactement de la même façon : on demande ce que ce carnet permet d'établir, et jusqu'où.",
+            "Non : un carnet privé n'est pas une source.",
+            "Oui, mais le résultat sera toujours « indéterminé »."
+          ],
+          "juste": 1,
+          "pourquoi": "Le tampon ne dépend ni de l'âge ni du prestige d'un document : il porte sur ce qu'on peut en tirer. Ce carnet établit très bien ce qui se vendait et à quel prix, et n'établit rien de ce que pensaient les clients. C'est mot pour mot le geste de la tablette."
+        }
+      ]
+    },
+    {
+      "id": "EP-H6-B",
+      "discipline": "histoire",
+      "niveau": "6e",
+      "rang": 2,
+      "titre": "Le guichet, le train et la photocopieuse",
+      "sequence": "Thème 2 — Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique",
+      "modules": [
+        "H6-04",
+        "H6-05",
+        "H6-06"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-H6-B.json",
+      "items": [
+        {
+          "id": "EP-H6-B-01",
+          "palier": "rappel",
+          "module": "H6-04",
+          "ref": "CLM-H6-004",
+          "enonce": "La Constitution des Athéniens décrit le tirage au sort des membres du Conseil. Qu'est-ce que cela établit ?",
+          "options": [
+            "Que tous les habitants d'Athènes participaient aux décisions.",
+            "Qu'il existait des institutions réglées où des citoyens décidaient.",
+            "Que la démocratie athénienne ressemblait à la nôtre.",
+            "Que les femmes siégeaient au Conseil."
+          ],
+          "juste": 1,
+          "pourquoi": "Le texte décrit un fonctionnement, et il le décrit bien. Il ne dit rien des femmes, des métèques ni des esclaves, qui ne sont pas citoyens, ni de ce qu'ils vivaient. Participation réelle, et réservée : les deux mots vont ensemble."
+        },
+        {
+          "id": "EP-H6-B-02",
+          "palier": "rappel",
+          "module": "H6-05",
+          "ref": "CLM-H6-003",
+          "enonce": "Tite-Live raconte la fondation de Rome. Sur quoi ce texte renseigne-t-il d'abord ?",
+          "options": [
+            "Sur le déroulement des origines de Rome.",
+            "Sur ceux qui racontaient ainsi, à l'époque où il écrit.",
+            "Sur la date exacte de la fondation.",
+            "Sur rien : c'est une légende."
+          ],
+          "juste": 1,
+          "pourquoi": "Le train : temps raconté, puis temps de l'auteur, puis temps de l'historien. Tite-Live est dans le deuxième wagon, à des siècles des origines supposées, et un train ne roule pas en arrière. La dernière réponse jette tout : un récit de fondation est une excellente source sur ceux qui le racontent."
+        },
+        {
+          "id": "EP-H6-B-03",
+          "palier": "rappel",
+          "module": "H6-06",
+          "ref": "CLM-H6-003",
+          "enonce": "Dix manuscrits anciens donnent exactement le même texte. Que prouve cette concordance ?",
+          "options": [
+            "Que les événements racontés ont eu lieu.",
+            "Que les copistes ont été fidèles.",
+            "Que dix témoins indépendants confirment le récit.",
+            "Que ce texte est le plus ancien connu."
+          ],
+          "juste": 1,
+          "pourquoi": "La photocopieuse. Dix copies d'un même texte ne font pas dix témoins : elles font un témoin photocopié dix fois. Avant de compter des sources, demandez toujours si elles sont indépendantes."
+        },
+        {
+          "id": "EP-H6-B-04",
+          "palier": "discrimination",
+          "module": "H6-04",
+          "ref": "CLM-H6-004",
+          "enonce": "Vous demandez à la Constitution des Athéniens ce que pensaient ceux qui ne siégeaient pas. Que répond-elle ?",
+          "options": [
+            "Qu'ils s'en accommodaient.",
+            "Rien : ce n'est pas la question à laquelle ce document sait répondre.",
+            "Qu'ils étaient exclus et mécontents.",
+            "Qu'il n'y en avait pas."
+          ],
+          "juste": 1,
+          "pourquoi": "Le guichet. Une source institutionnelle répond très bien à la question qu'on lui a apprise, et absolument pas aux autres. Elle ne dit ni « satisfaits » ni « mécontents » : elle ne dit rien, et c'est déjà une réponse — il faudra un autre guichet."
+        },
+        {
+          "id": "EP-H6-B-05",
+          "palier": "discrimination",
+          "module": "H6-06",
+          "ref": "CLM-H6-003",
+          "enonce": "Un manuscrit biblique très ancien est authentifié. Qu'établit-il ?",
+          "options": [
+            "Que les événements racontés dans ce livre ont eu lieu.",
+            "Que ce texte circulait et était copié à cette époque, et de quelle manière.",
+            "Que la croyance qu'il porte est vraie.",
+            "Que la croyance qu'il porte est fausse."
+          ],
+          "juste": 1,
+          "pourquoi": "Un manuscrit prouve la transmission du texte, jamais les événements qu'il raconte. Et décrire une croyance n'est ni la valider ni l'invalider : les deux dernières réponses sortent l'une comme l'autre du travail de l'historien."
+        },
+        {
+          "id": "EP-H6-B-06",
+          "palier": "discrimination",
+          "module": "H6-05",
+          "ref": "CLM-H6-003",
+          "enonce": "Un même récit est rapporté par Tite-Live, puis par un auteur plus tardif qui l'a lu. Combien de sources ?",
+          "options": [
+            "Deux.",
+            "Une, transmise deux fois.",
+            "Aucune, puisque le récit est légendaire.",
+            "Deux, mais l'une vaut plus que l'autre."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est la photocopieuse appliquée à Tite-Live : la dépendance ne se compte pas au nombre de noms, elle se lit dans ce que chacun a lu. La question n'est pas combien ils sont, mais d'où chacun tient ce qu'il dit."
+        },
+        {
+          "id": "EP-H6-B-07",
+          "groupe": "H6-04-T",
+          "palier": "transfert",
+          "module": "H6-04",
+          "ref": "CLM-H6-004",
+          "enonce": "Vous cherchez ce que mangeaient les élèves d'un collège en 1970, et vous n'avez que les registres du conseil d'administration. Que dit le guichet ?",
+          "options": [
+            "Que ces registres ne servent à rien.",
+            "Qu'ils répondront très bien sur les décisions et les budgets, et pas sur les repas : il faut un autre guichet.",
+            "Qu'il faut y chercher les menus.",
+            "Que l'information est perdue."
+          ],
+          "juste": 1,
+          "pourquoi": "Le guichet ne se juge pas, il se choisit. Un conseil d'administration dit ce qu'il a voté, avec quel argent et à quelle date. Les repas se retrouveront ailleurs : cahiers de la cuisine, factures d'un fournisseur, souvenirs d'anciens élèves. Un silence est une adresse, pas une fin."
+        },
+        {
+          "id": "EP-H6-B-07b",
+          "groupe": "H6-04-T",
+          "palier": "transfert",
+          "module": "H6-04",
+          "ref": "CLM-H6-004",
+          "enonce": "Vous voulez savoir comment un quartier construit en 1965 a été accueilli, et vous n'avez que le permis de construire.",
+          "options": [
+            "Le permis suffit : il décrit le projet en entier.",
+            "Il établira le projet, ses dates et ses signataires, et rien de l'accueil qu'il a reçu.",
+            "Le permis prouve que le quartier était réussi.",
+            "Il n'y a rien à tirer d'un document administratif."
+          ],
+          "juste": 1,
+          "pourquoi": "Le guichet du permis de construire répond avec précision : qui a décidé, quand, et quoi. L'accueil se cherche dans la presse locale, les courriers de riverains, les enquêtes d'usage. Ce n'est pas le même guichet, et ce n'est pas un défaut du premier."
+        },
+        {
+          "id": "EP-H6-B-08",
+          "groupe": "H6-05-T",
+          "palier": "transfert",
+          "module": "H6-05",
+          "ref": "CLM-H6-003",
+          "enonce": "Un film sorti l'an dernier raconte la guerre de Cent Ans. Dans quel wagon du train est-il ?",
+          "options": [
+            "Dans le premier, avec les événements.",
+            "Dans le deuxième : c'est une source sur son époque, sur ce qu'on y raconte et sur ce qu'on y montre.",
+            "Dans le troisième, avec les historiens.",
+            "Nulle part : une fiction n'est pas une source."
+          ],
+          "juste": 1,
+          "pourquoi": "Le train ne roule pas en arrière. Un film récent ne peut pas témoigner du XIVe siècle ; il témoigne parfaitement du sien — de ses moyens, de ses goûts, de ce que son public accepte de voir. La troisième réponse le confond avec un travail d'historien, ce qu'il n'est pas, même bien documenté."
+        },
+        {
+          "id": "EP-H6-B-08b",
+          "groupe": "H6-05-T",
+          "palier": "transfert",
+          "module": "H6-05",
+          "ref": "CLM-H6-003",
+          "enonce": "Une chanson écrite en 1975 parle de la Commune de Paris, qui date de 1871. De quoi est-elle la source ?",
+          "options": [
+            "De la Commune de Paris.",
+            "De 1975 : de la manière dont on se souvenait alors de la Commune.",
+            "De rien, faute d'être un document d'époque.",
+            "Des deux à parts égales."
+          ],
+          "juste": 1,
+          "pourquoi": "Le train, encore : la chanson est dans le deuxième wagon. Elle n'a pas pu voir 1871 ; elle montre très bien ce que 1871 voulait dire un siècle plus tard, et à qui. Une source sur la mémoire d'un événement est une vraie source — sur autre chose que l'événement."
+        },
+        {
+          "id": "EP-H6-B-09",
+          "groupe": "H6-06-T",
+          "palier": "transfert",
+          "module": "H6-06",
+          "ref": "CLM-H6-003",
+          "enonce": "Trois personnes ayant assisté au même accident, interrogées séparément le soir même, donnent la même version. La photocopieuse s'applique-t-elle ?",
+          "options": [
+            "Oui : trois versions identiques, donc une seule.",
+            "Non : rien n'indique qu'elles dépendent les unes des autres, et c'est justement le cas où la concordance compte.",
+            "Oui, si ces personnes se connaissaient.",
+            "Non : des témoignages parlés ne se comparent pas."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert à repérer la dépendance, pas à se méfier de tout accord. Interrogées séparément et sans s'être parlé, trois personnes qui concordent apportent bien trois informations. La troisième réponse touche le vrai critère et le rate d'un cran : ce n'est pas de se connaître qui compte, c'est d'avoir puisé à la même source."
+        },
+        {
+          "id": "EP-H6-B-09b",
+          "groupe": "H6-06-T",
+          "palier": "transfert",
+          "module": "H6-06",
+          "ref": "CLM-H6-003",
+          "enonce": "Cinq sites d'information publient la même nouvelle, reprise d'une même dépêche d'agence. Combien de sources ?",
+          "options": [
+            "Cinq.",
+            "Une : la dépêche, recopiée cinq fois.",
+            "Cinq, mais peu fiables.",
+            "Aucune, puisque ce sont des sites internet."
+          ],
+          "juste": 1,
+          "pourquoi": "La photocopieuse, sans changer un mot. Cinq occurrences donnent une impression de confirmation qui n'existe pas : toutes ont lu le même texte. Ce qui se compte, ce sont les sources indépendantes, pas les affichages."
+        }
+      ]
+    },
+    {
+      "id": "EP-H6-C",
+      "discipline": "histoire",
+      "niveau": "6e",
+      "rang": 3,
+      "titre": "La vitrine, la balance et le trait de crayon",
+      "sequence": "Thème 3 — L'Empire romain dans le monde antique",
+      "modules": [
+        "H6-07",
+        "H6-08",
+        "H6-09"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-H6-C.json",
+      "items": [
+        {
+          "id": "EP-H6-C-01",
+          "palier": "rappel",
+          "module": "H6-07",
+          "ref": "CLM-H6-005",
+          "enonce": "Un aqueduc romain bien conservé prouve :",
+          "options": [
+            "que la population de la région parlait latin,",
+            "une ingénierie, une décision, une richesse et un pouvoir,",
+            "que la région était entièrement romanisée,",
+            "que les habitants voulaient cet aqueduc."
+          ],
+          "juste": 1,
+          "pourquoi": "La vitrine. Un monument renseigne sur ceux qui l'ont voulu, l'ont payé et l'ont montré — pas sur ceux qui passaient devant. La langue parlée, les croyances, l'accord des habitants : rien de tout cela ne se lit dans la pierre."
+        },
+        {
+          "id": "EP-H6-C-02",
+          "palier": "rappel",
+          "module": "H6-08",
+          "ref": "CLM-H6-006",
+          "enonce": "Une décision impériale autorise un culte. Que change-t-elle immédiatement ?",
+          "options": [
+            "La vie quotidienne de tous les habitants.",
+            "Le cadre officiel ; ce qu'elle change dans les faits, quand et pour qui, reste à établir.",
+            "Rien du tout.",
+            "Les croyances des habitants."
+          ],
+          "juste": 1,
+          "pourquoi": "La balance. Une décision impériale pèse lourd sur le droit et léger sur la vie quotidienne : il faut d'autres documents pour l'autre plateau. Dans un empire immense, une décision met du temps, et pas partout le même."
+        },
+        {
+          "id": "EP-H6-C-03",
+          "palier": "rappel",
+          "module": "H6-09",
+          "ref": "CLM-H6-007",
+          "enonce": "Sur une carte, une flèche unique relie Rome à la Chine des Han. Que faut-il en penser ?",
+          "options": [
+            "Qu'il existait une route directe entre les deux.",
+            "Que le trait a effacé les réseaux, les villes, les oasis, les ports et les intermédiaires.",
+            "Que la carte est fausse.",
+            "Que des marchands romains allaient jusqu'en Chine."
+          ],
+          "juste": 1,
+          "pourquoi": "Le trait de crayon ne ment pas sur ses extrémités : il ment par ce qu'il ne dessine pas. Il s'agit de multiples routes, terrestres et maritimes, et de relais successifs — presque personne ne faisait le trajet entier."
+        },
+        {
+          "id": "EP-H6-C-04",
+          "palier": "discrimination",
+          "module": "H6-07",
+          "ref": "CLM-H6-005",
+          "enonce": "Une synthèse décrit la coopération d'élites locales avec Rome. Qu'est-ce qu'elle ne permet pas ?",
+          "options": [
+            "De décrire des villes et des institutions.",
+            "De conclure que la domination romaine a été vécue de la même façon partout.",
+            "De montrer que des élites y ont trouvé leur intérêt.",
+            "De situer des routes et des monuments."
+          ],
+          "juste": 1,
+          "pourquoi": "La romanisation désigne des transformations inégales et négociées. Une élite qui coopère est une élite, pas une population, et les expériences de la domination diffèrent selon les lieux. Rien dans cette pièce ne permet de les uniformiser."
+        },
+        {
+          "id": "EP-H6-C-05",
+          "palier": "discrimination",
+          "module": "H6-08",
+          "ref": "CLM-H6-006",
+          "enonce": "On met côte à côte un édit impérial et la lettre d'une communauté locale. Comment les peser ?",
+          "options": [
+            "L'édit l'emporte : il est officiel.",
+            "La lettre l'emporte : elle vient de ceux qui vivaient là.",
+            "Chacun pèse lourd sur sa question, et il faut dire laquelle avant de les comparer.",
+            "Ils se contredisent, donc l'un des deux ment."
+          ],
+          "juste": 2,
+          "pourquoi": "La balance. Avant de mettre deux sources côte à côte, demandez sur quelle question on les pèse : sur le droit, l'édit ; sur ce qui se vit dans une ville, la lettre. Et deux documents qui divergent ne se contredisent pas forcément — ils peuvent répondre à deux questions différentes."
+        },
+        {
+          "id": "EP-H6-C-06",
+          "palier": "discrimination",
+          "module": "H6-09",
+          "ref": "CLM-H6-007",
+          "enonce": "Une notice décrit les routes de la soie sur quinze siècles. Qu'est-ce qu'elle ne permet pas ?",
+          "options": [
+            "De montrer qu'il s'agissait de plusieurs routes.",
+            "De décrire l'état de ces routes à un siècle précis.",
+            "De citer des villes-étapes.",
+            "De parler d'échanges maritimes."
+          ],
+          "juste": 1,
+          "pourquoi": "Une notice de très longue durée écrase les siècles ; l'appliquer sans précaution à une année donnée, c'est faire au temps ce que le trait de crayon fait à l'espace. Ce qui vaut sur quinze siècles ne vaut pas forcément un jour donné."
+        },
+        {
+          "id": "EP-H6-C-07",
+          "groupe": "H6-07-T",
+          "palier": "transfert",
+          "module": "H6-07",
+          "ref": "CLM-H6-005",
+          "enonce": "Une entreprise inaugure un siège social spectaculaire. Que prouve le bâtiment ?",
+          "options": [
+            "Que l'entreprise se porte bien.",
+            "Qu'on a voulu, payé et montré ce bâtiment — ce que vivent ceux qui y travaillent reste à chercher.",
+            "Que les salariés sont fiers d'y travailler.",
+            "Que l'entreprise emploie beaucoup de monde."
+          ],
+          "juste": 1,
+          "pourquoi": "La vitrine voyage sans rien perdre. Un siège spectaculaire établit une décision, une dépense et une intention d'être vu. La santé de l'entreprise elle-même n'en découle pas : on a vu des sièges somptueux bâtis juste avant une chute."
+        },
+        {
+          "id": "EP-H6-C-07b",
+          "groupe": "H6-07-T",
+          "palier": "transfert",
+          "module": "H6-07",
+          "ref": "CLM-H6-005",
+          "enonce": "La façade d'un collège porte une devise gravée en 1890. Que prouve-t-elle ?",
+          "options": [
+            "Que les élèves de 1890 y adhéraient.",
+            "Que ceux qui ont fait construire tenaient à l'afficher.",
+            "Que l'enseignement y était de qualité.",
+            "Que la devise était appliquée dans les classes."
+          ],
+          "juste": 1,
+          "pourquoi": "Une inscription est une vitrine de pierre : elle dit ce qu'on a voulu montrer, à qui, et à quel prix. Ce qui se passait dans les classes se cherche ailleurs — cahiers d'élèves, rapports d'inspection, souvenirs."
+        },
+        {
+          "id": "EP-H6-C-08",
+          "groupe": "H6-08-T",
+          "palier": "transfert",
+          "module": "H6-08",
+          "ref": "CLM-H6-006",
+          "enonce": "Pour étudier une nouvelle règle de tri des déchets, vous avez le texte officiel et la photo d'un local à poubelles. Que pèse quoi ?",
+          "options": [
+            "Le texte, sur tout.",
+            "Le texte sur le cadre, la photo sur un lieu et un jour : deux questions, deux poids.",
+            "La photo, puisqu'elle montre le réel.",
+            "Ni l'un ni l'autre, faute de statistiques."
+          ],
+          "juste": 1,
+          "pourquoi": "La balance ne hiérarchise pas les sources : elle les apparie à des questions. Une photo établit très bien ce qu'il y avait dans ce local ce matin-là, et rien du pays. Un texte établit la règle et rien de son application. La dernière réponse a raison de vouloir des chiffres, et tort de disqualifier les deux autres."
+        },
+        {
+          "id": "EP-H6-C-08b",
+          "groupe": "H6-08-T",
+          "palier": "transfert",
+          "module": "H6-08",
+          "ref": "CLM-H6-006",
+          "enonce": "Le règlement intérieur d'un établissement, et le registre des sanctions prononcées. Sur quelle question chacun pèse-t-il ?",
+          "options": [
+            "Le règlement sur tout, le registre sur rien.",
+            "Le règlement sur les règles annoncées, le registre sur ce qui a été sanctionné, à qui et quand.",
+            "Le registre contredit forcément le règlement.",
+            "Les deux disent la même chose sous deux formes."
+          ],
+          "juste": 1,
+          "pourquoi": "Deux documents peuvent porter sur le même établissement sans répondre à la même question. Un écart entre les deux n'est pas une contradiction : c'est la distance ordinaire entre une règle et son application, et c'est précisément ce qu'on cherche à décrire."
+        },
+        {
+          "id": "EP-H6-C-09",
+          "groupe": "H6-09-T",
+          "palier": "transfert",
+          "module": "H6-09",
+          "ref": "CLM-H6-007",
+          "enonce": "Sur un plan d'évacuation, une flèche indique la sortie la plus proche. Le trait de crayon s'applique-t-il ?",
+          "options": [
+            "Oui : la flèche efface tout ce qui est au milieu.",
+            "Non : ce trait ne prétend décrire aucun trajet réel, il donne une consigne — et il est fait pour effacer le reste.",
+            "Oui : il faudrait dessiner tous les chemins possibles.",
+            "Non : les plans d'évacuation sont toujours exacts."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert à démasquer un trait qui prétend décrire. Une flèche d'évacuation ne décrit rien : elle ordonne, et toute sa valeur vient de ce qu'elle supprime. Y ajouter les chemins possibles la rendrait dangereuse. Un outil qu'on applique partout finit par se retourner contre ce qu'il protégeait."
+        },
+        {
+          "id": "EP-H6-C-09b",
+          "groupe": "H6-09-T",
+          "palier": "transfert",
+          "module": "H6-09",
+          "ref": "CLM-H6-007",
+          "enonce": "Le schéma d'une chaîne alimentaire relie l'herbe au renard par trois flèches. Que dit le trait de crayon ?",
+          "options": [
+            "Rien : ce n'est pas une carte.",
+            "Que le schéma a retenu trois relations et effacé toutes les autres : reste à savoir lesquelles.",
+            "Que le schéma est faux.",
+            "Que le renard ne mange que ce qui est dessiné."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste voyage de la carte au schéma : tout dessin qui simplifie choisit ce qu'il supprime. Ici, les autres proies, les charognards et les saisons. Le schéma n'est pas faux — il répond à une question étroite, et il faut savoir laquelle."
+        }
+      ]
     }
   ]
 }

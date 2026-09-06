@@ -14,459 +14,6 @@
   "limite": "Un choix parmi quatre teste la reconnaissance, pas le rappel libre. Le rappel libre, c'est l'Extraction du module qui le fait, en demandant d'écrire. L'épreuve fait donc ce que le module ne fait pas : distinguer, et transporter. Elle ne remplace pas l'Extraction, et elle ne sert jamais à noter.",
   "epreuves": [
     {
-      "id": "EP-G6-A",
-      "discipline": "geographie",
-      "niveau": "6e",
-      "rang": 1,
-      "titre": "Habiter : la métropole et l'espace de faible densité",
-      "sequence": "Thèmes 1 et 2 du programme de sixième",
-      "modules": [
-        "G6-01",
-        "G6-02",
-        "G6-03",
-        "G6-04"
-      ],
-      "duree": "15 min",
-      "items": [
-        {
-          "id": "EP-G6-A-01",
-          "palier": "rappel",
-          "module": "G6-01",
-          "ref": "CLM-GEO-002",
-          "enonce": "À quoi reconnaît-on une métropole, d'après le programme ?",
-          "options": [
-            "À sa population, au-delà d'un certain seuil d'habitants.",
-            "À ses fonctions et aux flux qui la traversent.",
-            "À sa superficie et au nombre de communes qu'elle rassemble.",
-            "À la présence d'un aéroport international."
-          ],
-          "juste": 1,
-          "pourquoi": "Le programme définit la métropole par ses fonctions — économiques, sociales, politiques, culturelles — et par les flux. Il ne donne aucun seuil de population, et c'est précisément ce que le module vous demandait de ne pas inventer. L'aéroport et la superficie sont des indices possibles, jamais la définition."
-        },
-        {
-          "id": "EP-G6-A-02",
-          "palier": "rappel",
-          "module": "G6-02",
-          "ref": "CLM-GEO-005",
-          "enonce": "Qu'est-ce qui distingue un scénario d'avenir d'une prophétie ?",
-          "options": [
-            "Le scénario est écrit par des spécialistes.",
-            "Le scénario porte sur un avenir plus proche.",
-            "On peut démonter le scénario et en remonter un autre avec les mêmes contraintes.",
-            "Le scénario a plus de chances de se réaliser."
-          ],
-          "juste": 2,
-          "pourquoi": "La maquette : un scénario se démonte. Un futur qu'on ne peut pas démonter n'est plus un scénario — c'est une prophétie, et elle sert quelqu'un. Ni l'auteur, ni l'échéance, ni la vraisemblance ne font la différence : c'est le fait qu'on puisse remplacer des pièces."
-        },
-        {
-          "id": "EP-G6-A-03",
-          "palier": "rappel",
-          "module": "G6-03",
-          "ref": "CLM-GEO-004",
-          "enonce": "« Cet espace est difficile à habiter. » Que manque-t-il à cette phrase ?",
-          "options": [
-            "Un chiffre de densité.",
-            "Le projet par rapport auquel il est difficile.",
-            "Le nom de la société qui l'habite.",
-            "Rien : certains milieux sont objectivement difficiles."
-          ],
-          "juste": 1,
-          "pourquoi": "Le gabarit. Une contrainte ne se mesure jamais seule : on approche du lieu un projet, et on regarde ce qui ne passe pas. Le sable est un obstacle pour un champ de blé, une route pour un troupeau. La dernière réponse est le piège du module : elle a l'air de bon sens, et elle fait disparaître le gabarit."
-        },
-        {
-          "id": "EP-G6-A-04",
-          "palier": "rappel",
-          "module": "G6-04",
-          "ref": "CLM-GEO-004",
-          "enonce": "Deux territoires ont exactement la même densité de population. Que peut-on en conclure ?",
-          "options": [
-            "Qu'ils ont à peu près la même répartition d'habitants.",
-            "Qu'ils ont le même nombre d'habitants.",
-            "Rien de plus que le rapport entre une population et une surface.",
-            "Qu'ils connaissent la même dynamique."
-          ],
-          "juste": 2,
-          "pourquoi": "Le tas. La même quantité de grains, étalée sur une table et entassée sur l'autre : la moyenne est identique et les deux tables n'ont rien à voir. Une densité ne dit rien de la répartition, ni des activités, ni de l'évolution. La deuxième réponse est fausse deux fois : à densité égale et surfaces différentes, les populations diffèrent."
-        },
-        {
-          "id": "EP-G6-A-05",
-          "palier": "discrimination",
-          "module": "G6-01",
-          "ref": "CLM-GEO-002",
-          "enonce": "Le programme définit la métropole par ses fonctions et par la diversité de ses usagers. Qu'est-ce que cette pièce ne permet pas de faire ?",
-          "options": [
-            "Caractériser une métropole autrement que par sa population.",
-            "Fixer le seuil d'habitants à partir duquel une ville devient une métropole.",
-            "Distinguer plusieurs manières d'habiter la même ville.",
-            "Nommer des fonctions économiques et culturelles."
-          ],
-          "juste": 1,
-          "pourquoi": "Les trois autres réponses sont exactement ce que la pièce permet. Le seuil, lui, n'est écrit nulle part, et aucun chiffre du module n'en propose. Une pièce qui ne dit pas une chose ne l'autorise pas — même quand on aimerait beaucoup la conclure."
-        },
-        {
-          "id": "EP-G6-A-06",
-          "palier": "discrimination",
-          "module": "G6-04",
-          "ref": "CLM-GEO-004",
-          "enonce": "Un document affirme : « Cet espace compte 12 habitants au km² ; il est donc en déclin. » Où est le saut ?",
-          "options": [
-            "Le chiffre est probablement faux.",
-            "Douze habitants au km², ce n'est pas une faible densité.",
-            "Le chiffre décrit un état, le déclin décrit une évolution : le second ne se déduit pas du premier.",
-            "Il faudrait la densité de l'année précédente pour pouvoir parler de faible densité."
-          ],
-          "juste": 2,
-          "pourquoi": "Une densité est une photographie ; un déclin est un film. Passer de l'une à l'autre demande une seconde mesure, à une autre date — le module ajoutait justement : « depuis quand ? ». La dernière réponse mélange les deux questions : la seconde date sert à parler d'évolution, pas à qualifier la densité."
-        },
-        {
-          "id": "EP-G6-A-07",
-          "palier": "discrimination",
-          "module": "G6-02",
-          "ref": "CLM-GEO-005",
-          "enonce": "Une brochure d'urbanisme annonce : « En 2050, la ville sera verticale et automatisée. » Quel statut lui donner ?",
-          "options": [
-            "Établi : la brochure est signée par des urbanistes.",
-            "C'est une proposition, tant qu'on ne sait pas ce qu'elle suppose et ce qu'on pourrait y remplacer.",
-            "Réfuté : personne ne peut connaître 2050.",
-            "Probable : la tendance actuelle va dans ce sens."
-          ],
-          "juste": 1,
-          "pourquoi": "Ni établi ni réfuté : ce n'est pas parce qu'une chose est publiée qu'elle est établie, ni parce qu'on ne peut pas la vérifier qu'elle est fausse. « Probable » glisse aussi : une tendance n'est pas une preuve. Le bon geste est de demander la maquette — sur quoi tient-elle, et que peut-on en retirer ?"
-        },
-        {
-          "id": "EP-G6-A-08",
-          "palier": "transfert",
-          "module": "G6-01",
-          "ref": "CLM-GEO-002",
-          "enonce": "Vous avez sous les yeux le plan du réseau de bus d'une agglomération. Quelle question le calque vous fait-il poser ?",
-          "options": [
-            "Combien cette agglomération compte-t-elle d'habitants ?",
-            "Ce plan est-il à jour ?",
-            "Pour quels usagers ce réseau a-t-il été dessiné — et lesquels n'y sont pas ?",
-            "Quelle est la longueur totale des lignes ?"
-          ],
-          "juste": 2,
-          "pourquoi": "Le calque : chaque sorte d'usager dessine une ville différente sur le même sol. Un réseau pensé pour les pendulaires du matin ne ressemble pas à un réseau pensé pour les élèves, ou pour ceux qui travaillent la nuit. « Ce plan est-il à jour ? » est une bonne question — mais c'est une question de fiabilité, pas d'usage.",
-          "groupe": "G6-01-T"
-        },
-        {
-          "id": "EP-G6-A-09",
-          "palier": "transfert",
-          "module": "G6-03",
-          "ref": "CLM-GEO-004",
-          "enonce": "Une commune de montagne déclarait : « Notre col est un handicap. » Vingt ans plus tard, elle ouvre une station de ski. Que dit le gabarit ?",
-          "options": [
-            "La commune s'était trompée la première fois.",
-            "Le col était bien un handicap, et la station est une compensation.",
-            "La pente n'a pas changé ; le projet a changé, donc la contrainte s'est déplacée.",
-            "Une contrainte finit toujours par disparaître avec le temps."
-          ],
-          "juste": 2,
-          "pourquoi": "Rien n'a bougé dans le relief. On a simplement approché du même lieu un autre gabarit — non plus « faire passer une route » mais « faire descendre des skieurs » — et ce qui ne passait pas est devenu ce qui porte. La première réponse est le piège : personne ne s'était trompé, une contrainte n'est simplement jamais absolue.",
-          "groupe": "G6-03-T"
-        },
-        {
-          "id": "EP-G6-A-10",
-          "palier": "transfert",
-          "module": "G6-04",
-          "ref": "CLM-GEO-004",
-          "enonce": "Un relevé indique : « Ce village comptait 512 habitants en 1999 et 388 en 2021. » Le tas s'applique-t-il ici ?",
-          "options": [
-            "Oui : ce sont deux moyennes, et il faut les décomposer.",
-            "Non : ce ne sont pas des moyennes mais deux dénombrements datés — le tas n'a rien à ouvrir.",
-            "Oui : il faut demander comment la population se répartit dans le village.",
-            "Non, parce que l'écart est trop faible pour qu'on puisse l'interpréter."
-          ],
-          "juste": 1,
-          "pourquoi": "Un outil qui s'applique partout ne sert à rien. Le tas ouvre les moyennes ; ici il n'y a pas de moyenne, il y a deux comptages à deux dates. La troisième réponse est tentante et reste une bonne question en soi — mais elle ne sort pas de ces chiffres-là. Ce que ces chiffres appellent, c'est plutôt : qui a compté, et comment ?",
-          "groupe": "G6-04-T"
-        },
-        {
-          "id": "EP-G6-A-08b",
-          "groupe": "G6-01-T",
-          "palier": "transfert",
-          "module": "G6-01",
-          "ref": "CLM-GEO-002",
-          "enonce": "Une brochure touristique présente « les incontournables de la ville en 48 heures ». Quelle question le calque vous fait-il poser ?",
-          "options": [
-            "Ces lieux sont-ils vraiment les plus beaux de la ville ?",
-            "Combien coûte ce parcours ?",
-            "Cette ville-là est celle de qui — et qui, l'habitant chaque jour, n'y figure pas ?",
-            "Cette brochure est-elle à jour ?"
-          ],
-          "juste": 2,
-          "pourquoi": "Le calque du touriste dessine une ville entière et cohérente, où ne figurent ni l'entrepôt, ni le collège, ni le trajet de six heures quarante. Elle n'est pas fausse pour autant : c'est un calque parmi d'autres, et elle ne dit jamais lequel."
-        },
-        {
-          "id": "EP-G6-A-11",
-          "groupe": "G6-02-T",
-          "palier": "transfert",
-          "module": "G6-02",
-          "ref": "CLM-GEO-005",
-          "enonce": "Un dossier d'aménagement affirme : « Il n'y a pas d'alternative. » Que fait la maquette de cette phrase ?",
-          "options": [
-            "Elle la confirme, si le budget est contraint.",
-            "Elle en fait le signe qu'on présente une maquette comme si elle ne se démontait pas.",
-            "Elle la rejette : il existe toujours une solution équivalente.",
-            "Elle demande l'avis d'un expert indépendant."
-          ],
-          "juste": 1,
-          "pourquoi": "« Pas d'alternative » n'est pas un constat, c'est une clôture. La maquette ne prétend pas qu'une autre solution serait aussi bonne — la troisième réponse va trop loin, démontable ne veut pas dire interchangeable. Elle demande seulement quelles pièces on pourrait remplacer, et ce qu'il en coûterait."
-        },
-        {
-          "id": "EP-G6-A-09b",
-          "groupe": "G6-03-T",
-          "palier": "transfert",
-          "module": "G6-03",
-          "ref": "CLM-GEO-004",
-          "enonce": "Un même bâtiment vide est jugé « inadapté » par une école et « parfait » par une entreprise de stockage. Que dit le gabarit ?",
-          "options": [
-            "L'un des deux se trompe.",
-            "Le bâtiment est moyennement adapté.",
-            "Les deux ont raison : ils n'approchent pas du même lieu le même projet.",
-            "Il faudrait une expertise pour trancher."
-          ],
-          "juste": 2,
-          "pourquoi": "L'inadaptation n'est pas une propriété du bâtiment : c'est un rapport entre lui et un projet. Sans fenêtres, sans cour, avec un quai de chargement — le mur qui manque à l'école est celui qui sert au stockage. Chercher qui a raison, c'est chercher un gabarit unique, et il n'y en a pas."
-        },
-        {
-          "id": "EP-G6-A-10b",
-          "groupe": "G6-04-T",
-          "palier": "transfert",
-          "module": "G6-04",
-          "ref": "CLM-GEO-004",
-          "enonce": "Une note de quartier indique : « Le revenu moyen y est de 2 100 € par mois. » Que demande le tas ?",
-          "options": [
-            "Ce chiffre place-t-il le quartier au-dessus de la moyenne nationale ?",
-            "Comment ce revenu se répartit-il entre les habitants ?",
-            "Ce chiffre est-il net ou brut ?",
-            "Combien d'habitants compte le quartier ?"
-          ],
-          "juste": 1,
-          "pourquoi": "Le tas voyage hors de la géographie : toute moyenne écrase une répartition. Deux quartiers à 2 100 € peuvent être l'un homogène, l'autre partagé entre 800 € et 6 000 €. Les trois autres questions sont utiles et légitimes ; aucune n'ouvre le tas."
-        },
-        {
-          "id": "EP-G6-A-12",
-          "palier": "discrimination",
-          "module": "G6-03",
-          "ref": "CLM-GEO-004",
-          "enonce": "Le programme demande de mettre en évidence les représentations dont ces espaces sont l'objet. Qu'est-ce que cette pièce ne permet pas ?",
-          "options": [
-            "De décrire comment des sociétés s'adaptent différemment à un même milieu.",
-            "De classer les milieux du plus facile au plus difficile à habiter.",
-            "De montrer qu'un même espace est vu autrement selon qui le regarde.",
-            "De relever ce qu'on dit couramment d'un désert ou d'une montagne."
-          ],
-          "juste": 1,
-          "pourquoi": "Les trois autres réponses sont exactement ce que la pièce demande. Le classement, lui, changerait avec le projet — c'est le gabarit — et ce serait donc un classement de projets déguisé en classement de milieux. Une pièce qui décrit des représentations ne délivre aucun palmarès."
-        }
-      ],
-      "jdr": "jdr/JDR-G6-A.json"
-    },
-    {
-      "id": "EP-G6-B",
-      "discipline": "geographie",
-      "niveau": "6e",
-      "rang": 2,
-      "titre": "Le littoral, la carte, et ce que le milieu ne décide pas",
-      "sequence": "Thèmes 3 et 4 du programme de sixième",
-      "modules": [
-        "G6-05",
-        "G6-06",
-        "G6-07"
-      ],
-      "duree": "12 min",
-      "items": [
-        {
-          "id": "EP-G6-B-01",
-          "palier": "rappel",
-          "module": "G6-05",
-          "ref": "CLM-GEO-002",
-          "enonce": "Pourquoi les usages d'un littoral entrent-ils si souvent en concurrence ?",
-          "options": [
-            "Parce que les habitants des littoraux sont plus nombreux qu'ailleurs.",
-            "Parce que la ressource disputée est une bande étroite : ce que l'un y pose, l'autre ne peut plus l'y mettre.",
-            "Parce que le tourisme rapporte plus que l'industrie.",
-            "Parce que la loi y interdit beaucoup de constructions."
-          ],
-          "juste": 1,
-          "pourquoi": "L'étagère : longue, mais d'une seule profondeur. Le port, les hôtels, les logements et la dune protégée se partagent la même planche. La première réponse décrit une conséquence, pas la cause. Les deux dernières sont parfois vraies et ne sont jamais la raison de la concurrence."
-        },
-        {
-          "id": "EP-G6-B-02",
-          "palier": "rappel",
-          "module": "G6-06",
-          "ref": "CLM-GEO-002",
-          "enonce": "Quelle carte du monde ne déforme rien ?",
-          "options": [
-            "La projection de Mercator, celle qui sert à la navigation.",
-            "Aucune : on ne met pas une sphère à plat sans déchirer ou sans étirer.",
-            "Les cartes récentes, établies par satellite.",
-            "La projection de Peters, qui respecte les surfaces."
-          ],
-          "juste": 1,
-          "pourquoi": "La peau d'orange. C'est une propriété de la sphère, pas un défaut du cartographe, et ce n'est pas un aveu : c'est un résultat. Peters garde les surfaces justes en abandonnant les formes ; Mercator garde les angles en gonflant les hautes latitudes. Un satellite ne change rien à la géométrie."
-        },
-        {
-          "id": "EP-G6-B-03",
-          "palier": "rappel",
-          "module": "G6-07",
-          "ref": "CLM-GEO-002",
-          "enonce": "Deux sociétés habitent le même milieu de façon très différente. Qu'est-ce que cela montre ?",
-          "options": [
-            "Que l'une s'est mieux adaptée que l'autre.",
-            "Que le milieu a finalement peu d'influence.",
-            "Que le milieu ferme des routes mais n'en choisit aucune : quelqu'un a choisi.",
-            "Que les deux sociétés ne disposent pas des mêmes ressources naturelles."
-          ],
-          "juste": 2,
-          "pourquoi": "La fourche. Le milieu contraint, il ne dicte pas. La deuxième réponse va trop loin dans l'autre sens : la contrainte est réelle. La première classe, alors que le module refuse de classer. La dernière contredit l'énoncé, qui dit que le milieu est le même."
-        },
-        {
-          "id": "EP-G6-B-04",
-          "palier": "discrimination",
-          "module": "G6-06",
-          "ref": "CLM-GEO-002",
-          "enonce": "Sur un planisphère, le Groenland paraît plus grand que l'Afrique. Que peut-on en conclure ?",
-          "options": [
-            "Que la carte est fausse et qu'il faut la remplacer.",
-            "Que cette projection a choisi de garder juste autre chose que les surfaces.",
-            "Que le Groenland est effectivement plus grand que l'Afrique.",
-            "Que le cartographe a voulu tromper son lecteur."
-          ],
-          "juste": 1,
-          "pourquoi": "La troisième réponse est fausse : l'Afrique fait environ quatorze fois le Groenland. Les deux autres durcissent — la déformation n'est ni une erreur ni forcément une intention. Ce qu'on peut dire, c'est ce que la carte a sacrifié ; on se demande ensuite, et seulement ensuite, à quoi elle sert."
-        },
-        {
-          "id": "EP-G6-B-05",
-          "palier": "discrimination",
-          "module": "G6-05",
-          "ref": "CLM-GEO-002",
-          "enonce": "Le programme traite les littoraux par les usages, les aménagements et la vulnérabilité. Qu'est-ce que cette pièce ne permet pas ?",
-          "options": [
-            "Repérer que deux usages se disputent le même espace.",
-            "Décrire l'aménagement d'un port de commerce.",
-            "Dire quel usage devrait l'emporter sur les autres.",
-            "Constater qu'on aménage beaucoup un espace exposé."
-          ],
-          "juste": 2,
-          "pourquoi": "Trancher entre le port et la dune n'est pas une question de géographie : c'est une décision politique, qui se prend ailleurs et avec d'autres personnes. La géographie peut poser le conflit avec précision — elle n'a pas mandat pour le clore."
-        },
-        {
-          "id": "EP-G6-B-06",
-          "palier": "discrimination",
-          "module": "G6-07",
-          "ref": "CLM-GEO-002",
-          "enonce": "« Le climat aride explique l'habitat nomade. » Que vaut cette phrase ?",
-          "options": [
-            "Elle est établie : c'est ce que montre la carte des climats.",
-            "Elle est réfutée : le climat n'a aucun effet sur l'habitat.",
-            "Elle fait dire au milieu ce qu'il ne dit pas : plusieurs routes restaient ouvertes.",
-            "Elle est probable, faute de meilleure explication."
-          ],
-          "juste": 2,
-          "pourquoi": "On trouve en milieu aride des sociétés nomades et des sociétés sédentaires — oasis, villes caravanières, irrigation. Le milieu a fermé des routes ; il n'en a choisi aucune. La deuxième réponse est l'excès inverse : la contrainte, elle, est bien réelle."
-        },
-        {
-          "id": "EP-G6-B-07",
-          "palier": "transfert",
-          "module": "G6-05",
-          "ref": "CLM-GEO-002",
-          "enonce": "Une commune du bord de mer annonce un parking de quatre cents places au plus près de la plage. Quelle question l'étagère fait-elle poser ?",
-          "options": [
-            "Combien de touristes viendront-ils ?",
-            "Le stationnement sera-t-il payant ?",
-            "Qu'a-t-il fallu retirer de la bande pour poser ce parking ?",
-            "La commune a-t-elle les moyens de le financer ?"
-          ],
-          "juste": 2,
-          "pourquoi": "Un parking sur le littoral n'est pas seulement un ajout : c'est une place prise sur une planche déjà pleine — dune, logement, activité, espace protégé. Les autres questions sont légitimes, et aucune ne porte sur la rareté de la bande.",
-          "groupe": "G6-05-T"
-        },
-        {
-          "id": "EP-G6-B-08",
-          "palier": "transfert",
-          "module": "G6-06",
-          "ref": "CLM-GEO-002",
-          "enonce": "Sur un plan de métro, deux stations voisines sont séparées de deux centimètres, comme presque partout ailleurs sur le plan. Que dit la peau d'orange ?",
-          "options": [
-            "Rien : un plan de métro n'est pas une carte du monde.",
-            "Que le plan a gardé l'ordre des stations et abandonné les distances.",
-            "Que le plan est faux.",
-            "Que les stations sont réellement à égale distance."
-          ],
-          "juste": 1,
-          "pourquoi": "Le geste voyage : toute mise à plat choisit ce qu'elle garde juste. Un plan de métro sacrifie les distances et les formes pour garder l'ordre et les correspondances — et c'est exactement pour cela qu'il est lisible. La première réponse refuse un transfert qui fonctionne.",
-          "groupe": "G6-06-T"
-        },
-        {
-          "id": "EP-G6-B-09",
-          "palier": "transfert",
-          "module": "G6-07",
-          "ref": "CLM-GEO-002",
-          "enonce": "Sous quatre mètres d'eau à marée haute, aucune société n'a jamais cultivé de champ sans construire d'abord une digue. La fourche s'applique-t-elle ?",
-          "options": [
-            "Oui, comme toujours : quelqu'un a forcément choisi.",
-            "Non : là où il ne reste qu'un seul chemin, on peut dire que le milieu a décidé.",
-            "Non, parce que la fourche ne vaut que pour les climats.",
-            "Oui : d'autres sociétés auraient pu cultiver sous l'eau."
-          ],
-          "juste": 1,
-          "pourquoi": "Le module l'annonçait lui-même : là où il ne reste qu'une route, le milieu a bien décidé ; c'est presque partout ailleurs qu'il ne décide pas. La première réponse est l'erreur qui guette un outil qu'on aime — on finit par l'appliquer sans regarder. Et la digue est justement la manière dont on rouvre la fourche : elle a un coût, une date, et des gens qui l'ont voulue.",
-          "groupe": "G6-07-T"
-        },
-        {
-          "id": "EP-G6-B-07b",
-          "groupe": "G6-05-T",
-          "palier": "transfert",
-          "module": "G6-05",
-          "ref": "CLM-GEO-002",
-          "enonce": "Une ville de l'intérieur des terres veut créer une zone d'activités sur d'anciennes friches. L'étagère s'applique-t-elle ?",
-          "options": [
-            "Oui : tout aménagement retire toujours quelque chose.",
-            "Pas de la même façon : ce qui fait l'étagère, c'est la profondeur unique — une friche intérieure n'est pas rare de cette manière-là.",
-            "Non : l'étagère ne vaut que pour le bord de mer.",
-            "Oui : les friches sont aussi disputées que les littoraux."
-          ],
-          "juste": 1,
-          "pourquoi": "La première réponse est vraie, et c'est bien le problème : elle est vraie partout, donc elle ne tranche rien. L'outil garde ici une part de sa force et perd ce qui le rendait coupant — à l'intérieur des terres, on peut souvent s'écarter ; sur une bande littorale, non. Un outil qu'on transporte sans regarder ce qu'il perd en route finit par ne plus rien dire."
-        },
-        {
-          "id": "EP-G6-B-08b",
-          "groupe": "G6-06-T",
-          "palier": "transfert",
-          "module": "G6-06",
-          "ref": "CLM-GEO-002",
-          "enonce": "Un graphique résume vingt ans d'évolution en une seule courbe. Que dit la peau d'orange ?",
-          "options": [
-            "Rien : elle ne concerne que les cartes.",
-            "Que le graphique est trompeur.",
-            "Que toute mise à plat garde certaines choses justes et en abandonne d'autres : reste à savoir lesquelles.",
-            "Qu'il faudrait tracer plusieurs courbes."
-          ],
-          "juste": 2,
-          "pourquoi": "Le geste voyage : représenter, c'est choisir ce qu'on sacrifie. Une courbe unique garde la tendance et abandonne les écarts, les cas particuliers et les ruptures. « Trompeur » durcit — Mercator ne trompe pas, il est explicite sur ce qu'il garde. Tracer plusieurs courbes est parfois la bonne suite, mais c'est une solution, pas une lecture."
-        },
-        {
-          "id": "EP-G6-B-09b",
-          "groupe": "G6-07-T",
-          "palier": "transfert",
-          "module": "G6-07",
-          "ref": "CLM-GEO-002",
-          "enonce": "Deux villages voisins, même vallée, même sol : l'un vit du bois, l'autre de l'élevage. Que cherche la fourche ?",
-          "options": [
-            "Lequel des deux a fait le meilleur choix.",
-            "Ce que le milieu leur interdisait à tous les deux.",
-            "Qui a choisi, quand, et avec quels moyens.",
-            "Si le sol est vraiment identique des deux côtés."
-          ],
-          "juste": 2,
-          "pourquoi": "Là où plusieurs routes restaient ouvertes, une décision a eu lieu : elle a une date, des personnes, des moyens, et elle s'enquête. La deuxième réponse est le premier temps de l'outil — utile, mais elle ne dit rien de ce qui restait ouvert. La première classe, et le module refuse de classer."
-        }
-      ],
-      "jdr": "jdr/JDR-G6-B.json"
-    },
-    {
       "id": "EP-H6-A",
       "discipline": "histoire",
       "niveau": "6e",
@@ -1072,6 +619,1194 @@
           ],
           "juste": 1,
           "pourquoi": "Le geste voyage de la carte au schéma : tout dessin qui simplifie choisit ce qu'il supprime. Ici, les autres proies, les charognards et les saisons. Le schéma n'est pas faux — il répond à une question étroite, et il faut savoir laquelle."
+        }
+      ]
+    },
+    {
+      "id": "EP-G6-A",
+      "discipline": "geographie",
+      "niveau": "6e",
+      "rang": 1,
+      "titre": "Habiter : la métropole et l'espace de faible densité",
+      "sequence": "Thèmes 1 et 2 du programme de sixième",
+      "modules": [
+        "G6-01",
+        "G6-02",
+        "G6-03",
+        "G6-04"
+      ],
+      "duree": "15 min",
+      "items": [
+        {
+          "id": "EP-G6-A-01",
+          "palier": "rappel",
+          "module": "G6-01",
+          "ref": "CLM-GEO-002",
+          "enonce": "À quoi reconnaît-on une métropole, d'après le programme ?",
+          "options": [
+            "À sa population, au-delà d'un certain seuil d'habitants.",
+            "À ses fonctions et aux flux qui la traversent.",
+            "À sa superficie et au nombre de communes qu'elle rassemble.",
+            "À la présence d'un aéroport international."
+          ],
+          "juste": 1,
+          "pourquoi": "Le programme définit la métropole par ses fonctions — économiques, sociales, politiques, culturelles — et par les flux. Il ne donne aucun seuil de population, et c'est précisément ce que le module vous demandait de ne pas inventer. L'aéroport et la superficie sont des indices possibles, jamais la définition."
+        },
+        {
+          "id": "EP-G6-A-02",
+          "palier": "rappel",
+          "module": "G6-02",
+          "ref": "CLM-GEO-005",
+          "enonce": "Qu'est-ce qui distingue un scénario d'avenir d'une prophétie ?",
+          "options": [
+            "Le scénario est écrit par des spécialistes.",
+            "Le scénario porte sur un avenir plus proche.",
+            "On peut démonter le scénario et en remonter un autre avec les mêmes contraintes.",
+            "Le scénario a plus de chances de se réaliser."
+          ],
+          "juste": 2,
+          "pourquoi": "La maquette : un scénario se démonte. Un futur qu'on ne peut pas démonter n'est plus un scénario — c'est une prophétie, et elle sert quelqu'un. Ni l'auteur, ni l'échéance, ni la vraisemblance ne font la différence : c'est le fait qu'on puisse remplacer des pièces."
+        },
+        {
+          "id": "EP-G6-A-03",
+          "palier": "rappel",
+          "module": "G6-03",
+          "ref": "CLM-GEO-004",
+          "enonce": "« Cet espace est difficile à habiter. » Que manque-t-il à cette phrase ?",
+          "options": [
+            "Un chiffre de densité.",
+            "Le projet par rapport auquel il est difficile.",
+            "Le nom de la société qui l'habite.",
+            "Rien : certains milieux sont objectivement difficiles."
+          ],
+          "juste": 1,
+          "pourquoi": "Le gabarit. Une contrainte ne se mesure jamais seule : on approche du lieu un projet, et on regarde ce qui ne passe pas. Le sable est un obstacle pour un champ de blé, une route pour un troupeau. La dernière réponse est le piège du module : elle a l'air de bon sens, et elle fait disparaître le gabarit."
+        },
+        {
+          "id": "EP-G6-A-04",
+          "palier": "rappel",
+          "module": "G6-04",
+          "ref": "CLM-GEO-004",
+          "enonce": "Deux territoires ont exactement la même densité de population. Que peut-on en conclure ?",
+          "options": [
+            "Qu'ils ont à peu près la même répartition d'habitants.",
+            "Qu'ils ont le même nombre d'habitants.",
+            "Rien de plus que le rapport entre une population et une surface.",
+            "Qu'ils connaissent la même dynamique."
+          ],
+          "juste": 2,
+          "pourquoi": "Le tas. La même quantité de grains, étalée sur une table et entassée sur l'autre : la moyenne est identique et les deux tables n'ont rien à voir. Une densité ne dit rien de la répartition, ni des activités, ni de l'évolution. La deuxième réponse est fausse deux fois : à densité égale et surfaces différentes, les populations diffèrent."
+        },
+        {
+          "id": "EP-G6-A-05",
+          "palier": "discrimination",
+          "module": "G6-01",
+          "ref": "CLM-GEO-002",
+          "enonce": "Le programme définit la métropole par ses fonctions et par la diversité de ses usagers. Qu'est-ce que cette pièce ne permet pas de faire ?",
+          "options": [
+            "Caractériser une métropole autrement que par sa population.",
+            "Fixer le seuil d'habitants à partir duquel une ville devient une métropole.",
+            "Distinguer plusieurs manières d'habiter la même ville.",
+            "Nommer des fonctions économiques et culturelles."
+          ],
+          "juste": 1,
+          "pourquoi": "Les trois autres réponses sont exactement ce que la pièce permet. Le seuil, lui, n'est écrit nulle part, et aucun chiffre du module n'en propose. Une pièce qui ne dit pas une chose ne l'autorise pas — même quand on aimerait beaucoup la conclure."
+        },
+        {
+          "id": "EP-G6-A-06",
+          "palier": "discrimination",
+          "module": "G6-04",
+          "ref": "CLM-GEO-004",
+          "enonce": "Un document affirme : « Cet espace compte 12 habitants au km² ; il est donc en déclin. » Où est le saut ?",
+          "options": [
+            "Le chiffre est probablement faux.",
+            "Douze habitants au km², ce n'est pas une faible densité.",
+            "Le chiffre décrit un état, le déclin décrit une évolution : le second ne se déduit pas du premier.",
+            "Il faudrait la densité de l'année précédente pour pouvoir parler de faible densité."
+          ],
+          "juste": 2,
+          "pourquoi": "Une densité est une photographie ; un déclin est un film. Passer de l'une à l'autre demande une seconde mesure, à une autre date — le module ajoutait justement : « depuis quand ? ». La dernière réponse mélange les deux questions : la seconde date sert à parler d'évolution, pas à qualifier la densité."
+        },
+        {
+          "id": "EP-G6-A-07",
+          "palier": "discrimination",
+          "module": "G6-02",
+          "ref": "CLM-GEO-005",
+          "enonce": "Une brochure d'urbanisme annonce : « En 2050, la ville sera verticale et automatisée. » Quel statut lui donner ?",
+          "options": [
+            "Établi : la brochure est signée par des urbanistes.",
+            "C'est une proposition, tant qu'on ne sait pas ce qu'elle suppose et ce qu'on pourrait y remplacer.",
+            "Réfuté : personne ne peut connaître 2050.",
+            "Probable : la tendance actuelle va dans ce sens."
+          ],
+          "juste": 1,
+          "pourquoi": "Ni établi ni réfuté : ce n'est pas parce qu'une chose est publiée qu'elle est établie, ni parce qu'on ne peut pas la vérifier qu'elle est fausse. « Probable » glisse aussi : une tendance n'est pas une preuve. Le bon geste est de demander la maquette — sur quoi tient-elle, et que peut-on en retirer ?"
+        },
+        {
+          "id": "EP-G6-A-08",
+          "palier": "transfert",
+          "module": "G6-01",
+          "ref": "CLM-GEO-002",
+          "enonce": "Vous avez sous les yeux le plan du réseau de bus d'une agglomération. Quelle question le calque vous fait-il poser ?",
+          "options": [
+            "Combien cette agglomération compte-t-elle d'habitants ?",
+            "Ce plan est-il à jour ?",
+            "Pour quels usagers ce réseau a-t-il été dessiné — et lesquels n'y sont pas ?",
+            "Quelle est la longueur totale des lignes ?"
+          ],
+          "juste": 2,
+          "pourquoi": "Le calque : chaque sorte d'usager dessine une ville différente sur le même sol. Un réseau pensé pour les pendulaires du matin ne ressemble pas à un réseau pensé pour les élèves, ou pour ceux qui travaillent la nuit. « Ce plan est-il à jour ? » est une bonne question — mais c'est une question de fiabilité, pas d'usage.",
+          "groupe": "G6-01-T"
+        },
+        {
+          "id": "EP-G6-A-09",
+          "palier": "transfert",
+          "module": "G6-03",
+          "ref": "CLM-GEO-004",
+          "enonce": "Une commune de montagne déclarait : « Notre col est un handicap. » Vingt ans plus tard, elle ouvre une station de ski. Que dit le gabarit ?",
+          "options": [
+            "La commune s'était trompée la première fois.",
+            "Le col était bien un handicap, et la station est une compensation.",
+            "La pente n'a pas changé ; le projet a changé, donc la contrainte s'est déplacée.",
+            "Une contrainte finit toujours par disparaître avec le temps."
+          ],
+          "juste": 2,
+          "pourquoi": "Rien n'a bougé dans le relief. On a simplement approché du même lieu un autre gabarit — non plus « faire passer une route » mais « faire descendre des skieurs » — et ce qui ne passait pas est devenu ce qui porte. La première réponse est le piège : personne ne s'était trompé, une contrainte n'est simplement jamais absolue.",
+          "groupe": "G6-03-T"
+        },
+        {
+          "id": "EP-G6-A-10",
+          "palier": "transfert",
+          "module": "G6-04",
+          "ref": "CLM-GEO-004",
+          "enonce": "Un relevé indique : « Ce village comptait 512 habitants en 1999 et 388 en 2021. » Le tas s'applique-t-il ici ?",
+          "options": [
+            "Oui : ce sont deux moyennes, et il faut les décomposer.",
+            "Non : ce ne sont pas des moyennes mais deux dénombrements datés — le tas n'a rien à ouvrir.",
+            "Oui : il faut demander comment la population se répartit dans le village.",
+            "Non, parce que l'écart est trop faible pour qu'on puisse l'interpréter."
+          ],
+          "juste": 1,
+          "pourquoi": "Un outil qui s'applique partout ne sert à rien. Le tas ouvre les moyennes ; ici il n'y a pas de moyenne, il y a deux comptages à deux dates. La troisième réponse est tentante et reste une bonne question en soi — mais elle ne sort pas de ces chiffres-là. Ce que ces chiffres appellent, c'est plutôt : qui a compté, et comment ?",
+          "groupe": "G6-04-T"
+        },
+        {
+          "id": "EP-G6-A-08b",
+          "groupe": "G6-01-T",
+          "palier": "transfert",
+          "module": "G6-01",
+          "ref": "CLM-GEO-002",
+          "enonce": "Une brochure touristique présente « les incontournables de la ville en 48 heures ». Quelle question le calque vous fait-il poser ?",
+          "options": [
+            "Ces lieux sont-ils vraiment les plus beaux de la ville ?",
+            "Combien coûte ce parcours ?",
+            "Cette ville-là est celle de qui — et qui, l'habitant chaque jour, n'y figure pas ?",
+            "Cette brochure est-elle à jour ?"
+          ],
+          "juste": 2,
+          "pourquoi": "Le calque du touriste dessine une ville entière et cohérente, où ne figurent ni l'entrepôt, ni le collège, ni le trajet de six heures quarante. Elle n'est pas fausse pour autant : c'est un calque parmi d'autres, et elle ne dit jamais lequel."
+        },
+        {
+          "id": "EP-G6-A-11",
+          "groupe": "G6-02-T",
+          "palier": "transfert",
+          "module": "G6-02",
+          "ref": "CLM-GEO-005",
+          "enonce": "Un dossier d'aménagement affirme : « Il n'y a pas d'alternative. » Que fait la maquette de cette phrase ?",
+          "options": [
+            "Elle la confirme, si le budget est contraint.",
+            "Elle en fait le signe qu'on présente une maquette comme si elle ne se démontait pas.",
+            "Elle la rejette : il existe toujours une solution équivalente.",
+            "Elle demande l'avis d'un expert indépendant."
+          ],
+          "juste": 1,
+          "pourquoi": "« Pas d'alternative » n'est pas un constat, c'est une clôture. La maquette ne prétend pas qu'une autre solution serait aussi bonne — la troisième réponse va trop loin, démontable ne veut pas dire interchangeable. Elle demande seulement quelles pièces on pourrait remplacer, et ce qu'il en coûterait."
+        },
+        {
+          "id": "EP-G6-A-09b",
+          "groupe": "G6-03-T",
+          "palier": "transfert",
+          "module": "G6-03",
+          "ref": "CLM-GEO-004",
+          "enonce": "Un même bâtiment vide est jugé « inadapté » par une école et « parfait » par une entreprise de stockage. Que dit le gabarit ?",
+          "options": [
+            "L'un des deux se trompe.",
+            "Le bâtiment est moyennement adapté.",
+            "Les deux ont raison : ils n'approchent pas du même lieu le même projet.",
+            "Il faudrait une expertise pour trancher."
+          ],
+          "juste": 2,
+          "pourquoi": "L'inadaptation n'est pas une propriété du bâtiment : c'est un rapport entre lui et un projet. Sans fenêtres, sans cour, avec un quai de chargement — le mur qui manque à l'école est celui qui sert au stockage. Chercher qui a raison, c'est chercher un gabarit unique, et il n'y en a pas."
+        },
+        {
+          "id": "EP-G6-A-10b",
+          "groupe": "G6-04-T",
+          "palier": "transfert",
+          "module": "G6-04",
+          "ref": "CLM-GEO-004",
+          "enonce": "Une note de quartier indique : « Le revenu moyen y est de 2 100 € par mois. » Que demande le tas ?",
+          "options": [
+            "Ce chiffre place-t-il le quartier au-dessus de la moyenne nationale ?",
+            "Comment ce revenu se répartit-il entre les habitants ?",
+            "Ce chiffre est-il net ou brut ?",
+            "Combien d'habitants compte le quartier ?"
+          ],
+          "juste": 1,
+          "pourquoi": "Le tas voyage hors de la géographie : toute moyenne écrase une répartition. Deux quartiers à 2 100 € peuvent être l'un homogène, l'autre partagé entre 800 € et 6 000 €. Les trois autres questions sont utiles et légitimes ; aucune n'ouvre le tas."
+        },
+        {
+          "id": "EP-G6-A-12",
+          "palier": "discrimination",
+          "module": "G6-03",
+          "ref": "CLM-GEO-004",
+          "enonce": "Le programme demande de mettre en évidence les représentations dont ces espaces sont l'objet. Qu'est-ce que cette pièce ne permet pas ?",
+          "options": [
+            "De décrire comment des sociétés s'adaptent différemment à un même milieu.",
+            "De classer les milieux du plus facile au plus difficile à habiter.",
+            "De montrer qu'un même espace est vu autrement selon qui le regarde.",
+            "De relever ce qu'on dit couramment d'un désert ou d'une montagne."
+          ],
+          "juste": 1,
+          "pourquoi": "Les trois autres réponses sont exactement ce que la pièce demande. Le classement, lui, changerait avec le projet — c'est le gabarit — et ce serait donc un classement de projets déguisé en classement de milieux. Une pièce qui décrit des représentations ne délivre aucun palmarès."
+        }
+      ],
+      "jdr": "jdr/JDR-G6-A.json"
+    },
+    {
+      "id": "EP-G6-B",
+      "discipline": "geographie",
+      "niveau": "6e",
+      "rang": 2,
+      "titre": "Le littoral, la carte, et ce que le milieu ne décide pas",
+      "sequence": "Thèmes 3 et 4 du programme de sixième",
+      "modules": [
+        "G6-05",
+        "G6-06",
+        "G6-07"
+      ],
+      "duree": "12 min",
+      "items": [
+        {
+          "id": "EP-G6-B-01",
+          "palier": "rappel",
+          "module": "G6-05",
+          "ref": "CLM-GEO-002",
+          "enonce": "Pourquoi les usages d'un littoral entrent-ils si souvent en concurrence ?",
+          "options": [
+            "Parce que les habitants des littoraux sont plus nombreux qu'ailleurs.",
+            "Parce que la ressource disputée est une bande étroite : ce que l'un y pose, l'autre ne peut plus l'y mettre.",
+            "Parce que le tourisme rapporte plus que l'industrie.",
+            "Parce que la loi y interdit beaucoup de constructions."
+          ],
+          "juste": 1,
+          "pourquoi": "L'étagère : longue, mais d'une seule profondeur. Le port, les hôtels, les logements et la dune protégée se partagent la même planche. La première réponse décrit une conséquence, pas la cause. Les deux dernières sont parfois vraies et ne sont jamais la raison de la concurrence."
+        },
+        {
+          "id": "EP-G6-B-02",
+          "palier": "rappel",
+          "module": "G6-06",
+          "ref": "CLM-GEO-002",
+          "enonce": "Quelle carte du monde ne déforme rien ?",
+          "options": [
+            "La projection de Mercator, celle qui sert à la navigation.",
+            "Aucune : on ne met pas une sphère à plat sans déchirer ou sans étirer.",
+            "Les cartes récentes, établies par satellite.",
+            "La projection de Peters, qui respecte les surfaces."
+          ],
+          "juste": 1,
+          "pourquoi": "La peau d'orange. C'est une propriété de la sphère, pas un défaut du cartographe, et ce n'est pas un aveu : c'est un résultat. Peters garde les surfaces justes en abandonnant les formes ; Mercator garde les angles en gonflant les hautes latitudes. Un satellite ne change rien à la géométrie."
+        },
+        {
+          "id": "EP-G6-B-03",
+          "palier": "rappel",
+          "module": "G6-07",
+          "ref": "CLM-GEO-002",
+          "enonce": "Deux sociétés habitent le même milieu de façon très différente. Qu'est-ce que cela montre ?",
+          "options": [
+            "Que l'une s'est mieux adaptée que l'autre.",
+            "Que le milieu a finalement peu d'influence.",
+            "Que le milieu ferme des routes mais n'en choisit aucune : quelqu'un a choisi.",
+            "Que les deux sociétés ne disposent pas des mêmes ressources naturelles."
+          ],
+          "juste": 2,
+          "pourquoi": "La fourche. Le milieu contraint, il ne dicte pas. La deuxième réponse va trop loin dans l'autre sens : la contrainte est réelle. La première classe, alors que le module refuse de classer. La dernière contredit l'énoncé, qui dit que le milieu est le même."
+        },
+        {
+          "id": "EP-G6-B-04",
+          "palier": "discrimination",
+          "module": "G6-06",
+          "ref": "CLM-GEO-002",
+          "enonce": "Sur un planisphère, le Groenland paraît plus grand que l'Afrique. Que peut-on en conclure ?",
+          "options": [
+            "Que la carte est fausse et qu'il faut la remplacer.",
+            "Que cette projection a choisi de garder juste autre chose que les surfaces.",
+            "Que le Groenland est effectivement plus grand que l'Afrique.",
+            "Que le cartographe a voulu tromper son lecteur."
+          ],
+          "juste": 1,
+          "pourquoi": "La troisième réponse est fausse : l'Afrique fait environ quatorze fois le Groenland. Les deux autres durcissent — la déformation n'est ni une erreur ni forcément une intention. Ce qu'on peut dire, c'est ce que la carte a sacrifié ; on se demande ensuite, et seulement ensuite, à quoi elle sert."
+        },
+        {
+          "id": "EP-G6-B-05",
+          "palier": "discrimination",
+          "module": "G6-05",
+          "ref": "CLM-GEO-002",
+          "enonce": "Le programme traite les littoraux par les usages, les aménagements et la vulnérabilité. Qu'est-ce que cette pièce ne permet pas ?",
+          "options": [
+            "Repérer que deux usages se disputent le même espace.",
+            "Décrire l'aménagement d'un port de commerce.",
+            "Dire quel usage devrait l'emporter sur les autres.",
+            "Constater qu'on aménage beaucoup un espace exposé."
+          ],
+          "juste": 2,
+          "pourquoi": "Trancher entre le port et la dune n'est pas une question de géographie : c'est une décision politique, qui se prend ailleurs et avec d'autres personnes. La géographie peut poser le conflit avec précision — elle n'a pas mandat pour le clore."
+        },
+        {
+          "id": "EP-G6-B-06",
+          "palier": "discrimination",
+          "module": "G6-07",
+          "ref": "CLM-GEO-002",
+          "enonce": "« Le climat aride explique l'habitat nomade. » Que vaut cette phrase ?",
+          "options": [
+            "Elle est établie : c'est ce que montre la carte des climats.",
+            "Elle est réfutée : le climat n'a aucun effet sur l'habitat.",
+            "Elle fait dire au milieu ce qu'il ne dit pas : plusieurs routes restaient ouvertes.",
+            "Elle est probable, faute de meilleure explication."
+          ],
+          "juste": 2,
+          "pourquoi": "On trouve en milieu aride des sociétés nomades et des sociétés sédentaires — oasis, villes caravanières, irrigation. Le milieu a fermé des routes ; il n'en a choisi aucune. La deuxième réponse est l'excès inverse : la contrainte, elle, est bien réelle."
+        },
+        {
+          "id": "EP-G6-B-07",
+          "palier": "transfert",
+          "module": "G6-05",
+          "ref": "CLM-GEO-002",
+          "enonce": "Une commune du bord de mer annonce un parking de quatre cents places au plus près de la plage. Quelle question l'étagère fait-elle poser ?",
+          "options": [
+            "Combien de touristes viendront-ils ?",
+            "Le stationnement sera-t-il payant ?",
+            "Qu'a-t-il fallu retirer de la bande pour poser ce parking ?",
+            "La commune a-t-elle les moyens de le financer ?"
+          ],
+          "juste": 2,
+          "pourquoi": "Un parking sur le littoral n'est pas seulement un ajout : c'est une place prise sur une planche déjà pleine — dune, logement, activité, espace protégé. Les autres questions sont légitimes, et aucune ne porte sur la rareté de la bande.",
+          "groupe": "G6-05-T"
+        },
+        {
+          "id": "EP-G6-B-08",
+          "palier": "transfert",
+          "module": "G6-06",
+          "ref": "CLM-GEO-002",
+          "enonce": "Sur un plan de métro, deux stations voisines sont séparées de deux centimètres, comme presque partout ailleurs sur le plan. Que dit la peau d'orange ?",
+          "options": [
+            "Rien : un plan de métro n'est pas une carte du monde.",
+            "Que le plan a gardé l'ordre des stations et abandonné les distances.",
+            "Que le plan est faux.",
+            "Que les stations sont réellement à égale distance."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste voyage : toute mise à plat choisit ce qu'elle garde juste. Un plan de métro sacrifie les distances et les formes pour garder l'ordre et les correspondances — et c'est exactement pour cela qu'il est lisible. La première réponse refuse un transfert qui fonctionne.",
+          "groupe": "G6-06-T"
+        },
+        {
+          "id": "EP-G6-B-09",
+          "palier": "transfert",
+          "module": "G6-07",
+          "ref": "CLM-GEO-002",
+          "enonce": "Sous quatre mètres d'eau à marée haute, aucune société n'a jamais cultivé de champ sans construire d'abord une digue. La fourche s'applique-t-elle ?",
+          "options": [
+            "Oui, comme toujours : quelqu'un a forcément choisi.",
+            "Non : là où il ne reste qu'un seul chemin, on peut dire que le milieu a décidé.",
+            "Non, parce que la fourche ne vaut que pour les climats.",
+            "Oui : d'autres sociétés auraient pu cultiver sous l'eau."
+          ],
+          "juste": 1,
+          "pourquoi": "Le module l'annonçait lui-même : là où il ne reste qu'une route, le milieu a bien décidé ; c'est presque partout ailleurs qu'il ne décide pas. La première réponse est l'erreur qui guette un outil qu'on aime — on finit par l'appliquer sans regarder. Et la digue est justement la manière dont on rouvre la fourche : elle a un coût, une date, et des gens qui l'ont voulue.",
+          "groupe": "G6-07-T"
+        },
+        {
+          "id": "EP-G6-B-07b",
+          "groupe": "G6-05-T",
+          "palier": "transfert",
+          "module": "G6-05",
+          "ref": "CLM-GEO-002",
+          "enonce": "Une ville de l'intérieur des terres veut créer une zone d'activités sur d'anciennes friches. L'étagère s'applique-t-elle ?",
+          "options": [
+            "Oui : tout aménagement retire toujours quelque chose.",
+            "Pas de la même façon : ce qui fait l'étagère, c'est la profondeur unique — une friche intérieure n'est pas rare de cette manière-là.",
+            "Non : l'étagère ne vaut que pour le bord de mer.",
+            "Oui : les friches sont aussi disputées que les littoraux."
+          ],
+          "juste": 1,
+          "pourquoi": "La première réponse est vraie, et c'est bien le problème : elle est vraie partout, donc elle ne tranche rien. L'outil garde ici une part de sa force et perd ce qui le rendait coupant — à l'intérieur des terres, on peut souvent s'écarter ; sur une bande littorale, non. Un outil qu'on transporte sans regarder ce qu'il perd en route finit par ne plus rien dire."
+        },
+        {
+          "id": "EP-G6-B-08b",
+          "groupe": "G6-06-T",
+          "palier": "transfert",
+          "module": "G6-06",
+          "ref": "CLM-GEO-002",
+          "enonce": "Un graphique résume vingt ans d'évolution en une seule courbe. Que dit la peau d'orange ?",
+          "options": [
+            "Rien : elle ne concerne que les cartes.",
+            "Que le graphique est trompeur.",
+            "Que toute mise à plat garde certaines choses justes et en abandonne d'autres : reste à savoir lesquelles.",
+            "Qu'il faudrait tracer plusieurs courbes."
+          ],
+          "juste": 2,
+          "pourquoi": "Le geste voyage : représenter, c'est choisir ce qu'on sacrifie. Une courbe unique garde la tendance et abandonne les écarts, les cas particuliers et les ruptures. « Trompeur » durcit — Mercator ne trompe pas, il est explicite sur ce qu'il garde. Tracer plusieurs courbes est parfois la bonne suite, mais c'est une solution, pas une lecture."
+        },
+        {
+          "id": "EP-G6-B-09b",
+          "groupe": "G6-07-T",
+          "palier": "transfert",
+          "module": "G6-07",
+          "ref": "CLM-GEO-002",
+          "enonce": "Deux villages voisins, même vallée, même sol : l'un vit du bois, l'autre de l'élevage. Que cherche la fourche ?",
+          "options": [
+            "Lequel des deux a fait le meilleur choix.",
+            "Ce que le milieu leur interdisait à tous les deux.",
+            "Qui a choisi, quand, et avec quels moyens.",
+            "Si le sol est vraiment identique des deux côtés."
+          ],
+          "juste": 2,
+          "pourquoi": "Là où plusieurs routes restaient ouvertes, une décision a eu lieu : elle a une date, des personnes, des moyens, et elle s'enquête. La deuxième réponse est le premier temps de l'outil — utile, mais elle ne dit rien de ce qui restait ouvert. La première classe, et le module refuse de classer."
+        }
+      ],
+      "jdr": "jdr/JDR-G6-B.json"
+    },
+    {
+      "id": "EP-ST6-A",
+      "discipline": "sciences",
+      "niveau": "6e",
+      "rang": 1,
+      "titre": "La matière, le repère, l'énergie et le signal",
+      "sequence": "Thème 1 — Matière, mouvement, énergie, information",
+      "modules": [
+        "ST6-01",
+        "ST6-02",
+        "ST6-03",
+        "ST6-04"
+      ],
+      "duree": "16 min",
+      "jdr": "jdr/JDR-ST6-A.json",
+      "items": [
+        {
+          "id": "EP-ST6-A-01",
+          "palier": "rappel",
+          "module": "ST6-01",
+          "ref": "CLM-ST-002",
+          "enonce": "On dissout 5 g de sel dans 100 g d'eau, dans un récipient fermé. Que pèse le mélange ?",
+          "options": [
+            "100 g : le sel a disparu.",
+            "105 g.",
+            "Un peu moins de 105 g, une partie s'évapore.",
+            "On ne peut pas le savoir avant de mesurer."
+          ],
+          "juste": 1,
+          "pourquoi": "Le bocal : dans un récipient fermé, ce qui entre en sort. Dissoudre réarrange la matière sans la supprimer. La dernière réponse a l'air prudente et n'est qu'un renoncement : on peut prévoir ce que la balance affichera avant de regarder, et c'est même tout l'intérêt."
+        },
+        {
+          "id": "EP-ST6-A-02",
+          "palier": "rappel",
+          "module": "ST6-02",
+          "ref": "CLM-ST-002",
+          "enonce": "« Le passager assis dans le train ne bouge pas. » Cette phrase est :",
+          "options": [
+            "fausse : le train roule à deux cents kilomètres à l'heure,",
+            "incomplète : il manque « par rapport à quoi »,",
+            "vraie : il est assis,",
+            "impossible à trancher sans connaître la vitesse du train."
+          ],
+          "juste": 1,
+          "pourquoi": "Le repère. « Ça bouge » est une phrase incomplète, et « ça ne bouge pas » l'est tout autant. Par rapport au wagon, le passager est immobile ; par rapport au quai, il file. Les deux sont vraies, et aucune ne l'est toute seule."
+        },
+        {
+          "id": "EP-ST6-A-03",
+          "palier": "rappel",
+          "module": "ST6-03",
+          "ref": "CLM-ST-002",
+          "enonce": "On dit qu'une éolienne « produit » de l'électricité. Que faudrait-il dire ?",
+          "options": [
+            "Qu'elle en fabrique à partir de rien.",
+            "Qu'elle convertit l'énergie du vent en énergie électrique.",
+            "Qu'elle stocke l'énergie contenue dans l'air.",
+            "Qu'elle produit une énergie gratuite."
+          ],
+          "juste": 1,
+          "pourquoi": "Le relais : l'énergie court comme un témoin, elle passe de main en main, et personne n'en fabrique. Une éolienne prélève l'énergie d'un vent qui, sans elle, aurait fait autre chose. Le mot « gratuite » confond le prix et la conservation — ce sont deux questions différentes."
+        },
+        {
+          "id": "EP-ST6-A-04",
+          "palier": "rappel",
+          "module": "ST6-04",
+          "ref": "CLM-ST-002",
+          "enonce": "Une diode clignote sur un appareil. Que veut dire ce clignotement ?",
+          "options": [
+            "Que l'appareil est en panne.",
+            "Rien par lui-même : il faut connaître la convention.",
+            "Que l'appareil est allumé.",
+            "Que la batterie est faible."
+          ],
+          "juste": 1,
+          "pourquoi": "Le messager porte un message, il ne le contient pas. Le même clignotement dit « batterie faible » sur un appareil et « prêt à l'emploi » sur un autre. Sans l'accord préalable — la notice — il ne veut rien dire, et c'est bien pour cela qu'on cherche la notice."
+        },
+        {
+          "id": "EP-ST6-A-05",
+          "palier": "discrimination",
+          "module": "ST6-01",
+          "ref": "CLM-ST-002",
+          "enonce": "L'eau sucrée est parfaitement transparente, et la balance affiche la même masse qu'avant. Qu'est-ce que cela établit ?",
+          "options": [
+            "Que le sucre a disparu.",
+            "Que la matière est conservée, même quand l'aspect change entièrement.",
+            "Que le sucre s'est transformé en eau.",
+            "Que la balance est mal réglée."
+          ],
+          "juste": 1,
+          "pourquoi": "L'œil dit « c'est parti », la balance dit le contraire — et sur cette question-là, c'est la balance qui répond. Devenir invisible n'est pas devenir autre chose. La dernière réponse fait dire à un instrument juste qu'il est faux : c'est le réflexe le plus coûteux qui soit en sciences."
+        },
+        {
+          "id": "EP-ST6-A-06",
+          "palier": "discrimination",
+          "module": "ST6-03",
+          "ref": "CLM-ST-002",
+          "enonce": "Une publicité annonce une lampe « sans aucune perte ». Que peut-on en dire ?",
+          "options": [
+            "C'est possible avec les technologies récentes.",
+            "Une conversion laisse toujours tomber une part, presque toujours en chaleur.",
+            "Cela dépend de la puissance de la lampe.",
+            "C'est vrai si la lampe ne chauffe pas au toucher."
+          ],
+          "juste": 1,
+          "pourquoi": "Chaque coureur du relais en laisse tomber un peu. « Sans perte » n'est pas une performance, c'est une phrase de publicité. La dernière réponse confond « je ne sens pas la chaleur » et « il n'y a pas de chaleur » : une surface à peine tiède peut évacuer beaucoup."
+        },
+        {
+          "id": "EP-ST6-A-07",
+          "palier": "discrimination",
+          "module": "ST6-02",
+          "ref": "CLM-ST-002",
+          "enonce": "On mesure 120 mètres parcourus en 20 secondes. Qu'est-ce que cela permet de dire ?",
+          "options": [
+            "Que l'objet allait à 6 mètres par seconde à chaque instant.",
+            "Que sa vitesse moyenne était de 6 mètres par seconde.",
+            "Qu'il a accéléré pendant le trajet.",
+            "Qu'il allait plus vite qu'un piéton."
+          ],
+          "juste": 1,
+          "pourquoi": "Une distance et une durée donnent une moyenne, et une moyenne écrase tout ce qui s'est passé entre les deux bornes : l'objet a pu s'arrêter, puis foncer. La dernière réponse est sans doute vraie et n'est pas ce que la mesure établit — il faudrait comparer, et on ne l'a pas fait."
+        },
+        {
+          "id": "EP-ST6-A-08",
+          "palier": "discrimination",
+          "module": "ST6-04",
+          "ref": "CLM-ST-002",
+          "enonce": "Deux appareils différents emploient le même signal sonore pour dire deux choses opposées. Que montre cet exemple ?",
+          "options": [
+            "Que l'un des deux fabricants s'est trompé.",
+            "Que le sens vient de la convention, pas du signal.",
+            "Que les signaux sonores sont peu fiables.",
+            "Qu'il faudrait normaliser tous les signaux."
+          ],
+          "juste": 1,
+          "pourquoi": "Aucun des deux ne s'est trompé : un signal ne veut rien dire par lui-même. La dernière réponse est une bonne idée d'ingénieur — normaliser, c'est précisément fixer une convention — mais elle ne répond pas à la question posée, qui portait sur ce que l'exemple montre."
+        },
+        {
+          "id": "EP-ST6-A-09",
+          "groupe": "ST6-01-T",
+          "palier": "transfert",
+          "module": "ST6-01",
+          "ref": "CLM-ST-002",
+          "enonce": "Un feu de bois laisse un tas de cendres bien plus léger que la bûche. Que dit le bocal ?",
+          "options": [
+            "Que de la matière a été détruite.",
+            "Que le reste est parti en gaz et en fumée : dans un récipient fermé, on le retrouverait.",
+            "Que le bois contenait surtout de l'eau.",
+            "Que la combustion fait disparaître la matière."
+          ],
+          "juste": 1,
+          "pourquoi": "Le bocal ne dit pas que rien ne change : il dit que rien ne sort d'un système fermé. Ici le système est grand ouvert, et l'essentiel s'en va par le haut. Une disparition apparente est presque toujours une sortie qu'on n'a pas suivie."
+        },
+        {
+          "id": "EP-ST6-A-09b",
+          "groupe": "ST6-01-T",
+          "palier": "transfert",
+          "module": "ST6-01",
+          "ref": "CLM-ST-002",
+          "enonce": "Une flaque a séché pendant la nuit. Que dit le bocal ?",
+          "options": [
+            "Que le soleil a détruit l'eau.",
+            "Que l'eau est passée ailleurs : en récipient fermé, on la retrouverait.",
+            "Que l'eau s'est forcément infiltrée dans le sol.",
+            "Que la flaque contenait moins d'eau qu'on ne le croyait."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste ne change pas : on demande où c'est parti, jamais si cela a disparu. La troisième réponse choisit un chemin sans le vérifier — infiltration et évaporation sont deux hypothèses, et on peut les départager en couvrant la flaque."
+        },
+        {
+          "id": "EP-ST6-A-10",
+          "groupe": "ST6-02-T",
+          "palier": "transfert",
+          "module": "ST6-02",
+          "ref": "CLM-ST-002",
+          "enonce": "Une notice de machine indique : « la pièce mobile se déplace de 3 cm ». Que demande le repère ?",
+          "options": [
+            "La vitesse de ce déplacement.",
+            "Par rapport à quelle partie de la machine — le bâti, ou une autre pièce qui bouge aussi.",
+            "La durée de l'opération.",
+            "La masse de la pièce."
+          ],
+          "juste": 1,
+          "pourquoi": "Dans une machine où plusieurs pièces bougent, « se déplace de 3 cm » n'est vérifiable que si l'on dit par rapport à quoi. Ce n'est pas une subtilité d'école : c'est ce qui permet à quelqu'un d'autre de mesurer la même chose et de trouver le même nombre."
+        },
+        {
+          "id": "EP-ST6-A-10b",
+          "groupe": "ST6-02-T",
+          "palier": "transfert",
+          "module": "ST6-02",
+          "ref": "CLM-ST-002",
+          "enonce": "Un passant crie : « attention, la voiture recule ! » Faut-il demander par rapport à quoi ?",
+          "options": [
+            "Oui : la phrase est incomplète.",
+            "Non : le repère est le sol, tout le monde le partage, et la question coûterait le temps qui manque.",
+            "Oui, mais après s'être écarté.",
+            "Non : le repère ne vaut qu'en physique."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert quand le repère est tu et qu'il change la réponse. Ici il est évident, partagé, et l'urgence tranche. Un outil qu'on dégaine partout finit par gêner tout le monde, puis par ne plus servir du tout. La dernière réponse se trompe de raison : le repère voyage très bien hors de la physique."
+        },
+        {
+          "id": "EP-ST6-A-11",
+          "groupe": "ST6-03-T",
+          "palier": "transfert",
+          "module": "ST6-03",
+          "ref": "CLM-ST-002",
+          "enonce": "Une publicité vante un dispositif « qui récupère l'énergie perdue au freinage ». Que fait le relais ?",
+          "options": [
+            "Il approuve : rien ne se perd jamais.",
+            "Il demande d'où vient cette énergie et sous quelle forme elle repart : en récupérer une part est possible, tout récupérer ne l'est pas.",
+            "Il rejette : ce qui est perdu est perdu.",
+            "Il demande le prix du dispositif."
+          ],
+          "juste": 1,
+          "pourquoi": "Le relais n'interdit pas de récupérer : freiner un train et renvoyer du courant dans la ligne, cela se fait vraiment. Il interdit d'en fabriquer, et il rappelle qu'à chaque passage une part tombe en chaleur. « Récupérer une part » est vérifiable ; « ne rien perdre » ne l'est pas."
+        },
+        {
+          "id": "EP-ST6-A-11b",
+          "groupe": "ST6-03-T",
+          "palier": "transfert",
+          "module": "ST6-03",
+          "ref": "CLM-ST-002",
+          "enonce": "Une affiche annonce : « l'énergie solaire est gratuite et infinie ». Que fait le relais ?",
+          "options": [
+            "Il approuve : le Soleil n'envoie pas de facture.",
+            "Il sépare les deux mots : ce qui arrive est prélevé, mesurable et limité, et le capter coûte quelque chose.",
+            "Il rejette : rien n'est jamais gratuit.",
+            "Il demande le rendement des panneaux."
+          ],
+          "juste": 1,
+          "pourquoi": "Deux mots à ne pas confondre. « Gratuite » parle d'argent, et les panneaux se paient. « Infinie » parle de quantité, et ce qui arrive au sol par mètre carré est un nombre fini qu'on mesure. Le relais ne conteste pas l'intérêt du solaire : il refuse qu'on le dise avec des mots qui n'engagent à rien."
+        },
+        {
+          "id": "EP-ST6-A-12",
+          "groupe": "ST6-04-T",
+          "palier": "transfert",
+          "module": "ST6-04",
+          "ref": "CLM-ST-002",
+          "enonce": "La sonnerie d'un collège retentit. Qu'est-ce qui lui donne son sens ?",
+          "options": [
+            "Le son lui-même.",
+            "L'accord donné à l'avance : sans emploi du temps connu, elle ne dit rien.",
+            "Son volume, plus fort à la fin des cours.",
+            "L'habitude qu'en ont les élèves."
+          ],
+          "juste": 1,
+          "pourquoi": "Le même son dirait « évacuation » dans un autre établissement. La dernière réponse est presque juste et rate d'un cheveu : l'habitude est la conséquence de la convention, non ce qui la fonde — un élève arrivé la veille comprend dès qu'on le lui a dit."
+        },
+        {
+          "id": "EP-ST6-A-12b",
+          "groupe": "ST6-04-T",
+          "palier": "transfert",
+          "module": "ST6-04",
+          "ref": "CLM-ST-002",
+          "enonce": "Un feu tricolore passe au vert. Le messager s'applique-t-il ?",
+          "options": [
+            "Non : le vert veut dire « passez », partout et naturellement.",
+            "Oui : la couleur ne porte ce sens que par une convention, apprise et écrite dans un code.",
+            "Non : ce n'est pas un signal électrique.",
+            "Oui, mais seulement pour les conducteurs étrangers."
+          ],
+          "juste": 1,
+          "pourquoi": "Rien dans la couleur verte ne signifie « passez ». Cela s'apprend, c'est écrit dans un code, et cela pourrait être autrement. La première réponse est la plus intéressante à défaire : une convention si bien installée qu'on la croit naturelle reste une convention."
+        }
+      ]
+    },
+    {
+      "id": "EP-ST6-B",
+      "discipline": "sciences",
+      "niveau": "6e",
+      "rang": 2,
+      "titre": "Ranger le vivant, chercher ce qui agit, suivre le porteur",
+      "sequence": "Thème 2 — Le vivant, sa diversité et les fonctions qui le caractérisent",
+      "modules": [
+        "ST6-05",
+        "ST6-06",
+        "ST6-07"
+      ],
+      "duree": "13 min",
+      "jdr": "jdr/JDR-ST6-B.json",
+      "items": [
+        {
+          "id": "EP-ST6-B-01",
+          "palier": "rappel",
+          "module": "ST6-05",
+          "ref": "CLM-ST-004",
+          "enonce": "Peut-on former un groupe des « animaux sans plumes » ?",
+          "options": [
+            "Oui : le critère est net et facile à appliquer.",
+            "Non : on classe par ce qu'un être possède, jamais par ce qui lui manque.",
+            "Oui, à condition de préciser « à l'âge adulte ».",
+            "Non : il y en aurait beaucoup trop."
+          ],
+          "juste": 1,
+          "pourquoi": "La clé n'ouvre que dans un sens. « Sans plumes » rassemble la mouche, l'escargot et vous : cela ne dit rien d'une parenté. « Avec des poils » forme un groupe ; « sans poils » n'en forme aucun."
+        },
+        {
+          "id": "EP-ST6-B-02",
+          "palier": "rappel",
+          "module": "ST6-06",
+          "ref": "CLM-ST-002",
+          "enonce": "La pâte à pain gonfle. Qu'est-ce qui travaille ?",
+          "options": [
+            "La chaleur du four, à elle seule.",
+            "Des micro-organismes, qu'on ne voit pas.",
+            "La farine, qui absorbe l'eau.",
+            "Le pétrissage."
+          ],
+          "juste": 1,
+          "pourquoi": "Le levain travaille sans qu'on le voie : ce qui agit n'est pas toujours ce qu'on observe. La pâte gonfle, mais ce n'est pas la pâte qui fait le travail. Le pétrissage et la chaleur comptent, et ne suffisent pas — une pâte sans levure, pétrie et chauffée, ne lève pas."
+        },
+        {
+          "id": "EP-ST6-B-03",
+          "palier": "rappel",
+          "module": "ST6-07",
+          "ref": "CLM-ST-002",
+          "enonce": "Une plante fixée au sol ne peut pas se déplacer. Comment se reproduit-elle avec une autre ?",
+          "options": [
+            "Elle attire l'autre plante vers elle.",
+            "Elle fait porter son pollen par le vent ou par un animal.",
+            "Elle envoie ses racines à sa rencontre.",
+            "Elle choisit l'insecte le plus adapté."
+          ],
+          "juste": 1,
+          "pourquoi": "Le facteur : elle ne va pas, elle fait porter. La dernière réponse glisse vers l'intention — décrire un mécanisme n'est pas raconter un projet, et une fleur ne choisit personne. Ce qu'on établit, ce sont des visites, des fréquences, des transports observés."
+        },
+        {
+          "id": "EP-ST6-B-04",
+          "palier": "discrimination",
+          "module": "ST6-05",
+          "ref": "CLM-ST-004",
+          "enonce": "Le dauphin et le requin se ressemblent beaucoup. Qu'est-ce que cela établit sur leur parenté ?",
+          "options": [
+            "Qu'ils sont proches parents.",
+            "Rien : on classe par des caractères possédés en commun, pas par l'allure.",
+            "Qu'ils descendent d'un même ancêtre marin.",
+            "Qu'ils appartiennent au même groupe."
+          ],
+          "juste": 1,
+          "pourquoi": "Deux êtres qui se ressemblent ne sont pas nécessairement proches : la ressemblance vient souvent du même milieu, car nager vite impose une forme. Ce qui compte, ce sont les caractères partagés — le dauphin a des poils et allaite ses petits, le requin non."
+        },
+        {
+          "id": "EP-ST6-B-05",
+          "palier": "discrimination",
+          "module": "ST6-06",
+          "ref": "CLM-ST-002",
+          "enonce": "Un pain préparé avec de la levure a bien levé. Qu'est-ce que cette réussite établit ?",
+          "options": [
+            "Que la levure fait lever le pain.",
+            "Peu de chose à elle seule : il faut la comparer à un pain sans levure, tout le reste égal.",
+            "Que la recette est bonne.",
+            "Que la température était la bonne."
+          ],
+          "juste": 1,
+          "pourquoi": "Un paramètre ne se démontre qu'en le faisant varier : un seul essai réussi ne sépare pas la levure de la chaleur, du sucre ou du temps d'attente. Le témoin n'est pas une formalité de compte rendu, c'est ce qui transforme une réussite en preuve."
+        },
+        {
+          "id": "EP-ST6-B-06",
+          "palier": "discrimination",
+          "module": "ST6-07",
+          "ref": "CLM-ST-002",
+          "enonce": "Un documentaire affirme : « l'abeille rend service à la fleur ». Que faut-il en penser ?",
+          "options": [
+            "C'est établi : sans abeille, pas de fruit.",
+            "Le transport se constate ; le mot « service » ajoute une intention que rien ne montre.",
+            "C'est faux : l'abeille ne cherche que du nectar.",
+            "C'est vrai pour certaines espèces seulement."
+          ],
+          "juste": 1,
+          "pourquoi": "On peut établir qu'un insecte transporte du pollen, à quelle fréquence, et avec quel effet sur la fécondation. « Rendre service » ajoute un projet qu'aucune observation ne donne. La troisième réponse tombe dans le piège inverse, en prêtant à l'abeille l'intention de ne chercher que du nectar."
+        },
+        {
+          "id": "EP-ST6-B-07",
+          "groupe": "ST6-05-T",
+          "palier": "transfert",
+          "module": "ST6-05",
+          "ref": "CLM-ST-004",
+          "enonce": "Une bibliothèque installe un rayon « livres qui ne sont pas des romans ». Que dit la clé ?",
+          "options": [
+            "Que le classement est commode.",
+            "Que ce rayon ne forme pas un groupe : il rassemble ce qui reste, sans rien de commun.",
+            "Que le rayon sera trop grand.",
+            "Que les romans devraient être ailleurs."
+          ],
+          "juste": 1,
+          "pourquoi": "La clé voyage hors du vivant. Un ensemble défini par une absence n'a pour propriété commune que cette absence : le dictionnaire, la bande dessinée et l'atlas ne se ressemblent en rien. Ce n'est pas interdit, c'est même parfois pratique — ce n'est simplement pas un groupe."
+        },
+        {
+          "id": "EP-ST6-B-07b",
+          "groupe": "ST6-05-T",
+          "palier": "transfert",
+          "module": "ST6-05",
+          "ref": "CLM-ST-004",
+          "enonce": "Un restaurant range certains plats sous l'étiquette « sans arachide ». Est-ce un groupe au sens de la clé ?",
+          "options": [
+            "Oui : le critère est parfaitement clair.",
+            "Non au sens de la clé, et pourtant c'est le bon critère ici : l'absence ne fonde pas une parenté, mais elle protège quelqu'un.",
+            "Non : l'arachide n'est pas un caractère.",
+            "Oui : ces plats se ressemblent."
+          ],
+          "juste": 1,
+          "pourquoi": "Deux choses vraies en même temps, et c'est tout l'intérêt de la question. Pour classer le vivant et parler de parenté, une absence ne fonde rien. Pour trier des plats à l'usage de quelqu'un qui doit les éviter, elle est exactement ce qu'il faut. La clé n'interdit pas les listes utiles : elle interdit d'en tirer une parenté."
+        },
+        {
+          "id": "EP-ST6-B-08",
+          "groupe": "ST6-06-T",
+          "palier": "transfert",
+          "module": "ST6-06",
+          "ref": "CLM-ST-002",
+          "enonce": "Une plante en pot dépérit alors qu'on l'arrose régulièrement. Que fait le levain ?",
+          "options": [
+            "Il conclut au manque d'eau.",
+            "Il fait chercher ce qui agit sans se voir : les racines, la terre, un parasite, la lumière.",
+            "Il conclut que la plante est en fin de vie.",
+            "Il conseille de changer le pot."
+          ],
+          "juste": 1,
+          "pourquoi": "Ce qui agit n'est pas toujours ce qu'on observe : on voit les feuilles, la cause est ailleurs, et souvent sous la surface. Les deux dernières réponses sautent à une solution avant d'avoir cherché la cause — et l'une des deux marchera peut-être, sans qu'on sache jamais pourquoi."
+        },
+        {
+          "id": "EP-ST6-B-08b",
+          "groupe": "ST6-06-T",
+          "palier": "transfert",
+          "module": "ST6-06",
+          "ref": "CLM-ST-002",
+          "enonce": "Un ballon gonflé se dégonfle tout seul en trois jours. Faut-il chercher un micro-organisme ?",
+          "options": [
+            "Oui : quelque chose de vivant travaille forcément.",
+            "Non : l'outil fait chercher une cause invisible, et ici c'est le caoutchouc qui laisse passer l'air — invisible ne veut pas dire vivant.",
+            "Oui : les surfaces tièdes abritent des bactéries.",
+            "Non : un ballon n'est pas un aliment."
+          ],
+          "juste": 1,
+          "pourquoi": "Le levain a appris à chercher une cause qu'on ne voit pas. Il n'a jamais dit qu'elle serait vivante. Un outil qu'on transporte en gardant le mauvais morceau mène droit à l'erreur : ici « invisible » a pris la place de « micro-organisme ». La dernière réponse conclut bien, et pour une raison qui ne tient pas."
+        },
+        {
+          "id": "EP-ST6-B-09",
+          "groupe": "ST6-07-T",
+          "palier": "transfert",
+          "module": "ST6-07",
+          "ref": "CLM-ST-002",
+          "enonce": "Une entreprise qui ne possède aucun camion livre pourtant dans toute la France. Que fait le facteur ?",
+          "options": [
+            "Il conclut qu'elle exagère.",
+            "Il fait chercher qui transporte à sa place, et ce que ce porteur y gagne.",
+            "Il demande son chiffre d'affaires.",
+            "Il conclut qu'elle vend en ligne."
+          ],
+          "juste": 1,
+          "pourquoi": "Devant quelque chose d'immobile qui agit pourtant à distance, on cherche le porteur — et la seconde question du module compte autant : que gagne celui qui porte ? Le vent ne gagne rien, l'insecte si, un transporteur aussi. La dernière réponse devine une réponse plausible au lieu de la chercher."
+        },
+        {
+          "id": "EP-ST6-B-09b",
+          "groupe": "ST6-07-T",
+          "palier": "transfert",
+          "module": "ST6-07",
+          "ref": "CLM-ST-002",
+          "enonce": "En une matinée, tout le collège croit savoir que la sortie de vendredi est annulée. Que fait le facteur ?",
+          "options": [
+            "Il conclut que l'information est fausse.",
+            "Il fait chercher qui l'a portée, par quel chemin, et ce que chacun y trouvait.",
+            "Il conclut qu'elle est vraie, vu la vitesse.",
+            "Il cherche qui l'a inventée en premier."
+          ],
+          "juste": 1,
+          "pourquoi": "Le facteur ne juge pas le contenu, il suit le transport. La dernière réponse cherche une origine unique, alors que l'outil apprend à regarder le trajet et les porteurs : une information, comme un pollen, n'avance que parce que quelqu'un la porte — et il faut demander ce qu'il y trouve."
+        }
+      ]
+    },
+    {
+      "id": "EP-ST6-C",
+      "discipline": "sciences",
+      "niveau": "6e",
+      "rang": 3,
+      "titre": "La commande, le programme, la fenêtre et le nœud",
+      "sequence": "Thèmes 3 et 4 — Objets techniques, et la Terre qui abrite la vie",
+      "modules": [
+        "ST6-08",
+        "ST6-09",
+        "ST6-10",
+        "ST6-11"
+      ],
+      "duree": "16 min",
+      "jdr": "jdr/JDR-ST6-C.json",
+      "items": [
+        {
+          "id": "EP-ST6-C-01",
+          "palier": "rappel",
+          "module": "ST6-08",
+          "ref": "CLM-ST-002",
+          "enonce": "Décrire un objet technique, c'est d'abord :",
+          "options": [
+            "dire s'il est bien fait,",
+            "retrouver le besoin auquel il répondait,",
+            "lister ses matériaux,",
+            "mesurer ses dimensions."
+          ],
+          "juste": 1,
+          "pourquoi": "La commande. Aucun objet technique n'existe sans que quelqu'un l'ait commandé : pour quel besoin, avec quelles contraintes ? Les matériaux et les dimensions viennent ensuite, et chacun se rattache à une fonction. Juger, en revanche, est une autre question, et elle vient en dernier."
+        },
+        {
+          "id": "EP-ST6-C-02",
+          "palier": "rappel",
+          "module": "ST6-09",
+          "ref": "CLM-ST-002",
+          "enonce": "Un programme ne fait pas ce que vous vouliez. Où faut-il chercher ?",
+          "options": [
+            "Dans votre intention, sans doute mal formulée.",
+            "Dans les instructions, une par une.",
+            "Dans la machine, peut-être défectueuse.",
+            "Dans le langage, mal adapté au problème."
+          ],
+          "juste": 1,
+          "pourquoi": "Le somnambule fait exactement ce qui est écrit, ne devine rien et ne vous corrige pas. Relire son intention ne sert à rien : elle est parfaitement claire, c'est justement le problème. On déroule les instructions dans l'ordre, et l'on cherche l'écart."
+        },
+        {
+          "id": "EP-ST6-C-03",
+          "palier": "rappel",
+          "module": "ST6-10",
+          "ref": "CLM-ST-004",
+          "enonce": "Il a fait très froid toute la semaine. Que peut-on en conclure sur le climat ?",
+          "options": [
+            "Qu'il se refroidit.",
+            "Rien : une semaine est une fenêtre bien trop étroite.",
+            "Que le réchauffement s'est interrompu.",
+            "Que la tendance s'inverse."
+          ],
+          "juste": 1,
+          "pourquoi": "La largeur de la fenêtre décide de ce qu'on voit. Par un trou de la taille d'une semaine, on ne voit que du désordre ; il faut une longue série pour qu'une pente apparaisse. Les trois autres réponses font exactement la même erreur, en trois formulations différentes."
+        },
+        {
+          "id": "EP-ST6-C-04",
+          "palier": "rappel",
+          "module": "ST6-11",
+          "ref": "CLM-ST-002",
+          "enonce": "On retire une espèce d'un écosystème. Que peut-on prévoir ?",
+          "options": [
+            "Que l'espèce juste au-dessus disparaîtra.",
+            "Qu'il y aura des effets, sans pouvoir dire précisément lesquels.",
+            "Que rien ne changera si l'espèce était rare.",
+            "Que la chaîne sera coupée en deux."
+          ],
+          "juste": 1,
+          "pourquoi": "Le nœud : chaque être tient plusieurs fils et plusieurs fils le tiennent. Couper un nœud ne fait pas lâcher un fil, cela ébranle tout ce qui y était accroché. On établit qu'il y aura des effets — pas lesquels, et c'est une limite qu'il faut savoir énoncer."
+        },
+        {
+          "id": "EP-ST6-C-05",
+          "palier": "discrimination",
+          "module": "ST6-08",
+          "ref": "CLM-ST-002",
+          "enonce": "On décrit un objet par ses fonctions techniques. Qu'est-ce que cela ne permet pas ?",
+          "options": [
+            "De relier chaque pièce à un rôle.",
+            "De dire si c'est un bon objet.",
+            "D'expliquer son fonctionnement.",
+            "De retrouver la demande d'origine."
+          ],
+          "juste": 1,
+          "pourquoi": "Un objet répond à une demande ; savoir si la demande était la bonne est une autre question, et elle ne se tranche pas avec un schéma technique. Un objet peut remplir parfaitement sa fonction et n'avoir jamais dû exister."
+        },
+        {
+          "id": "EP-ST6-C-06",
+          "palier": "discrimination",
+          "module": "ST6-09",
+          "ref": "CLM-ST-002",
+          "enonce": "Un programme fonctionne dès le premier essai. Qu'est-ce que cela établit ?",
+          "options": [
+            "Qu'il est correct.",
+            "Qu'il a fonctionné sur ce cas-là ; les autres restent à essayer.",
+            "Que la machine a compris ce qu'on voulait.",
+            "Que celui qui l'a écrit est expérimenté."
+          ],
+          "juste": 1,
+          "pourquoi": "Un essai réussi est un essai réussi. Le somnambule exécutera tout aussi fidèlement le cas auquel personne n'a pensé : la valeur zéro, la liste vide, le nom avec un accent. « La machine a compris » est le contresens que le module vise — elle exécute, c'est autre chose."
+        },
+        {
+          "id": "EP-ST6-C-07",
+          "palier": "discrimination",
+          "module": "ST6-10",
+          "ref": "CLM-ST-004",
+          "enonce": "Une longue série de mesures fait apparaître une pente nette. Qu'est-ce qu'elle ne permet pas ?",
+          "options": [
+            "De parler d'une tendance.",
+            "De dire le temps qu'il fera samedi prochain.",
+            "De comparer deux périodes.",
+            "De montrer que la fenêtre était assez large."
+          ],
+          "juste": 1,
+          "pourquoi": "Une tendance et une prévision du jour ne se lisent pas dans la même fenêtre, et l'une ne donne jamais l'autre. C'est la même distinction dans les deux sens : une semaine ne dit rien du climat, et le climat ne dit rien de samedi."
+        },
+        {
+          "id": "EP-ST6-C-08",
+          "palier": "discrimination",
+          "module": "ST6-11",
+          "ref": "CLM-ST-002",
+          "enonce": "Un schéma montre une chaîne : herbe, puis lapin, puis renard. Qu'est-ce que ce schéma ne permet pas ?",
+          "options": [
+            "De montrer qui mange qui.",
+            "De prévoir ce qui arrive si l'on retire le lapin.",
+            "D'identifier un producteur et des consommateurs.",
+            "De situer le renard en bout de chaîne."
+          ],
+          "juste": 1,
+          "pourquoi": "Une chaîne est une simplification commode : elle montre bien trois relations et en efface toutes les autres. Le renard mange aussi autre chose, le lapin est mangé par autre chose. Pour prévoir une propagation, il faut le filet, pas la chaîne."
+        },
+        {
+          "id": "EP-ST6-C-09",
+          "groupe": "ST6-08-T",
+          "palier": "transfert",
+          "module": "ST6-08",
+          "ref": "CLM-ST-002",
+          "enonce": "Un banc public est équipé d'un accoudoir fixé en son milieu. Que fait la commande ?",
+          "options": [
+            "Elle conclut que c'est plus confortable.",
+            "Elle demande qui a passé cette commande, pour quel besoin, et avec quelles contraintes.",
+            "Elle mesure la longueur du banc.",
+            "Elle conclut que l'objet est mal conçu."
+          ],
+          "juste": 1,
+          "pourquoi": "Un objet ne se juge pas dans l'absolu : il se juge par rapport à la demande à laquelle il répondait. Un accoudoir central peut répondre à « offrir un appui pour se relever » ou à « empêcher de s'allonger ». Le même objet, deux commandes — et savoir laquelle a été passée n'est pas une question technique."
+        },
+        {
+          "id": "EP-ST6-C-09b",
+          "groupe": "ST6-08-T",
+          "palier": "transfert",
+          "module": "ST6-08",
+          "ref": "CLM-ST-002",
+          "enonce": "La porte d'un magasin ne s'ouvre que vers l'extérieur. Que fait la commande ?",
+          "options": [
+            "Elle conclut à une erreur de montage.",
+            "Elle cherche le besoin : évacuer vite en cas d'urgence, une contrainte écrite dans les règlements.",
+            "Elle mesure la largeur du passage.",
+            "Elle conclut que c'est plus pratique pour les clients."
+          ],
+          "juste": 1,
+          "pourquoi": "Ce qui ressemble à un défaut d'usage est souvent une contrainte d'une autre nature. Derrière l'objet, la commande : ici une exigence de sécurité qui l'emporte sur le confort quotidien, et qui a été écrite après des accidents."
+        },
+        {
+          "id": "EP-ST6-C-10",
+          "groupe": "ST6-09-T",
+          "palier": "transfert",
+          "module": "ST6-09",
+          "ref": "CLM-ST-002",
+          "enonce": "Un service en ligne refuse un dossier que vous savez complet. Que fait le somnambule ?",
+          "options": [
+            "Il conclut que le service est en panne.",
+            "Il fait dérouler la règle appliquée, condition après condition, pour trouver celle qui rejette.",
+            "Il conclut que le dossier est incomplet malgré tout.",
+            "Il conseille de tout ressaisir."
+          ],
+          "juste": 1,
+          "pourquoi": "La machine ne devine pas et ne se trompe pas d'intention : elle applique ce qui est écrit. « Complet » selon vous et « complet » selon la règle codée ne sont peut-être pas la même liste, et l'écart est là, dans une condition — pas dans une panne."
+        },
+        {
+          "id": "EP-ST6-C-10b",
+          "groupe": "ST6-09-T",
+          "palier": "transfert",
+          "module": "ST6-09",
+          "ref": "CLM-ST-002",
+          "enonce": "Quelqu'un n'a pas fait ce que vous lui aviez demandé. Le somnambule s'applique-t-il ?",
+          "options": [
+            "Oui : il faut dérouler vos instructions une par une.",
+            "Non : une personne comprend, interprète et peut vous corriger — c'est précisément ce qu'une machine ne fait pas.",
+            "Oui, si vos consignes étaient écrites.",
+            "Non : le somnambule ne vaut que pour les robots."
+          ],
+          "juste": 1,
+          "pourquoi": "Le module tient tout entier sur une différence, et la perdre en chemin coûte cher. Une machine exécute ; une personne interprète, devine, et vous dit quand la demande est absurde. Traiter quelqu'un en somnambule, c'est lui retirer ce qu'il a de plus utile. Reformuler reste une bonne idée — parce qu'on parle à quelqu'un, pas parce qu'on programme."
+        },
+        {
+          "id": "EP-ST6-C-11",
+          "groupe": "ST6-10-T",
+          "palier": "transfert",
+          "module": "ST6-10",
+          "ref": "CLM-ST-004",
+          "enonce": "Un commerçant affirme : « les ventes s'effondrent, regardez mardi ». Que fait la fenêtre ?",
+          "options": [
+            "Elle confirme l'effondrement.",
+            "Elle demande la série : un mardi ne montre rien, il faut voir les mardis d'avant.",
+            "Elle demande le chiffre exact de mardi.",
+            "Elle conclut que le commerçant se trompe."
+          ],
+          "juste": 1,
+          "pourquoi": "La largeur de la fenêtre décide de ce qu'on voit, et cela vaut bien au-delà de la météo : un jour isolé ne se distingue pas du désordre ordinaire. La dernière réponse va trop loin — on ne dit pas que le commerçant a tort, on dit qu'on ne peut pas encore le savoir."
+        },
+        {
+          "id": "EP-ST6-C-11b",
+          "groupe": "ST6-10-T",
+          "palier": "transfert",
+          "module": "ST6-10",
+          "ref": "CLM-ST-004",
+          "enonce": "Un élève rapporte une note très basse en mathématiques. Que fait la fenêtre ?",
+          "options": [
+            "Elle conclut à des difficultés en mathématiques.",
+            "Elle demande les autres notes et sur quoi portait celle-ci : un point ne fait pas une pente.",
+            "Elle conclut que le contrôle était trop difficile.",
+            "Elle demande la moyenne de la classe."
+          ],
+          "juste": 1,
+          "pourquoi": "Un point isolé ne montre ni une tendance ni un niveau — c'est vrai d'une température comme d'une note. La moyenne de la classe est une information utile, et elle répond à une autre question : elle situe, elle ne montre aucune évolution."
+        },
+        {
+          "id": "EP-ST6-C-12",
+          "groupe": "ST6-11-T",
+          "palier": "transfert",
+          "module": "ST6-11",
+          "ref": "CLM-ST-002",
+          "enonce": "La seule entreprise d'une petite ville ferme. Que fait le nœud ?",
+          "options": [
+            "Il annonce la fermeture de la boulangerie.",
+            "Il fait chercher tout ce qui était accroché à ce nœud, et prévoit des effets sans dire lesquels.",
+            "Il conclut que la ville va disparaître.",
+            "Il compte les emplois perdus."
+          ],
+          "juste": 1,
+          "pourquoi": "Le nœud voyage : là où plusieurs fils se rejoignent, retirer le nœud ébranle tout ce qui y tenait — fournisseurs, école, commerces, transports. La première et la troisième réponses annoncent le détail, ce que l'outil interdit précisément. Compter les emplois est utile, et c'est un fil parmi plusieurs."
+        },
+        {
+          "id": "EP-ST6-C-12b",
+          "groupe": "ST6-11-T",
+          "palier": "transfert",
+          "module": "ST6-11",
+          "ref": "CLM-ST-002",
+          "enonce": "Dans une recette, on remplace le beurre par de l'huile. Le nœud s'applique-t-il ?",
+          "options": [
+            "Oui : tout est lié dans une recette.",
+            "Pas vraiment : le nœud sert quand un élément en tient beaucoup d'autres, et ici on peut dire assez précisément ce que le changement produit.",
+            "Non : une recette n'est pas un écosystème.",
+            "Oui : la recette entière est à refaire."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert là où les liens sont nombreux, croisés et mal connus — c'est cela qui empêche de prévoir le détail. Une recette est un système simple et bien étudié : on sait que la pâte sera plus moelleuse et moins ferme. La troisième réponse conclut bien pour une mauvaise raison : le nœud voyage très loin de l'écologie, à condition que le système soit assez emmêlé."
         }
       ]
     }

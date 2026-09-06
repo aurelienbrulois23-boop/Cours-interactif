@@ -166,7 +166,14 @@ ce sera **en Python** — Node n'est pas installé sur ce poste.
 
 ## 5. Ce qui reste
 
-- 45 modules sur 52 n'ont pas encore d'épreuve. `verifier.py` les nomme à chaque passage.
-- Les micro-jeux : deux écrits sur sept séquences à venir. Chaque nouvelle séquence
-  appelle sa propre scène, tirée de sa propre discipline — il n'y a pas de gabarit
-  à recopier, et c'est voulu.
+Au 6 septembre 2026 : **huit séquences, 107 questions, huit scènes** — histoire,
+géographie et sciences de sixième sont couvertes.
+
+- **25 modules attendent encore leur épreuve** : les six d'EMC, les dix de français CE2,
+  les neuf de français 6e. `verifier.py` les nomme à chaque passage.
+- Chaque nouvelle séquence appelle **sa propre scène**, tirée de sa propre discipline.
+  Il n'y a pas de gabarit à recopier, et c'est voulu : les huit écrites n'ont en commun
+  que leur longueur.
+- **Le piège technique, rencontré trois fois** : un guillemet droit à l'intérieur d'un
+  texte français casse le JSON. Écrire les citations avec des guillemets français, ou
+  avec un deux-points. Un contrôle passe désormais sur tous les fichiers de contenu.

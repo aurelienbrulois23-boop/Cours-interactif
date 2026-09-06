@@ -13,14 +13,16 @@ outils qui vérifient que l'un ne dit rien que l'autre n'établisse.
 | | |
 | --- | --- |
 | **Français CE2** | 10 modules, les cinq domaines du programme |
+| **Français 6e** | 9 modules, dont les cinq entrées de culture littéraire |
 | **Histoire 6e** | 9 modules, les trois thèmes du programme |
 | **Géographie 6e** | 7 modules, les quatre thèmes du programme |
 | **Sciences et technologie 6e** | 11 modules, les quatre thèmes du programme |
 | **EMC 6e** | 6 modules, les trois parties du programme |
 | Histoire 5e, 4e, 3e | 27 modules déclarés, non écrits |
 
-**La classe de 6e est complète en histoire, géographie, sciences et EMC** —
-43 modules, 43 objets-mémoire dessinés.
+**La classe de 6e est complète dans les cinq disciplines** — français, histoire,
+géographie, sciences et technologie, EMC. 52 modules, 52 objets-mémoire dessinés,
+plus les exercices générés de mathématiques.
 
 Une **voie « Pas à pas »** double chaque module : un pas à la fois, texte plus
 aéré, mots difficiles donnés avant, lecture à voix haute, et un suivi que

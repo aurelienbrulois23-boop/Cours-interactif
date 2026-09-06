@@ -131,12 +131,27 @@ def main():
     for chemin in sorted(glob.glob(os.path.join(ICI, 'plan-*.json'))):
         plans.append(json.load(open(chemin, encoding='utf-8')))
     plans.sort(key=lambda p: (p.get('rang', 50), p.get('nom', '')))
+    # Deux plans peuvent porter la meme discipline a des niveaux differents —
+    # le francais du CE2 et celui de la 6e, par exemple. Ils fusionnent : une
+    # discipline, plusieurs niveaux. Sinon elle apparaitrait deux fois.
+    fusion = {}
     for p in plans:
-        disciplines.append({
-            'id': p['discipline'], 'nom': p['nom'], 'reference': p['reference'],
-            'source': p.get('source', ''), 'avertissement': p.get('avertissement', ''),
-            'niveaux': p['niveaux'],
-        })
+        d = fusion.get(p['discipline'])
+        if d is None:
+            fusion[p['discipline']] = {
+                'id': p['discipline'], 'nom': p['nom'], 'reference': p['reference'],
+                'source': p.get('source', ''), 'avertissement': p.get('avertissement', ''),
+                'niveaux': list(p['niveaux']),
+            }
+        else:
+            d['niveaux'] += p['niveaux']
+            # Les references et avertissements propres a un niveau restent
+            # portes par le plan ; on ne concatene que ce qui differe.
+            for champ in ('reference', 'avertissement', 'source'):
+                v = p.get(champ, '')
+                if v and v not in (d.get(champ) or ''):
+                    d[champ] = ((d.get(champ) or '') + ' · ' + v).strip(' ·')
+    disciplines += list(fusion.values())
     # Les disciplines annoncees mais sans carte. Des qu'un plan-*.json en
     # declare une, son repere « a venir » disparait tout seul : personne n'a a
     # penser a le retirer, et la discipline ne peut pas figurer deux fois.

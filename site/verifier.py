@@ -158,8 +158,73 @@ for i in sorted(reg):
         avertis.append("%s : %d libellés — un schéma qui parle trop est redevenu du texte" % (i, n))
 
 
+# ── Épreuves de fin de séquence ──────────────────────────────────────────────
+# Le piège propre à ce fichier : le tableau de verdict liste TOUS les modules
+# de la séquence. Un module sans aucune question y apparaîtrait donc comme
+# « acquis » sans avoir jamais été interrogé. C'est un mensonge, pas un oubli
+# d'affichage — d'où une erreur, et non un avertissement.
+PALIERS = ['rappel', 'discrimination', 'transfert']
+EPREUVES = os.path.join(ICI, 'epreuves.json')
+eps = []
+if os.path.exists(EPREUVES):
+    try:
+        banque = json.load(io.open(EPREUVES, encoding='utf-8'))
+        eps = banque.get('epreuves', [])
+        for p in PALIERS:
+            if p not in banque.get('renvois', {}):
+                erreurs.append("epreuves.json : aucun renvoi pour le palier « %s »" % p)
+        vus = set()
+        for ep in eps:
+            i = ep.get('id', '?')
+            if i in vus:
+                erreurs.append("épreuve %s : identifiant en double" % i)
+            vus.add(i)
+            for mid in ep.get('modules', []):
+                if mid not in mods:
+                    erreurs.append("épreuve %s : module %s inexistant" % (i, mid))
+                elif not [x for x in ep.get('items', []) if x.get('module') == mid]:
+                    erreurs.append("épreuve %s : %s est dans la séquence sans aucune "
+                                   "question — il serait déclaré acquis sans être vu" % (i, mid))
+                else:
+                    vus_p = set(x.get('palier') for x in ep.get('items', [])
+                                if x.get('module') == mid)
+                    if len(vus_p) < 2:
+                        avertis.append("épreuve %s : %s n'est interrogé que sur « %s »"
+                                       % (i, mid, ', '.join(sorted(vus_p))))
+            for p in PALIERS:
+                if not [x for x in ep.get('items', []) if x.get('palier') == p]:
+                    erreurs.append("épreuve %s : aucune question au palier « %s »" % (i, p))
+            for it in ep.get('items', []):
+                j, opts = it.get('id', '?'), it.get('options', [])
+                if it.get('palier') not in PALIERS:
+                    erreurs.append("%s : palier « %s » inconnu" % (j, it.get('palier')))
+                if it.get('module') not in ep.get('modules', []):
+                    erreurs.append("%s : rattaché à %s, hors de la séquence" % (j, it.get('module')))
+                if len(opts) < 3:
+                    erreurs.append("%s : %d propositions — trop peu pour choisir" % (j, len(opts)))
+                if len(set(opts)) != len(opts):
+                    erreurs.append("%s : deux propositions identiques" % j)
+                if not isinstance(it.get('juste'), int) or not 0 <= it['juste'] < len(opts):
+                    erreurs.append("%s : « juste » hors des propositions" % j)
+                if not it.get('pourquoi', '').strip():
+                    erreurs.append("%s : sans « pourquoi » — la question ne rend rien" % j)
+                mref = mods.get(it.get('module'), {}).get('affirmation', {}).get('ref')
+                if mref and it.get('ref') != mref:
+                    avertis.append("%s : référence %s alors que %s cite %s"
+                                   % (j, it.get('ref'), it.get('module'), mref))
+    except ValueError as e:
+        erreurs.append("epreuves.json : JSON invalide — %s" % e)
+
+couverts = set(m for ep in eps for m in ep.get('modules', []))
+orphelins = [i for i in sorted(mods) if i not in couverts]
+if orphelins:
+    avertis.append("%d modules sans épreuve de fin de séquence : %s"
+                   % (len(orphelins), ', '.join(orphelins)))
+
+
 # ── Rapport ──────────────────────────────────────────────────────────────────
-print("%d modules, %d schémas\n" % (len(mods), len(reg)))
+print("%d modules, %d schémas, %d épreuves (%d questions)\n"
+      % (len(mods), len(reg), len(eps), sum(len(e.get('items', [])) for e in eps)))
 disciplines = []
 for i in sorted(mods):
     dd = mods[i].get('discipline', '?')

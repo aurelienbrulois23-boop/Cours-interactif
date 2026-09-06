@@ -488,6 +488,7 @@ function etapeExtraction(m){
       </table></div>
       <p class="fine">Le rappel de demain vous attendra sur la page des modules. Il donnera un indice
       et vous laissera reconstruire la réponse : il ne la redira pas.</p>
+      <div id="apresSequence"></div>
       <a class="bouton" href="index.html">Terminer</a>
     </div>
   </section>`;
@@ -528,6 +529,38 @@ if (!m) {
   cible.innerHTML = etapeCible(m) + filJalons(m) + motsAvant(m) + suivi(m)
                   + etapeRappel(m) + etapePorte(m) + etapeAnticipation(m)
                   + etapeCollision(m, proposee) + etapeTransformation(m) + etapeExtraction(m);
+
+  /* La sortie de séquence.
+   *
+   * Un module se termine sur une trace et des rappels ; il ne dit pas
+   * encore si l'outil tient sur autre chose que sur sa propre pièce.
+   * C'est le rôle de l'épreuve, qui prend plusieurs modules ensemble et
+   * mélange leurs questions. On l'annonce ici même quand la séquence
+   * n'est pas finie : savoir qu'un rendez-vous existe change la façon
+   * dont on lit, et la promesse n'a pas besoin d'être tenue tout de
+   * suite pour être utile. */
+  try {
+    const rb = await fetch('epreuves.json');
+    if (rb.ok) {
+      const banque = await rb.json();
+      const ep = banque.epreuves.find(e => e.modules.includes(m.id));
+      const zone = document.getElementById('apresSequence');
+      if (ep && zone) {
+        const p = progres();
+        const reste = ep.modules.filter(x => x !== m.id && !(p[x] && p[x].fait));
+        zone.innerHTML = `<h3>Au bout de la séquence</h3>
+          <p>Ce module appartient à la séquence <em>${esc(ep.titre)}</em>, qui se termine
+          par une épreuve commune à ${ep.modules.length} modules. Les questions y sont
+          mélangées : reconnaître de quel cours vient une question est déjà la moitié
+          du travail, et l'épreuve vous prive de cette moitié-là.</p>
+          ${reste.length === 0
+            ? `<p><a class="bouton" href="epreuve.html?e=${encodeURIComponent(ep.id)}">Passer l'épreuve</a></p>`
+            : `<p class="fine">Il reste ${reste.length === 1 ? 'un module' : reste.length + ' modules'}
+               avant de la passer : ${reste.map(esc).join(', ')}.
+               <a href="epreuve.html?e=${encodeURIComponent(ep.id)}">La regarder quand même</a>.</p>`}`;
+      }
+    }
+  } catch (e) { /* sans épreuves, le module reste entier */ }
 
   /* Le fil des jalons suit l'élève. Il dit une position, jamais une valeur :
    * pas de pourcentage, pas de série, pas de compte à rebours. */

@@ -1,0 +1,453 @@
+{
+  "version": 1,
+  "note": "Index des épreuves de fin de séquence. Chaque item est rattaché à un module, à un palier et à la référence de claim du module. Ce fichier est la source unique : l'épreuve le lit pour se jouer, et toute autre forme (jeu de rôle, carnet imprimé) doit y puiser plutôt que de réécrire des questions. Deux items qui partagent un « groupe » sont deux variantes de la même question : l'épreuve n'en tire qu'une, celle qui correspond au numéro de passage. Une reprise pose donc une autre situation — sans quoi elle ne testerait plus que le souvenir de la réponse.",
+  "paliers": {
+    "rappel": "La notion revient-elle sans le cahier ?",
+    "discrimination": "Sait-on ce que la pièce permet, et ce qu'elle ne permet pas ?",
+    "transfert": "L'outil fonctionne-t-il sur une situation que le module n'a jamais montrée ?"
+  },
+  "renvois": {
+    "rappel": "La notion n'est pas encore là. Rouvrez le module en entier : c'est la seule des trois marches qui demande de tout relire.",
+    "discrimination": "La notion est là, le statut ne l'est pas. Rouvrez la Collision du module : la pièce, et le bandeau qui dit ce qu'elle vaut.",
+    "transfert": "La notion et le statut sont là ; l'outil ne voyage pas encore. Ne relisez rien — reprenez seulement une autre situation."
+  },
+  "limite": "Un choix parmi quatre teste la reconnaissance, pas le rappel libre. Le rappel libre, c'est l'Extraction du module qui le fait, en demandant d'écrire. L'épreuve fait donc ce que le module ne fait pas : distinguer, et transporter. Elle ne remplace pas l'Extraction, et elle ne sert jamais à noter.",
+  "epreuves": [
+    {
+      "id": "EP-G6-A",
+      "discipline": "geographie",
+      "niveau": "6e",
+      "rang": 1,
+      "titre": "Habiter : la métropole et l'espace de faible densité",
+      "sequence": "Thèmes 1 et 2 du programme de sixième",
+      "modules": [
+        "G6-01",
+        "G6-02",
+        "G6-03",
+        "G6-04"
+      ],
+      "duree": "15 min",
+      "items": [
+        {
+          "id": "EP-G6-A-01",
+          "palier": "rappel",
+          "module": "G6-01",
+          "ref": "CLM-GEO-002",
+          "enonce": "À quoi reconnaît-on une métropole, d'après le programme ?",
+          "options": [
+            "À sa population, au-delà d'un certain seuil d'habitants.",
+            "À ses fonctions et aux flux qui la traversent.",
+            "À sa superficie et au nombre de communes qu'elle rassemble.",
+            "À la présence d'un aéroport international."
+          ],
+          "juste": 1,
+          "pourquoi": "Le programme définit la métropole par ses fonctions — économiques, sociales, politiques, culturelles — et par les flux. Il ne donne aucun seuil de population, et c'est précisément ce que le module vous demandait de ne pas inventer. L'aéroport et la superficie sont des indices possibles, jamais la définition."
+        },
+        {
+          "id": "EP-G6-A-02",
+          "palier": "rappel",
+          "module": "G6-02",
+          "ref": "CLM-GEO-005",
+          "enonce": "Qu'est-ce qui distingue un scénario d'avenir d'une prophétie ?",
+          "options": [
+            "Le scénario est écrit par des spécialistes.",
+            "Le scénario porte sur un avenir plus proche.",
+            "On peut démonter le scénario et en remonter un autre avec les mêmes contraintes.",
+            "Le scénario a plus de chances de se réaliser."
+          ],
+          "juste": 2,
+          "pourquoi": "La maquette : un scénario se démonte. Un futur qu'on ne peut pas démonter n'est plus un scénario — c'est une prophétie, et elle sert quelqu'un. Ni l'auteur, ni l'échéance, ni la vraisemblance ne font la différence : c'est le fait qu'on puisse remplacer des pièces."
+        },
+        {
+          "id": "EP-G6-A-03",
+          "palier": "rappel",
+          "module": "G6-03",
+          "ref": "CLM-GEO-004",
+          "enonce": "« Cet espace est difficile à habiter. » Que manque-t-il à cette phrase ?",
+          "options": [
+            "Un chiffre de densité.",
+            "Le projet par rapport auquel il est difficile.",
+            "Le nom de la société qui l'habite.",
+            "Rien : certains milieux sont objectivement difficiles."
+          ],
+          "juste": 1,
+          "pourquoi": "Le gabarit. Une contrainte ne se mesure jamais seule : on approche du lieu un projet, et on regarde ce qui ne passe pas. Le sable est un obstacle pour un champ de blé, une route pour un troupeau. La dernière réponse est le piège du module : elle a l'air de bon sens, et elle fait disparaître le gabarit."
+        },
+        {
+          "id": "EP-G6-A-04",
+          "palier": "rappel",
+          "module": "G6-04",
+          "ref": "CLM-GEO-004",
+          "enonce": "Deux territoires ont exactement la même densité de population. Que peut-on en conclure ?",
+          "options": [
+            "Qu'ils ont à peu près la même répartition d'habitants.",
+            "Qu'ils ont le même nombre d'habitants.",
+            "Rien de plus que le rapport entre une population et une surface.",
+            "Qu'ils connaissent la même dynamique."
+          ],
+          "juste": 2,
+          "pourquoi": "Le tas. La même quantité de grains, étalée sur une table et entassée sur l'autre : la moyenne est identique et les deux tables n'ont rien à voir. Une densité ne dit rien de la répartition, ni des activités, ni de l'évolution. La deuxième réponse est fausse deux fois : à densité égale et surfaces différentes, les populations diffèrent."
+        },
+        {
+          "id": "EP-G6-A-05",
+          "palier": "discrimination",
+          "module": "G6-01",
+          "ref": "CLM-GEO-002",
+          "enonce": "Le programme définit la métropole par ses fonctions et par la diversité de ses usagers. Qu'est-ce que cette pièce ne permet pas de faire ?",
+          "options": [
+            "Caractériser une métropole autrement que par sa population.",
+            "Fixer le seuil d'habitants à partir duquel une ville devient une métropole.",
+            "Distinguer plusieurs manières d'habiter la même ville.",
+            "Nommer des fonctions économiques et culturelles."
+          ],
+          "juste": 1,
+          "pourquoi": "Les trois autres réponses sont exactement ce que la pièce permet. Le seuil, lui, n'est écrit nulle part, et aucun chiffre du module n'en propose. Une pièce qui ne dit pas une chose ne l'autorise pas — même quand on aimerait beaucoup la conclure."
+        },
+        {
+          "id": "EP-G6-A-06",
+          "palier": "discrimination",
+          "module": "G6-04",
+          "ref": "CLM-GEO-004",
+          "enonce": "Un document affirme : « Cet espace compte 12 habitants au km² ; il est donc en déclin. » Où est le saut ?",
+          "options": [
+            "Le chiffre est probablement faux.",
+            "Douze habitants au km², ce n'est pas une faible densité.",
+            "Le chiffre décrit un état, le déclin décrit une évolution : le second ne se déduit pas du premier.",
+            "Il faudrait la densité de l'année précédente pour pouvoir parler de faible densité."
+          ],
+          "juste": 2,
+          "pourquoi": "Une densité est une photographie ; un déclin est un film. Passer de l'une à l'autre demande une seconde mesure, à une autre date — le module ajoutait justement : « depuis quand ? ». La dernière réponse mélange les deux questions : la seconde date sert à parler d'évolution, pas à qualifier la densité."
+        },
+        {
+          "id": "EP-G6-A-07",
+          "palier": "discrimination",
+          "module": "G6-02",
+          "ref": "CLM-GEO-005",
+          "enonce": "Une brochure d'urbanisme annonce : « En 2050, la ville sera verticale et automatisée. » Quel statut lui donner ?",
+          "options": [
+            "Établi : la brochure est signée par des urbanistes.",
+            "C'est une proposition, tant qu'on ne sait pas ce qu'elle suppose et ce qu'on pourrait y remplacer.",
+            "Réfuté : personne ne peut connaître 2050.",
+            "Probable : la tendance actuelle va dans ce sens."
+          ],
+          "juste": 1,
+          "pourquoi": "Ni établi ni réfuté : ce n'est pas parce qu'une chose est publiée qu'elle est établie, ni parce qu'on ne peut pas la vérifier qu'elle est fausse. « Probable » glisse aussi : une tendance n'est pas une preuve. Le bon geste est de demander la maquette — sur quoi tient-elle, et que peut-on en retirer ?"
+        },
+        {
+          "id": "EP-G6-A-08",
+          "palier": "transfert",
+          "module": "G6-01",
+          "ref": "CLM-GEO-002",
+          "enonce": "Vous avez sous les yeux le plan du réseau de bus d'une agglomération. Quelle question le calque vous fait-il poser ?",
+          "options": [
+            "Combien cette agglomération compte-t-elle d'habitants ?",
+            "Ce plan est-il à jour ?",
+            "Pour quels usagers ce réseau a-t-il été dessiné — et lesquels n'y sont pas ?",
+            "Quelle est la longueur totale des lignes ?"
+          ],
+          "juste": 2,
+          "pourquoi": "Le calque : chaque sorte d'usager dessine une ville différente sur le même sol. Un réseau pensé pour les pendulaires du matin ne ressemble pas à un réseau pensé pour les élèves, ou pour ceux qui travaillent la nuit. « Ce plan est-il à jour ? » est une bonne question — mais c'est une question de fiabilité, pas d'usage.",
+          "groupe": "G6-01-T"
+        },
+        {
+          "id": "EP-G6-A-09",
+          "palier": "transfert",
+          "module": "G6-03",
+          "ref": "CLM-GEO-004",
+          "enonce": "Une commune de montagne déclarait : « Notre col est un handicap. » Vingt ans plus tard, elle ouvre une station de ski. Que dit le gabarit ?",
+          "options": [
+            "La commune s'était trompée la première fois.",
+            "Le col était bien un handicap, et la station est une compensation.",
+            "La pente n'a pas changé ; le projet a changé, donc la contrainte s'est déplacée.",
+            "Une contrainte finit toujours par disparaître avec le temps."
+          ],
+          "juste": 2,
+          "pourquoi": "Rien n'a bougé dans le relief. On a simplement approché du même lieu un autre gabarit — non plus « faire passer une route » mais « faire descendre des skieurs » — et ce qui ne passait pas est devenu ce qui porte. La première réponse est le piège : personne ne s'était trompé, une contrainte n'est simplement jamais absolue.",
+          "groupe": "G6-03-T"
+        },
+        {
+          "id": "EP-G6-A-10",
+          "palier": "transfert",
+          "module": "G6-04",
+          "ref": "CLM-GEO-004",
+          "enonce": "Un relevé indique : « Ce village comptait 512 habitants en 1999 et 388 en 2021. » Le tas s'applique-t-il ici ?",
+          "options": [
+            "Oui : ce sont deux moyennes, et il faut les décomposer.",
+            "Non : ce ne sont pas des moyennes mais deux dénombrements datés — le tas n'a rien à ouvrir.",
+            "Oui : il faut demander comment la population se répartit dans le village.",
+            "Non, parce que l'écart est trop faible pour qu'on puisse l'interpréter."
+          ],
+          "juste": 1,
+          "pourquoi": "Un outil qui s'applique partout ne sert à rien. Le tas ouvre les moyennes ; ici il n'y a pas de moyenne, il y a deux comptages à deux dates. La troisième réponse est tentante et reste une bonne question en soi — mais elle ne sort pas de ces chiffres-là. Ce que ces chiffres appellent, c'est plutôt : qui a compté, et comment ?",
+          "groupe": "G6-04-T"
+        },
+        {
+          "id": "EP-G6-A-08b",
+          "groupe": "G6-01-T",
+          "palier": "transfert",
+          "module": "G6-01",
+          "ref": "CLM-GEO-002",
+          "enonce": "Une brochure touristique présente « les incontournables de la ville en 48 heures ». Quelle question le calque vous fait-il poser ?",
+          "options": [
+            "Ces lieux sont-ils vraiment les plus beaux de la ville ?",
+            "Combien coûte ce parcours ?",
+            "Cette ville-là est celle de qui — et qui, l'habitant chaque jour, n'y figure pas ?",
+            "Cette brochure est-elle à jour ?"
+          ],
+          "juste": 2,
+          "pourquoi": "Le calque du touriste dessine une ville entière et cohérente, où ne figurent ni l'entrepôt, ni le collège, ni le trajet de six heures quarante. Elle n'est pas fausse pour autant : c'est un calque parmi d'autres, et elle ne dit jamais lequel."
+        },
+        {
+          "id": "EP-G6-A-11",
+          "groupe": "G6-02-T",
+          "palier": "transfert",
+          "module": "G6-02",
+          "ref": "CLM-GEO-005",
+          "enonce": "Un dossier d'aménagement affirme : « Il n'y a pas d'alternative. » Que fait la maquette de cette phrase ?",
+          "options": [
+            "Elle la confirme, si le budget est contraint.",
+            "Elle en fait le signe qu'on présente une maquette comme si elle ne se démontait pas.",
+            "Elle la rejette : il existe toujours une solution équivalente.",
+            "Elle demande l'avis d'un expert indépendant."
+          ],
+          "juste": 1,
+          "pourquoi": "« Pas d'alternative » n'est pas un constat, c'est une clôture. La maquette ne prétend pas qu'une autre solution serait aussi bonne — la troisième réponse va trop loin, démontable ne veut pas dire interchangeable. Elle demande seulement quelles pièces on pourrait remplacer, et ce qu'il en coûterait."
+        },
+        {
+          "id": "EP-G6-A-09b",
+          "groupe": "G6-03-T",
+          "palier": "transfert",
+          "module": "G6-03",
+          "ref": "CLM-GEO-004",
+          "enonce": "Un même bâtiment vide est jugé « inadapté » par une école et « parfait » par une entreprise de stockage. Que dit le gabarit ?",
+          "options": [
+            "L'un des deux se trompe.",
+            "Le bâtiment est moyennement adapté.",
+            "Les deux ont raison : ils n'approchent pas du même lieu le même projet.",
+            "Il faudrait une expertise pour trancher."
+          ],
+          "juste": 2,
+          "pourquoi": "L'inadaptation n'est pas une propriété du bâtiment : c'est un rapport entre lui et un projet. Sans fenêtres, sans cour, avec un quai de chargement — le mur qui manque à l'école est celui qui sert au stockage. Chercher qui a raison, c'est chercher un gabarit unique, et il n'y en a pas."
+        },
+        {
+          "id": "EP-G6-A-10b",
+          "groupe": "G6-04-T",
+          "palier": "transfert",
+          "module": "G6-04",
+          "ref": "CLM-GEO-004",
+          "enonce": "Une note de quartier indique : « Le revenu moyen y est de 2 100 € par mois. » Que demande le tas ?",
+          "options": [
+            "Ce chiffre place-t-il le quartier au-dessus de la moyenne nationale ?",
+            "Comment ce revenu se répartit-il entre les habitants ?",
+            "Ce chiffre est-il net ou brut ?",
+            "Combien d'habitants compte le quartier ?"
+          ],
+          "juste": 1,
+          "pourquoi": "Le tas voyage hors de la géographie : toute moyenne écrase une répartition. Deux quartiers à 2 100 € peuvent être l'un homogène, l'autre partagé entre 800 € et 6 000 €. Les trois autres questions sont utiles et légitimes ; aucune n'ouvre le tas."
+        }
+      ]
+    },
+    {
+      "id": "EP-G6-B",
+      "discipline": "geographie",
+      "niveau": "6e",
+      "rang": 2,
+      "titre": "Le littoral, la carte, et ce que le milieu ne décide pas",
+      "sequence": "Thèmes 3 et 4 du programme de sixième",
+      "modules": [
+        "G6-05",
+        "G6-06",
+        "G6-07"
+      ],
+      "duree": "12 min",
+      "items": [
+        {
+          "id": "EP-G6-B-01",
+          "palier": "rappel",
+          "module": "G6-05",
+          "ref": "CLM-GEO-002",
+          "enonce": "Pourquoi les usages d'un littoral entrent-ils si souvent en concurrence ?",
+          "options": [
+            "Parce que les habitants des littoraux sont plus nombreux qu'ailleurs.",
+            "Parce que la ressource disputée est une bande étroite : ce que l'un y pose, l'autre ne peut plus l'y mettre.",
+            "Parce que le tourisme rapporte plus que l'industrie.",
+            "Parce que la loi y interdit beaucoup de constructions."
+          ],
+          "juste": 1,
+          "pourquoi": "L'étagère : longue, mais d'une seule profondeur. Le port, les hôtels, les logements et la dune protégée se partagent la même planche. La première réponse décrit une conséquence, pas la cause. Les deux dernières sont parfois vraies et ne sont jamais la raison de la concurrence."
+        },
+        {
+          "id": "EP-G6-B-02",
+          "palier": "rappel",
+          "module": "G6-06",
+          "ref": "CLM-GEO-002",
+          "enonce": "Quelle carte du monde ne déforme rien ?",
+          "options": [
+            "La projection de Mercator, celle qui sert à la navigation.",
+            "Aucune : on ne met pas une sphère à plat sans déchirer ou sans étirer.",
+            "Les cartes récentes, établies par satellite.",
+            "La projection de Peters, qui respecte les surfaces."
+          ],
+          "juste": 1,
+          "pourquoi": "La peau d'orange. C'est une propriété de la sphère, pas un défaut du cartographe, et ce n'est pas un aveu : c'est un résultat. Peters garde les surfaces justes en abandonnant les formes ; Mercator garde les angles en gonflant les hautes latitudes. Un satellite ne change rien à la géométrie."
+        },
+        {
+          "id": "EP-G6-B-03",
+          "palier": "rappel",
+          "module": "G6-07",
+          "ref": "CLM-GEO-002",
+          "enonce": "Deux sociétés habitent le même milieu de façon très différente. Qu'est-ce que cela montre ?",
+          "options": [
+            "Que l'une s'est mieux adaptée que l'autre.",
+            "Que le milieu a finalement peu d'influence.",
+            "Que le milieu ferme des routes mais n'en choisit aucune : quelqu'un a choisi.",
+            "Que les deux sociétés ne disposent pas des mêmes ressources naturelles."
+          ],
+          "juste": 2,
+          "pourquoi": "La fourche. Le milieu contraint, il ne dicte pas. La deuxième réponse va trop loin dans l'autre sens : la contrainte est réelle. La première classe, alors que le module refuse de classer. La dernière contredit l'énoncé, qui dit que le milieu est le même."
+        },
+        {
+          "id": "EP-G6-B-04",
+          "palier": "discrimination",
+          "module": "G6-06",
+          "ref": "CLM-GEO-002",
+          "enonce": "Sur un planisphère, le Groenland paraît plus grand que l'Afrique. Que peut-on en conclure ?",
+          "options": [
+            "Que la carte est fausse et qu'il faut la remplacer.",
+            "Que cette projection a choisi de garder juste autre chose que les surfaces.",
+            "Que le Groenland est effectivement plus grand que l'Afrique.",
+            "Que le cartographe a voulu tromper son lecteur."
+          ],
+          "juste": 1,
+          "pourquoi": "La troisième réponse est fausse : l'Afrique fait environ quatorze fois le Groenland. Les deux autres durcissent — la déformation n'est ni une erreur ni forcément une intention. Ce qu'on peut dire, c'est ce que la carte a sacrifié ; on se demande ensuite, et seulement ensuite, à quoi elle sert."
+        },
+        {
+          "id": "EP-G6-B-05",
+          "palier": "discrimination",
+          "module": "G6-05",
+          "ref": "CLM-GEO-002",
+          "enonce": "Le programme traite les littoraux par les usages, les aménagements et la vulnérabilité. Qu'est-ce que cette pièce ne permet pas ?",
+          "options": [
+            "Repérer que deux usages se disputent le même espace.",
+            "Décrire l'aménagement d'un port de commerce.",
+            "Dire quel usage devrait l'emporter sur les autres.",
+            "Constater qu'on aménage beaucoup un espace exposé."
+          ],
+          "juste": 2,
+          "pourquoi": "Trancher entre le port et la dune n'est pas une question de géographie : c'est une décision politique, qui se prend ailleurs et avec d'autres personnes. La géographie peut poser le conflit avec précision — elle n'a pas mandat pour le clore."
+        },
+        {
+          "id": "EP-G6-B-06",
+          "palier": "discrimination",
+          "module": "G6-07",
+          "ref": "CLM-GEO-002",
+          "enonce": "« Le climat aride explique l'habitat nomade. » Que vaut cette phrase ?",
+          "options": [
+            "Elle est établie : c'est ce que montre la carte des climats.",
+            "Elle est réfutée : le climat n'a aucun effet sur l'habitat.",
+            "Elle fait dire au milieu ce qu'il ne dit pas : plusieurs routes restaient ouvertes.",
+            "Elle est probable, faute de meilleure explication."
+          ],
+          "juste": 2,
+          "pourquoi": "On trouve en milieu aride des sociétés nomades et des sociétés sédentaires — oasis, villes caravanières, irrigation. Le milieu a fermé des routes ; il n'en a choisi aucune. La deuxième réponse est l'excès inverse : la contrainte, elle, est bien réelle."
+        },
+        {
+          "id": "EP-G6-B-07",
+          "palier": "transfert",
+          "module": "G6-05",
+          "ref": "CLM-GEO-002",
+          "enonce": "Une commune du bord de mer annonce un parking de quatre cents places au plus près de la plage. Quelle question l'étagère fait-elle poser ?",
+          "options": [
+            "Combien de touristes viendront-ils ?",
+            "Le stationnement sera-t-il payant ?",
+            "Qu'a-t-il fallu retirer de la bande pour poser ce parking ?",
+            "La commune a-t-elle les moyens de le financer ?"
+          ],
+          "juste": 2,
+          "pourquoi": "Un parking sur le littoral n'est pas seulement un ajout : c'est une place prise sur une planche déjà pleine — dune, logement, activité, espace protégé. Les autres questions sont légitimes, et aucune ne porte sur la rareté de la bande.",
+          "groupe": "G6-05-T"
+        },
+        {
+          "id": "EP-G6-B-08",
+          "palier": "transfert",
+          "module": "G6-06",
+          "ref": "CLM-GEO-002",
+          "enonce": "Sur un plan de métro, deux stations voisines sont séparées de deux centimètres, comme presque partout ailleurs sur le plan. Que dit la peau d'orange ?",
+          "options": [
+            "Rien : un plan de métro n'est pas une carte du monde.",
+            "Que le plan a gardé l'ordre des stations et abandonné les distances.",
+            "Que le plan est faux.",
+            "Que les stations sont réellement à égale distance."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste voyage : toute mise à plat choisit ce qu'elle garde juste. Un plan de métro sacrifie les distances et les formes pour garder l'ordre et les correspondances — et c'est exactement pour cela qu'il est lisible. La première réponse refuse un transfert qui fonctionne.",
+          "groupe": "G6-06-T"
+        },
+        {
+          "id": "EP-G6-B-09",
+          "palier": "transfert",
+          "module": "G6-07",
+          "ref": "CLM-GEO-002",
+          "enonce": "Sous quatre mètres d'eau à marée haute, aucune société n'a jamais cultivé de champ sans construire d'abord une digue. La fourche s'applique-t-elle ?",
+          "options": [
+            "Oui, comme toujours : quelqu'un a forcément choisi.",
+            "Non : là où il ne reste qu'un seul chemin, on peut dire que le milieu a décidé.",
+            "Non, parce que la fourche ne vaut que pour les climats.",
+            "Oui : d'autres sociétés auraient pu cultiver sous l'eau."
+          ],
+          "juste": 1,
+          "pourquoi": "Le module l'annonçait lui-même : là où il ne reste qu'une route, le milieu a bien décidé ; c'est presque partout ailleurs qu'il ne décide pas. La première réponse est l'erreur qui guette un outil qu'on aime — on finit par l'appliquer sans regarder. Et la digue est justement la manière dont on rouvre la fourche : elle a un coût, une date, et des gens qui l'ont voulue.",
+          "groupe": "G6-07-T"
+        },
+        {
+          "id": "EP-G6-B-07b",
+          "groupe": "G6-05-T",
+          "palier": "transfert",
+          "module": "G6-05",
+          "ref": "CLM-GEO-002",
+          "enonce": "Une ville de l'intérieur des terres veut créer une zone d'activités sur d'anciennes friches. L'étagère s'applique-t-elle ?",
+          "options": [
+            "Oui : tout aménagement retire toujours quelque chose.",
+            "Pas de la même façon : ce qui fait l'étagère, c'est la profondeur unique — une friche intérieure n'est pas rare de cette manière-là.",
+            "Non : l'étagère ne vaut que pour le bord de mer.",
+            "Oui : les friches sont aussi disputées que les littoraux."
+          ],
+          "juste": 1,
+          "pourquoi": "La première réponse est vraie, et c'est bien le problème : elle est vraie partout, donc elle ne tranche rien. L'outil garde ici une part de sa force et perd ce qui le rendait coupant — à l'intérieur des terres, on peut souvent s'écarter ; sur une bande littorale, non. Un outil qu'on transporte sans regarder ce qu'il perd en route finit par ne plus rien dire."
+        },
+        {
+          "id": "EP-G6-B-08b",
+          "groupe": "G6-06-T",
+          "palier": "transfert",
+          "module": "G6-06",
+          "ref": "CLM-GEO-002",
+          "enonce": "Un graphique résume vingt ans d'évolution en une seule courbe. Que dit la peau d'orange ?",
+          "options": [
+            "Rien : elle ne concerne que les cartes.",
+            "Que le graphique est trompeur.",
+            "Que toute mise à plat garde certaines choses justes et en abandonne d'autres : reste à savoir lesquelles.",
+            "Qu'il faudrait tracer plusieurs courbes."
+          ],
+          "juste": 2,
+          "pourquoi": "Le geste voyage : représenter, c'est choisir ce qu'on sacrifie. Une courbe unique garde la tendance et abandonne les écarts, les cas particuliers et les ruptures. « Trompeur » durcit — Mercator ne trompe pas, il est explicite sur ce qu'il garde. Tracer plusieurs courbes est parfois la bonne suite, mais c'est une solution, pas une lecture."
+        },
+        {
+          "id": "EP-G6-B-09b",
+          "groupe": "G6-07-T",
+          "palier": "transfert",
+          "module": "G6-07",
+          "ref": "CLM-GEO-002",
+          "enonce": "Deux villages voisins, même vallée, même sol : l'un vit du bois, l'autre de l'élevage. Que cherche la fourche ?",
+          "options": [
+            "Lequel des deux a fait le meilleur choix.",
+            "Ce que le milieu leur interdisait à tous les deux.",
+            "Qui a choisi, quand, et avec quels moyens.",
+            "Si le sol est vraiment identique des deux côtés."
+          ],
+          "juste": 2,
+          "pourquoi": "Là où plusieurs routes restaient ouvertes, une décision a eu lieu : elle a une date, des personnes, des moyens, et elle s'enquête. La deuxième réponse est le premier temps de l'outil — utile, mais elle ne dit rien de ce qui restait ouvert. La première classe, et le module refuse de classer."
+        }
+      ]
+    }
+  ]
+}

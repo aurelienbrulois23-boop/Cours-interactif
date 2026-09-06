@@ -1,9 +1,10 @@
-# L'épreuve de fin de séquence, et le jeu de rôle qui pourrait la précéder
+# L'épreuve de fin de séquence, et les micro-jeux qui la précèdent
 
 **Usage :** décider ce qu'on construit, dans quel ordre, et ce qu'on refuse de construire.
 **État au 6 septembre 2026 :** l'épreuve est faite et jouable (`site/epreuve.html`,
-`site/epreuves.json`, deux séquences de géographie). Le jeu de rôle est spécifié ici,
-et **n'est pas commencé**.
+`site/epreuves.json`, deux séquences de géographie). Les **micro-jeux de rôle** le sont
+aussi (`site/microjdr.html`, `site/jdr/`), sous la forme arrêtée par l'utilisateur :
+courts, **pas identiques entre eux**, et **sans rapport avec Valdurne**.
 **Origine :** proposition de l'utilisateur, à partir des modules PIX-pHARe qu'il a écrits
 pour le Portail Vie Scolaire (`aethonyx_phénix/projet hub viesco/`).
 
@@ -122,7 +123,36 @@ L'univers est écrit, l'utilisateur le connaît, ses élèves aussi. Mais deux r
 Piste : un cadre neutre côté site public, et Valdurne comme habillage côté établissement.
 La décision appartient à l'utilisateur — c'est son univers et ce sont ses livres.
 
-### 4.4 Le document téléchargeable
+### 4.4 La forme retenue : des micro-jeux, sans univers commun
+
+Décision de l'utilisateur, 6 septembre 2026 : **des micro-jeux de rôle, pas forcément
+identiques entre eux, et différents de Valdurne.** Trois conséquences, toutes bonnes :
+
+- **Micro** — quatre décisions, huit minutes. Un format long accumule du décor, et le
+  décor est exactement ce qui coûte (§4.2 a). Un micro-format n'en a pas les moyens.
+  `verifier.py` avertit au-delà de six scènes.
+- **Pas d'univers commun** — donc pas de fiction plaquée. **Le décor est la situation
+  professionnelle où la notion sert réellement** : un conseil municipal pour la
+  séquence « Habiter », une rédaction de journal pour la séquence « Littoral, carte ».
+  La question devient l'action sans effort, puisque c'est déjà ainsi que la notion
+  travaille dans le monde. Chaque séquence appelle donc sa propre scène.
+- **Hors de Valdurne** — le problème de licence du §4.3 disparaît, et avec lui la
+  tentation d'importer des fichiers du Portail Vie Scolaire.
+
+**La garantie est structurelle, pas déclarative.** Un scénario ne contient aucune
+question et aucune réponse : seulement des identifiants d'items, et les suites
+narratives de chaque option. **Il ne peut donc pas énoncer un faux, puisqu'il n'énonce
+rien.** `verifier.py` refuse un scénario où apparaîtraient les champs `enonce`,
+`options`, `juste`, `pourquoi` ou `reponse`, et refuse une option laissée sans suite.
+C'est cette contrainte-là, et non une consigne, qui rendra sûr le jour venu un scénario
+composé par une IA.
+
+Une erreur ne produit pas une croix : elle produit une conséquence dans la scène — le
+dossier part avec une case vide, la correction paraîtra en page deux. La raison est
+donnée ensuite, **dans tous les cas**, y compris quand la réponse tenait : le retour
+immédiat fait l'essentiel du bénéfice, et une fiction n'en dispense de rien.
+
+### 4.5 Le document téléchargeable
 
 Non pas une fiche distribuée **avant**, avec les réponses en regard, mais un **carnet
 produit après** : ce qui a été demandé, ce qui a été répondu, ce qu'on attendait, et
@@ -137,6 +167,6 @@ ce sera **en Python** — Node n'est pas installé sur ce poste.
 ## 5. Ce qui reste
 
 - 45 modules sur 52 n'ont pas encore d'épreuve. `verifier.py` les nomme à chaque passage.
-- Le jeu de rôle : rien n'est commencé, et rien ne doit l'être avant que l'index couvre
-  au moins deux disciplines complètes — sans quoi il n'y aurait pas d'interdisciplinaire
-  à croiser.
+- Les micro-jeux : deux écrits sur sept séquences à venir. Chaque nouvelle séquence
+  appelle sa propre scène, tirée de sa propre discipline — il n'y a pas de gabarit
+  à recopier, et c'est voulu.

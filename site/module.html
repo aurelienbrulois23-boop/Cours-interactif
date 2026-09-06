@@ -553,11 +553,17 @@ if (!m) {
           par une épreuve commune à ${ep.modules.length} modules. Les questions y sont
           mélangées : reconnaître de quel cours vient une question est déjà la moitié
           du travail, et l'épreuve vous prive de cette moitié-là.</p>
+          ${ep.jdr ? `<p>Avant l'épreuve, une situation vous attend : une scène courte
+            où la question posée est aussi ce que vous faites. Elle ne compte pas,
+            et elle ne barre rien.</p>` : ''}
           ${reste.length === 0
-            ? `<p><a class="bouton" href="epreuve.html?e=${encodeURIComponent(ep.id)}">Passer l'épreuve</a></p>`
+            ? `<p>${ep.jdr ? `<a class="bouton" href="microjdr.html?e=${encodeURIComponent(ep.id)}">Entrer dans la situation</a>
+                 <a class="bouton discret" href="epreuve.html?e=${encodeURIComponent(ep.id)}">Aller droit à l'épreuve</a>`
+                : `<a class="bouton" href="epreuve.html?e=${encodeURIComponent(ep.id)}">Passer l'épreuve</a>`}</p>`
             : `<p class="fine">Il reste ${reste.length === 1 ? 'un module' : reste.length + ' modules'}
-               avant de la passer : ${reste.map(esc).join(', ')}.
-               <a href="epreuve.html?e=${encodeURIComponent(ep.id)}">La regarder quand même</a>.</p>`}`;
+               avant la fin de la séquence : ${reste.map(esc).join(', ')}.
+               ${ep.jdr ? `<a href="microjdr.html?e=${encodeURIComponent(ep.id)}">Voir la situation</a> ·` : ''}
+               <a href="epreuve.html?e=${encodeURIComponent(ep.id)}">Voir l'épreuve</a>.</p>`}`;
       }
     }
   } catch (e) { /* sans épreuves, le module reste entier */ }

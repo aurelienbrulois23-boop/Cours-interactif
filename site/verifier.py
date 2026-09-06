@@ -215,6 +215,58 @@ if os.path.exists(EPREUVES):
     except ValueError as e:
         erreurs.append("epreuves.json : JSON invalide — %s" % e)
 
+# ── Micro-jeux de rôle ───────────────────────────────────────────────────────
+# La garantie du dispositif est structurelle : un scénario ne contient AUCUNE
+# question et AUCUNE réponse, seulement des identifiants d'items et des suites
+# narratives. Un scénario ne peut donc pas énoncer un faux — il n'énonce rien.
+# Ce contrôle sert à ce que cette garantie ne se perde pas en route.
+INTERDITS = ['enonce', 'options', 'juste', 'pourquoi', 'reponse']
+jdrs = 0
+for ep in eps:
+    if not ep.get('jdr'):
+        continue
+    chemin = os.path.join(ICI, ep['jdr'].replace('/', os.sep))
+    if not os.path.exists(chemin):
+        erreurs.append("épreuve %s : scénario %s introuvable" % (ep['id'], ep['jdr']))
+        continue
+    try:
+        j = json.load(io.open(chemin, encoding='utf-8'))
+    except ValueError as e:
+        erreurs.append("%s : JSON invalide — %s" % (ep['jdr'], e))
+        continue
+    jdrs += 1
+    n = j.get('id', ep['jdr'])
+    if j.get('epreuve') != ep['id']:
+        erreurs.append("%s : se dit rattaché à %s, alors que %s le désigne"
+                       % (n, j.get('epreuve'), ep['id']))
+    par_id = {x['id']: x for x in ep.get('items', [])}
+    for s in j.get('scenes', []):
+        moment = s.get('moment', '?')
+        it = par_id.get(s.get('item'))
+        if it is None:
+            erreurs.append("%s / %s : item %s absent de l'épreuve"
+                           % (n, moment, s.get('item')))
+            continue
+        for c in INTERDITS:
+            if c in s:
+                erreurs.append("%s / %s : champ « %s » écrit dans le scénario — "
+                               "les questions et les réponses ne vivent que dans "
+                               "l'index" % (n, moment, c))
+        manquantes = [k for k in range(len(it['options'])) if str(k) not in s.get('suites', {})]
+        if manquantes:
+            erreurs.append("%s / %s : aucune suite pour la réponse %s — la scène "
+                           "s'arrêterait net" % (n, moment, ', '.join(map(str, manquantes))))
+        for k, v in s.get('suites', {}).items():
+            if not str(v).strip():
+                erreurs.append("%s / %s : suite vide pour la réponse %s" % (n, moment, k))
+    for c in ['tenu', 'ecarts', 'apres']:
+        if not j.get('issue', {}).get(c, '').strip():
+            erreurs.append("%s : issue sans « %s »" % (n, c))
+    if len(j.get('scenes', [])) > 6:
+        avertis.append("%s : %d scènes — un micro-jeu qui s'allonge redevient du décor"
+                       % (n, len(j['scenes'])))
+
+
 couverts = set(m for ep in eps for m in ep.get('modules', []))
 orphelins = [i for i in sorted(mods) if i not in couverts]
 if orphelins:
@@ -223,8 +275,9 @@ if orphelins:
 
 
 # ── Rapport ──────────────────────────────────────────────────────────────────
-print("%d modules, %d schémas, %d épreuves (%d questions)\n"
-      % (len(mods), len(reg), len(eps), sum(len(e.get('items', [])) for e in eps)))
+print("%d modules, %d schémas, %d épreuves (%d questions), %d situations\n"
+      % (len(mods), len(reg), len(eps),
+         sum(len(e.get('items', [])) for e in eps), jdrs))
 disciplines = []
 for i in sorted(mods):
     dd = mods[i].get('discipline', '?')

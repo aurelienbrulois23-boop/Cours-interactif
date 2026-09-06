@@ -245,7 +245,8 @@
           "juste": 1,
           "pourquoi": "Le tas voyage hors de la géographie : toute moyenne écrase une répartition. Deux quartiers à 2 100 € peuvent être l'un homogène, l'autre partagé entre 800 € et 6 000 €. Les trois autres questions sont utiles et légitimes ; aucune n'ouvre le tas."
         }
-      ]
+      ],
+      "jdr": "jdr/JDR-G6-A.json"
     },
     {
       "id": "EP-G6-B",
@@ -447,7 +448,8 @@
           "juste": 2,
           "pourquoi": "Là où plusieurs routes restaient ouvertes, une décision a eu lieu : elle a une date, des personnes, des moyens, et elle s'enquête. La deuxième réponse est le premier temps de l'outil — utile, mais elle ne dit rien de ce qui restait ouvert. La première classe, et le module refuse de classer."
         }
-      ]
+      ],
+      "jdr": "jdr/JDR-G6-B.json"
     }
   ]
 }

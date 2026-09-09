@@ -1809,6 +1809,1653 @@
           "pourquoi": "L'outil sert là où les liens sont nombreux, croisés et mal connus — c'est cela qui empêche de prévoir le détail. Une recette est un système simple et bien étudié : on sait que la pâte sera plus moelleuse et moins ferme. La troisième réponse conclut bien pour une mauvaise raison : le nœud voyage très loin de l'écologie, à condition que le système soit assez emmêlé."
         }
       ]
+    },
+    {
+      "id": "EP-FCE2-A",
+      "discipline": "francais",
+      "niveau": "CE2",
+      "rang": 1,
+      "titre": "Le doigt, la loupe, la ficelle et le pont",
+      "sequence": "Lire un texte et le comprendre",
+      "modules": [
+        "FCE2-01",
+        "FCE2-02",
+        "FCE2-03",
+        "FCE2-04"
+      ],
+      "duree": "12 min",
+      "jdr": "jdr/JDR-FCE2-A.json",
+      "items": [
+        {
+          "id": "EP-FCE2-A-01",
+          "palier": "rappel",
+          "module": "FCE2-01",
+          "ref": "CLM-FR-002",
+          "enonce": "Avant de dire ce qu'un texte raconte, que fait-on ?",
+          "options": [
+            "On se rappelle ce qu'on a compris.",
+            "On retourne au texte et on montre la ligne.",
+            "On demande à quelqu'un."
+          ],
+          "juste": 1,
+          "pourquoi": "Le doigt. Ce qu'on croit se rappeler n'est pas toujours ce qui est écrit. Montrer la ligne, c'est vérifier — et cela va très vite."
+        },
+        {
+          "id": "EP-FCE2-A-02",
+          "palier": "rappel",
+          "module": "FCE2-02",
+          "ref": "CLM-FR-002",
+          "enonce": "Pourquoi le mot « grand » finit-il par un d qu'on n'entend pas ?",
+          "options": [
+            "Pour faire plus joli.",
+            "Parce qu'on l'entend dans « grande » et dans « grandir ».",
+            "C'est une erreur de l'orthographe."
+          ],
+          "juste": 1,
+          "pourquoi": "La loupe. Une lettre muette n'est presque jamais là pour rien : elle se réveille dans un mot de la même famille. Cherchez le mot où on l'entend."
+        },
+        {
+          "id": "EP-FCE2-A-03",
+          "palier": "rappel",
+          "module": "FCE2-03",
+          "ref": "CLM-FR-002",
+          "enonce": "On lit : « Léa appelle Tom. Il ne répond pas. » Qui est « il » ?",
+          "options": [
+            "Léa.",
+            "Tom.",
+            "On ne peut pas le savoir."
+          ],
+          "juste": 1,
+          "pourquoi": "La ficelle. Un petit mot comme « il » remplace quelqu'un, et il faut savoir qui — sinon on lit une autre histoire. Ici « il » ne peut pas être Léa : on dirait « elle »."
+        },
+        {
+          "id": "EP-FCE2-A-04",
+          "palier": "rappel",
+          "module": "FCE2-04",
+          "ref": "CLM-FR-002",
+          "enonce": "Le texte dit : « Paul ouvre son parapluie en sortant. » Que peut-on savoir ?",
+          "options": [
+            "Qu'il pleut.",
+            "Que Paul est en retard.",
+            "Rien : ce n'est pas écrit."
+          ],
+          "juste": 0,
+          "pourquoi": "Le pont. Ce n'est pas écrit, et on peut le savoir : le texte donne un appui — le parapluie — et on ajoute ce qu'on sait déjà, qu'on l'ouvre quand il pleut. Le pont a besoin des deux côtés."
+        },
+        {
+          "id": "EP-FCE2-A-05",
+          "palier": "discrimination",
+          "module": "FCE2-01",
+          "ref": "CLM-FR-002",
+          "enonce": "Un camarade dit : « le héros a peur, c'est sûr. » Que lui demander ?",
+          "options": [
+            "De relire tout le livre.",
+            "À quelle ligne c'est écrit.",
+            "S'il a aimé l'histoire."
+          ],
+          "juste": 1,
+          "pourquoi": "On ne dit pas qu'il a tort : on demande où. S'il trouve la ligne, il a raison. S'il ne la trouve pas, c'est qu'il l'a ajouté lui-même — et il vaut mieux le savoir."
+        },
+        {
+          "id": "EP-FCE2-A-06",
+          "palier": "discrimination",
+          "module": "FCE2-04",
+          "ref": "CLM-FR-002",
+          "enonce": "Le texte dit : « Paul ouvre son parapluie. » Peut-on savoir de quelle couleur il est ?",
+          "options": [
+            "Oui, la plupart sont noirs.",
+            "Non : le texte ne le dit pas, et on ne le sait pas non plus par ailleurs.",
+            "Oui, si on imagine bien."
+          ],
+          "juste": 1,
+          "pourquoi": "Le pont a besoin de ses deux côtés : le texte, et ce qu'on sait vraiment. Pour la pluie, les deux étaient là. Pour la couleur, il n'y a ni l'un ni l'autre — alors on ne devine pas."
+        },
+        {
+          "id": "EP-FCE2-A-07",
+          "palier": "discrimination",
+          "module": "FCE2-03",
+          "ref": "CLM-FR-002",
+          "enonce": "« Le chat regarde l'oiseau. Il s'envole. » Qui s'envole ?",
+          "options": [
+            "Le chat.",
+            "L'oiseau.",
+            "Les deux."
+          ],
+          "juste": 1,
+          "pourquoi": "La ficelle ne s'attache pas au mot le plus proche : elle s'attache à celui qui peut faire l'action. Un chat ne s'envole pas."
+        },
+        {
+          "id": "EP-FCE2-A-08",
+          "groupe": "FCE2-01-T",
+          "palier": "transfert",
+          "module": "FCE2-01",
+          "ref": "CLM-FR-002",
+          "enonce": "Quelqu'un vous dit : « la sortie est annulée, je l'ai lu. » Que demandez-vous ?",
+          "options": [
+            "S'il en est bien sûr.",
+            "Où il l'a lu, pour aller voir.",
+            "Qui le lui a dit."
+          ],
+          "juste": 1,
+          "pourquoi": "Le doigt sort de la classe. « Montre-moi où c'est écrit » n'est pas de la méfiance : c'est la façon la plus rapide de savoir."
+        },
+        {
+          "id": "EP-FCE2-A-08b",
+          "groupe": "FCE2-01-T",
+          "palier": "transfert",
+          "module": "FCE2-01",
+          "ref": "CLM-FR-002",
+          "enonce": "Une affiche dit que le club ferme. Un camarade dit le contraire. Que fait le doigt ?",
+          "options": [
+            "Il croit l'affiche, qui est écrite.",
+            "Il va lire l'affiche en entier, avec la date.",
+            "Il croit le camarade, qui était là."
+          ],
+          "juste": 1,
+          "pourquoi": "Le doigt ne choisit pas qui a raison : il va voir. Souvent l'affiche dit autre chose que ce qu'on en avait retenu — ou elle date de trois semaines."
+        },
+        {
+          "id": "EP-FCE2-A-09",
+          "groupe": "FCE2-02-T",
+          "palier": "transfert",
+          "module": "FCE2-02",
+          "ref": "CLM-FR-002",
+          "enonce": "Le mot « chant » finit par un t. Dans quel mot l'entend-on ?",
+          "options": [
+            "Dans « chandelle ».",
+            "Dans « chanter ».",
+            "Nulle part."
+          ],
+          "juste": 1,
+          "pourquoi": "« Chanter », « chanteuse », « chantonner » : le t se réveille. « Chandelle » commence pareil et n'a rien à voir — la loupe regarde la famille, pas le début du mot."
+        },
+        {
+          "id": "EP-FCE2-A-09b",
+          "groupe": "FCE2-02-T",
+          "palier": "transfert",
+          "module": "FCE2-02",
+          "ref": "CLM-FR-002",
+          "enonce": "Le mot « bavard » finit par un d. Dans quel mot l'entend-on ?",
+          "options": [
+            "Dans « bavarder ».",
+            "Dans « baver ».",
+            "Nulle part."
+          ],
+          "juste": 0,
+          "pourquoi": "« Bavarder », « bavardage » : le d se réveille. « Baver » se ressemble et n'est pas de la même famille — la loupe cherche le sens, pas seulement le son."
+        },
+        {
+          "id": "EP-FCE2-A-10",
+          "groupe": "FCE2-04-T",
+          "palier": "transfert",
+          "module": "FCE2-04",
+          "ref": "CLM-FR-002",
+          "enonce": "Un voisin arrive avec un parapluie tout mouillé. Que dit le pont ?",
+          "options": [
+            "Qu'il pleut, ou qu'il vient de pleuvoir.",
+            "Qu'il a peur de la pluie.",
+            "Rien : on ne l'a pas vu dehors."
+          ],
+          "juste": 0,
+          "pourquoi": "Le pont marche hors des livres : un appui qu'on voit — le parapluie mouillé — plus ce qu'on sait déjà. C'est exactement la même opération que dans un texte."
+        },
+        {
+          "id": "EP-FCE2-A-10b",
+          "groupe": "FCE2-04-T",
+          "palier": "transfert",
+          "module": "FCE2-04",
+          "ref": "CLM-FR-002",
+          "enonce": "Ce même voisin arrive avec son parapluie mouillé. Peut-on savoir s'il a passé une bonne journée ?",
+          "options": [
+            "Oui : il a l'air content.",
+            "Non : le parapluie ne dit rien de cela.",
+            "Oui : personne n'est content sous la pluie."
+          ],
+          "juste": 1,
+          "pourquoi": "Le pont ne va que là où il y a un appui. Le parapluie parle du temps qu'il fait, pas de l'humeur. Un pont qu'on pose n'importe où ne tient pas — et on croit alors savoir des choses qu'on ne sait pas."
+        },
+        {
+          "id": "EP-FCE2-A-11",
+          "palier": "discrimination",
+          "module": "FCE2-02",
+          "ref": "CLM-FR-002",
+          "enonce": "La loupe a trouvé que le t de « petit » s'entend dans « petite ». Qu'est-ce que cela permet ?",
+          "options": [
+            "De savoir quelle lettre écrire à la fin de « petit ».",
+            "De savoir ce que « petit » veut dire.",
+            "De savoir comment on prononce « petit »."
+          ],
+          "juste": 0,
+          "pourquoi": "La loupe sert à l'orthographe : elle dit quelle lettre écrire à la fin d'un mot. Elle ne dit rien du sens, ni de la façon de le prononcer — pour cela, il faut chercher autre chose."
+        },
+        {
+          "id": "EP-FCE2-A-12",
+          "groupe": "FCE2-03-T",
+          "palier": "transfert",
+          "module": "FCE2-03",
+          "ref": "CLM-FR-002",
+          "enonce": "Dans un message, on lit : « Dis à Léo que Marie l'attend devant la porte. » Qui attend qui ?",
+          "options": [
+            "Léo attend Marie.",
+            "Marie attend Léo.",
+            "On ne peut pas le savoir."
+          ],
+          "juste": 1,
+          "pourquoi": "La ficelle attache « l' » à Léo : c'est lui qu'on attend, et c'est Marie qui attend. Le petit mot ne remplace pas celui qui vient juste avant — il remplace celui dont la phrase parle."
+        },
+        {
+          "id": "EP-FCE2-A-12b",
+          "groupe": "FCE2-03-T",
+          "palier": "transfert",
+          "module": "FCE2-03",
+          "ref": "CLM-FR-002",
+          "enonce": "Sur une affiche : « Rapporte le livre à la bibliothécaire. Elle le range le soir. » Que range-t-elle ?",
+          "options": [
+            "La bibliothécaire.",
+            "Le livre.",
+            "Le soir."
+          ],
+          "juste": 1,
+          "pourquoi": "Deux petits mots dans la même phrase : « elle » tient à la bibliothécaire, « le » tient au livre. On suit chaque ficelle séparément, sinon les deux s'emmêlent."
+        }
+      ]
+    },
+    {
+      "id": "EP-FCE2-B",
+      "discipline": "francais",
+      "niveau": "CE2",
+      "rang": 2,
+      "titre": "Les briques, le déguisement et la manivelle",
+      "sequence": "Les mots, et le sujet de la phrase",
+      "modules": [
+        "FCE2-05",
+        "FCE2-06",
+        "FCE2-07"
+      ],
+      "duree": "9 min",
+      "jdr": "jdr/JDR-FCE2-B.json",
+      "items": [
+        {
+          "id": "EP-FCE2-B-01",
+          "palier": "rappel",
+          "module": "FCE2-05",
+          "ref": "CLM-FR-002",
+          "enonce": "Le mot « refaire » est fait de deux morceaux. Que veut dire « re- » ?",
+          "options": [
+            "Faire vite.",
+            "Faire une nouvelle fois.",
+            "Ne pas faire."
+          ],
+          "juste": 1,
+          "pourquoi": "Les briques. « Re- » se retrouve dans « relire », « redire », « repartir » : chaque fois, une nouvelle fois. Une brique qu'on reconnaît dans un mot se reconnaît dans les autres."
+        },
+        {
+          "id": "EP-FCE2-B-02",
+          "palier": "rappel",
+          "module": "FCE2-06",
+          "ref": "CLM-FR-002",
+          "enonce": "« Il a le cœur brisé. » Que veut dire cette phrase ?",
+          "options": [
+            "Son cœur est cassé, il faut un médecin.",
+            "Il a beaucoup de chagrin.",
+            "Il a couru trop vite."
+          ],
+          "juste": 1,
+          "pourquoi": "Le déguisement. Le mot « brisé » fait ici un autre métier que d'habitude : il ne parle plus d'un objet cassé, il parle d'un chagrin. Le mot est le même, le métier a changé."
+        },
+        {
+          "id": "EP-FCE2-B-03",
+          "palier": "rappel",
+          "module": "FCE2-07",
+          "ref": "CLM-FR-002",
+          "enonce": "« Dans la cour, les élèves crient. » Qui est-ce qui crie ?",
+          "options": [
+            "La cour.",
+            "Les élèves.",
+            "Dans la cour."
+          ],
+          "juste": 1,
+          "pourquoi": "La manivelle : on tourne la question « qui est-ce qui crie ? » et le sujet arrive. Ce n'est pas le premier mot de la phrase — presque jamais quand elle commence par où ou quand."
+        },
+        {
+          "id": "EP-FCE2-B-04",
+          "palier": "discrimination",
+          "module": "FCE2-05",
+          "ref": "CLM-FR-002",
+          "enonce": "Le mot « rideau » commence par « ri- ». Est-ce la même brique que dans « rire » ?",
+          "options": [
+            "Oui, cela commence pareil.",
+            "Non : un rideau n'a rien à voir avec rire.",
+            "Oui, c'est la même famille."
+          ],
+          "juste": 1,
+          "pourquoi": "Les briques se reconnaissent au sens, pas seulement au son. Deux mots qui commencent pareil ne sont pas forcément de la même famille — il suffit de se demander si le sens se retrouve."
+        },
+        {
+          "id": "EP-FCE2-B-05",
+          "palier": "discrimination",
+          "module": "FCE2-06",
+          "ref": "CLM-FR-002",
+          "enonce": "« J'ai mangé une pomme. » Le mot « mangé » est-il déguisé ?",
+          "options": [
+            "Oui : tous les mots ont deux sens.",
+            "Non : ici, il fait son métier de tous les jours.",
+            "Oui : on peut manger ses mots."
+          ],
+          "juste": 1,
+          "pourquoi": "Un mot n'est pas toujours déguisé. « Manger une pomme », c'est le métier ordinaire du mot. « Manger ses mots », là oui, il en fait un autre. On regarde la phrase, pas le mot tout seul."
+        },
+        {
+          "id": "EP-FCE2-B-06",
+          "palier": "discrimination",
+          "module": "FCE2-07",
+          "ref": "CLM-FR-002",
+          "enonce": "Le sujet est-il toujours au début de la phrase ?",
+          "options": [
+            "Oui, toujours.",
+            "Non : il arrive après un début qui dit où ou quand.",
+            "Oui, sauf dans les questions."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est pour cela qu'on tourne la manivelle au lieu de regarder le premier mot. « Chaque matin, le facteur passe » : le sujet est « le facteur », et il est au milieu."
+        },
+        {
+          "id": "EP-FCE2-B-07",
+          "groupe": "FCE2-05-T",
+          "palier": "transfert",
+          "module": "FCE2-05",
+          "ref": "CLM-FR-002",
+          "enonce": "Vous ne connaissez pas le mot « déboutonner ». Que font les briques ?",
+          "options": [
+            "Elles cherchent tout de suite dans le dictionnaire.",
+            "Elles reconnaissent « dé- », « bouton » et « -er » : défaire les boutons.",
+            "Elles regardent la fin du mot."
+          ],
+          "juste": 1,
+          "pourquoi": "Les briques servent surtout aux mots qu'on n'a jamais vus. « Dé- » défait : décoller, déplier, débrancher. Le dictionnaire reste utile — après avoir essayé."
+        },
+        {
+          "id": "EP-FCE2-B-07b",
+          "groupe": "FCE2-05-T",
+          "palier": "transfert",
+          "module": "FCE2-05",
+          "ref": "CLM-FR-002",
+          "enonce": "Vous lisez le mot « inutilisable ». Que font les briques ?",
+          "options": [
+            "Elles voient « in- », « utilis- » et « -able » : qu'on ne peut pas utiliser.",
+            "Elles cherchent le mot dans une liste.",
+            "Elles coupent le mot en deux."
+          ],
+          "juste": 0,
+          "pourquoi": "Trois briques, trois renseignements : « in- » dit non, « -able » dit qu'on peut, et le milieu dit quoi. Les mêmes briques se retrouvent dans « incassable » et dans « invisible »."
+        },
+        {
+          "id": "EP-FCE2-B-08",
+          "groupe": "FCE2-06-T",
+          "palier": "transfert",
+          "module": "FCE2-06",
+          "ref": "CLM-FR-002",
+          "enonce": "« Cette histoire m'a scotché. » Le mot « scotché » est-il déguisé ?",
+          "options": [
+            "Oui : personne n'a été collé avec du ruban adhésif.",
+            "Non : c'est ce que veut dire le mot.",
+            "Oui, mais il ne faut pas le dire."
+          ],
+          "juste": 0,
+          "pourquoi": "Le mot vient d'un objet qui colle, et il fait ici un autre métier : rester immobile, sans pouvoir bouger. Le déguisement est partout dans la langue de tous les jours."
+        },
+        {
+          "id": "EP-FCE2-B-08b",
+          "groupe": "FCE2-06-T",
+          "palier": "transfert",
+          "module": "FCE2-06",
+          "ref": "CLM-FR-002",
+          "enonce": "« Le chat dort sur le tapis. » Faut-il chercher un déguisement ?",
+          "options": [
+            "Oui : il y en a toujours un.",
+            "Non : tous les mots font ici leur métier ordinaire.",
+            "Oui : « dormir » peut vouloir dire autre chose."
+          ],
+          "juste": 1,
+          "pourquoi": "Chercher un sens caché partout, c'est ne plus lire ce qui est écrit. On cherche le déguisement quand la phrase, prise au premier sens, coince — et ici, elle ne coince pas du tout."
+        },
+        {
+          "id": "EP-FCE2-B-09",
+          "groupe": "FCE2-07-T",
+          "palier": "transfert",
+          "module": "FCE2-07",
+          "ref": "CLM-FR-002",
+          "enonce": "« Depuis ce matin, la porte du garage grince. » Qui est-ce qui grince ?",
+          "options": [
+            "Ce matin.",
+            "La porte du garage.",
+            "Le garage."
+          ],
+          "juste": 1,
+          "pourquoi": "On tourne la manivelle et le sujet arrive : « la porte ». « Du garage » vient avec, c'est le morceau qui dit laquelle — mais ce n'est pas le garage qui grince."
+        },
+        {
+          "id": "EP-FCE2-B-09b",
+          "groupe": "FCE2-07-T",
+          "palier": "transfert",
+          "module": "FCE2-07",
+          "ref": "CLM-FR-002",
+          "enonce": "« Tous les soirs, mon frère range la cuisine. » Qui est-ce qui range ?",
+          "options": [
+            "Les soirs.",
+            "Mon frère.",
+            "La cuisine."
+          ],
+          "juste": 1,
+          "pourquoi": "« Tous les soirs » dit quand, pas qui. Et « la cuisine » est ce qu'on range, pas celui qui range. La manivelle sépare les trois d'un seul coup."
+        }
+      ]
+    },
+    {
+      "id": "EP-FCE2-C",
+      "discipline": "francais",
+      "niveau": "CE2",
+      "rang": 3,
+      "titre": "L'écho, le peigne et le rebond",
+      "sequence": "Accorder, se relire, participer",
+      "modules": [
+        "FCE2-08",
+        "FCE2-09",
+        "FCE2-10"
+      ],
+      "duree": "9 min",
+      "jdr": "jdr/JDR-FCE2-C.json",
+      "items": [
+        {
+          "id": "EP-FCE2-C-01",
+          "palier": "rappel",
+          "module": "FCE2-08",
+          "ref": "CLM-FR-002",
+          "enonce": "On écrit « les chats noirs ». Pourquoi un s à « noirs » ?",
+          "options": [
+            "Parce que cela se dit ainsi.",
+            "Parce que « chats » est au pluriel, et les mots autour le répètent.",
+            "Parce qu'il y en a beaucoup."
+          ],
+          "juste": 1,
+          "pourquoi": "L'écho. Quand un nom passe au pluriel, les mots qui l'accompagnent le répètent par écrit — même quand on n'entend rien de plus."
+        },
+        {
+          "id": "EP-FCE2-C-02",
+          "palier": "rappel",
+          "module": "FCE2-09",
+          "ref": "CLM-FR-002",
+          "enonce": "Comment relit-on un texte qu'on vient d'écrire ?",
+          "options": [
+            "Une fois, en entier.",
+            "Plusieurs fois, en cherchant une seule chose à chaque passage.",
+            "En le faisant lire à quelqu'un d'autre."
+          ],
+          "juste": 1,
+          "pourquoi": "Le peigne. On ne voit pas tout d'un coup : un passage pour les points, un pour les accords, un pour les mots oubliés. Chercher tout en même temps, c'est ne rien trouver."
+        },
+        {
+          "id": "EP-FCE2-C-03",
+          "palier": "rappel",
+          "module": "FCE2-10",
+          "ref": "CLM-FR-002",
+          "enonce": "Participer à un échange, c'est :",
+          "options": [
+            "dire sa phrase quand c'est son tour,",
+            "tenir compte de ce qui vient d'être dit,",
+            "parler le plus longtemps possible."
+          ],
+          "juste": 1,
+          "pourquoi": "Le rebond. Placer sa phrase, ce n'est pas encore participer : elle aurait été la même si personne n'avait parlé avant. Rebondir, c'est repartir de ce qui vient d'être dit."
+        },
+        {
+          "id": "EP-FCE2-C-04",
+          "palier": "discrimination",
+          "module": "FCE2-08",
+          "ref": "CLM-FR-002",
+          "enonce": "« Le chat noir » et « les chats noirs » se terminent pareil à l'oreille. Pourquoi les écrire autrement ?",
+          "options": [
+            "Pour faire plus long.",
+            "Parce que l'écrit garde une marque que l'oreille n'entend pas.",
+            "Parce que c'est une exception."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est là toute la difficulté : ces accords ne s'entendent pas. On ne peut donc pas se fier à l'oreille — il faut regarder le nom et se demander s'il y en a un ou plusieurs."
+        },
+        {
+          "id": "EP-FCE2-C-05",
+          "palier": "discrimination",
+          "module": "FCE2-09",
+          "ref": "CLM-FR-002",
+          "enonce": "Vous relisez pour les accords et vous voyez un mot oublié. Que faire ?",
+          "options": [
+            "Tout reprendre depuis le début.",
+            "Le noter, et continuer le passage sur les accords.",
+            "Ne pas s'en occuper."
+          ],
+          "juste": 1,
+          "pourquoi": "On ne jette pas ce qu'on a vu : on le note. Mais on ne quitte pas son passage — si l'on change de recherche à chaque trouvaille, on repasse trois fois au même endroit et on rate le reste."
+        },
+        {
+          "id": "EP-FCE2-C-06",
+          "palier": "discrimination",
+          "module": "FCE2-10",
+          "ref": "CLM-FR-002",
+          "enonce": "Quelqu'un dit quelque chose avec quoi vous n'êtes pas d'accord. Que fait le rebond ?",
+          "options": [
+            "Il change de sujet.",
+            "Il repart de ce qui a été dit, pour en discuter.",
+            "Il attend son tour pour dire autre chose."
+          ],
+          "juste": 1,
+          "pourquoi": "Rebondir ne veut pas dire être d'accord. On peut repartir d'une phrase pour dire pourquoi on ne la suit pas — c'est même là que l'échange sert vraiment à quelque chose."
+        },
+        {
+          "id": "EP-FCE2-C-07",
+          "groupe": "FCE2-08-T",
+          "palier": "transfert",
+          "module": "FCE2-08",
+          "ref": "CLM-FR-002",
+          "enonce": "« J'ai vu trois petit… oiseau… » Qu'écrit-on ?",
+          "options": [
+            "trois petit oiseaux",
+            "trois petits oiseaux",
+            "trois petits oiseau"
+          ],
+          "juste": 1,
+          "pourquoi": "« Trois » annonce le pluriel : le nom le prend, et l'adjectif le répète. L'écho traverse tout le groupe, pas seulement le nom."
+        },
+        {
+          "id": "EP-FCE2-C-07b",
+          "groupe": "FCE2-08-T",
+          "palier": "transfert",
+          "module": "FCE2-08",
+          "ref": "CLM-FR-002",
+          "enonce": "« Elle range ses vieux cahier… » Qu'écrit-on ?",
+          "options": [
+            "ses vieux cahiers",
+            "ses vieux cahier",
+            "ses vieu cahiers"
+          ],
+          "juste": 0,
+          "pourquoi": "« Ses » annonce déjà le pluriel, et « vieux » se termine par un x qui ne bouge pas. Il ne manquait que le s de « cahiers » — l'écho passe par tous les mots, même par ceux qui ne changent pas."
+        },
+        {
+          "id": "EP-FCE2-C-08",
+          "groupe": "FCE2-09-T",
+          "palier": "transfert",
+          "module": "FCE2-09",
+          "ref": "CLM-FR-002",
+          "enonce": "Vous cherchez vos affaires dans une chambre en désordre. Que dit le peigne ?",
+          "options": [
+            "Chercher partout en même temps.",
+            "Chercher une chose à la fois : d'abord les chaussures, ensuite le cahier.",
+            "Demander de l'aide tout de suite."
+          ],
+          "juste": 1,
+          "pourquoi": "Le peigne sort de la feuille : chercher trois choses en même temps, c'est repasser au même endroit sans rien voir. Une chose, un passage."
+        },
+        {
+          "id": "EP-FCE2-C-08b",
+          "groupe": "FCE2-09-T",
+          "palier": "transfert",
+          "module": "FCE2-09",
+          "ref": "CLM-FR-002",
+          "enonce": "Vous n'avez écrit qu'une seule phrase. Faut-il faire quatre passages ?",
+          "options": [
+            "Oui : toujours quatre.",
+            "Non : une phrase se relit d'un coup, le peigne sert quand il y a beaucoup à voir.",
+            "Non : une phrase n'a pas besoin d'être relue."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert quand il y a trop à regarder en une seule fois. Sur une phrase, il n'y en a pas trop. La dernière réponse va trop loin : une phrase se relit, mais une fois suffit."
+        },
+        {
+          "id": "EP-FCE2-C-09",
+          "groupe": "FCE2-10-T",
+          "palier": "transfert",
+          "module": "FCE2-10",
+          "ref": "CLM-FR-002",
+          "enonce": "Dans un jeu, un camarade propose une règle. Que fait le rebond ?",
+          "options": [
+            "Il propose aussitôt une autre règle.",
+            "Il repart de la sienne : ce qui va, ce qui ne va pas.",
+            "Il accepte sans rien dire."
+          ],
+          "juste": 1,
+          "pourquoi": "Proposer autre chose sans avoir parlé de ce qui vient d'être dit, c'est deux monologues côte à côte. Le rebond attrape la phrase précédente avant d'en lancer une nouvelle."
+        },
+        {
+          "id": "EP-FCE2-C-09b",
+          "groupe": "FCE2-10-T",
+          "palier": "transfert",
+          "module": "FCE2-10",
+          "ref": "CLM-FR-002",
+          "enonce": "Un camarade dit : « je n'aime pas ce livre. » Quel rebond ?",
+          "options": [
+            "« Moi non plus. »",
+            "« Qu'est-ce qui t'a gêné ? »",
+            "« Moi, j'en ai lu un autre la semaine dernière. »"
+          ],
+          "juste": 1,
+          "pourquoi": "« Moi non plus » est d'accord et n'avance pas ; parler d'un autre livre, c'est partir ailleurs. Repartir de sa phrase, c'est lui demander de quoi elle est faite — et l'échange continue."
+        }
+      ]
+    },
+    {
+      "id": "EP-FR6-A",
+      "discipline": "francais",
+      "niveau": "6e",
+      "rang": 1,
+      "titre": "La lampe, la version et le levier",
+      "sequence": "Lecture, récits des origines, poésie",
+      "modules": [
+        "FR6-01",
+        "FR6-02",
+        "FR6-03"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-FR6-A.json",
+      "items": [
+        {
+          "id": "EP-FR6-A-01",
+          "palier": "rappel",
+          "module": "FR6-01",
+          "ref": "CLM-FM-001",
+          "enonce": "Dans un récit, un personnage sort de la pièce et le texte ne dit pas où il va. Que peut-on en conclure ?",
+          "options": [
+            "Qu'il ne va nulle part.",
+            "Rien : le texte n'éclaire pas cet endroit-là.",
+            "Que l'auteur a oublié de le dire.",
+            "Qu'il reviendra plus tard."
+          ],
+          "juste": 1,
+          "pourquoi": "La lampe éclaire un cercle et laisse le reste dans le noir. Ce qui est dans le noir n'a pas disparu : il n'est simplement pas montré. Et ce noir est un choix — la troisième réponse le prend pour un oubli, alors que c'est le travail de l'auteur."
+        },
+        {
+          "id": "EP-FR6-A-02",
+          "palier": "rappel",
+          "module": "FR6-02",
+          "ref": "CLM-FM-001",
+          "enonce": "Deux récits des origines racontent des commencements différents. Que fait-on quand on les compare ?",
+          "options": [
+            "On cherche lequel est vrai.",
+            "On repère ce que chacun met en avant, et les valeurs qu'il porte.",
+            "On garde le plus ancien des deux.",
+            "On conclut qu'ils sont tous les deux faux."
+          ],
+          "juste": 1,
+          "pourquoi": "Un récit des origines est une version : la réponse d'un groupe humain à une question que tous se posent. Comparer des versions ne consiste pas à en élire une, et le programme ne le demande pas."
+        },
+        {
+          "id": "EP-FR6-A-03",
+          "palier": "rappel",
+          "module": "FR6-03",
+          "ref": "CLM-FM-001",
+          "enonce": "D'où vient la force d'une image dans un poème ?",
+          "options": [
+            "Du nombre de syllabes du vers.",
+            "De ce qu'elle fait apparaître, bien plus grand que les mots employés.",
+            "De la rime.",
+            "De la longueur du poème."
+          ],
+          "juste": 1,
+          "pourquoi": "Le levier : petit d'un côté, il soulève de l'autre une image beaucoup plus grande que lui. Les vers et les rimes comptent, et ce n'est pas là que se joue le pouvoir d'évocation."
+        },
+        {
+          "id": "EP-FR6-A-04",
+          "palier": "discrimination",
+          "module": "FR6-01",
+          "ref": "CLM-FM-001",
+          "enonce": "Un lecteur affirme : « le personnage était en colère, on le sent bien. » Que faut-il lui demander ?",
+          "options": [
+            "De relire le passage en entier.",
+            "À quel endroit le texte le dit — et, s'il ne le dit pas, ce qui l'a fait compléter ainsi.",
+            "De ne pas interpréter.",
+            "S'il a lu la fin du récit."
+          ],
+          "juste": 1,
+          "pourquoi": "On distingue ce que le texte dit de ce qu'on complète soi-même. Compléter n'est pas interdit : c'est même ce que fait tout lecteur. Ce qui l'est, c'est de ne plus savoir lequel des deux on est en train de faire."
+        },
+        {
+          "id": "EP-FR6-A-05",
+          "palier": "discrimination",
+          "module": "FR6-02",
+          "ref": "CLM-FM-001",
+          "enonce": "Le programme demande de comparer des récits des origines. Qu'est-ce que cela ne permet pas ?",
+          "options": [
+            "De repérer des symboles et des métaphores.",
+            "De dire lequel raconte ce qui s'est réellement passé.",
+            "D'interroger les valeurs que ces récits portent.",
+            "De remarquer ce qu'ils ont en commun."
+          ],
+          "juste": 1,
+          "pourquoi": "Ce n'est pas la question qu'un récit des origines pose, et le programme ne la pose pas. Les trois autres réponses sont exactement ce qu'il demande — la pièce est donc généreuse, sur autre chose."
+        },
+        {
+          "id": "EP-FR6-A-06",
+          "palier": "discrimination",
+          "module": "FR6-03",
+          "ref": "CLM-FM-001",
+          "enonce": "« Cette image est belle. » Que peut-on établir à partir de cette phrase ?",
+          "options": [
+            "Qu'elle est vraie si beaucoup de lecteurs le pensent.",
+            "Rien — et ce n'est pas grave : on peut en revanche dire ce que l'image fait apparaître, et par quels mots.",
+            "Qu'elle est fausse.",
+            "Qu'il faut compter les figures de style du poème."
+          ],
+          "juste": 1,
+          "pourquoi": "La beauté n'est pas une question de preuve, et le module ne la traite pas ainsi. Ce qui se décrit, se montre et se discute, c'est le mécanisme : quel mot, quel point d'appui, quelle image soulevée."
+        },
+        {
+          "id": "EP-FR6-A-07",
+          "groupe": "FR6-01-T",
+          "palier": "transfert",
+          "module": "FR6-01",
+          "ref": "CLM-FM-001",
+          "enonce": "Un reportage montre une manifestation, cadré sur trois personnes qui crient. Que dit la lampe ?",
+          "options": [
+            "Que la manifestation était violente.",
+            "Que le cadre a éclairé cela et laissé le reste hors champ : on ne sait rien de ce qu'il y avait autour.",
+            "Que le reportage est mensonger.",
+            "Qu'il y avait peu de monde."
+          ],
+          "juste": 1,
+          "pourquoi": "Une caméra est une lampe : elle éclaire un cercle. Hors champ ne veut pas dire inexistant. « Mensonger » va trop loin — un cadre n'est pas un mensonge, c'est un choix, et la bonne question reste : qu'a-t-il laissé dans le noir ?"
+        },
+        {
+          "id": "EP-FR6-A-07b",
+          "groupe": "FR6-01-T",
+          "palier": "transfert",
+          "module": "FR6-01",
+          "ref": "CLM-FM-001",
+          "enonce": "Un bulletin scolaire ne comporte que des notes et des appréciations courtes. Que dit la lampe ?",
+          "options": [
+            "Qu'il n'y a rien d'autre à savoir sur l'élève.",
+            "Qu'il éclaire ce qui se note, et laisse dans le noir tout ce qui ne se note pas.",
+            "Que les notes sont fausses.",
+            "Qu'il faudrait davantage de matières."
+          ],
+          "juste": 1,
+          "pourquoi": "Ce qui n'est pas montré n'a pas disparu : le travail fourni, l'entraide, ce qui a été compris trois semaines trop tard. Un bulletin n'est pas un portrait, et le lire comme un portrait, c'est confondre le cercle éclairé avec la pièce entière."
+        },
+        {
+          "id": "EP-FR6-A-08",
+          "groupe": "FR6-02-T",
+          "palier": "transfert",
+          "module": "FR6-02",
+          "ref": "CLM-FM-001",
+          "enonce": "Deux témoins racontent la même dispute de deux façons très différentes. Que fait la version ?",
+          "options": [
+            "Elle cherche lequel des deux ment.",
+            "Elle regarde ce que chaque récit met en avant, et ce que cela dit de celui qui le raconte.",
+            "Elle conclut qu'on ne saura jamais.",
+            "Elle fond les deux récits en un seul."
+          ],
+          "juste": 1,
+          "pourquoi": "Comparer n'est pas départager. Deux récits différents ne supposent pas un menteur : chacun a vu depuis un endroit et retenu ce qui comptait pour lui. Les fondre en un seul détruirait justement ce qu'on cherchait à voir."
+        },
+        {
+          "id": "EP-FR6-A-08b",
+          "groupe": "FR6-02-T",
+          "palier": "transfert",
+          "module": "FR6-02",
+          "ref": "CLM-FM-001",
+          "enonce": "Deux élèves donnent deux réponses différentes à un même calcul. Faut-il traiter cela comme deux versions ?",
+          "options": [
+            "Oui : chacun a sa manière de voir.",
+            "Non : ici une réponse est juste et l'autre non, et la comparaison sert à trouver l'erreur.",
+            "Oui, du moment que les deux ont travaillé.",
+            "Non : les mathématiques ne se racontent pas."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil a été fait pour des récits qui répondent à une question sans réponse unique. Le transporter là où il y en a une, c'est en faire un refus de trancher — et un outil qui sert à ne jamais trancher ne sert plus à rien. La dernière réponse conclut bien pour une raison qui ne tient pas : un calcul se raconte très bien, et c'est même ainsi qu'on trouve l'erreur."
+        },
+        {
+          "id": "EP-FR6-A-09",
+          "groupe": "FR6-03-T",
+          "palier": "transfert",
+          "module": "FR6-03",
+          "ref": "CLM-FM-001",
+          "enonce": "Une publicité dit d'une voiture qu'« elle avale la route ». Que fait le levier ?",
+          "options": [
+            "Il conclut que la voiture est rapide.",
+            "Il cherche le point d'appui : « avaler » vient du repas, et fait apparaître une route qui disparaît sans effort.",
+            "Il rejette la phrase, qui est fausse.",
+            "Il compte les figures de style de l'annonce."
+          ],
+          "juste": 1,
+          "pourquoi": "Le travail du lecteur est de retrouver le point d'appui — le mot ordinaire d'où l'image est soulevée. Une publicité emploie les mêmes leviers qu'un poème, et les repérer est exactement la même opération."
+        },
+        {
+          "id": "EP-FR6-A-09b",
+          "groupe": "FR6-03-T",
+          "palier": "transfert",
+          "module": "FR6-03",
+          "ref": "CLM-FM-001",
+          "enonce": "Un journal titre : « la ville étouffe ». Que fait le levier ?",
+          "options": [
+            "Il vérifie la qualité de l'air.",
+            "Il repère l'appui : « étouffer » vient du corps, et fait apparaître une ville qu'on empêche de respirer.",
+            "Il conclut que le titre exagère.",
+            "Il cherche le nom de l'auteur."
+          ],
+          "juste": 1,
+          "pourquoi": "L'image est courte et elle soulève beaucoup : un corps, une gêne, une urgence. La repérer ne dit pas si le titre a raison — c'est une autre question, et vérifier la qualité de l'air en est encore une troisième. Le levier montre comment le titre agit sur celui qui le lit."
+        }
+      ]
+    },
+    {
+      "id": "EP-FR6-B",
+      "discipline": "francais",
+      "niveau": "6e",
+      "rang": 2,
+      "titre": "Le double fond, la boucle et le miroir",
+      "sequence": "Théâtre, récits d'aventure, figures du monstre",
+      "modules": [
+        "FR6-04",
+        "FR6-05",
+        "FR6-06"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-FR6-B.json",
+      "items": [
+        {
+          "id": "EP-FR6-B-01",
+          "palier": "rappel",
+          "module": "FR6-04",
+          "ref": "CLM-FM-001",
+          "enonce": "Au théâtre, qu'est-ce qui fait la ruse ?",
+          "options": [
+            "L'habileté du personnage qui trompe.",
+            "L'écart entre ce que le personnage sait et ce que la salle sait.",
+            "La surprise du public à la fin.",
+            "Le déguisement."
+          ],
+          "juste": 1,
+          "pourquoi": "Le double fond : ce que le personnage croit voir, et ce que la salle voit en plus. Le théâtre ne cache pas l'astuce au spectateur, il la lui confie — et c'est cet écart qui fait le rire, ou l'inquiétude."
+        },
+        {
+          "id": "EP-FR6-B-02",
+          "palier": "rappel",
+          "module": "FR6-05",
+          "ref": "CLM-FM-001",
+          "enonce": "Beaucoup de récits d'aventure ramènent au point de départ. Qu'est-ce qui a changé ?",
+          "options": [
+            "Le lieu.",
+            "Celui qui revient.",
+            "Rien, sinon le temps écoulé.",
+            "Les personnages secondaires."
+          ],
+          "juste": 1,
+          "pourquoi": "La boucle se referme sur le lieu, jamais sur le personnage. Le décor est le même, et celui qui rentre n'est plus celui qui est parti : c'est ce décalage qui donne sa forme au récit."
+        },
+        {
+          "id": "EP-FR6-B-03",
+          "palier": "rappel",
+          "module": "FR6-06",
+          "ref": "CLM-FM-001",
+          "enonce": "De quoi un monstre de récit parle-t-il d'abord ?",
+          "options": [
+            "De lui-même.",
+            "De ceux qui l'ont inventé, et de ce qu'ils redoutent.",
+            "D'une époque lointaine.",
+            "De la nature sauvage."
+          ],
+          "juste": 1,
+          "pourquoi": "Le miroir montre en grand ce qu'un groupe redoute — et, par là, ce à quoi il tient. Un monstre a une part d'humanité, et c'est justement ce qui le rend lisible."
+        },
+        {
+          "id": "EP-FR6-B-04",
+          "palier": "discrimination",
+          "module": "FR6-04",
+          "ref": "CLM-FM-001",
+          "enonce": "Le programme demande d'interroger les valeurs mises en jeu par une ruse. Qu'est-ce que cela ne permet pas ?",
+          "options": [
+            "De repérer qui sait quoi, à chaque instant.",
+            "De dire si la ruse était justifiée.",
+            "De décrire ce que l'écart produit chez le spectateur.",
+            "De relever les moments où le personnage se trompe."
+          ],
+          "juste": 1,
+          "pourquoi": "Interroger n'est pas trancher. On peut décrire très précisément qui trompe qui, ce que cela coûte et à qui cela profite ; décider si c'était bien reste ouvert, et le programme le laisse ouvert."
+        },
+        {
+          "id": "EP-FR6-B-05",
+          "palier": "discrimination",
+          "module": "FR6-06",
+          "ref": "CLM-FM-001",
+          "enonce": "Un récit ancien décrit un monstre effrayant. Qu'est-ce que cela établit sur les gens de cette époque ?",
+          "options": [
+            "Qu'ils croyaient à l'existence de ce monstre.",
+            "Qu'on racontait ainsi : le récit montre ce que le groupe met en scène, pas ce que chacun pensait.",
+            "Qu'ils avaient peur de la forêt.",
+            "Rien du tout."
+          ],
+          "juste": 1,
+          "pourquoi": "Un récit n'est pas un sondage. Il établit qu'on racontait cela, et devant qui — pas ce que pensait réellement une population. La dernière réponse jette trop : le récit reste une source, sur autre chose que les croyances individuelles."
+        },
+        {
+          "id": "EP-FR6-B-06",
+          "palier": "discrimination",
+          "module": "FR6-05",
+          "ref": "CLM-FM-001",
+          "enonce": "Un récit d'aventure se termine très loin de son point de départ. Que peut-on en dire ?",
+          "options": [
+            "Que ce n'est pas vraiment un récit d'aventure.",
+            "Que la boucle n'est pas une règle : beaucoup de récits ne reviennent pas, et ce n'est pas un défaut.",
+            "Que la fin est ratée.",
+            "Que le personnage n'a pas changé."
+          ],
+          "juste": 1,
+          "pourquoi": "La boucle décrit une forme fréquente, pas une obligation. Un outil qui se met à juger les textes qui ne lui ressemblent pas a cessé de servir à lire — il ne sert plus qu'à trier."
+        },
+        {
+          "id": "EP-FR6-B-07",
+          "groupe": "FR6-04-T",
+          "palier": "transfert",
+          "module": "FR6-04",
+          "ref": "CLM-FM-001",
+          "enonce": "Dans un film, le spectateur voit une bombe sous une table ; les personnages, eux, ne la voient pas. Que dit le double fond ?",
+          "options": [
+            "Que le film est mal construit.",
+            "Que la tension vient de l'écart entre ce que la salle sait et ce que les personnages ignorent.",
+            "Qu'il faudrait prévenir les personnages.",
+            "Que la scène est la ruse d'un personnage."
+          ],
+          "juste": 1,
+          "pourquoi": "L'écart n'a pas besoin d'un personnage rusé pour exister : ici, personne ne trompe personne, et pourtant la salle en sait plus. Le mécanisme est celui de la scène de ruse — le savoir est distribué inégalement, et c'est cela qui agit."
+        },
+        {
+          "id": "EP-FR6-B-07b",
+          "groupe": "FR6-04-T",
+          "palier": "transfert",
+          "module": "FR6-04",
+          "ref": "CLM-FM-001",
+          "enonce": "Vous lisez une vieille lettre dont vous connaissez déjà la suite, que celui qui l'écrivait ignorait. Que dit le double fond ?",
+          "options": [
+            "Que la lettre n'apprend rien.",
+            "Que vous lisez avec un savoir que l'auteur n'avait pas : cet écart change tout ce que la lettre dit.",
+            "Qu'il vaut mieux lire la suite d'abord.",
+            "Que l'auteur s'était trompé."
+          ],
+          "juste": 1,
+          "pourquoi": "Le même mécanisme, hors du théâtre : « à bientôt » ne se lit pas de la même façon selon qu'on sait ou non ce qui est arrivé ensuite. Le savoir du lecteur est un fond que le texte, lui, n'avait pas."
+        },
+        {
+          "id": "EP-FR6-B-08",
+          "groupe": "FR6-05-T",
+          "palier": "transfert",
+          "module": "FR6-05",
+          "ref": "CLM-FM-001",
+          "enonce": "Vous retournez dans votre école primaire dix ans après. Que dit la boucle ?",
+          "options": [
+            "Que l'école a changé.",
+            "Que le lieu est le même et que celui qui revient ne l'est plus : ce qui a bougé se mesure là.",
+            "Que le souvenir était faux.",
+            "Qu'il vaut mieux ne pas y retourner."
+          ],
+          "juste": 1,
+          "pourquoi": "Les couloirs paraissent plus petits, et ce ne sont pas eux qui ont rétréci. La boucle sert exactement à cela : quand le décor reste constant, ce qui a changé devient visible."
+        },
+        {
+          "id": "EP-FR6-B-08b",
+          "groupe": "FR6-05-T",
+          "palier": "transfert",
+          "module": "FR6-05",
+          "ref": "CLM-FM-001",
+          "enonce": "Un aller-retour au supermarché forme-t-il une boucle au sens du module ?",
+          "options": [
+            "Oui : on part et on revient.",
+            "Non : rien ne s'est éprouvé entre les deux, et c'est l'épreuve qui fait la boucle, pas le trajet.",
+            "Oui, si l'on a oublié quelque chose et qu'on y retourne.",
+            "Non : la boucle ne vaut que pour la littérature."
+          ],
+          "juste": 1,
+          "pourquoi": "On part, on éprouve, on revient — le mot du milieu porte tout. Sans lui il ne reste qu'un déplacement, et un outil qui s'applique à tous les déplacements ne dit plus rien de personne. La dernière réponse se trompe de raison : la boucle voyage très bien hors des livres."
+        },
+        {
+          "id": "EP-FR6-B-09",
+          "groupe": "FR6-06-T",
+          "palier": "transfert",
+          "module": "FR6-06",
+          "ref": "CLM-FM-001",
+          "enonce": "Une série récente met en scène une machine qui décide à la place des humains. Que fait le miroir ?",
+          "options": [
+            "Il conclut que ces machines sont dangereuses.",
+            "Il demande ce que redoute le groupe qui raconte cela, et donc ce à quoi il tient.",
+            "Il conclut que la série exagère.",
+            "Il vérifie si l'auteur s'y connaît en informatique."
+          ],
+          "juste": 1,
+          "pourquoi": "Le monstre parle de ceux qui l'inventent. Une créature qui remplace, surveille ou décide à notre place dit une crainte — celle de perdre la main — et donc une valeur. Ce que la série établit sur les machines réelles est une tout autre question, et elle ne se règle pas devant un écran de fiction."
+        },
+        {
+          "id": "EP-FR6-B-09b",
+          "groupe": "FR6-06-T",
+          "palier": "transfert",
+          "module": "FR6-06",
+          "ref": "CLM-FM-001",
+          "enonce": "Deux siècles séparent deux monstres de récits très différents. Que fait le miroir ?",
+          "options": [
+            "Il désigne le plus effrayant des deux.",
+            "Il compare ce que chaque époque a mis dans son monstre.",
+            "Il conclut que les peurs ne changent jamais.",
+            "Il cherche lequel des deux a existé."
+          ],
+          "juste": 1,
+          "pourquoi": "La figure du monstre traverse les âges ; ce qu'on y met, non. Comparer deux monstres, c'est comparer deux inquiétudes — et la troisième réponse tranche d'avance ce qu'il fallait justement aller regarder."
+        }
+      ]
+    },
+    {
+      "id": "EP-FR6-C",
+      "discipline": "francais",
+      "niveau": "6e",
+      "rang": 3,
+      "titre": "Le brouillon, la poupée gigogne et le fil",
+      "sequence": "Écriture, phrase complexe, orthographe grammaticale",
+      "modules": [
+        "FR6-07",
+        "FR6-08",
+        "FR6-09"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-FR6-C.json",
+      "items": [
+        {
+          "id": "EP-FR6-C-01",
+          "palier": "rappel",
+          "module": "FR6-07",
+          "ref": "CLM-FM-001",
+          "enonce": "Que faire d'un premier jet qui ne va pas ?",
+          "options": [
+            "Le recommencer entièrement.",
+            "Le reprendre par opérations : supprimer, remplacer, ajouter, déplacer.",
+            "Le recopier au propre.",
+            "Le montrer à quelqu'un d'autre."
+          ],
+          "juste": 1,
+          "pourquoi": "Un brouillon n'est pas un texte raté : c'est de la matière, et on ne travaille pas la matière en la recopiant. Quatre opérations, une à la fois. Recommencer, c'est jeter ce qu'on avait déjà trouvé."
+        },
+        {
+          "id": "EP-FR6-C-02",
+          "palier": "rappel",
+          "module": "FR6-08",
+          "ref": "CLM-FM-001",
+          "enonce": "Comment sait-on combien de propositions contient une phrase ?",
+          "options": [
+            "En comptant les virgules.",
+            "En comptant les verbes conjugués.",
+            "En comptant les mots de liaison.",
+            "En comptant les sujets."
+          ],
+          "juste": 1,
+          "pourquoi": "La poupée gigogne : une phrase complexe en contient d'autres, qui sont elles-mêmes des phrases. Un verbe conjugué, une proposition. Les infinitifs et les participes ne comptent pas."
+        },
+        {
+          "id": "EP-FR6-C-03",
+          "palier": "rappel",
+          "module": "FR6-09",
+          "ref": "CLM-FM-001",
+          "enonce": "« Le sac des enfants ……… lourd. » Avec quoi le verbe s'accorde-t-il ?",
+          "options": [
+            "Avec « enfants », le mot le plus proche.",
+            "Avec « le sac », qui est le sujet.",
+            "Avec les deux à la fois.",
+            "Avec ce qu'on entend le mieux."
+          ],
+          "juste": 1,
+          "pourquoi": "Le fil ne casse pas, et il ne s'attache pas au passage. Le mot le plus proche du verbe n'est pas son sujet, et l'oreille ne sert à rien ici : la plupart de ces accords ne s'entendent pas."
+        },
+        {
+          "id": "EP-FR6-C-04",
+          "palier": "discrimination",
+          "module": "FR6-07",
+          "ref": "CLM-FM-001",
+          "enonce": "À quoi sert de reprendre un texte ?",
+          "options": [
+            "À le rendre bon.",
+            "À le rendre meilleur que lui-même, ce qui est déjà beaucoup.",
+            "À le rendre plus long.",
+            "À en supprimer les fautes."
+          ],
+          "juste": 1,
+          "pourquoi": "Reprendre ne garantit pas la réussite, et promettre le contraire découragerait à la première déception. Ce qui est garanti, c'est un écart entre la version d'avant et celle d'après — et cet écart-là, on peut le montrer."
+        },
+        {
+          "id": "EP-FR6-C-05",
+          "palier": "discrimination",
+          "module": "FR6-08",
+          "ref": "CLM-FM-001",
+          "enonce": "Une phrase complexe est-elle meilleure qu'une phrase simple ?",
+          "options": [
+            "Oui : elle est plus riche.",
+            "Non : ce n'est pas une question de qualité, seulement de construction.",
+            "Oui, à l'écrit.",
+            "Non : elle est plus difficile à lire."
+          ],
+          "juste": 1,
+          "pourquoi": "Compter les propositions décrit une phrase, cela ne la note pas. Une phrase simple bien placée vaut mieux qu'une complexe embrouillée, et l'inverse est vrai tout autant."
+        },
+        {
+          "id": "EP-FR6-C-06",
+          "palier": "discrimination",
+          "module": "FR6-09",
+          "ref": "CLM-FM-001",
+          "enonce": "Peut-on se fier à son oreille pour ces accords ?",
+          "options": [
+            "Oui : on entend le pluriel.",
+            "Non : la plupart de ces accords ne s'entendent pas.",
+            "Oui, en lisant à voix haute.",
+            "Non, sauf pour les verbes en -er."
+          ],
+          "juste": 1,
+          "pourquoi": "« Il est » et « ils sont » s'entendent ; « il chante » et « ils chantent », non. C'est précisément là que se logent les erreurs, et c'est pourquoi on remonte le fil au lieu d'écouter. La dernière réponse inverse le fait : c'est avec les verbes en -er que l'oreille est la plus trompeuse."
+        },
+        {
+          "id": "EP-FR6-C-07",
+          "groupe": "FR6-07-T",
+          "palier": "transfert",
+          "module": "FR6-07",
+          "ref": "CLM-FM-001",
+          "enonce": "Vous devez ramener un texte à la moitié de sa longueur. Par où commencer ?",
+          "options": [
+            "En le réécrivant plus court.",
+            "Par une seule opération : supprimer, sur tout le texte, avant de toucher au reste.",
+            "En coupant la fin.",
+            "En enlevant les adjectifs."
+          ],
+          "juste": 1,
+          "pourquoi": "Une opération à la fois, sur tout le texte. Réécrire produit un texte différent, pas le même en plus court, et l'on perd ce qu'on avait trouvé. Couper la fin ou enlever les adjectifs sont des suppressions décidées d'avance, sans avoir regardé ce qui portait."
+        },
+        {
+          "id": "EP-FR6-C-07b",
+          "groupe": "FR6-07-T",
+          "palier": "transfert",
+          "module": "FR6-07",
+          "ref": "CLM-FM-001",
+          "enonce": "Un camarade vous dit que votre texte « ne va pas ». Que demande le brouillon ?",
+          "options": [
+            "De tout recommencer.",
+            "Laquelle des quatre opérations il propose : que supprimer, remplacer, ajouter ou déplacer.",
+            "S'il a bien lu jusqu'au bout.",
+            "Une note sur vingt."
+          ],
+          "juste": 1,
+          "pourquoi": "« Ça ne va pas » n'est pas exploitable : ce n'est pas un défaut de politesse, c'est un défaut de prise. Ramener un avis à une opération le rend applicable — et permet, ensuite, de vérifier si cela a marché."
+        },
+        {
+          "id": "EP-FR6-C-08",
+          "groupe": "FR6-08-T",
+          "palier": "transfert",
+          "module": "FR6-08",
+          "ref": "CLM-FM-001",
+          "enonce": "« Il faut ranger la salle avant de partir. » Combien de propositions ?",
+          "options": [
+            "Deux.",
+            "Une : « ranger » et « partir » sont des infinitifs, pas des verbes conjugués.",
+            "Trois.",
+            "Aucune."
+          ],
+          "juste": 1,
+          "pourquoi": "On compte les verbes conjugués, et il n'y en a qu'un : « il faut ». Les infinitifs allongent la phrase sans ouvrir de nouvelle poupée. C'est l'erreur la plus fréquente, et elle vient de ce qu'on compte des verbes au lieu de compter des verbes conjugués."
+        },
+        {
+          "id": "EP-FR6-C-08b",
+          "groupe": "FR6-08-T",
+          "palier": "transfert",
+          "module": "FR6-08",
+          "ref": "CLM-FM-001",
+          "enonce": "« Le train, qui avait du retard, est arrivé quand la nuit tombait. » Combien de propositions ?",
+          "options": [
+            "Deux.",
+            "Trois.",
+            "Quatre.",
+            "Une."
+          ],
+          "juste": 1,
+          "pourquoi": "Trois verbes conjugués : « avait », « est arrivé », « tombait ». Les deux propositions insérées ne rendent la phrase ni fautive ni meilleure : elles la construisent, et les compter permet de la voir."
+        },
+        {
+          "id": "EP-FR6-C-09",
+          "groupe": "FR6-09-T",
+          "palier": "transfert",
+          "module": "FR6-09",
+          "ref": "CLM-FM-001",
+          "enonce": "« La boîte de chocolats ……… sur la table. » Qu'est-ce qui décide de l'accord ?",
+          "options": [
+            "« chocolats », qui est juste avant le verbe.",
+            "« la boîte », qui est le sujet.",
+            "Le sens : il y a plusieurs chocolats.",
+            "Ce qu'on entend en lisant."
+          ],
+          "juste": 1,
+          "pourquoi": "Le fil relie le verbe à son sujet, et à lui seul. « De chocolats » complète « la boîte » : c'est un passager, pas le sujet. Le sens ne décide pas davantage — on parle de la boîte, même pleine."
+        },
+        {
+          "id": "EP-FR6-C-09b",
+          "groupe": "FR6-09-T",
+          "palier": "transfert",
+          "module": "FR6-09",
+          "ref": "CLM-FM-001",
+          "enonce": "Vous hésitez entre « le chien aboie » et « le chien aboient ». Faut-il remonter le fil ?",
+          "options": [
+            "Oui, comme toujours.",
+            "Ce n'est pas nécessaire ici : rien ne s'est glissé entre les deux, et le sujet est juste devant.",
+            "Oui, pour vérifier le sens de la phrase.",
+            "Non : cet accord ne s'entend pas."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil a été fait pour la distance. Là où il n'y en a pas, il n'apporte rien, et s'en servir partout finit par ralentir sans rien sécuriser. On le sort quand quelque chose s'est glissé entre le sujet et le verbe — c'est-à-dire quand on risque vraiment de se tromper."
+        }
+      ]
+    },
+    {
+      "id": "EP-EMC6-A",
+      "discipline": "emc",
+      "niveau": "6e",
+      "rang": 1,
+      "titre": "Le porte-voix, le pot commun et le cadre",
+      "sequence": "Représenter les autres, servir l'intérêt général, et le principe de laïcité",
+      "modules": [
+        "EMC6-01",
+        "EMC6-02",
+        "EMC6-03"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-EMC6-A.json",
+      "items": [
+        {
+          "id": "EP-EMC6-A-01",
+          "palier": "rappel",
+          "module": "EMC6-01",
+          "ref": "CLM-EMC-002",
+          "enonce": "Que fait un délégué de classe ?",
+          "options": [
+            "Il décide pour la classe.",
+            "Il porte la parole de la classe et prend part à une délibération.",
+            "Il donne son avis personnel au conseil.",
+            "Il représente le professeur principal."
+          ],
+          "juste": 1,
+          "pourquoi": "Un porte-voix amplifie une parole qui n'est pas la sienne. Il ne décide pas seul — la décision se prend dans la délibération, avec d'autres — et il ne parle pas en son nom : un porte-voix qui se met à parler tout seul n'est plus un porte-voix."
+        },
+        {
+          "id": "EP-EMC6-A-02",
+          "palier": "rappel",
+          "module": "EMC6-02",
+          "ref": "CLM-EMC-005",
+          "enonce": "Qu'est-ce que l'intérêt général ?",
+          "options": [
+            "La somme des intérêts de chacun.",
+            "Ce qui est commun à tous, et qui peut s'opposer à l'intérêt de chacun.",
+            "L'avis de la majorité.",
+            "L'intérêt de l'État."
+          ],
+          "juste": 1,
+          "pourquoi": "Le pot commun : chacun y met, chacun y prend, et il doit rester quelque chose après nous. Ni une addition, ni un vote — le programme pose explicitement que l'intérêt général peut être incompatible avec les intérêts particuliers."
+        },
+        {
+          "id": "EP-EMC6-A-03",
+          "palier": "rappel",
+          "module": "EMC6-03",
+          "ref": "CLM-EMC-003",
+          "enonce": "La laïcité, c'est :",
+          "options": [
+            "une opinion sur les religions,",
+            "un principe juridique qui garantit la liberté de croire, de ne pas croire et de changer,",
+            "l'absence de religion,",
+            "le contraire de la croyance."
+          ],
+          "juste": 1,
+          "pourquoi": "Le programme distingue explicitement la laïcité de l'athéisme et de l'agnosticisme. Un cadre n'est pas un tableau : il ne représente rien, il ne raconte rien, et il permet à des tableaux très différents de tenir au même mur."
+        },
+        {
+          "id": "EP-EMC6-A-04",
+          "palier": "discrimination",
+          "module": "EMC6-01",
+          "ref": "CLM-EMC-002",
+          "enonce": "Une classe est divisée en deux parts égales sur une question. Que dit le programme de ce que le délégué doit faire ?",
+          "options": [
+            "Qu'il doit suivre la majorité.",
+            "Rien : le texte ne le dit pas, et personne ne peut le déduire de lui.",
+            "Qu'il doit donner son propre avis.",
+            "Qu'il doit s'abstenir."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est une question réelle, fréquente, et le programme ne la tranche pas. Les trois autres réponses sont des positions défendables — aucune n'est écrite dans la pièce, et les présenter comme telles serait lui faire dire ce qu'elle ne dit pas."
+        },
+        {
+          "id": "EP-EMC6-A-05",
+          "palier": "discrimination",
+          "module": "EMC6-02",
+          "ref": "CLM-EMC-005",
+          "enonce": "Le programme pose que l'intérêt général peut s'opposer aux intérêts de chacun. Qu'est-ce qu'il ne dit pas ?",
+          "options": [
+            "Que l'intérêt général existe.",
+            "Comment arbitrer quand les deux s'opposent.",
+            "Que ce n'est pas la somme des intérêts particuliers.",
+            "Que ce n'est pas l'avis de la majorité."
+          ],
+          "juste": 1,
+          "pourquoi": "Le texte pose la tension sans la résoudre, et le module non plus. Savoir qu'un conflit existe et savoir comment le trancher sont deux choses : la seconde relève de la délibération politique, pas d'une définition."
+        },
+        {
+          "id": "EP-EMC6-A-06",
+          "palier": "discrimination",
+          "module": "EMC6-03",
+          "ref": "CLM-EMC-003",
+          "enonce": "Un débat public porte sur l'application de la laïcité dans un cas précis. Que permet le programme ?",
+          "options": [
+            "De dire qui a raison.",
+            "De dire ce qu'est la laïcité en droit et ce qu'elle garantit — et rien de plus.",
+            "De conclure qu'elle est mal appliquée.",
+            "De renvoyer les deux camps dos à dos."
+          ],
+          "juste": 1,
+          "pourquoi": "La pièce définit un principe ; elle ne tranche aucune controverse d'application, et le module non plus. La dernière réponse a l'air neutre sans l'être : renvoyer dos à dos est déjà une position, et elle n'est pas dans le texte."
+        },
+        {
+          "id": "EP-EMC6-A-07",
+          "groupe": "EMC6-01-T",
+          "palier": "transfert",
+          "module": "EMC6-01",
+          "ref": "CLM-EMC-002",
+          "enonce": "Une association mandate quelqu'un pour la représenter à une réunion. Que dit le porte-voix ?",
+          "options": [
+            "Qu'il décide au nom de l'association.",
+            "Qu'il porte ce qui a été décidé avant, et qu'il doit pouvoir dire d'où cela vient.",
+            "Qu'il donne son avis d'expert.",
+            "Qu'il ne doit pas prendre la parole."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste est le même hors de l'école : un mandat est une parole confiée, et celui qui la porte doit pouvoir en rendre compte. Un porte-voix qui parle tout seul est devenu quelqu'un qui parle en son nom — ce qui est autre chose, et qui se dit."
+        },
+        {
+          "id": "EP-EMC6-A-07b",
+          "groupe": "EMC6-01-T",
+          "palier": "transfert",
+          "module": "EMC6-01",
+          "ref": "CLM-EMC-002",
+          "enonce": "Un délégué rapporte au conseil ce que « tout le monde pense » dans sa classe, sans le lui avoir demandé. Que dit le porte-voix ?",
+          "options": [
+            "C'est exactement ce qu'on attend de lui.",
+            "Il porte une parole qu'il n'a pas recueillie : ce n'est plus la classe qui parle.",
+            "Il devrait voter à la place de la classe.",
+            "Il faut lui retirer son mandat."
+          ],
+          "juste": 1,
+          "pourquoi": "Amplifier suppose qu'il y ait eu quelque chose à amplifier. Sans consultation, ce qui sort du porte-voix est sa propre voix, en plus fort. La dernière réponse sanctionne au lieu de nommer : ce qui manquait, c'était un tour de parole avant la réunion."
+        },
+        {
+          "id": "EP-EMC6-A-08",
+          "groupe": "EMC6-02-T",
+          "palier": "transfert",
+          "module": "EMC6-02",
+          "ref": "CLM-EMC-005",
+          "enonce": "Une commune installe un banc là où trois riverains voulaient une place de stationnement. Que dit le pot commun ?",
+          "options": [
+            "Que la majorité doit l'emporter.",
+            "Que ce qui est bon pour le pot n'est pas toujours bon pour chacun aujourd'hui, et qu'il faut dire lequel des deux on sert.",
+            "Que les riverains ont tort.",
+            "Qu'il faut compter les avis."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil ne désigne pas le gagnant : il oblige à nommer ce dont on parle. Compter les avis répond à une autre question, et le module rappelle que l'intérêt général n'est ni la somme des intérêts ni le résultat d'un vote."
+        },
+        {
+          "id": "EP-EMC6-A-08b",
+          "groupe": "EMC6-02-T",
+          "palier": "transfert",
+          "module": "EMC6-02",
+          "ref": "CLM-EMC-005",
+          "enonce": "Vous choisissez un dessert au restaurant. Le pot commun s'applique-t-il ?",
+          "options": [
+            "Oui : tout choix a des conséquences.",
+            "Non : rien n'est commun ici, et il n'y a pas de pot à préserver.",
+            "Oui, si l'on partage l'addition.",
+            "Non : l'intérêt général ne concerne que l'État."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert là où quelque chose est partagé et doit durer. Un dessert n'engage que celui qui le mange. Appliquer l'intérêt général à tout finit par le vider, et par rendre suspecte la moindre chose qu'on fait pour soi. La dernière réponse se trompe de raison : une classe, une commune, une association ont aussi leur pot commun."
+        },
+        {
+          "id": "EP-EMC6-A-09",
+          "groupe": "EMC6-03-T",
+          "palier": "transfert",
+          "module": "EMC6-03",
+          "ref": "CLM-EMC-003",
+          "enonce": "Le règlement d'une bibliothèque interdit de téléphoner dans la salle de lecture. Que dit le cadre ?",
+          "options": [
+            "Qu'il est hostile au téléphone.",
+            "Qu'il ne dit rien de ce qu'on doit lire : il organise un espace pour que des lectures très différentes y tiennent.",
+            "Qu'il faut sortir pour téléphoner, donc que le lieu est mal conçu.",
+            "Qu'il s'agit d'une opinion du bibliothécaire."
+          ],
+          "juste": 1,
+          "pourquoi": "Un cadre ne représente rien et ne raconte rien : il permet à des tableaux très différents de tenir au mur. Confondre une règle d'espace avec un jugement sur ce qu'on y fait, c'est prendre le cadre pour le tableau."
+        },
+        {
+          "id": "EP-EMC6-A-09b",
+          "groupe": "EMC6-03-T",
+          "palier": "transfert",
+          "module": "EMC6-03",
+          "ref": "CLM-EMC-003",
+          "enonce": "Le règlement d'un club de sport impose la même tenue à tous. De quoi cette règle parle-t-elle ?",
+          "options": [
+            "Du goût du président du club.",
+            "De ce qui rend possible de jouer ensemble, pas de ce que chacun aime porter.",
+            "De l'obligation de faire du sport.",
+            "De l'égalité entre les joueurs."
+          ],
+          "juste": 1,
+          "pourquoi": "On peut discuter la règle, la trouver excessive, demander qu'elle change : cela reste une discussion sur le cadre. Ce qu'elle ne fait pas, c'est dire ce que chacun doit aimer. La dernière réponse est plausible et va au-delà — l'égalité peut être un effet de la règle, elle n'en est pas la définition."
+        }
+      ]
+    },
+    {
+      "id": "EP-EMC6-B",
+      "discipline": "emc",
+      "niveau": "6e",
+      "rang": 2,
+      "titre": "Le seuil, l'étai et l'empreinte",
+      "sequence": "L'application d'un principe selon les espaces, et le droit à la vie privée",
+      "modules": [
+        "EMC6-04",
+        "EMC6-05",
+        "EMC6-06"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-EMC6-B.json",
+      "items": [
+        {
+          "id": "EP-EMC6-B-01",
+          "palier": "rappel",
+          "module": "EMC6-04",
+          "ref": "CLM-EMC-004",
+          "enonce": "Le principe de laïcité s'applique-t-il partout de la même façon ?",
+          "options": [
+            "Oui, à l'identique partout.",
+            "Non : le programme distingue la sphère publique, l'espace public et la sphère privée.",
+            "Non : il ne s'applique qu'à l'école.",
+            "Oui, sauf chez soi."
+          ],
+          "juste": 1,
+          "pourquoi": "Le seuil. Une règle peut changer quand on franchit une porte, et ce n'est pas une incohérence : c'est le fonctionnement ordinaire du droit, qui distingue les lieux et les rôles. Trois espaces que le langage courant mélange, et que le programme demande de ne plus confondre."
+        },
+        {
+          "id": "EP-EMC6-B-02",
+          "palier": "rappel",
+          "module": "EMC6-05",
+          "ref": "CLM-EMC-007",
+          "enonce": "Sur quoi s'appuie le droit au respect de la vie privée ?",
+          "options": [
+            "Sur lui-même.",
+            "Sur d'autres droits : celui à la vie, au nom, à la nationalité.",
+            "Sur le règlement intérieur de l'établissement.",
+            "Sur l'accord des parents."
+          ],
+          "juste": 1,
+          "pourquoi": "L'étai : un droit tient rarement seul. Le programme adosse celui-ci à des articles précis de la Convention internationale des droits de l'enfant. Retirez les étais, et ce qui tenait au-dessus s'affaisse."
+        },
+        {
+          "id": "EP-EMC6-B-03",
+          "palier": "rappel",
+          "module": "EMC6-06",
+          "ref": "CLM-EMC-007",
+          "enonce": "Le droit à l'oubli existe-t-il ?",
+          "options": [
+            "Non.",
+            "Oui, et le faire valoir demande des démarches.",
+            "Oui, et il suffit de le demander.",
+            "Cela dépend des sites."
+          ],
+          "juste": 1,
+          "pourquoi": "L'empreinte : on la laisse sans y penser, elle reste après qu'on est parti, et l'effacer demande beaucoup plus d'efforts que de la faire. Avoir un droit et pouvoir l'exercer sont deux choses — et le module dit à qui s'adresser."
+        },
+        {
+          "id": "EP-EMC6-B-04",
+          "palier": "discrimination",
+          "module": "EMC6-04",
+          "ref": "CLM-EMC-004",
+          "enonce": "Une situation précise pose question dans un établissement. Que permet la distinction des trois espaces ?",
+          "options": [
+            "De dire ce qui s'applique exactement.",
+            "De ne pas confondre trois espaces, ce qui est la condition pour poser correctement la question.",
+            "De trancher à la place du chef d'établissement.",
+            "De conclure que la règle est floue."
+          ],
+          "juste": 1,
+          "pourquoi": "Ce qui s'applique exactement relève du droit et du règlement intérieur, pas d'un cours. Le module donne de quoi ne pas se tromper de question — c'est déjà beaucoup, et prétendre davantage serait faire dire au programme ce qu'il ne dit pas."
+        },
+        {
+          "id": "EP-EMC6-B-05",
+          "palier": "discrimination",
+          "module": "EMC6-05",
+          "ref": "CLM-EMC-007",
+          "enonce": "Le programme nomme des articles de la Convention internationale des droits de l'enfant. Qu'est-ce que cela permet ?",
+          "options": [
+            "De citer leur texte exact.",
+            "De dire d'où vient ce droit et ce qu'il recouvre.",
+            "De juger un cas particulier.",
+            "De conclure que ce droit est absolu."
+          ],
+          "juste": 1,
+          "pourquoi": "Le programme les nomme ; leur contenu exact demande d'ouvrir la Convention — et c'est une bonne raison de l'ouvrir. Nommer une source et la citer sont deux gestes différents, et les confondre est la façon la plus courante de se tromper."
+        },
+        {
+          "id": "EP-EMC6-B-06",
+          "palier": "discrimination",
+          "module": "EMC6-06",
+          "ref": "CLM-EMC-007",
+          "enonce": "Quelle est la différence entre avoir un droit et pouvoir l'exercer ?",
+          "options": [
+            "Il n'y en a pas.",
+            "Le droit peut exister alors que les démarches pour le faire valoir sont longues et difficiles.",
+            "Un droit n'existe que si on l'exerce.",
+            "Exercer un droit est toujours automatique."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est la tension que le programme signale lui-même. Dire « vous avez le droit » sans dire ce que coûte de l'exercer, c'est ne promettre qu'à moitié — et dire « on ne peut rien faire » serait faux : des démarches existent."
+        },
+        {
+          "id": "EP-EMC6-B-07",
+          "groupe": "EMC6-04-T",
+          "palier": "transfert",
+          "module": "EMC6-04",
+          "ref": "CLM-EMC-004",
+          "enonce": "On peut fumer dans la rue et pas dans un train. Que dit le seuil ?",
+          "options": [
+            "Que la loi est incohérente.",
+            "Qu'une règle change en franchissant une porte, et que savoir où l'on est fait partie de la règle.",
+            "Que le train est un lieu privé.",
+            "Qu'il faudrait interdire partout."
+          ],
+          "juste": 1,
+          "pourquoi": "Le droit distingue les lieux et les rôles : ce n'est pas un défaut de cohérence, c'est ainsi qu'il fonctionne. Le geste voyage — avant de demander ce qui est permis, on demande où l'on se trouve."
+        },
+        {
+          "id": "EP-EMC6-B-07b",
+          "groupe": "EMC6-04-T",
+          "palier": "transfert",
+          "module": "EMC6-04",
+          "ref": "CLM-EMC-004",
+          "enonce": "Ce qu'on dit à un ami et ce qu'on écrit sur un réseau ouvert : même règle ?",
+          "options": [
+            "Oui : c'est la même parole.",
+            "Non : le seuil a été franchi — ni le même espace, ni le même public, ni les mêmes suites.",
+            "Non : sur un réseau, tout est permis.",
+            "Oui, si le compte est privé."
+          ],
+          "juste": 1,
+          "pourquoi": "Le nombre de gens qui peuvent lire, leur identité, la durée de ce qui reste : tout change en passant la porte. La dernière réponse touche quelque chose de vrai et s'arrête trop tôt — « privé » sur un réseau ne veut pas dire ce que ce mot veut dire dans une chambre."
+        },
+        {
+          "id": "EP-EMC6-B-08",
+          "groupe": "EMC6-05-T",
+          "palier": "transfert",
+          "module": "EMC6-05",
+          "ref": "CLM-EMC-007",
+          "enonce": "Un club promet à ses membres le droit de participer aux décisions. Que fait l'étai ?",
+          "options": [
+            "Il conclut que la promesse est fausse.",
+            "Il cherche sur quoi ce droit s'appuie : des statuts, une assemblée, une convocation.",
+            "Il demande le nombre de membres.",
+            "Il conclut que le club est bien organisé."
+          ],
+          "juste": 1,
+          "pourquoi": "Un droit qui ne repose sur rien de nommable est un souhait. Chercher les étais n'est pas de la méfiance : c'est la seule façon de savoir ce qu'on pourra réclamer, et devant qui."
+        },
+        {
+          "id": "EP-EMC6-B-08b",
+          "groupe": "EMC6-05-T",
+          "palier": "transfert",
+          "module": "EMC6-05",
+          "ref": "CLM-EMC-007",
+          "enonce": "On vous dit : « tu as le droit d'être respecté ». Que fait l'étai ?",
+          "options": [
+            "Il conclut que c'est une phrase creuse.",
+            "Il cherche ce qui la soutient : le règlement intérieur, la loi, et ce qu'on peut faire quand elle n'est pas tenue.",
+            "Il demande d'en apporter la preuve.",
+            "Il conclut que le respect ne se réclame pas."
+          ],
+          "juste": 1,
+          "pourquoi": "La phrase est vraie et, seule, elle ne permet rien. Ce qui la rend utilisable, ce sont les textes qui la portent et les personnes à qui s'adresser. Les deux réponses extrêmes se ressemblent plus qu'elles ne le croient : l'une comme l'autre laissent la personne sans recours."
+        },
+        {
+          "id": "EP-EMC6-B-09",
+          "groupe": "EMC6-06-T",
+          "palier": "transfert",
+          "module": "EMC6-06",
+          "ref": "CLM-EMC-007",
+          "enonce": "Vous effacez une photo de votre téléphone. L'empreinte est-elle effacée ?",
+          "options": [
+            "Oui : le fichier a disparu.",
+            "Pas nécessairement : ce que d'autres ont déjà enregistré ne dépend plus de vous.",
+            "Oui, une fois la corbeille vidée.",
+            "Non : rien ne s'efface jamais."
+          ],
+          "juste": 1,
+          "pourquoi": "Effacer chez soi n'efface pas chez les autres. La dernière réponse va trop loin dans l'autre sens et décourage : des démarches existent, elles aboutissent parfois, et c'est justement pour cela qu'il vaut mieux savoir à qui s'adresser que de croire tout perdu."
+        },
+        {
+          "id": "EP-EMC6-B-09b",
+          "groupe": "EMC6-06-T",
+          "palier": "transfert",
+          "module": "EMC6-06",
+          "ref": "CLM-EMC-007",
+          "enonce": "Vous notez une adresse sur un papier, que vous jetez ensuite. Faut-il parler d'empreinte numérique ?",
+          "options": [
+            "Oui : toute trace est une empreinte.",
+            "Non : l'outil décrit ce qui se copie et se diffuse tout seul, ce qu'un papier ne fait pas.",
+            "Oui, si quelqu'un a vu le papier.",
+            "Non : un papier ne laisse aucune trace."
+          ],
+          "juste": 1,
+          "pourquoi": "Ce qui fait l'empreinte numérique, c'est qu'elle se duplique sans qu'on le sache et qu'elle survit à celui qui l'a laissée. Un papier jeté peut être retrouvé — c'est un risque, ce n'est pas le même mécanisme. Confondre les deux fait perdre à l'outil tout ce qu'il avait de précis."
+        }
+      ]
     }
   ]
 }

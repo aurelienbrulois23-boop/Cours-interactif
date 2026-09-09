@@ -1,10 +1,10 @@
 # L'épreuve de fin de séquence, et les micro-jeux qui la précèdent
 
 **Usage :** décider ce qu'on construit, dans quel ordre, et ce qu'on refuse de construire.
-**État au 6 septembre 2026 :** l'épreuve est faite et jouable (`site/epreuve.html`,
-`site/epreuves.json`) — **huit séquences, 107 questions**, couvrant l'histoire, la
-géographie et les sciences de sixième. Les **micro-jeux de rôle** le sont aussi
-(`site/microjdr.html`, `site/jdr/`), **huit scènes**, sous la forme arrêtée par
+**État au 9 septembre 2026 :** l'épreuve est faite et jouable (`site/epreuve.html`,
+`site/epreuves.json`) — **seize séquences, 207 questions**, couvrant les cinq
+disciplines de la sixième et du CE2. Les **micro-jeux de rôle** le sont aussi
+(`site/microjdr.html`, `site/jdr/`), **seize scènes**, sous la forme arrêtée par
 l'utilisateur : courtes, **pas identiques entre elles**, et **sans rapport avec
 Valdurne**.
 **Origine :** proposition de l'utilisateur, à partir des modules PIX-pHARe qu'il a écrits
@@ -63,7 +63,8 @@ rien, et c'est le prolongement direct des rappels-échecs délibérés des modul
 
 ## 3. Les limites, écrites dans le fichier lui-même
 
-- **Un choix parmi quatre teste la reconnaissance, pas le rappel libre.** Le rappel
+- **Un choix parmi trois ou quatre teste la reconnaissance, pas le rappel libre.** (Le
+  CE2 en propose trois, la sixième quatre.) Le rappel
   libre, c'est l'Extraction du module, qui fait écrire. L'épreuve ne la remplace pas.
 - **Les réponses sont dans la page.** C'est vrai de tout ce que ce site sert en
   statique. Cela signifie que **l'épreuve ne peut pas noter**, et qu'elle ne doit
@@ -168,14 +169,16 @@ ce sera **en Python** — Node n'est pas installé sur ce poste.
 
 ## 5. Ce qui reste
 
-Au 6 septembre 2026 : **huit séquences, 107 questions, huit scènes** — histoire,
-géographie et sciences de sixième sont couvertes.
+Au 9 septembre 2026 : **seize séquences, 207 questions, seize scènes** — les cinq
+disciplines sont couvertes, et `verifier.py` ne signale plus aucun module sans épreuve.
 
-- **25 modules attendent encore leur épreuve** : les six d'EMC, les dix de français CE2,
-  les neuf de français 6e. `verifier.py` les nomme à chaque passage.
+- **Les 52 modules ont leur épreuve**, et chacun est interrogé sur les trois marches —
+  ce n'était pas le cas au départ : quatre modules pouvaient être déclarés « acquis »
+  sans avoir passé une marche, et le contrôle les a nommés.
 - Chaque nouvelle séquence appelle **sa propre scène**, tirée de sa propre discipline.
-  Il n'y a pas de gabarit à recopier, et c'est voulu : les huit écrites n'ont en commun
-  que leur longueur.
+  Il n'y a pas de gabarit à recopier, et c'est voulu : les seize écrites n'ont en commun
+  que leur longueur. Celles du CE2 sont écrites pour des lecteurs de huit ans — une
+  chasse au trésor, une lettre de correspondants, le journal de la classe.
 - **Le piège technique, rencontré trois fois** : un guillemet droit à l'intérieur d'un
   texte français casse le JSON. Écrire les citations avec des guillemets français, ou
   avec un deux-points. Un contrôle passe désormais sur tous les fichiers de contenu.

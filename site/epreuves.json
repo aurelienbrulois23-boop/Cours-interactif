@@ -1811,6 +1811,615 @@
       ]
     },
     {
+      "id": "EP-MA6-A",
+      "discipline": "mathematiques",
+      "niveau": "6e",
+      "rang": 1,
+      "titre": "La parcelle, le glissoir, le paquet et le rabot",
+      "sequence": "Nombres, calcul et résolution de problèmes",
+      "modules": [
+        "MA6-01",
+        "MA6-02",
+        "MA6-03",
+        "MA6-04"
+      ],
+      "duree": "16 min",
+      "jdr": "jdr/JDR-MA6-A.json",
+      "items": [
+        {
+          "id": "EP-MA6-A-01",
+          "palier": "rappel",
+          "module": "MA6-01",
+          "ref": "CLM-MAT-003",
+          "enonce": "Sans calculer : 8 × 0,25 est-il plus grand ou plus petit que 8 ?",
+          "options": [
+            "Plus grand : on multiplie.",
+            "Plus petit : 0,25 est plus petit que 1.",
+            "Égal à 8.",
+            "On ne peut pas le savoir sans calculer."
+          ],
+          "juste": 1,
+          "pourquoi": "La parcelle : un produit est une surface à deux côtés. Le second mesure 0,25, donc moins d'une unité, et la parcelle est plus courte que la bande de départ. On peut le prévoir avant tout calcul — c'est précisément l'intérêt de l'outil."
+        },
+        {
+          "id": "EP-MA6-A-02",
+          "palier": "rappel",
+          "module": "MA6-02",
+          "ref": "CLM-MAT-003",
+          "enonce": "Que se passe-t-il exactement quand on multiplie 3,5 par 100 ?",
+          "options": [
+            "La virgule se déplace de deux rangs vers la droite.",
+            "Chaque chiffre monte de deux rangs, et la virgule ne bouge pas.",
+            "On ajoute deux zéros à la fin.",
+            "Le nombre devient entier automatiquement."
+          ],
+          "juste": 1,
+          "pourquoi": "Le glissoir. La virgule sépare les unités des dixièmes : elle n'a pas d'autre place possible. Le 3 passe des unités aux centaines, le 5 des dixièmes aux dizaines, et un 0 tient le rang des unités. « Ajouter deux zéros » donnerait 3,500, qui est le même nombre."
+        },
+        {
+          "id": "EP-MA6-A-03",
+          "palier": "rappel",
+          "module": "MA6-03",
+          "ref": "CLM-MAT-003",
+          "enonce": "On écrit « 20 ÷ 5 ». Que cherche-t-on ?",
+          "options": [
+            "La taille de chaque part.",
+            "Le nombre de parts.",
+            "Cela dépend de l'énoncé : le calcul ne le dit pas.",
+            "Les deux à la fois."
+          ],
+          "juste": 2,
+          "pourquoi": "Le paquet. Partition et quotition se calculent de la même façon et ne posent pas la même question. Le résultat sera 4 dans les deux cas ; ce que ce 4 compte change, et l'unité du résultat est la seule chose qui le montre."
+        },
+        {
+          "id": "EP-MA6-A-04",
+          "palier": "rappel",
+          "module": "MA6-04",
+          "ref": "CLM-MAT-003",
+          "enonce": "Pourquoi arrondir avant de calculer est-il risqué ?",
+          "options": [
+            "Parce qu'un arrondi est parfois faux.",
+            "Parce que les écarts s'additionnent au lieu de se compenser.",
+            "Parce que c'est plus long.",
+            "Parce qu'on perd les décimales."
+          ],
+          "juste": 1,
+          "pourquoi": "Le rabot : chaque copeau part dans le même sens. Trois prix arrondis à l'euro depuis 2,49 € enlèvent 49 centimes chacun, soit 1,47 € en tout. La dernière réponse décrit ce qui se passe sans dire pourquoi cela coûte."
+        },
+        {
+          "id": "EP-MA6-A-05",
+          "palier": "discrimination",
+          "module": "MA6-01",
+          "ref": "CLM-MAT-003",
+          "enonce": "Le programme demande de dépasser l'addition itérée. Qu'est-ce que cela ne veut PAS dire ?",
+          "options": [
+            "Que la multiplication a un sens plus large qu'on ne croyait.",
+            "Que l'addition répétée était fausse.",
+            "Que l'aire d'un rectangle sert d'appui.",
+            "Qu'on peut multiplier par un nombre plus petit que 1."
+          ],
+          "juste": 1,
+          "pourquoi": "Dépasser n'est pas corriger. L'addition répétée reste exacte quand le second facteur est un entier : elle a seulement cessé d'être le seul sens du mot. Confondre les deux ferait croire à l'élève qu'on lui avait menti pendant cinq ans."
+        },
+        {
+          "id": "EP-MA6-A-06",
+          "palier": "discrimination",
+          "module": "MA6-02",
+          "ref": "CLM-MAT-003",
+          "enonce": "« La virgule se déplace de deux rangs. » Que vaut cette phrase ?",
+          "options": [
+            "Elle est fausse et il faut la corriger partout.",
+            "C'est un raccourci : il donne le bon résultat et cache la raison.",
+            "Elle est exacte : c'est bien ce qui se passe.",
+            "Elle ne vaut que pour la multiplication."
+          ],
+          "juste": 1,
+          "pourquoi": "La recette marche, et elle lâche au premier cas imprévu — celui où il faut ajouter des zéros. Ce n'est pas une faute de langage à corriger chez les autres : c'est un abrégé, et il vaut mieux savoir ce qu'il abrège."
+        },
+        {
+          "id": "EP-MA6-A-07",
+          "palier": "discrimination",
+          "module": "MA6-03",
+          "ref": "CLM-MAT-003",
+          "enonce": "Deux problèmes très différents donnent tous deux 12 ÷ 4 = 3. Qu'est-ce que le calcul établit ?",
+          "options": [
+            "Que les deux problèmes sont au fond les mêmes.",
+            "Le nombre, et rien de ce qu'il compte.",
+            "Que l'un des deux énoncés est mal posé.",
+            "Que la division n'a qu'un seul sens."
+          ],
+          "juste": 1,
+          "pourquoi": "Le calcul ne distingue rien : c'est l'énoncé qui décide, et l'unité du résultat qui le montre. « 3 bonbons » et « 3 sachets » ne sont pas la même réponse, même quand le 3 est le même."
+        },
+        {
+          "id": "EP-MA6-A-08",
+          "palier": "discrimination",
+          "module": "MA6-04",
+          "ref": "CLM-MAT-003",
+          "enonce": "À quoi sert un ordre de grandeur, d'après le programme ?",
+          "options": [
+            "À calculer plus vite.",
+            "À contrôler un résultat : dire s'il est plausible.",
+            "À remplacer le calcul exact quand il est trop long.",
+            "À arrondir la réponse finale."
+          ],
+          "juste": 1,
+          "pourquoi": "Le programme écrit « contrôler les résultats à l'aide d'ordres de grandeur ». Un ordre de grandeur dit si le résultat est vraisemblable ; il ne dit jamais qu'il est juste, et il ne remplace aucun calcul."
+        },
+        {
+          "id": "EP-MA6-A-09",
+          "groupe": "MA6-01-T",
+          "palier": "transfert",
+          "module": "MA6-01",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un magasin annonce « −30 % ». Que fait la parcelle ?",
+          "options": [
+            "Elle conclut que le prix augmente de 30 %.",
+            "Elle voit une multiplication par 0,70 : un côté plus petit que 1, donc une parcelle plus courte.",
+            "Elle demande le prix de départ.",
+            "Elle multiplie par 30."
+          ],
+          "juste": 1,
+          "pourquoi": "Retirer 30 %, c'est garder 70 %, donc multiplier par 0,70. La troisième réponse est utile pour calculer et ne répond pas à ce qu'on demandait : le sens de l'opération, pas sa valeur."
+        },
+        {
+          "id": "EP-MA6-A-09b",
+          "groupe": "MA6-01-T",
+          "palier": "transfert",
+          "module": "MA6-01",
+          "ref": "CLM-MAT-003",
+          "enonce": "Une photocopieuse est réglée sur 80 %. Que fait la parcelle ?",
+          "options": [
+            "Elle conclut que la copie sera plus grande.",
+            "Elle voit une multiplication par 0,80 sur chaque côté : la copie rétrécit.",
+            "Elle conclut que la copie sera identique.",
+            "Elle demande le format du papier."
+          ],
+          "juste": 1,
+          "pourquoi": "Les deux côtés sont multipliés par 0,80, donc chacun raccourcit. Et la surface, elle, est multipliée par 0,80 × 0,80, soit 0,64 : l'aire diminue bien plus vite que les longueurs, ce qui surprend presque tout le monde."
+        },
+        {
+          "id": "EP-MA6-A-10",
+          "groupe": "MA6-02-T",
+          "palier": "transfert",
+          "module": "MA6-02",
+          "ref": "CLM-MAT-003",
+          "enonce": "Convertir 2,4 km en mètres. Que fait le glissoir ?",
+          "options": [
+            "Il ajoute trois zéros.",
+            "Il fait monter chaque chiffre de trois rangs : 2 400 m.",
+            "Il déplace la virgule vers la gauche.",
+            "Il divise par 1 000."
+          ],
+          "juste": 1,
+          "pourquoi": "Un kilomètre vaut mille mètres : on multiplie par 1 000, donc trois rangs vers le haut. « Ajouter trois zéros » donnerait 2,4000 — exactement le même nombre, et pas la réponse."
+        },
+        {
+          "id": "EP-MA6-A-10b",
+          "groupe": "MA6-02-T",
+          "palier": "transfert",
+          "module": "MA6-02",
+          "ref": "CLM-MAT-003",
+          "enonce": "Une carte est à l'échelle 1/25 000. Le glissoir s'applique-t-il ?",
+          "options": [
+            "Oui, comme toujours.",
+            "Pas directement : 25 000 n'est pas une puissance de dix, et les chiffres ne glissent pas d'un nombre entier de rangs.",
+            "Non : le glissoir ne vaut que pour les longueurs.",
+            "Oui, en glissant de quatre rangs."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil a été fait pour 10, 100 et 1 000 — les cas où le rapport est une puissance de dix. Ailleurs il ne s'applique pas tel quel, et le forcer donne un résultat faux. La troisième réponse conclut bien pour une raison qui ne tient pas : le glissoir voyage très bien sur les longueurs."
+        },
+        {
+          "id": "EP-MA6-A-11",
+          "groupe": "MA6-03-T",
+          "palier": "transfert",
+          "module": "MA6-03",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un paquet de café de 250 g coûte 3,75 €. On calcule 3,75 ÷ 250. Que cherche-t-on ?",
+          "options": [
+            "Le nombre de grammes qu'on peut acheter.",
+            "Le prix d'un gramme : la valeur d'une part.",
+            "Le nombre de paquets.",
+            "Rien : le calcul est mal posé."
+          ],
+          "juste": 1,
+          "pourquoi": "On connaît le nombre de parts — 250 grammes — et l'on cherche ce que vaut chacune. C'est une partition, et l'unité du résultat le dit : des euros par gramme."
+        },
+        {
+          "id": "EP-MA6-A-11b",
+          "groupe": "MA6-03-T",
+          "palier": "transfert",
+          "module": "MA6-03",
+          "ref": "CLM-MAT-003",
+          "enonce": "On vous écrit seulement « 12 ÷ 4 », sans énoncé. Le paquet s'applique-t-il ?",
+          "options": [
+            "Oui : c'est une partition.",
+            "Non : sans énoncé il n'y a pas de question à distinguer, il n'y a qu'un calcul.",
+            "Oui : c'est une quotition.",
+            "Non : le paquet ne vaut que pour les nombres entiers."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sépare deux questions posées par un texte. Sans texte, les deux premières réponses sont également vraies et également vides. Appliquer le paquet à un calcul nu, c'est lui faire dire ce qu'il ne sait pas."
+        },
+        {
+          "id": "EP-MA6-A-12",
+          "groupe": "MA6-04-T",
+          "palier": "transfert",
+          "module": "MA6-04",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un article annonce : « 62 % des élèves ». Que fait le rabot ?",
+          "options": [
+            "Il conclut que le chiffre est faux.",
+            "Il demande à partir de quoi ce pourcentage a été arrondi, et sur combien d'élèves.",
+            "Il arrondit à 60 %.",
+            "Il vérifie l'addition."
+          ],
+          "juste": 1,
+          "pourquoi": "Sur treize élèves, huit font 61,5 %, arrondi à 62 %. Le chiffre a l'air précis et il porte sur huit personnes. Le rabot ne dit pas que c'est faux : il demande ce que le copeau a emporté."
+        },
+        {
+          "id": "EP-MA6-A-12b",
+          "groupe": "MA6-04-T",
+          "palier": "transfert",
+          "module": "MA6-04",
+          "ref": "CLM-MAT-003",
+          "enonce": "Une recette demande 2 œufs. Faut-il un ordre de grandeur ?",
+          "options": [
+            "Oui : toujours, avant de calculer.",
+            "Non : c'est un dénombrement exact, il n'y a aucun résultat à contrôler.",
+            "Oui, si l'on double la recette.",
+            "Non : les ordres de grandeur ne valent que pour les grands nombres."
+          ],
+          "juste": 1,
+          "pourquoi": "Un ordre de grandeur contrôle un résultat de calcul qui pourrait déraper d'un facteur dix. Deux œufs ne dérapent pas. La dernière réponse se trompe de raison : un ordre de grandeur sert très bien sur de petits nombres, dès qu'il y a un calcul."
+        }
+      ]
+    },
+    {
+      "id": "EP-MA6-B",
+      "discipline": "mathematiques",
+      "niveau": "6e",
+      "rang": 2,
+      "titre": "Les deux arcs, la laisse et le va-et-vient",
+      "sequence": "Espace et géométrie",
+      "modules": [
+        "MA6-05",
+        "MA6-06",
+        "MA6-07"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-MA6-B.json",
+      "items": [
+        {
+          "id": "EP-MA6-B-01",
+          "palier": "rappel",
+          "module": "MA6-05",
+          "ref": "CLM-MAT-003",
+          "enonce": "Les deux arcs de compas ne se croisent pas. Qu'a-t-on trouvé ?",
+          "options": [
+            "Une erreur de tracé : il faut recommencer.",
+            "Un résultat : ce triangle n'existe pas.",
+            "Qu'il faudrait un compas plus précis.",
+            "Que les longueurs ont été mal mesurées."
+          ],
+          "juste": 1,
+          "pourquoi": "Les deux petites longueurs mises bout à bout sont trop courtes pour couvrir la grande, et aucun soin n'y changera rien. En mathématiques, montrer qu'une chose est impossible est un travail à part entière — souvent plus profond que de la faire."
+        },
+        {
+          "id": "EP-MA6-B-02",
+          "palier": "rappel",
+          "module": "MA6-06",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un cercle de centre O et de rayon 4 cm est fait :",
+          "options": [
+            "de tous les points situés à 4 cm de O, et d'eux seuls,",
+            "de tous les points situés à moins de 4 cm de O,",
+            "du trait et de tout son intérieur,",
+            "de quatre points seulement."
+          ],
+          "juste": 0,
+          "pourquoi": "La laisse : le cercle est le trait que fait la laisse tendue. Les points situés à moins de 4 cm forment l'intérieur ; le trait et l'intérieur ensemble s'appellent le disque."
+        },
+        {
+          "id": "EP-MA6-B-03",
+          "palier": "rappel",
+          "module": "MA6-07",
+          "ref": "CLM-MAT-003",
+          "enonce": "Que veut dire qu'une propriété est « caractéristique » ?",
+          "options": [
+            "Qu'elle est importante.",
+            "Qu'elle se lit dans les deux sens.",
+            "Qu'elle est difficile à retenir.",
+            "Qu'elle a été démontrée."
+          ],
+          "juste": 1,
+          "pourquoi": "Le va-et-vient. Aller : si un point est sur la médiatrice, ses distances sont égales. Retour : si ses distances sont égales, il est sur la médiatrice. Les deux tiennent, donc la propriété reconnaît à coup sûr — et c'est cela qui permet de s'en servir pour justifier."
+        },
+        {
+          "id": "EP-MA6-B-04",
+          "palier": "discrimination",
+          "module": "MA6-05",
+          "ref": "CLM-MAT-003",
+          "enonce": "Quatre cas essayés au compas. Qu'est-ce que cela établit ?",
+          "options": [
+            "Une règle générale sur les triangles.",
+            "Un constat sur ces quatre cas : solide, et non démontré.",
+            "Rien du tout : un dessin ne prouve jamais rien.",
+            "Que le compas est un outil de démonstration."
+          ],
+          "juste": 1,
+          "pourquoi": "Le programme demande de « remarquer », et il n'énonce aucune propriété. La troisième réponse jette trop : un dessin ne démontre pas, et il établit très bien ce qu'on a vu — c'est le mot « toujours » qu'il ne permet pas."
+        },
+        {
+          "id": "EP-MA6-B-05",
+          "palier": "discrimination",
+          "module": "MA6-06",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un jardinier veut clôturer un massif rond de 2 m de rayon. Achète-t-il du cercle ou du disque ?",
+          "options": [
+            "Du disque : c'est la surface du massif.",
+            "Du cercle : la clôture suit la frontière.",
+            "Les deux, selon le prix au mètre.",
+            "Ni l'un ni l'autre : il achète un périmètre."
+          ],
+          "juste": 1,
+          "pourquoi": "La clôture longe le bord ; la terre à l'intérieur est le disque. La dernière réponse touche quelque chose de vrai — il achète bien une longueur — et rate la question : cette longueur est justement celle du cercle."
+        },
+        {
+          "id": "EP-MA6-B-06",
+          "palier": "discrimination",
+          "module": "MA6-07",
+          "ref": "CLM-MAT-003",
+          "enonce": "« Si un nombre se termine par 0, alors il est pair. » Que donne le retour ?",
+          "options": [
+            "Il tient aussi.",
+            "Il est faux : 4 est pair et ne se termine pas par 0.",
+            "Il n'y a pas de retour possible.",
+            "Il faudrait le démontrer pour le savoir."
+          ],
+          "juste": 1,
+          "pourquoi": "Un seul contre-exemple suffit à faire tomber le retour. Cette propriété ne va que dans un sens, et l'employer à l'envers est l'erreur de raisonnement la plus fréquente qui soit — au tribunal comme dans un journal."
+        },
+        {
+          "id": "EP-MA6-B-07",
+          "groupe": "MA6-05-T",
+          "palier": "transfert",
+          "module": "MA6-05",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un exercice demande un rectangle de 20 cm de périmètre et de 30 cm² d'aire. Que dit l'outil ?",
+          "options": [
+            "Qu'il faut chercher plus longtemps.",
+            "Qu'il faut d'abord se demander si un tel rectangle existe.",
+            "Qu'il faut arrondir les mesures.",
+            "Que l'énoncé a été mal recopié."
+          ],
+          "juste": 1,
+          "pourquoi": "Avant de construire, on demande si la figure existe. Ici, un périmètre de 20 cm laisse 10 cm à partager entre deux côtés, et la plus grande aire possible est celle du carré de 5 cm : 25 cm². Aucun rectangle n'atteint 30 cm², et chercher plus longtemps n'y changera rien."
+        },
+        {
+          "id": "EP-MA6-B-07b",
+          "groupe": "MA6-05-T",
+          "palier": "transfert",
+          "module": "MA6-05",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un budget de 50 € pour acheter cinq objets à 12 € pièce. Que dit l'outil ?",
+          "options": [
+            "Qu'il faut négocier.",
+            "Qu'il faut d'abord se demander si c'est possible : cinq fois 12 font 60.",
+            "Qu'il faut acheter les objets un par un.",
+            "Qu'il faut arrondir à 10 € l'objet."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste voyage hors de la géométrie : avant de chercher comment faire, on demande s'il y a quelque chose à faire. Un problème sans solution n'est pas un problème raté — c'est un résultat, et il se montre."
+        },
+        {
+          "id": "EP-MA6-B-08",
+          "groupe": "MA6-06-T",
+          "palier": "transfert",
+          "module": "MA6-06",
+          "ref": "CLM-MAT-003",
+          "enonce": "« Les habitants situés à moins de dix minutes de la gare. » Trait ou tache ?",
+          "options": [
+            "Le trait : la limite des dix minutes.",
+            "La tache : tous ceux qui sont à dix minutes ou moins.",
+            "Ni l'un ni l'autre : le temps n'est pas une distance.",
+            "Les deux, selon le moyen de transport."
+          ],
+          "juste": 1,
+          "pourquoi": "« À moins de » désigne un territoire, pas une frontière. La troisième réponse soulève un point juste — dix minutes ne couvrent pas la même distance à pied ou à vélo — et ce n'est pas la question : la forme de la zone changerait, sa nature non."
+        },
+        {
+          "id": "EP-MA6-B-08b",
+          "groupe": "MA6-06-T",
+          "palier": "transfert",
+          "module": "MA6-06",
+          "ref": "CLM-MAT-003",
+          "enonce": "Vous devez peindre le bord d'une table ronde. Cercle ou disque ?",
+          "options": [
+            "Le disque : c'est toute la table.",
+            "Le cercle : le bord est la frontière.",
+            "Les deux, puisque la peinture a une épaisseur.",
+            "Ni l'un ni l'autre : une table n'est pas une figure."
+          ],
+          "juste": 1,
+          "pourquoi": "Le bord est le cercle ; le plateau est le disque. La troisième réponse est astucieuse et sort du cadre : en géométrie un trait n'a pas d'épaisseur, et c'est précisément cette absence qui permet de raisonner."
+        },
+        {
+          "id": "EP-MA6-B-09",
+          "groupe": "MA6-07-T",
+          "palier": "transfert",
+          "module": "MA6-07",
+          "ref": "CLM-MAT-003",
+          "enonce": "« Si un animal est un chien, alors il a quatre pattes. » Faites le va-et-vient.",
+          "options": [
+            "Les deux sens tiennent.",
+            "L'aller tient, le retour non : un chat a quatre pattes.",
+            "Aucun des deux ne tient.",
+            "Le retour tient, l'aller non."
+          ],
+          "juste": 1,
+          "pourquoi": "Un seul contre-exemple suffit à faire tomber le retour. La propriété n'est donc pas caractéristique : « avoir quatre pattes » ne permet pas de reconnaître un chien, alors que « être sur la médiatrice » permet bien de reconnaître l'égalité des distances, et l'inverse."
+        },
+        {
+          "id": "EP-MA6-B-09b",
+          "groupe": "MA6-07-T",
+          "palier": "transfert",
+          "module": "MA6-07",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un camarade dit : « j'ai froid. » Faut-il faire le va-et-vient ?",
+          "options": [
+            "Oui : et si l'on a froid, alors… ?",
+            "Non : ce n'est pas une phrase en « si… alors », il n'y a rien à retourner.",
+            "Oui, pour vérifier qu'il dit vrai.",
+            "Non : le va-et-vient ne vaut qu'en géométrie."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil s'applique aux phrases qui affirment qu'une chose en entraîne une autre. Une phrase qui décrit un état n'en est pas une. Le dégainer partout finit par rendre insupportable — et la dernière réponse se trompe de raison : le va-et-vient voyage très loin de la géométrie."
+        }
+      ]
+    },
+    {
+      "id": "EP-MA6-C",
+      "discipline": "mathematiques",
+      "niveau": "6e",
+      "rang": 3,
+      "titre": "Le prix au kilo et le moule",
+      "sequence": "Proportionnalité, et organisation des données",
+      "modules": [
+        "MA6-08",
+        "MA6-09"
+      ],
+      "duree": "9 min",
+      "jdr": "jdr/JDR-MA6-C.json",
+      "items": [
+        {
+          "id": "EP-MA6-C-01",
+          "palier": "rappel",
+          "module": "MA6-08",
+          "ref": "CLM-MAT-003",
+          "enonce": "Qu'est-ce qui reste constant dans une situation de proportionnalité ?",
+          "options": [
+            "Le plus grand des deux nombres.",
+            "Une grandeur : le prix au kilo, la vitesse, le nombre par minute.",
+            "La différence entre les deux lignes du tableau.",
+            "Rien : tout varie."
+          ],
+          "juste": 1,
+          "pourquoi": "Le prix au kilo. Cette grandeur porte souvent un nom de la vie courante, et c'est elle la proportionnalité. La différence entre les deux lignes, elle, change d'une colonne à l'autre — c'est justement ce qui distingue la proportionnalité d'un simple écart constant."
+        },
+        {
+          "id": "EP-MA6-C-02",
+          "palier": "rappel",
+          "module": "MA6-09",
+          "ref": "CLM-MAT-003",
+          "enonce": "Quand trace-t-on le tableau d'une enquête ?",
+          "options": [
+            "Après avoir relevé, pour ranger les notes.",
+            "Avant de relever : ce qui n'a pas de colonne ne sera pas relevé.",
+            "Pendant, au fur et à mesure.",
+            "À la fin, pour présenter les résultats."
+          ],
+          "juste": 1,
+          "pourquoi": "Le moule se fabrique avant de couler. Trois élèves partis avec un carnet reviennent avec « beaucoup de pain » et « surtout les petits » : rien de cela n'entre dans une colonne, et il faut y retourner."
+        },
+        {
+          "id": "EP-MA6-C-03",
+          "palier": "discrimination",
+          "module": "MA6-08",
+          "ref": "CLM-MAT-003",
+          "enonce": "Le programme écarte le produit en croix. Qu'est-ce que cela veut dire ?",
+          "options": [
+            "Que la technique donne des résultats faux.",
+            "Qu'elle n'est pas enseignée en sixième, parce qu'elle donne un nombre sans donner le sens.",
+            "Qu'il est interdit de s'en servir toute sa vie.",
+            "Qu'elle est réservée aux élèves les plus avancés."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est la seule interdiction explicite du programme, et elle est motivée : « dans cette optique de compréhension du sens ». La technique est exacte, et personne n'a à la corriger chez qui l'emploie."
+        },
+        {
+          "id": "EP-MA6-C-04",
+          "palier": "discrimination",
+          "module": "MA6-09",
+          "ref": "CLM-MAT-003",
+          "enonce": "Votre enquête a duré trois jours à la cantine. Que ne permet-elle pas de conclure ?",
+          "options": [
+            "Ce qui s'est passé ces trois jours-là.",
+            "Ce qui se passe les autres jours, ni dans les autres établissements.",
+            "La masse de pain relevée.",
+            "Le niveau des classes observées."
+          ],
+          "juste": 1,
+          "pourquoi": "Une enquête renseigne sur ce qui a été mesuré, là où cela a été mesuré. Les trois autres réponses sont exactement ce qu'elle établit : c'est le mot « toujours » qu'elle ne permet pas."
+        },
+        {
+          "id": "EP-MA6-C-05",
+          "groupe": "MA6-08-T",
+          "palier": "transfert",
+          "module": "MA6-08",
+          "ref": "CLM-MAT-003",
+          "enonce": "Une offre annonce « 3 pour le prix de 2 ». Que fait le prix au kilo ?",
+          "options": [
+            "Il conclut que c'est une bonne affaire.",
+            "Il cherche le prix d'un seul objet, avant et après.",
+            "Il multiplie par trois.",
+            "Il compare avec un autre magasin."
+          ],
+          "juste": 1,
+          "pourquoi": "Le prix à l'unité est la grandeur qui permet de comparer. Sans lui, « 3 pour le prix de 2 » et « −30 % » ne se comparent pas — et pourtant l'un des deux est meilleur."
+        },
+        {
+          "id": "EP-MA6-C-05b",
+          "groupe": "MA6-08-T",
+          "palier": "transfert",
+          "module": "MA6-08",
+          "ref": "CLM-MAT-003",
+          "enonce": "La taille d'un enfant selon son âge : est-ce une situation proportionnelle ?",
+          "options": [
+            "Oui : plus il vieillit, plus il grandit.",
+            "Non : aucune grandeur ne reste constante — un enfant de dix ans ne mesure pas le double d'un enfant de cinq ans.",
+            "Oui, entre cinq et dix ans.",
+            "On ne peut pas le savoir sans mesurer."
+          ],
+          "juste": 1,
+          "pourquoi": "Deux grandeurs qui augmentent ensemble ne sont pas forcément proportionnelles, et c'est l'erreur la plus fréquente avec cet outil. On cherche un rapport constant, on n'en trouve pas — il faut alors dire qu'il n'y en a pas, plutôt que d'en inventer un."
+        },
+        {
+          "id": "EP-MA6-C-06",
+          "groupe": "MA6-09-T",
+          "palier": "transfert",
+          "module": "MA6-09",
+          "ref": "CLM-MAT-003",
+          "enonce": "Un sondage annonce que 70 % des gens préfèrent A. Que fait le moule ?",
+          "options": [
+            "Il conclut que A est meilleur.",
+            "Il demande quelles colonnes avaient été prévues, et qui les a choisies.",
+            "Il vérifie que les pourcentages font bien cent.",
+            "Il conclut que les sondages ne servent à rien."
+          ],
+          "juste": 1,
+          "pourquoi": "Le moule est fabriqué par quelqu'un, et ce quelqu'un a des raisons. Les questions posées décident des réponses possibles : si B ne figurait pas dans la liste, personne n'a pu le choisir. La dernière réponse renonce au lieu de regarder."
+        },
+        {
+          "id": "EP-MA6-C-06b",
+          "groupe": "MA6-09-T",
+          "palier": "transfert",
+          "module": "MA6-09",
+          "ref": "CLM-MAT-003",
+          "enonce": "Le tableau publié par un journal ne comporte aucune colonne « région ». Que fait le moule ?",
+          "options": [
+            "Il conclut que les régions ne comptent pas.",
+            "Il note ce qu'on ne pourra pas dire à partir de ce tableau.",
+            "Il ajoute la colonne lui-même.",
+            "Il rejette le tableau."
+          ],
+          "juste": 1,
+          "pourquoi": "Une colonne absente ne prouve rien sur le monde : elle dit ce que le tableau ne pourra pas répondre. Et l'ajouter après coup est impossible — la donnée n'a pas été relevée, et l'inventer serait la fabriquer."
+        }
+      ]
+    },
+    {
       "id": "EP-FCE2-A",
       "discipline": "francais",
       "niveau": "CE2",

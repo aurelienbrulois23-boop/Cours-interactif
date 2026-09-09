@@ -89,11 +89,35 @@ export function normalise(s) {
     .replace(/\.$/, '');
 }
 
+/* Le français demande une autre comparaison que les nombres.
+ *
+ * On ignore la casse, les espaces en trop et l'apostrophe typographique.
+ * On N'IGNORE PAS les accents : dans un exercice d'orthographe, « a » et
+ * « à » sont justement ce qui se joue, et un contrôle indulgent sur ce
+ * point ferait exactement le contraire de ce qu'on demande.               */
+export function normaliseTexte(s) {
+  return String(s == null ? '' : s)
+    .toLowerCase()
+    .replace(/[’‘ʼ]/g, "'")
+    .replace(/[.,;:!?]+$/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/* « attendu » peut être une liste : plusieurs écritures sont parfois
+ * également justes — « le chat » et « chat » pour un sujet, par exemple.  */
 export function juste(saisie, attendu) {
+  const liste = Array.isArray(attendu) ? attendu : [attendu];
+  return liste.some(a => unSeul(saisie, a));
+}
+
+function unSeul(saisie, attendu) {
   const a = normalise(saisie), b = normalise(attendu);
   if (a === b) return true;
   const na = Number(a), nb = Number(b);
-  return a !== '' && isFinite(na) && isFinite(nb) && Math.abs(na - nb) < 1e-9;
+  if (a !== '' && isFinite(na) && isFinite(nb) && Math.abs(na - nb) < 1e-9) return true;
+  const ta = normaliseTexte(saisie);
+  return ta !== '' && ta === normaliseTexte(attendu);
 }
 
 /* ═══════════════════════ LES GÉNÉRATEURS ═══════════════════════════════ *
@@ -225,7 +249,279 @@ export const GENERATEURS = [
              aide: `Le chiffre est ${chiffre}. Sa valeur est ${chiffre} × ${fr(pas)}, pas ${chiffre}.` };
   }
 },
+
+/* ─── Français, CE2 ─────────────────────────────────────────────────────
+ * Deux entrées, et deux seulement : ce sont celles que le programme du
+ * cycle 2 nomme (CLM-FR-004). Tout le reste attend d'être relu.          */
+{
+  id: 'FCE2-AUT-01', discipline: 'francais', niveau: 'CE2',
+  domaine: 'Grammaire — se repérer dans la phrase simple', rang: 1, source: 'CLM-FR-004',
+  nom: 'Trouver le sujet quand il n’est pas au début',
+  quoi: "Retrouver le sujet d'une phrase qui commence par autre chose que lui.",
+  saisie: 'texte',
+  faire(r) {
+    const debuts = ['Dans le jardin', 'Chaque matin', 'Sous la table', 'Près de la rivière',
+                    'Le soir', 'Pendant la récréation', 'Derrière la porte', 'En hiver',
+                    'Depuis ce matin', 'Tout au fond de la cour'];
+    // « anime » décide de la question : on dit « qui est-ce qui court ? »
+    // d'un chien, et « qu'est-ce qui tombe ? » d'une feuille.
+    const sujets = [
+      { d: 'le', s: 'chat', n: 1, anime: true }, { d: 'les', s: 'oiseaux', n: 2, anime: true },
+      { d: 'une', s: 'souris', n: 1, anime: true }, { d: 'mon', s: 'frère', n: 1, anime: true },
+      { d: 'les', s: 'élèves', n: 2, anime: true }, { d: 'la', s: 'voisine', n: 1, anime: true },
+      { d: 'deux', s: 'chiens', n: 2, anime: true }, { d: 'les', s: 'voisins', n: 2, anime: true },
+      { d: 'le', s: 'vent', n: 1, anime: false }, { d: 'les', s: 'feuilles', n: 2, anime: false },
+      { d: 'la', s: 'pluie', n: 1, anime: false }, { d: 'les', s: 'volets', n: 2, anime: false },
+    ];
+    const verbes = [['dort', 'dorment'], ['attend', 'attendent'], ['revient', 'reviennent'],
+                    ['s’arrête', 's’arrêtent'], ['passe', 'passent'], ['tombe', 'tombent']];
+    const c = parmi(r, debuts), u = parmi(r, sujets), v = parmi(r, verbes);
+    const groupe = `${u.d} ${u.s}`;
+    const conjugue = u.n === 1 ? v[0] : v[1];
+    const question = u.anime ? 'Qui est-ce qui' : 'Qu’est-ce qui';
+    return {
+      enonce: `${question} ${conjugue} ?<br><strong>${c}, ${groupe} ${conjugue}.</strong>`,
+      reponse: groupe,
+      reponses: [groupe, u.s],
+      aide: `Posez la question « ${question.toLowerCase()} ${conjugue} ? ». ` +
+            `Ce n’est pas « ${c.toLowerCase()} » : le sujet n’est pas le premier mot de la phrase.`,
+    };
+  }
+},
+{
+  id: 'FCE2-AUT-02', discipline: 'francais', niveau: 'CE2',
+  domaine: 'Orthographe grammaticale — accords dans le groupe nominal', rang: 2, source: 'CLM-FR-004',
+  nom: 'Le pluriel qu’on n’entend pas',
+  quoi: "Mettre au pluriel un groupe nominal dont le pluriel ne s'entend pas.",
+  saisie: 'texte',
+  faire(r) {
+    const g = parmi(r, [
+      ['le petit chat', 'les petits chats'], ['la grande fleur', 'les grandes fleurs'],
+      ['le joli dessin', 'les jolis dessins'], ['la longue route', 'les longues routes'],
+      ['le vieux mur', 'les vieux murs'], ['la belle image', 'les belles images'],
+      ['le gros nuage', 'les gros nuages'], ['la petite fenêtre', 'les petites fenêtres'],
+      ['le nouveau cahier', 'les nouveaux cahiers'], ['la douce lumière', 'les douces lumières'],
+      ['le dernier jour', 'les derniers jours'], ['la première page', 'les premières pages'],
+    ]);
+    return {
+      enonce: `Écrivez au pluriel : <strong>${g[0]}</strong>`,
+      reponse: g[1],
+      aide: 'Le nom passe au pluriel, et les mots autour de lui le répètent par écrit — ' +
+            'même quand on n’entend rien de plus.',
+    };
+  }
+},
+
+/* ─── Français, sixième ─────────────────────────────────────────────────
+ * Les quatre entrées nommées par le programme du cycle 3 pour la sixième
+ * (CLM-FM-002). Les homophones grammaticaux n'y figurent pas : il n'y a
+ * donc pas de générateur pour eux, et ce n'est pas un oubli.             */
+{
+  id: 'FR6-AUT-01', discipline: 'francais', niveau: '6e',
+  domaine: 'Orthographe grammaticale — accord du sujet et du verbe', rang: 1, source: 'CLM-FM-002',
+  nom: 'Accorder malgré la distance',
+  quoi: "Accorder le verbe avec son sujet quand d'autres mots se sont glissés entre les deux.",
+  saisie: 'texte',
+  faire(r) {
+    // Chaque sujet porte un complément du NOMBRE OPPOSÉ à son noyau : c'est
+    // le piège, et il est là dans tous les tirages, sans exception.
+    const sujets = [
+      { s: 'Le chien des voisins', noyau: 'le chien', n: 1 },
+      { s: 'Les chiens du voisin', noyau: 'les chiens', n: 2 },
+      { s: 'La liste des courses', noyau: 'la liste', n: 1 },
+      { s: 'Les élèves de la classe', noyau: 'les élèves', n: 2 },
+      { s: 'Le sac des enfants', noyau: 'le sac', n: 1 },
+      { s: 'Les portes du placard', noyau: 'les portes', n: 2 },
+      { s: 'La couleur des murs', noyau: 'la couleur', n: 1 },
+      { s: 'Les fenêtres de la salle', noyau: 'les fenêtres', n: 2 },
+      { s: 'Le bruit des moteurs', noyau: 'le bruit', n: 1 },
+      { s: 'Les feuilles de l’arbre', noyau: 'les feuilles', n: 2 },
+      { s: 'Le toit des maisons', noyau: 'le toit', n: 1 },
+      { s: 'Les branches du chêne', noyau: 'les branches', n: 2 },
+      { s: 'Le trousseau de clés', noyau: 'le trousseau', n: 1 },
+      { s: 'Les boîtes de conserve', noyau: 'les boîtes', n: 2 },
+      { s: 'La sœur de mes cousins', noyau: 'la sœur', n: 1 },
+      { s: 'Les enfants du village', noyau: 'les enfants', n: 2 },
+      { s: 'Le gardien des immeubles', noyau: 'le gardien', n: 1 },
+      { s: 'Les joueurs de l’équipe', noyau: 'les joueurs', n: 2 },
+    ];
+    // Verbe ET complément vont avec n'importe lequel de ces sujets : un
+    // toit qui court ferait douter de l'exercice avant de le faire réussir.
+    const verbes = [
+      ['être', 'est', 'sont', 'toujours là'],
+      ['avoir', 'a', 'ont', 'de l’importance'],
+      ['aller', 'va', 'vont', 'très bien'],
+      ['faire', 'fait', 'font', 'du bruit'],
+      ['prendre', 'prend', 'prennent', 'de la place'],
+      ['venir', 'vient', 'viennent', 'de loin'],
+      ['partir', 'part', 'partent', 'demain'],
+      ['attendre', 'attend', 'attendent', 'depuis une heure'],
+      ['tenir', 'tient', 'tiennent', 'malgré tout'],
+      ['finir', 'finit', 'finissent', 'par céder'],
+      ['disparaître', 'disparaît', 'disparaissent', 'chaque hiver'],
+      ['revenir', 'revient', 'reviennent', 'chaque année'],
+      ['changer', 'change', 'changent', 'avec le temps'],
+      ['compter', 'compte', 'comptent', 'beaucoup ici'],
+      ['manquer', 'manque', 'manquent', 'depuis lundi'],
+      ['arriver', 'arrive', 'arrivent', 'en retard'],
+      ['tomber', 'tombe', 'tombent', 'souvent'],
+      ['durer', 'dure', 'durent', 'longtemps'],
+      ['pouvoir', 'peut', 'peuvent', 'encore servir'],
+      ['devoir', 'doit', 'doivent', 'changer'],
+      ['bouger', 'bouge', 'bougent', 'à peine'],
+      ['servir', 'sert', 'servent', 'encore'],
+    ];
+    const u = parmi(r, sujets), v = parmi(r, verbes);
+    return {
+      enonce: `Écrivez le verbe au présent.<br><strong>${u.s} ……… ${v[3]}.</strong> <em>(${v[0]})</em>`,
+      reponse: u.n === 1 ? v[1] : v[2],
+      aide: `Demandez : qui est-ce qui ${v[0]} ? Le sujet est « ${u.noyau} ». ` +
+            'Les mots posés entre le sujet et le verbe ne s’accrochent pas au fil.',
+    };
+  }
+},
+{
+  id: 'FR6-AUT-02', discipline: 'francais', niveau: '6e',
+  domaine: 'Orthographe grammaticale — chaîne d’accords dans le groupe nominal', rang: 2, source: 'CLM-FM-002',
+  nom: 'La chaîne d’accords, exceptions comprises',
+  quoi: 'Accorder un nom et son adjectif au pluriel, y compris quand le pluriel est irrégulier.',
+  saisie: 'texte',
+  faire(r) {
+    const g = parmi(r, [
+      ['journal', 'local', 'journaux', 'locaux'], ['cheval', 'gris', 'chevaux', 'gris'],
+      ['tableau', 'ancien', 'tableaux', 'anciens'], ['bateau', 'bleu', 'bateaux', 'bleus'],
+      ['chapeau', 'neuf', 'chapeaux', 'neufs'], ['oiseau', 'blanc', 'oiseaux', 'blancs'],
+      ['travail', 'manuel', 'travaux', 'manuels'], ['vitrail', 'coloré', 'vitraux', 'colorés'],
+      ['caillou', 'rond', 'cailloux', 'ronds'], ['genou', 'fragile', 'genoux', 'fragiles'],
+      ['prix', 'élevé', 'prix', 'élevés'], ['bras', 'long', 'bras', 'longs'],
+      ['festival', 'annuel', 'festivals', 'annuels'], ['carnaval', 'bruyant', 'carnavals', 'bruyants'],
+      ['bal', 'populaire', 'bals', 'populaires'], ['pneu', 'neuf', 'pneus', 'neufs'],
+      ['landau', 'ancien', 'landaus', 'anciens'], ['détail', 'précis', 'détails', 'précis'],
+      ['chandail', 'épais', 'chandails', 'épais'], ['voix', 'douce', 'voix', 'douces'],
+      ['croix', 'blanche', 'croix', 'blanches'], ['eau', 'claire', 'eaux', 'claires'],
+    ]);
+    return {
+      enonce: `Complétez au pluriel : <strong>ces ……… ………</strong> <em>(${g[0]} ${g[1]})</em>`,
+      reponse: `${g[2]} ${g[3]}`,
+      aide: 'Le nom d’abord, l’adjectif ensuite — et l’adjectif suit le nom, ' +
+            'même quand le pluriel du nom est irrégulier.',
+    };
+  }
+},
+{
+  id: 'FR6-AUT-03', discipline: 'francais', niveau: '6e',
+  domaine: 'Grammaire — se repérer dans la phrase complexe', rang: 3, source: 'CLM-FM-002',
+  nom: 'Compter les propositions',
+  quoi: 'Compter les propositions d’une phrase en comptant ses verbes conjugués.',
+  saisie: 'texte',
+  faire(r) {
+    const p = phrasesAssemblees(r, entre(r, 1, 3));
+    return {
+      enonce: `Combien de propositions dans cette phrase ?<br><strong>${p.texte}</strong>`,
+      reponse: String(p.n),
+      aide: 'Une proposition, un verbe conjugué. Comptez les verbes conjugués : ' +
+            'les infinitifs et les participes ne comptent pas.',
+    };
+  }
+},
+{
+  id: 'FR6-AUT-04', discipline: 'francais', niveau: '6e',
+  domaine: 'Grammaire — se repérer dans la phrase complexe', rang: 4, source: 'CLM-FM-002',
+  nom: 'Juxtaposition, coordination, subordination',
+  quoi: 'Nommer la façon dont deux propositions sont articulées.',
+  faire(r) {
+    const p = phrasesAssemblees(r, 2);
+    return {
+      enonce: `Comment ces deux propositions sont-elles reliées ?<br><strong>${p.texte}</strong>`,
+      choix: ['juxtaposition', 'coordination', 'subordination'],
+      reponse: p.lien,
+      aide: 'Rien qu’une virgule : juxtaposition. « mais, ou, et, donc, or, ni, car » : ' +
+            'coordination. Un mot qui rend la seconde dépendante de la première ' +
+            '(« quand », « parce que », « qui », « que ») : subordination. ' +
+            'Attention : « car » coordonne, « parce que » subordonne.',
+    };
+  }
+},
+{
+  id: 'FR6-AUT-05', discipline: 'francais', niveau: '6e',
+  domaine: 'Grammaire — pronoms et antécédents', rang: 5, source: 'CLM-FM-002',
+  nom: 'À qui renvoie ce pronom ?',
+  quoi: 'Mettre un pronom personnel en relation avec son antécédent.',
+  saisie: 'texte',
+  faire(r) {
+    // Trois référents de genres et de nombres tous différents : le pronom
+    // ne peut alors désigner qu'un seul d'entre eux, et l'exercice a une
+    // réponse et une seule.
+    const personnes = {
+      m: [['le facteur', 'facteur'], ['le gardien', 'gardien'], ['le voisin', 'voisin']],
+      f: [['la maîtresse', 'maîtresse'], ['la directrice', 'directrice'], ['la voisine', 'voisine']],
+    };
+    const objets = {
+      m: [['les colis', 'colis'], ['les cahiers', 'cahiers'], ['les cartons', 'cartons']],
+      f: [['les clés', 'clés'], ['les affiches', 'affiches'], ['les enveloppes', 'enveloppes']],
+    };
+    const lieux = {
+      m: [['le placard', 'placard'], ['le comptoir', 'comptoir'], ['le bureau', 'bureau']],
+      // Pas d'élision ici : « l’étagère » cacherait le genre, et l'exercice
+      // porte justement sur le genre et le nombre.
+      f: [['la table', 'table'], ['la vitrine', 'vitrine'], ['la fenêtre', 'fenêtre']],
+    };
+    const gp = r() < 0.5 ? 'm' : 'f';          // genre de la personne
+    const gl = gp === 'm' ? 'f' : 'm';         // le lieu prend l'autre genre
+    const go = r() < 0.5 ? 'm' : 'f';          // le genre de l'objet est libre : il est au pluriel
+    const P = parmi(r, personnes[gp]), O = parmi(r, objets[go]), lieu = parmi(r, lieux[gl]);
+    const cibles = [
+      { ref: P, pron: gp === 'm' ? 'Il' : 'Elle', pl: false },
+      { ref: O, pron: go === 'm' ? 'Ils' : 'Elles', pl: true },
+      { ref: lieu, pron: gl === 'm' ? 'Il' : 'Elle', pl: false },
+    ];
+    const c = parmi(r, cibles);
+    const suite = c.pl ? 'n’ont pas bougé de la journée' : 'n’a pas bougé de la journée';
+    return {
+      enonce: `À qui ou à quoi renvoie le pronom en gras ?<br>` +
+              `<strong>${P[0].charAt(0).toUpperCase() + P[0].slice(1)} a posé ${O[0]} sur ${lieu[0]}. ` +
+              `<em>${c.pron}</em> ${suite}.</strong>`,
+      reponse: c.ref[0],
+      reponses: [c.ref[0], c.ref[1]],
+      aide: `« ${c.pron} » est ${c.pl ? 'au pluriel' : 'au singulier'} et ` +
+            `${/^(Il|Ils)$/.test(c.pron) ? 'masculin' : 'féminin'} : un seul des trois groupes ` +
+            'de la première phrase a ce genre et ce nombre.',
+    };
+  }
+},
 ];
+
+/* Assemble 1, 2 ou 3 propositions, chacune avec un seul verbe conjugué.
+ * Le compte est donc connu par construction, et non deviné après coup. */
+function phrasesAssemblees(r, combien) {
+  const bouts = [
+    'le vent souffle', 'la porte claque', 'les enfants rient', 'le chien aboie',
+    'la lampe s’éteint', 'nous partons', 'le train arrive', 'les feuilles tombent',
+    'la pluie cesse', 'les volets battent', 'le feu crépite', 'la nuit tombe',
+  ];
+  const liens = [
+    { mot: ', ', type: 'juxtaposition' },
+    { mot: ' et ', type: 'coordination' },
+    { mot: ' mais ', type: 'coordination' },
+    { mot: ' car ', type: 'coordination' },
+    { mot: ' quand ', type: 'subordination' },
+    { mot: ' parce que ', type: 'subordination' },
+    { mot: ' pendant que ', type: 'subordination' },
+  ];
+  const choisis = [];
+  while (choisis.length < combien) {
+    const b = parmi(r, bouts);
+    if (!choisis.includes(b)) choisis.push(b);
+  }
+  let texte = choisis[0], lien = null;
+  for (let i = 1; i < choisis.length; i++) {
+    const l = parmi(r, liens);
+    if (i === 1) lien = l.type;
+    texte += l.mot + choisis[i];
+  }
+  texte = texte.charAt(0).toUpperCase() + texte.slice(1) + '.';
+  return { texte, n: combien, lien };
+}
 
 export const parId = id => GENERATEURS.find(g => g.id === id);
 

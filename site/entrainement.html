@@ -101,7 +101,8 @@ function servir() {
              </div>`
           : `<label class="fine" for="rep">Votre réponse</label>
              <div style="display:flex;align-items:center;gap:.5rem">
-               <input id="rep" inputmode="decimal" autocomplete="off"
+               <input id="rep" inputmode="${courant.saisie === 'texte' ? 'text' : 'decimal'}"
+                 autocomplete="off" autocapitalize="off" spellcheck="false"
                  style="flex:1;font-family:var(--serif);font-size:1.2rem;padding:.6rem .8rem;
                         border:1px solid var(--filet);border-radius:4px;
                         background:var(--papier-2);color:var(--encre)">
@@ -140,7 +141,10 @@ function valider(saisie) {
   if (!exo.choix && !String(saisie || '').trim()) return;
   repondu = true;
   const avant = statut(courant.id);          // lu AVANT de noter
-  const ok = exo.choix ? String(saisie).trim() === exo.reponse : juste(saisie, exo.reponse);
+  // « reponses » liste les écritures également justes — « le chat » et
+  // « chat » pour un sujet. À défaut, la réponse canonique fait seule foi.
+  const ok = exo.choix ? String(saisie).trim() === exo.reponse
+                       : juste(saisie, exo.reponses || exo.reponse);
   const st = noter(courant.id, ok);
 
   document.querySelectorAll('#choix button, #btnValider, #rep').forEach(e => {

@@ -2,9 +2,9 @@
 
 **Usage :** décider ce qu'on construit, dans quel ordre, et ce qu'on refuse de construire.
 **État au 9 septembre 2026 :** l'épreuve est faite et jouable (`site/epreuve.html`,
-`site/epreuves.json`) — **dix-neuf séquences, 243 questions**, couvrant les six
-disciplines de la sixième et du CE2. Les **micro-jeux de rôle** le sont aussi
-(`site/microjdr.html`, `site/jdr/`), **dix-neuf scènes**, sous la forme arrêtée par
+`site/epreuves.json`) — **vingt-deux séquences, 275 questions**, couvrant les six
+disciplines de la sixième, le CE2 et l'histoire de 5e. Les **micro-jeux de rôle** le sont aussi
+(`site/microjdr.html`, `site/jdr/`), **vingt-deux scènes**, sous la forme arrêtée par
 l'utilisateur : courtes, **pas identiques entre elles**, et **sans rapport avec
 Valdurne**.
 **Origine :** proposition de l'utilisateur, à partir des modules PIX-pHARe qu'il a écrits
@@ -169,14 +169,14 @@ ce sera **en Python** — Node n'est pas installé sur ce poste.
 
 ## 5. Ce qui reste
 
-Au 9 septembre 2026 : **dix-neuf séquences, 243 questions, dix-neuf scènes** — les six
-disciplines sont couvertes, et `verifier.py` ne signale plus aucun module sans épreuve.
+Au 10 septembre 2026 : **vingt-deux séquences, 275 questions, vingt-deux scènes** — les six
+disciplines de sixième, le CE2 et l'histoire de 5e sont couverts, et `verifier.py` ne signale plus aucun module sans épreuve.
 
-- **Les 61 modules ont leur épreuve**, et chacun est interrogé sur les trois marches —
+- **Les 69 modules ont leur épreuve**, et chacun est interrogé sur les trois marches —
   ce n'était pas le cas au départ : quatre modules pouvaient être déclarés « acquis »
   sans avoir passé une marche, et le contrôle les a nommés.
 - Chaque nouvelle séquence appelle **sa propre scène**, tirée de sa propre discipline.
-  Il n'y a pas de gabarit à recopier, et c'est voulu : les dix-neuf écrites n'ont en commun
+  Il n'y a pas de gabarit à recopier, et c'est voulu : les vingt-deux écrites n'ont en commun
   que leur longueur. Celles du CE2 sont écrites pour des lecteurs de huit ans — une
   chasse au trésor, une lettre de correspondants, le journal de la classe.
 - **Le piège technique, rencontré trois fois** : un guillemet droit à l'intérieur d'un

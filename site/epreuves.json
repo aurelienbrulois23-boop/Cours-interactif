@@ -623,6 +623,552 @@
       ]
     },
     {
+      "id": "EP-H5-A",
+      "discipline": "histoire",
+      "niveau": "5e",
+      "rang": 1,
+      "titre": "Les guillemets et la voix off",
+      "sequence": "Thème 1 — Chrétientés et islam, des mondes en contact",
+      "modules": [
+        "H5-01",
+        "H5-02"
+      ],
+      "duree": "10 min",
+      "jdr": "jdr/JDR-H5-A.json",
+      "items": [
+        {
+          "id": "EP-H5-A-01",
+          "palier": "rappel",
+          "module": "H5-01",
+          "ref": "CLM-H5-001",
+          "enonce": "Éginhard écrit que Charlemagne « affirmait » n'avoir pas voulu entrer dans l'église s'il avait su. Qu'est-ce que cela établit ?",
+          "options": [
+            "Que Charlemagne ne voulait pas être empereur.",
+            "Qu'à la cour, trente ans après, on racontait qu'il ne l'avait pas voulu.",
+            "Que le pape a agi contre la volonté du roi.",
+            "Que Charlemagne mentait."
+          ],
+          "juste": 1,
+          "pourquoi": "Les guillemets. Une parole rapportée établit qu'on l'a rapportée, pas qu'elle a été dite ni qu'elle était sincère. Éginhard écrit après la mort du roi, pour sa famille : on sait ce qu'on racontait, pas ce que le roi pensait — et « il mentait » va aussi loin dans l'autre sens."
+        },
+        {
+          "id": "EP-H5-A-02",
+          "palier": "rappel",
+          "module": "H5-02",
+          "ref": "CLM-H5-002",
+          "enonce": "Ousâma annonce « une preuve de la dureté des Francs ». Que raconte-t-il ensuite ?",
+          "options": [
+            "Des Francs qui le chassent de la mosquée.",
+            "Un nouveau venu qui l'agresse, et des Templiers qui le protègent deux fois et s'excusent.",
+            "Des Templiers qui l'obligent à prier vers l'orient.",
+            "Rien : il ne donne aucun exemple."
+          ],
+          "juste": 1,
+          "pourquoi": "La voix off. Le commentaire dit « dureté » ; les gestes montrent une agression par un seul homme et une protection répétée. Coupez la voix off, listez les gestes avec leurs auteurs : c'est là que sont les faits."
+        },
+        {
+          "id": "EP-H5-A-03",
+          "palier": "discrimination",
+          "module": "H5-01",
+          "ref": "CLM-H5-001",
+          "enonce": "Le chapitre 28 parle de la « jalousie des empereurs romains ». De qui s'agit-il, et que peut-on en tirer ?",
+          "options": [
+            "Des empereurs de Rome, mécontents du pape.",
+            "Des empereurs de Constantinople : le texte établit qu'ils contestèrent le titre — vu depuis la cour franque.",
+            "De Charlemagne lui-même.",
+            "D'empereurs imaginaires."
+          ],
+          "juste": 1,
+          "pourquoi": "Constantinople se nommait Empire romain, et le mot « byzantin » viendra bien plus tard. La contestation du titre est établie ; le mot « jalousie », lui, est d'Éginhard, et il faudrait une source de Constantinople pour savoir comment eux le disaient."
+        },
+        {
+          "id": "EP-H5-A-04",
+          "palier": "discrimination",
+          "module": "H5-02",
+          "ref": "CLM-H5-002",
+          "enonce": "« Il n'est personne parmi ceux qui habitent de fraîche date les territoires des Francs qui ne se montre plus inhumain que ses prédécesseurs. » Qu'est-ce que cette phrase établit ?",
+          "options": [
+            "Que tous les Francs étaient inhumains.",
+            "Qu'un émir du XIIe siècle distinguait les Francs installés des nouveaux venus, et jugeait les seconds pires.",
+            "Que les Francs installés étaient devenus musulmans.",
+            "Que les nouveaux venus étaient plus nombreux."
+          ],
+          "juste": 1,
+          "pourquoi": "Ce que la phrase établit, c'est une distinction faite par un témoin, et elle est précieuse : elle dit que le contact change les gens, et que l'auteur le voyait. Elle ne compte personne et ne convertit personne."
+        },
+        {
+          "id": "EP-H5-A-05",
+          "groupe": "H5-01-T",
+          "palier": "transfert",
+          "module": "H5-01",
+          "ref": "CLM-H5-001",
+          "enonce": "Un article titre : « Le ministre aurait dit qu'il démissionnerait. » Que font les guillemets ?",
+          "options": [
+            "Ils concluent que le ministre va démissionner.",
+            "Ils demandent qui rapporte cette phrase, et ce qu'il gagne à ce qu'on la croie.",
+            "Ils concluent que c'est faux.",
+            "Ils demandent la date de la démission."
+          ],
+          "juste": 1,
+          "pourquoi": "Le conditionnel « aurait dit » est le « affirmait-il » d'aujourd'hui. Il faut trouver qui tient les guillemets — une source anonyme, un rival, un proche — avant de tenir la phrase pour dite. Conclure qu'elle est fausse va aussi vite que conclure qu'elle est vraie."
+        },
+        {
+          "id": "EP-H5-A-05b",
+          "groupe": "H5-01-T",
+          "palier": "transfert",
+          "module": "H5-01",
+          "ref": "CLM-H5-001",
+          "enonce": "Un ami vous dit, en face : « j'ai froid ». Faut-il chercher qui tient les guillemets ?",
+          "options": [
+            "Oui : toute parole est rapportée.",
+            "Non : il parle en son nom, devant vous ; il n'y a aucun intermédiaire à chercher.",
+            "Oui, pour savoir s'il ment.",
+            "Non : les guillemets ne valent que pour les textes anciens."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert quand quelqu'un rapporte la parole d'un autre. Ici personne ne rapporte : la parole est directe. Le dégainer partout revient à soupçonner tout le monde — et la dernière réponse se trompe de raison : les guillemets voyagent très bien jusqu'au journal de ce matin."
+        },
+        {
+          "id": "EP-H5-A-06",
+          "groupe": "H5-02-T",
+          "palier": "transfert",
+          "module": "H5-02",
+          "ref": "CLM-H5-002",
+          "enonce": "Un documentaire dit « un quartier abandonné » pendant que l'image montre un marché plein. Que fait la voix off ?",
+          "options": [
+            "Elle croit le commentaire : c'est lui qui explique.",
+            "Elle regarde l'image, note l'écart, et se demande pourquoi le commentaire dit autre chose.",
+            "Elle conclut que l'image est truquée.",
+            "Elle éteint le son."
+          ],
+          "juste": 1,
+          "pourquoi": "Les images renseignent sur ce qui a été filmé ; l'écart renseigne sur celui qui commente. « Truquée » va trop vite : l'image peut être vraie et le commentaire faux — c'est même le cas ordinaire."
+        },
+        {
+          "id": "EP-H5-A-06b",
+          "groupe": "H5-02-T",
+          "palier": "transfert",
+          "module": "H5-02",
+          "ref": "CLM-H5-002",
+          "enonce": "Un bulletin dit « élève sérieux » et relève trois devoirs non rendus. Que fait la voix off ?",
+          "options": [
+            "Elle retient « sérieux ».",
+            "Elle regarde les faits — trois devoirs non rendus — et cherche ce que l'écart dit de celui qui écrit.",
+            "Elle conclut que le professeur se trompe.",
+            "Elle conclut que l'élève ment."
+          ],
+          "juste": 1,
+          "pourquoi": "Le commentaire et les faits divergent ; les faits renseignent sur ce qui s'est passé, l'écart sur l'intention de celui qui commente — indulgence, encouragement, ou inattention. Aucune des deux conclusions extrêmes ne se tire de l'écart seul."
+        }
+      ]
+    },
+    {
+      "id": "EP-H5-B",
+      "discipline": "histoire",
+      "niveau": "5e",
+      "rang": 2,
+      "titre": "Les petites lignes, l'amende partagée et le raccourci",
+      "sequence": "Thème 2 — Société, Église et pouvoir politique dans l'Occident féodal",
+      "modules": [
+        "H5-03",
+        "H5-04",
+        "H5-05"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-H5-B.json",
+      "items": [
+        {
+          "id": "EP-H5-B-01",
+          "palier": "rappel",
+          "module": "H5-03",
+          "ref": "CLM-H5-003",
+          "enonce": "Que proclame Louis X en 1315, et que fait-il ?",
+          "options": [
+            "Il abolit le servage dans tout le royaume.",
+            "Il proclame que chacun doit naître franc, et charge deux officiers de vendre des affranchissements sur son domaine.",
+            "Il interdit aux seigneurs d'avoir des serfs.",
+            "Il affranchit gratuitement les serfs de Senlis."
+          ],
+          "juste": 1,
+          "pourquoi": "Les petites lignes. Le principe est en haut ; plus bas : seulement le domaine royal, seulement ceux qui le demandent, contre « suffisante récompensation ». Les autres seigneurs sont invités à prendre exemple, ce qui n'oblige à rien."
+        },
+        {
+          "id": "EP-H5-B-02",
+          "palier": "rappel",
+          "module": "H5-04",
+          "ref": "CLM-H5-004",
+          "enonce": "À Paris vers 1268, qui perçoit les amendes des tisserands ?",
+          "options": [
+            "Le roi seul.",
+            "Le métier seul.",
+            "Moitié le roi, moitié les maîtres et jurés du métier.",
+            "La ville."
+          ],
+          "juste": 2,
+          "pourquoi": "L'amende partagée : celui qui encaisse commande, et deux à encaisser font deux à commander. La ville libère du seigneur, pas du roi ni du métier."
+        },
+        {
+          "id": "EP-H5-B-03",
+          "palier": "rappel",
+          "module": "H5-05",
+          "ref": "CLM-H5-005",
+          "enonce": "Dans la scène de Joinville, que fait le roi une fois les parties devant lui ?",
+          "options": [
+            "Il juge chaque affaire lui-même.",
+            "Il appelle deux juges et leur dit : « délivrez-moi ces parties ».",
+            "Il renvoie les parties devant leur seigneur.",
+            "Il refuse de juger sous un arbre."
+          ],
+          "juste": 1,
+          "pourquoi": "Le raccourci. L'image est celle d'un roi accessible ; le fait, dans l'image, est celui de deux juges royaux — Pierre de Fontaines et Geoffroi de Villette. L'État, c'est le chemin direct confié à des hommes au roi."
+        },
+        {
+          "id": "EP-H5-B-04",
+          "palier": "discrimination",
+          "module": "H5-03",
+          "ref": "CLM-H5-003",
+          "enonce": "L'éditeur de 1723 note que ces lettres mentionnent « une ordonnance qu'on n'a pas ». Qu'est-ce que cela change ?",
+          "options": [
+            "Rien : les lettres suffisent.",
+            "Qu'on ne connaît la mesure générale que par une commission locale : ce qu'elle disait ailleurs n'est pas établi.",
+            "Que les lettres sont fausses.",
+            "Que l'ordonnance n'a jamais existé."
+          ],
+          "juste": 1,
+          "pourquoi": "Une pièce perdue laisse un trou qu'on ne bouche pas avec la pièce qui reste. Les lettres établissent ce qui fut ordonné pour Senlis — et une pareille pour Caen ; le reste est hors de portée, ni faux ni prouvé."
+        },
+        {
+          "id": "EP-H5-B-05",
+          "palier": "discrimination",
+          "module": "H5-04",
+          "ref": "CLM-H5-004",
+          "enonce": "Le Livre des métiers ne parle pas des ouvriers qui n'étaient pas maîtres. Que peut-on en conclure ?",
+          "options": [
+            "Qu'il n'y en avait pas.",
+            "Rien sur eux : le règlement ne donne de page qu'à ceux qui ont un statut.",
+            "Qu'ils étaient bien traités.",
+            "Qu'ils étaient tous fils de maîtres."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est le tamis de sixième, appliqué à un règlement : ce qui n'a pas de statut n'a pas de page. Le silence de la source n'est pas l'absence des gens — c'est la limite de ce que cette source-là peut dire."
+        },
+        {
+          "id": "EP-H5-B-06",
+          "palier": "discrimination",
+          "module": "H5-05",
+          "ref": "CLM-H5-005",
+          "enonce": "Joinville écrit « le bon saint » et « maintes fois ai vu ». Que faut-il en tirer ?",
+          "options": [
+            "Que le récit est faux.",
+            "Qu'il écrit après la canonisation, en témoin — deux choses à tenir ensemble : il a vu, et il raconte pour un roi saint.",
+            "Qu'il était présent à chaque séance.",
+            "Que le roi était vraiment un saint."
+          ],
+          "juste": 1,
+          "pourquoi": "Le train et les guillemets, ensemble. Témoin, mais cinquante ans après et pour l'héritier d'un saint : le récit vaut par les faits qu'il contient et que l'auteur n'avait pas besoin d'inventer — deux juges nommés, au milieu de l'image."
+        },
+        {
+          "id": "EP-H5-B-07",
+          "groupe": "H5-03-T",
+          "palier": "transfert",
+          "module": "H5-03",
+          "ref": "CLM-H5-003",
+          "enonce": "Une publicité annonce « Internet illimité* », et l'astérisque renvoie à « dans la limite de 50 Go ». Que font les petites lignes ?",
+          "options": [
+            "Elles retiennent « illimité ».",
+            "Elles lisent l'astérisque d'abord : la promesse a la taille de la note.",
+            "Elles concluent que la publicité est illégale.",
+            "Elles comparent avec un autre opérateur."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste de 1315, tel quel : le principe en gros, les conditions en petit. Ce qui va se passer est dans la note. Comparer est une bonne idée — après avoir lu les notes des deux offres."
+        },
+        {
+          "id": "EP-H5-B-07b",
+          "groupe": "H5-03-T",
+          "palier": "transfert",
+          "module": "H5-03",
+          "ref": "CLM-H5-003",
+          "enonce": "Un panneau indique « Sortie de secours ». Faut-il chercher les petites lignes ?",
+          "options": [
+            "Oui : tout texte en a.",
+            "Non : ce panneau ne proclame rien, il désigne — et chercher des conditions ferait perdre le temps qui manque.",
+            "Oui : la sortie est peut-être fermée la nuit.",
+            "Non : les petites lignes ne valent que pour les contrats."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant un texte qui proclame et conditionne. Un panneau qui désigne ne proclame rien. Le sortir partout finit par ralentir sans rien sécuriser — et la dernière réponse se trompe de raison : les petites lignes valent pour une loi, une publicité, un règlement."
+        },
+        {
+          "id": "EP-H5-B-08",
+          "groupe": "H5-04-T",
+          "palier": "transfert",
+          "module": "H5-04",
+          "ref": "CLM-H5-004",
+          "enonce": "Un règlement de collège : les sanctions sont prononcées par les professeurs et inscrites dans un registre tenu par la vie scolaire. Que fait l'amende partagée ?",
+          "options": [
+            "Elle conclut que la vie scolaire commande seule.",
+            "Elle regarde qui prononce et qui enregistre, et cherche s'il y a deux pouvoirs qui tiennent la règle ensemble.",
+            "Elle compte les sanctions.",
+            "Elle conclut que le règlement est injuste."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste voyage : dans un règlement, cherchez qui décide et qui tient la trace. La sanction dit qui prononce ; le registre dit qui garde ; s'ils sont deux, ils sont deux à tenir la règle — comme le roi et les jurés."
+        },
+        {
+          "id": "EP-H5-B-08b",
+          "groupe": "H5-04-T",
+          "palier": "transfert",
+          "module": "H5-04",
+          "ref": "CLM-H5-004",
+          "enonce": "Dans un tournoi, les frais d'inscription vont pour moitié à l'organisateur et pour moitié aux gagnants. Que dit l'amende partagée ?",
+          "options": [
+            "Que l'organisateur ne commande pas.",
+            "Que le partage dit qui tient le tournoi : ceux qui encaissent — et ici, les joueurs en font partie.",
+            "Que le tournoi est truqué.",
+            "Que les frais sont trop élevés."
+          ],
+          "juste": 1,
+          "pourquoi": "Un partage d'argent est un partage de pouvoir écrit en chiffres. Rien d'anormal à cela ; ce que l'outil demande, c'est de le lire avant de s'inscrire."
+        },
+        {
+          "id": "EP-H5-B-09",
+          "groupe": "H5-05-T",
+          "palier": "transfert",
+          "module": "H5-05",
+          "ref": "CLM-H5-005",
+          "enonce": "Une entreprise crée une adresse pour écrire directement au directeur. Que dit le raccourci ?",
+          "options": [
+            "Que le directeur va tout lire lui-même.",
+            "Qu'un pouvoir ouvre un chemin direct par-dessus les intermédiaires — et qu'il faut voir qui, en réalité, lit ces messages.",
+            "Que les intermédiaires ont disparu.",
+            "Que c'est de la publicité."
+          ],
+          "juste": 1,
+          "pourquoi": "Le roi sous le chêne, tel quel : le chemin direct est réel, et ce sont deux juges qui règlent les causes. Demandez quel intermédiaire est contourné, et qui prend sa place au bout du raccourci."
+        },
+        {
+          "id": "EP-H5-B-09b",
+          "groupe": "H5-05-T",
+          "palier": "transfert",
+          "module": "H5-05",
+          "ref": "CLM-H5-005",
+          "enonce": "Vous demandez à votre voisin de table de vous passer une règle. Le raccourci s'applique-t-il ?",
+          "options": [
+            "Oui : vous contournez le professeur.",
+            "Non : il n'y a ni pouvoir ni intermédiaire contourné — l'outil n'a rien à voir ici.",
+            "Oui : le voisin est un intermédiaire.",
+            "Non : le raccourci ne vaut qu'au Moyen Âge."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant un acte de pouvoir qui contourne quelqu'un. Passer une règle n'est pas un acte de pouvoir. Un outil qu'on applique à tout finit par voir des rois partout — et la dernière réponse se trompe de raison : le raccourci voyage très bien jusqu'à aujourd'hui."
+        }
+      ]
+    },
+    {
+      "id": "EP-H5-C",
+      "discipline": "histoire",
+      "niveau": "5e",
+      "rang": 3,
+      "titre": "L'en-tête, la ligne de partage et les lunettes",
+      "sequence": "Thème 3 — Transformations de l'Europe et ouverture sur le monde",
+      "modules": [
+        "H5-06",
+        "H5-07",
+        "H5-08"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-H5-C.json",
+      "items": [
+        {
+          "id": "EP-H5-C-01",
+          "palier": "rappel",
+          "module": "H5-06",
+          "ref": "CLM-H5-006",
+          "enonce": "Dans la lettre de 1526, comment Soliman nomme-t-il François Ier ?",
+          "options": [
+            "« Mon frère l'empereur ».",
+            "« François, roi du pays de France ».",
+            "« Le roi très chrétien ».",
+            "Il ne le nomme pas."
+          ],
+          "juste": 1,
+          "pourquoi": "L'en-tête. Vingt lignes pour se nommer — sultan des sultans, distributeur des couronnes —, une pour l'autre : « roi du pays de France ». C'est là que le sultan dit où il place chacun."
+        },
+        {
+          "id": "EP-H5-C-02",
+          "palier": "rappel",
+          "module": "H5-07",
+          "ref": "CLM-H5-007",
+          "enonce": "Que permet l'article VI de l'édit de Nantes, et que restreint l'article XIII ?",
+          "options": [
+            "VI : le culte partout ; XIII : la conscience seulement quelque part.",
+            "VI : vivre partout sans être inquiété pour sa conscience ; XIII : aucun culte public hors des lieux permis.",
+            "Les deux permettent tout.",
+            "Les deux interdisent tout."
+          ],
+          "juste": 1,
+          "pourquoi": "La ligne de partage : la conscience partout, le culte quelque part. Un texte de tolérance ne dit pas « oui », il trace une ligne — et c'est elle qui dit ce qu'il accorde."
+        },
+        {
+          "id": "EP-H5-C-03",
+          "palier": "rappel",
+          "module": "H5-08",
+          "ref": "CLM-H5-008",
+          "enonce": "Que vise l'article 111 de Villers-Cotterêts, d'après son propre texte ?",
+          "options": [
+            "Les langues régionales.",
+            "Le latin des tribunaux : le texte parle « des mots latins ».",
+            "L'anglais.",
+            "Toutes les langues sauf le français de Paris."
+          ],
+          "juste": 1,
+          "pourquoi": "Les lunettes. Le mot « latin » est dans l'article ; le mot « régional » n'y est pas. La lecture régionale vient de plus tard — elle n'est ni fausse ni prouvée par ces lignes."
+        },
+        {
+          "id": "EP-H5-C-04",
+          "palier": "discrimination",
+          "module": "H5-06",
+          "ref": "CLM-H5-006",
+          "enonce": "La lettre de Soliman résume la demande de François Ier. Que sait-on de la lettre de François ?",
+          "options": [
+            "Son texte exact.",
+            "Seulement ce que le sultan en dit — et rien des « communications verbales » de l'agent.",
+            "Qu'elle proposait une alliance militaire.",
+            "Qu'elle était écrite en turc."
+          ],
+          "juste": 1,
+          "pourquoi": "On connaît la demande par la réponse. L'essentiel a peut-être été dit de vive voix par Frangipani, et il n'en reste rien. La pièce établit ce que le sultan a écrit, pas ce que le roi avait demandé."
+        },
+        {
+          "id": "EP-H5-C-05",
+          "palier": "discrimination",
+          "module": "H5-07",
+          "ref": "CLM-H5-007",
+          "enonce": "L'édit nomme la religion tolérée « prétendue réformée ». Qu'est-ce que cela apprend ?",
+          "options": [
+            "Que le roi était protestant.",
+            "Que le texte tolère sans reconnaître : il accorde des droits à une religion qu'il nomme comme une erreur.",
+            "Que l'édit est un faux.",
+            "Que les protestants avaient choisi ce nom."
+          ],
+          "juste": 1,
+          "pourquoi": "Le vocabulaire est celui de celui qui accorde, pas de celui qui reçoit. Tolérer n'est pas reconnaître, et le mot le dit à chaque article."
+        },
+        {
+          "id": "EP-H5-C-06",
+          "palier": "discrimination",
+          "module": "H5-08",
+          "ref": "CLM-H5-008",
+          "enonce": "Dire que Villers-Cotterêts visait les langues régionales, c'est :",
+          "options": [
+            "une erreur prouvée,",
+            "une lecture postérieure, que le texte ne contient pas et que d'autres pièces devraient soutenir,",
+            "ce que dit l'article 111,",
+            "une certitude des historiens."
+          ],
+          "juste": 1,
+          "pourquoi": "Ni fausse ni prouvée par ces deux articles. Les historiens en discutent, et la discussion demande d'autres sources — ce que les tribunaux du Midi écrivaient avant 1539, par exemple. Le module retire les lunettes ; il ne tranche pas."
+        },
+        {
+          "id": "EP-H5-C-07",
+          "groupe": "H5-06-T",
+          "palier": "transfert",
+          "module": "H5-06",
+          "ref": "CLM-H5-006",
+          "enonce": "Une lettre commence par « Le Directeur général » en gros caractères, et s'adresse à « Madame, Monsieur ». Que fait l'en-tête ?",
+          "options": [
+            "Il conclut que la lettre est importante.",
+            "Il note où l'expéditeur se place et où il place le lecteur, avant de lire le contenu.",
+            "Il jette la lettre.",
+            "Il cherche la signature."
+          ],
+          "juste": 1,
+          "pourquoi": "Un titre long en face d'un titre court : la carte du monde vue d'un seul côté. Le geste de 1526, tel quel — et il faut ensuite vérifier si le contenu tient la promesse de l'en-tête."
+        },
+        {
+          "id": "EP-H5-C-07b",
+          "groupe": "H5-06-T",
+          "palier": "transfert",
+          "module": "H5-06",
+          "ref": "CLM-H5-006",
+          "enonce": "Un message d'un camarade commence par « Salut ». Faut-il lire l'en-tête ?",
+          "options": [
+            "Oui : toujours.",
+            "Il n'y en a pas : un message entre égaux n'a pas de titulature, et l'outil n'a rien à lire.",
+            "Oui : « Salut » est un titre.",
+            "Non : l'en-tête ne vaut que pour les sultans."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant un courrier où quelqu'un se place. Entre égaux, il n'y a pas d'en-tête, et en chercher un revient à voir des hiérarchies partout. La dernière réponse se trompe de raison : l'en-tête voyage jusqu'au courrier administratif d'aujourd'hui."
+        },
+        {
+          "id": "EP-H5-C-08",
+          "groupe": "H5-07-T",
+          "palier": "transfert",
+          "module": "H5-07",
+          "ref": "CLM-H5-007",
+          "enonce": "Un règlement de piscine : bonnet obligatoire partout, plongeons autorisés seulement dans le grand bassin. Que fait la ligne de partage ?",
+          "options": [
+            "Elle conclut que la piscine est stricte.",
+            "Elle range — permis partout, permis quelque part — et note ce que la restriction dit de ce qu'on redoutait.",
+            "Elle conclut que les plongeons sont interdits.",
+            "Elle demande le prix de l'entrée."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste de l'édit sur un règlement d'aujourd'hui : ce qui est repoussé dans un seul lieu est ce qu'on ne voulait pas voir ailleurs. La ligne dit ce que le texte accorde, et ce qu'il craint."
+        },
+        {
+          "id": "EP-H5-C-08b",
+          "groupe": "H5-07-T",
+          "palier": "transfert",
+          "module": "H5-07",
+          "ref": "CLM-H5-007",
+          "enonce": "Une consigne : « Interdiction de fumer dans tout l'établissement. » La ligne de partage s'applique-t-elle ?",
+          "options": [
+            "Oui : il y a forcément un lieu permis.",
+            "Non : il n'y a pas de ligne — la règle est uniforme, et c'est justement ce que l'outil constate.",
+            "Oui : dehors, c'est permis.",
+            "Non : la ligne ne vaut que pour les religions."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil cherche une ligne entre partout et quelque part. Quand la règle est la même partout, il n'y en a pas, et c'est un résultat : on a changé de genre de texte. La dernière réponse se trompe de raison : la ligne de partage voyage jusqu'à un règlement de piscine."
+        },
+        {
+          "id": "EP-H5-C-09",
+          "groupe": "H5-08-T",
+          "palier": "transfert",
+          "module": "H5-08",
+          "ref": "CLM-H5-008",
+          "enonce": "Un texte de 1789 parle de « la nation ». Que font les lunettes ?",
+          "options": [
+            "Elles lisent « nation » comme aujourd'hui.",
+            "Elles demandent ce que le mot voulait dire en 1789, contre quoi, et pour qui.",
+            "Elles concluent que le mot n'existait pas.",
+            "Elles remplacent le mot par « peuple »."
+          ],
+          "juste": 1,
+          "pourquoi": "Le mot a voyagé deux siècles et n'est pas arrivé intact. Retirer les lunettes, c'est demander ce qu'il désignait à sa date — pas ce que nous y mettons."
+        },
+        {
+          "id": "EP-H5-C-09b",
+          "groupe": "H5-08-T",
+          "palier": "transfert",
+          "module": "H5-08",
+          "ref": "CLM-H5-008",
+          "enonce": "Un mode d'emploi de 2024 dit « brancher l'appareil ». Faut-il retirer les lunettes ?",
+          "options": [
+            "Oui : tout texte est ancien.",
+            "Non : le texte est de notre époque et ses mots sont les nôtres — il n'y a aucune distance à franchir.",
+            "Oui : « brancher » a changé de sens.",
+            "Non : les lunettes ne valent que pour le XVIe siècle."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert quand une distance sépare les mots du texte des nôtres. Sans distance, il n'y a rien à retirer, et douter de « brancher » fait perdre son temps. La dernière réponse se trompe de raison : les lunettes servent pour 1789 comme pour 1539."
+        }
+      ]
+    },
+    {
       "id": "EP-G6-A",
       "discipline": "geographie",
       "niveau": "6e",

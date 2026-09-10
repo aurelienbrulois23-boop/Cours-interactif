@@ -1169,6 +1169,552 @@
       ]
     },
     {
+      "id": "EP-H4-A",
+      "discipline": "histoire",
+      "niveau": "4e",
+      "rang": 1,
+      "titre": "Le panneau, le privilège et les absents",
+      "sequence": "Thème 1 — Le XVIIIe siècle : expansions, Lumières et révolutions",
+      "modules": [
+        "H4-01",
+        "H4-02",
+        "H4-03"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-H4-A.json",
+      "items": [
+        {
+          "id": "EP-H4-A-01",
+          "palier": "rappel",
+          "module": "H4-01",
+          "ref": "CLM-H4-001",
+          "enonce": "L'article XLII du Code noir défend aux maîtres de torturer leurs esclaves. Qu'est-ce que cet article établit ?",
+          "options": [
+            "Que les esclaves étaient protégés de la torture.",
+            "Que des maîtres torturaient, puisqu'il a fallu l'interdire.",
+            "Que la torture était rare.",
+            "Que les maîtres étaient bienveillants."
+          ],
+          "juste": 1,
+          "pourquoi": "Le panneau. On n'interdit pas ce que personne ne fait : chaque « défendons » atteste une pratique. La protection, elle, n'est pas établie — elle est ordonnée, et l'ordre ne dit pas s'il fut suivi."
+        },
+        {
+          "id": "EP-H4-A-02",
+          "palier": "rappel",
+          "module": "H4-02",
+          "ref": "CLM-H4-002",
+          "enonce": "« Aucun homme n'a reçu de la nature le droit de commander aux autres » a été imprimé en 1751 :",
+          "options": [
+            "clandestinement, à l'étranger,",
+            "à Paris, dans un ouvrage portant approbation et privilège du roi,",
+            "dans un pamphlet anonyme brûlé aussitôt,",
+            "après la Révolution."
+          ],
+          "juste": 1,
+          "pourquoi": "Le privilège. Le tome I de l'Encyclopédie est paru autorisé, et l'ouvrage fut interdit ensuite. Ce qu'un pouvoir laisse imprimer dit jusqu'où il laisse aller ; ce qu'il interdit après dit où était la ligne."
+        },
+        {
+          "id": "EP-H4-A-03",
+          "palier": "rappel",
+          "module": "H4-03",
+          "ref": "CLM-H4-003",
+          "enonce": "Où se trouvent les exclusions de la Déclaration de 1789 — femmes, esclaves, citoyens passifs ?",
+          "options": [
+            "Dans son article 1er.",
+            "Dans les textes qui l'ont suivie, pas dans la Déclaration.",
+            "Dans son préambule.",
+            "Nulle part : personne n'était exclu."
+          ],
+          "juste": 1,
+          "pourquoi": "Les absents. Le texte est universel dans ses mots et n'exclut personne ; c'est la Constitution de 1791, le maintien de l'esclavage colonial, le refus du vote des femmes qui décident — à côté. Un texte universel peut être partiel dans son monde."
+        },
+        {
+          "id": "EP-H4-A-04",
+          "palier": "discrimination",
+          "module": "H4-01",
+          "ref": "CLM-H4-001",
+          "enonce": "Le Code noir ordonne le baptême des esclaves (art. II) et les déclare meubles (art. XLIV). Que faut-il en tirer ?",
+          "options": [
+            "Que le texte se contredit par erreur.",
+            "Que le même texte donne une âme et retire la personne : c'est la chose elle-même, pas une maladresse.",
+            "Que l'article II annule l'article XLIV.",
+            "Que les esclaves n'étaient pas vraiment des meubles."
+          ],
+          "juste": 1,
+          "pourquoi": "Les deux articles sont en vigueur ensemble, à quarante articles d'écart. Lire l'un sans l'autre adoucit ou durcit ; les lire ensemble dit ce qu'était l'esclavage colonial dans le droit du roi."
+        },
+        {
+          "id": "EP-H4-A-05",
+          "palier": "discrimination",
+          "module": "H4-02",
+          "ref": "CLM-H4-002",
+          "enonce": "Le privilège du roi sur le tome I de l'Encyclopédie établit :",
+          "options": [
+            "que le roi approuvait l'article « Autorité politique »,",
+            "qu'on a laissé passer le tome — pas qu'on en approuvait chaque page,",
+            "que la censure n'existait pas en 1751,",
+            "que Diderot était protégé du roi."
+          ],
+          "juste": 1,
+          "pourquoi": "Un privilège est une permission d'imprimer donnée après lecture d'un censeur qui n'a pas tout lu avec la même attention. Il dit qu'on a laissé passer. L'interdiction de 1752 dit le reste."
+        },
+        {
+          "id": "EP-H4-A-06",
+          "palier": "discrimination",
+          "module": "H4-03",
+          "ref": "CLM-H4-003",
+          "enonce": "« Les distinctions sociales ne peuvent être fondées que sur l'utilité commune. » Cette phrase de l'article 1er :",
+          "options": [
+            "abolit toutes les différences entre les citoyens,",
+            "admet des différences, à condition qu'elles se justifient,",
+            "rétablit les privilèges de la noblesse,",
+            "ne veut rien dire de précis."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est la petite ligne de la Déclaration : les distinctions existent, elles doivent se fonder sur autre chose que la naissance. Ni abolition ni retour en arrière — une condition."
+        },
+        {
+          "id": "EP-H4-A-07",
+          "groupe": "H4-01-T",
+          "palier": "transfert",
+          "module": "H4-01",
+          "ref": "CLM-H4-001",
+          "enonce": "Un règlement de piscine interdit de courir sur les bords. Que dit le panneau ?",
+          "options": [
+            "Que personne ne court.",
+            "Que des gens courent, et qu'on a vu ce que cela donnait.",
+            "Que la piscine est dangereuse.",
+            "Que le règlement est inutile."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste du Code noir sur un règlement d'aujourd'hui : un interdit est planté là où l'on a vu passer. Il atteste la pratique ; il n'atteste pas sa fin."
+        },
+        {
+          "id": "EP-H4-A-07b",
+          "groupe": "H4-01-T",
+          "palier": "transfert",
+          "module": "H4-01",
+          "ref": "CLM-H4-001",
+          "enonce": "Un panneau de chantier : « Port du casque obligatoire ». Le panneau s'applique-t-il ?",
+          "options": [
+            "Oui : on a vu des gens sans casque.",
+            "Oui, et l'outil dit la même chose : une obligation atteste ce qu'on a vu manquer.",
+            "Non : ce n'est pas une interdiction.",
+            "Non : le panneau ne vaut que pour les lois anciennes."
+          ],
+          "juste": 1,
+          "pourquoi": "Une obligation est un interdit retourné — « défense d'être sans casque ». L'outil s'applique : on n'oblige pas à ce que tout le monde fait déjà. La troisième réponse s'arrête à la forme ; la dernière se trompe de raison."
+        },
+        {
+          "id": "EP-H4-A-08",
+          "groupe": "H4-02-T",
+          "palier": "transfert",
+          "module": "H4-02",
+          "ref": "CLM-H4-002",
+          "enonce": "Une vidéo critique reste en ligne sur une plateforme qui modère ses contenus. Que dit le privilège ?",
+          "options": [
+            "Que la plateforme approuve la critique.",
+            "Qu'on l'a laissée passer — et que ce qu'on retire ensuite dira où est la ligne.",
+            "Que la modération n'existe pas.",
+            "Que la vidéo est vraie."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste de 1751 : autorisé n'est pas approuvé. Ce qu'un pouvoir laisse passer dit jusqu'où il laisse aller ; ce qu'il retire dit où était la ligne. La dernière réponse confond deux questions sans rapport."
+        },
+        {
+          "id": "EP-H4-A-08b",
+          "groupe": "H4-02-T",
+          "palier": "transfert",
+          "module": "H4-02",
+          "ref": "CLM-H4-002",
+          "enonce": "Un ami vous prête un livre qu'il a aimé. Faut-il chercher le privilège ?",
+          "options": [
+            "Oui : tout livre en a un.",
+            "Non : il n'y a pas de pouvoir qui autorise ici, seulement un ami qui recommande — l'outil n'a rien à lire.",
+            "Oui, pour savoir s'il est censuré.",
+            "Non : le privilège ne vaut qu'avant 1789."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant une autorisation donnée par un pouvoir. Un prêt entre amis n'en est pas une. Le dégainer partout revient à voir des censeurs partout — et la dernière réponse se trompe de raison : le privilège voyage jusqu'à la modération d'aujourd'hui."
+        },
+        {
+          "id": "EP-H4-A-09",
+          "groupe": "H4-03-T",
+          "palier": "transfert",
+          "module": "H4-03",
+          "ref": "CLM-H4-003",
+          "enonce": "Un règlement intérieur commence par « tous les élèves ont droit au respect ». Que font les absents ?",
+          "options": [
+            "Ils concluent que le règlement est complet.",
+            "Ils cherchent, dans les articles suivants, qui est effectivement compté — et qui ne l'est pas.",
+            "Ils concluent que « tous » est un mensonge.",
+            "Ils comptent les élèves."
+          ],
+          "juste": 1,
+          "pourquoi": "Un « tous » se vérifie dans ce qui suit. Ni mensonge ni complétude : la liste des absents se fait à côté du texte, dans les articles qui appliquent."
+        },
+        {
+          "id": "EP-H4-A-09b",
+          "groupe": "H4-03-T",
+          "palier": "transfert",
+          "module": "H4-03",
+          "ref": "CLM-H4-003",
+          "enonce": "Une liste nominative des vingt-six élèves d'une classe. Les absents s'appliquent-ils ?",
+          "options": [
+            "Oui : il manque peut-être quelqu'un.",
+            "Non : l'outil cherche qui se cache derrière un « tous » ; une liste nominative n'a pas de « tous », elle nomme.",
+            "Oui : toute liste a des absents.",
+            "Non : les absents ne valent que pour 1789."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant un mot général qui ne dit pas qui il couvre. Une liste de noms dit exactement qui elle couvre : il n'y a rien à deviner. La dernière réponse se trompe de raison : les absents voyagent jusqu'au règlement d'aujourd'hui."
+        }
+      ]
+    },
+    {
+      "id": "EP-H4-B",
+      "discipline": "histoire",
+      "niveau": "4e",
+      "rang": 2,
+      "titre": "La note de bas de page et les parenthèses",
+      "sequence": "Thème 2 — L'Europe et le monde au XIXe siècle",
+      "modules": [
+        "H4-04",
+        "H4-05"
+      ],
+      "duree": "10 min",
+      "jdr": "jdr/JDR-H4-B.json",
+      "items": [
+        {
+          "id": "EP-H4-B-01",
+          "palier": "rappel",
+          "module": "H4-04",
+          "ref": "CLM-H4-004",
+          "enonce": "D'où Villermé tient-il que des ouvriers de Mulhouse logent « à deux lieues » de la ville ?",
+          "options": [
+            "Il l'a estimé en les regardant marcher.",
+            "D'une note manuscrite de l'industriel André Kœchlin, citée en note de bas de page.",
+            "D'un roman de l'époque.",
+            "Il ne le dit pas."
+          ],
+          "juste": 1,
+          "pourquoi": "La note de bas de page. Villermé donne l'adresse de son chiffre — un industriel de la ville, et un journal. Un fait avec adresse est une source ; un texte qui donne ses notes demande à être vérifié, pas cru."
+        },
+        {
+          "id": "EP-H4-B-02",
+          "palier": "rappel",
+          "module": "H4-05",
+          "ref": "CLM-H4-005",
+          "enonce": "Que note le compte rendu juste après « les races supérieures ont un droit vis-à-vis des races inférieures » ?",
+          "options": [
+            "Des applaudissements unanimes.",
+            "Des rumeurs, puis deux députés qui protestent : les droits de l'homme, l'esclavage.",
+            "Rien : le discours continue.",
+            "La fin de la séance."
+          ],
+          "juste": 1,
+          "pourquoi": "Les parenthèses. « (Rumeurs sur plusieurs bancs à l'extrême gauche.) », puis Jules Maigne et M. de Guilloutet. La contestation est dans la pièce, le même jour, avec les mots du temps."
+        },
+        {
+          "id": "EP-H4-B-03",
+          "palier": "discrimination",
+          "module": "H4-04",
+          "ref": "CLM-H4-004",
+          "enonce": "Le passage de Villermé sur Mulhouse permet d'établir :",
+          "options": [
+            "l'état de toute l'industrie française en 1840,",
+            "ce qu'un médecin enquêteur a vu dans une ville, et sur quoi il s'appuie,",
+            "ce que Villermé pensait des remèdes,",
+            "que les industriels mentaient."
+          ],
+          "juste": 1,
+          "pourquoi": "Une ville, une industrie, un matin — et des notes. Les conclusions de Villermé sur ce qu'il faudrait faire sont ailleurs dans le livre ; et le chiffre le plus accablant vient d'un industriel, ce qui contredit la dernière réponse."
+        },
+        {
+          "id": "EP-H4-B-04",
+          "palier": "discrimination",
+          "module": "H4-05",
+          "ref": "CLM-H4-005",
+          "enonce": "Le compte rendu du 28 juillet 1885 permet-il d'écrire « les Français de 1885 croyaient aux races supérieures » ?",
+          "options": [
+            "Oui : le chef du gouvernement le dit.",
+            "Non : il montre une Chambre divisée, et les Français ne sont pas dans la salle.",
+            "Oui : personne ne proteste.",
+            "Non : le discours n'a jamais été prononcé."
+          ],
+          "juste": 1,
+          "pourquoi": "Le compte rendu établit l'argument et sa contestation — nommée, datée, notée entre parenthèses. Il n'établit pas l'opinion de ceux qui n'y étaient pas, et il ne dit rien des colonisés, dont personne ne parle ce jour-là."
+        },
+        {
+          "id": "EP-H4-B-05",
+          "groupe": "H4-04-T",
+          "palier": "transfert",
+          "module": "H4-04",
+          "ref": "CLM-H4-004",
+          "enonce": "Un article affirme que « 40 % des collégiens » font une chose, sans dire d'où vient le chiffre. Que fait la note de bas de page ?",
+          "options": [
+            "Elle retient 40 %.",
+            "Elle cherche l'adresse du chiffre — et, faute d'en trouver, traite l'affirmation comme une affirmation.",
+            "Elle conclut que le chiffre est faux.",
+            "Elle divise le chiffre par deux."
+          ],
+          "juste": 1,
+          "pourquoi": "Un fait sans adresse n'est pas faux : il n'est pas vérifiable. Un texte sans notes demande à être cru ; on lui répond en attendant. Conclure au faux va aussi vite que croire."
+        },
+        {
+          "id": "EP-H4-B-05b",
+          "groupe": "H4-04-T",
+          "palier": "transfert",
+          "module": "H4-04",
+          "ref": "CLM-H4-004",
+          "enonce": "Un ami vous dit qu'il fait beau dehors. Faut-il chercher la note de bas de page ?",
+          "options": [
+            "Oui : toujours.",
+            "Non : vous pouvez regarder par la fenêtre — l'outil sert quand on ne peut pas vérifier soi-même.",
+            "Oui : il ment peut-être.",
+            "Non : la note ne vaut que pour les livres."
+          ],
+          "juste": 1,
+          "pourquoi": "La note de bas de page donne l'adresse d'un fait qu'on ne peut pas voir. Quand on peut voir, on regarde. La dernière réponse se trompe de raison : la note vaut pour un article, un rapport, une publicité."
+        },
+        {
+          "id": "EP-H4-B-06",
+          "groupe": "H4-05-T",
+          "palier": "transfert",
+          "module": "H4-05",
+          "ref": "CLM-H4-005",
+          "enonce": "Un journal cite une phrase d'un discours de ministre, sans rien d'autre. Que font les parenthèses ?",
+          "options": [
+            "Elles concluent que le ministre a été applaudi.",
+            "Elles cherchent le compte rendu entier : ce qu'on lui a crié, et qui.",
+            "Elles concluent que le journal ment.",
+            "Elles cherchent la date du discours."
+          ],
+          "juste": 1,
+          "pourquoi": "Une phrase sans sa salle est une phrase sans sa contestation. Le compte rendu garde les deux ; le journal, souvent, n'en garde qu'une. Aller voir n'est pas accuser le journal."
+        },
+        {
+          "id": "EP-H4-B-06b",
+          "groupe": "H4-05-T",
+          "palier": "transfert",
+          "module": "H4-05",
+          "ref": "CLM-H4-005",
+          "enonce": "Une lettre écrite par une seule personne, lue seul chez soi. Les parenthèses s'appliquent-elles ?",
+          "options": [
+            "Oui : il y a toujours une salle.",
+            "Non : il n'y a pas de salle, pas d'interruption, rien entre parenthèses — l'outil n'a rien à lire.",
+            "Oui : le destinataire est une salle.",
+            "Non : les parenthèses ne valent qu'à l'Assemblée."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant une parole prononcée devant d'autres, et notée avec eux. Une lettre n'a pas de salle. La dernière réponse se trompe de raison : les parenthèses voyagent jusqu'à un conseil municipal ou une assemblée générale."
+        }
+      ]
+    },
+    {
+      "id": "EP-H4-C",
+      "discipline": "histoire",
+      "niveau": "4e",
+      "rang": 3,
+      "titre": "Le reflux, la table des matières et la date de fin",
+      "sequence": "Thème 3 — Société, culture et politique dans la France du XIXe siècle",
+      "modules": [
+        "H4-06",
+        "H4-07",
+        "H4-08"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-H4-C.json",
+      "items": [
+        {
+          "id": "EP-H4-C-01",
+          "palier": "rappel",
+          "module": "H4-06",
+          "ref": "CLM-H4-006",
+          "enonce": "Qui vote d'après l'article 25 de la Constitution de 1848 ?",
+          "options": [
+            "Tous les adultes.",
+            "Tous les Français de vingt et un ans, sans condition de cens — c'est-à-dire les hommes.",
+            "Les Français qui paient 200 francs d'impôt.",
+            "Les propriétaires."
+          ],
+          "juste": 1,
+          "pourquoi": "« Sans condition de cens » est écrit contre la monarchie de Juillet ; « les Français » désigne les hommes sans avoir à le dire. Neuf millions d'électeurs, contre deux cent mille avant."
+        },
+        {
+          "id": "EP-H4-C-02",
+          "palier": "rappel",
+          "module": "H4-07",
+          "ref": "CLM-H4-007",
+          "enonce": "Que contient la loi de 1881, en plus de « l'imprimerie et la librairie sont libres » ?",
+          "options": [
+            "Rien : c'est son seul article.",
+            "Un chapitre entier sur les crimes et délits commis par voie de presse.",
+            "Une liste de journaux autorisés.",
+            "Le rétablissement du privilège du roi."
+          ],
+          "juste": 1,
+          "pourquoi": "La table des matières. Sept mots pour la liberté, dix-neuf articles pour ses limites, dans la même loi, toujours en vigueur. Le plan d'une loi est sa pensée."
+        },
+        {
+          "id": "EP-H4-C-03",
+          "palier": "rappel",
+          "module": "H4-08",
+          "ref": "CLM-H4-008",
+          "enonce": "Jusqu'à quand l'article 213 du Code civil — « la femme obéissance à son mari » — est-il resté en vigueur ?",
+          "options": [
+            "Jusqu'en 1848.",
+            "Jusqu'en 1938.",
+            "Jusqu'en 1870.",
+            "Jusqu'en 1804 : il n'a jamais été appliqué."
+          ],
+          "juste": 1,
+          "pourquoi": "La date de fin. Cent trente-quatre ans, sous une monarchie, deux empires et trois républiques. La seconde date dit combien de temps le texte a pesé, et sur qui."
+        },
+        {
+          "id": "EP-H4-C-04",
+          "palier": "discrimination",
+          "module": "H4-06",
+          "ref": "CLM-H4-006",
+          "enonce": "Pourquoi dit-on que le suffrage universel a reflué après 1848 ?",
+          "options": [
+            "Parce qu'il a été aboli en 1852.",
+            "Parce que la loi du 31 mai 1850 a imposé trois ans de résidence et rayé près de trois millions d'électeurs.",
+            "Parce que les femmes ont perdu le droit de vote.",
+            "Parce que le cens a été rétabli."
+          ],
+          "juste": 1,
+          "pourquoi": "Ni le cens ni l'abolition : une condition de domicile, qui écarte les ouvriers mobiles. Puis 1852 le rétablit — pour un coup d'État. Un droit écrit peut refluer, et revenir au service d'un autre."
+        },
+        {
+          "id": "EP-H4-C-05",
+          "palier": "discrimination",
+          "module": "H4-07",
+          "ref": "CLM-H4-007",
+          "enonce": "Une loi de liberté qui contient un chapitre de délits, c'est :",
+          "options": [
+            "une contradiction : elle reprend ce qu'elle donne,",
+            "une liberté définie, donc bornée, d'un même geste — ce qui la distingue d'une absence de loi,",
+            "une loi de répression déguisée,",
+            "une erreur de rédaction."
+          ],
+          "juste": 1,
+          "pourquoi": "C'est le même texte qui donne et qui borne, et c'est même cela qui fait qu'il donne. Une liberté sans chapitre IV n'est pas une liberté plus grande : c'est une loi qui n'existe pas."
+        },
+        {
+          "id": "EP-H4-C-06",
+          "palier": "discrimination",
+          "module": "H4-08",
+          "ref": "CLM-H4-008",
+          "enonce": "Le Code civil de 1804 permet-il d'écrire « les femmes du XIXe siècle n'avaient aucun droit » ?",
+          "options": [
+            "Oui : l'article 213 le prouve.",
+            "Non : le Code règle l'épouse, pas la femme — les femmes non mariées, les veuves, les marchandes ne sont pas dans ce chapitre.",
+            "Oui : toutes les femmes étaient mariées.",
+            "Non : l'article 213 n'a jamais été appliqué."
+          ],
+          "juste": 1,
+          "pourquoi": "Le texte lui-même sait que des femmes sont « marchandes publiques ». Il fixe un statut de dépendance pour l'épouse ; il ne dit rien des autres, et un silence n'est pas une absence."
+        },
+        {
+          "id": "EP-H4-C-07",
+          "groupe": "H4-06-T",
+          "palier": "transfert",
+          "module": "H4-06",
+          "ref": "CLM-H4-006",
+          "enonce": "Un pays annonce avoir accordé un droit nouveau. Que fait le reflux ?",
+          "options": [
+            "Il conclut que le droit est acquis.",
+            "Il note la date, et demande si ce droit a déjà reculé ailleurs ou avant, et comment.",
+            "Il conclut que le droit sera repris.",
+            "Il compte les bénéficiaires."
+          ],
+          "juste": 1,
+          "pourquoi": "Un droit a deux dates possibles. Ni acquis ni condamné : l'outil demande l'histoire du droit, pas son avenir — et il rappelle que 1848 a reflué en 1850."
+        },
+        {
+          "id": "EP-H4-C-07b",
+          "groupe": "H4-06-T",
+          "palier": "transfert",
+          "module": "H4-06",
+          "ref": "CLM-H4-006",
+          "enonce": "La marée descend sur une plage. Le reflux — l'outil — s'applique-t-il ?",
+          "options": [
+            "Oui : c'est exactement un reflux.",
+            "Non : l'outil parle d'un droit qui recule, pas de la mer — le mot est le même, l'objet non.",
+            "Oui : la mer a des droits.",
+            "Non : le reflux ne vaut qu'en 1850."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil a pris son nom à la mer et ne s'applique qu'aux droits. Un même mot pour deux choses n'est pas un outil qui s'applique aux deux. La dernière réponse se trompe de raison : le reflux voyage jusqu'à un droit d'aujourd'hui."
+        },
+        {
+          "id": "EP-H4-C-08",
+          "groupe": "H4-07-T",
+          "palier": "transfert",
+          "module": "H4-07",
+          "ref": "CLM-H4-007",
+          "enonce": "Les conditions d'utilisation d'un service en ligne commencent par « vous êtes libre de publier ». Que fait la table des matières ?",
+          "options": [
+            "Elle conclut qu'on peut tout publier.",
+            "Elle lit les chapitres suivants : ce qui est interdit est dans le même document.",
+            "Elle conclut que le service ment.",
+            "Elle cherche le prix."
+          ],
+          "juste": 1,
+          "pourquoi": "Le geste de 1881 : la liberté et ses limites tiennent dans le même texte. Les chapitres qui bornent ne contredisent pas le premier ; ils le définissent."
+        },
+        {
+          "id": "EP-H4-C-08b",
+          "groupe": "H4-07-T",
+          "palier": "transfert",
+          "module": "H4-07",
+          "ref": "CLM-H4-007",
+          "enonce": "Un poème. Faut-il lire sa table des matières ?",
+          "options": [
+            "Oui : tout texte en a une.",
+            "Non : un poème ne donne ni ne borne — l'outil sert devant un texte qui accorde une liberté et la limite.",
+            "Oui : les strophes sont des chapitres.",
+            "Non : la table des matières ne vaut que pour 1881."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant une loi, un règlement, des conditions — un texte qui accorde et qui borne. Un poème ne fait ni l'un ni l'autre. La dernière réponse se trompe de raison : la table des matières voyage jusqu'aux conditions d'un service."
+        },
+        {
+          "id": "EP-H4-C-09",
+          "groupe": "H4-08-T",
+          "palier": "transfert",
+          "module": "H4-08",
+          "ref": "CLM-H4-008",
+          "enonce": "On vous cite une loi de 1905. Que fait la date de fin ?",
+          "options": [
+            "Elle conclut que la loi est ancienne, donc dépassée.",
+            "Elle demande si cette loi est encore en vigueur, et sinon, quand elle a cessé de l'être.",
+            "Elle conclut que la loi est toujours appliquée.",
+            "Elle cherche qui l'a votée."
+          ],
+          "juste": 1,
+          "pourquoi": "Une date de naissance ne dit rien du poids d'un texte. La loi de 1905 sur les cultes est en vigueur ; l'article 213 de 1804 ne l'est plus depuis 1938. Il faut demander la seconde date avant de conclure."
+        },
+        {
+          "id": "EP-H4-C-09b",
+          "groupe": "H4-08-T",
+          "palier": "transfert",
+          "module": "H4-08",
+          "ref": "CLM-H4-008",
+          "enonce": "Un ticket de cinéma pour ce soir. Faut-il chercher sa date de fin ?",
+          "options": [
+            "Oui : tout document a deux dates.",
+            "Non : sa durée est évidente et n'engage personne — l'outil sert devant un texte qui a pesé sur des vies.",
+            "Oui : le film peut être annulé.",
+            "Non : la date de fin ne vaut que pour les codes."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant une règle dont on veut savoir combien de temps elle a pesé, et sur qui. Un ticket ne pèse sur personne. La dernière réponse se trompe de raison : la date de fin voyage jusqu'à un règlement d'établissement."
+        }
+      ]
+    },
+    {
       "id": "EP-G6-A",
       "discipline": "geographie",
       "niveau": "6e",

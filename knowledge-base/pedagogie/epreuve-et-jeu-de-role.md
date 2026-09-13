@@ -1,10 +1,10 @@
 # L'épreuve de fin de séquence, et les micro-jeux qui la précèdent
 
 **Usage :** décider ce qu'on construit, dans quel ordre, et ce qu'on refuse de construire.
-**État au 9 septembre 2026 :** l'épreuve est faite et jouable (`site/epreuve.html`,
-`site/epreuves.json`) — **vingt-cinq séquences, 307 questions**, couvrant les six
-disciplines de la sixième, le CE2 et l'histoire de 5e et de 4e. Les **micro-jeux de rôle** le sont aussi
-(`site/microjdr.html`, `site/jdr/`), **vingt-cinq scènes**, sous la forme arrêtée par
+**État au 13 septembre 2026 :** l'épreuve est faite et jouable (`site/epreuve.html`,
+`site/epreuves.json`) — **vingt-huit séquences, 351 questions**, couvrant les six
+disciplines de la sixième, le CE2 et l'histoire de la 5e à la 3e. Les **micro-jeux de rôle** le sont aussi
+(`site/microjdr.html`, `site/jdr/`), **vingt-huit scènes**, sous la forme arrêtée par
 l'utilisateur : courtes, **pas identiques entre elles**, et **sans rapport avec
 Valdurne**.
 **Origine :** proposition de l'utilisateur, à partir des modules PIX-pHARe qu'il a écrits
@@ -169,16 +169,25 @@ ce sera **en Python** — Node n'est pas installé sur ce poste.
 
 ## 5. Ce qui reste
 
-Au 10 septembre 2026 : **vingt-cinq séquences, 307 questions, vingt-cinq scènes** — les six
-disciplines de sixième, le CE2, l'histoire de 5e et de 4e sont couverts, et `verifier.py` ne signale plus aucun module sans épreuve.
+Au 13 septembre 2026 : **vingt-huit séquences, 351 questions, vingt-huit scènes** — les six
+disciplines de sixième, le CE2 et l'histoire de la 5e à la 3e sont couverts, et `verifier.py` ne signale plus aucun module sans épreuve.
 
-- **Les 77 modules ont leur épreuve**, et chacun est interrogé sur les trois marches —
+- **Les 88 modules ont leur épreuve**, et chacun est interrogé sur les trois marches —
   ce n'était pas le cas au départ : quatre modules pouvaient être déclarés « acquis »
   sans avoir passé une marche, et le contrôle les a nommés.
 - Chaque nouvelle séquence appelle **sa propre scène**, tirée de sa propre discipline.
-  Il n'y a pas de gabarit à recopier, et c'est voulu : les vingt-cinq écrites n'ont en commun
+  Il n'y a pas de gabarit à recopier, et c'est voulu : les vingt-huit écrites n'ont en commun
   que leur longueur. Celles du CE2 sont écrites pour des lecteurs de huit ans — une
-  chasse au trésor, une lettre de correspondants, le journal de la classe.
+  chasse au trésor, une lettre de correspondants, le journal de la classe. Celles de 3e
+  mettent l'élève là où une phrase fausse coûte : un discours au monument aux morts, le
+  service de vérification d'un quotidien, la fiche qui accompagne les souvenirs enregistrés
+  d'une maison de retraite — où l'on ne corrige jamais le souvenir, seulement la page.
+- **Les pièces du XXe siècle** posent une question de droits que les siècles précédents ne
+  posaient pas. Le choix a été de ne citer que des textes officiels ou institutionnels à
+  adresse stable — Légifrance, Conseil constitutionnel, Assemblée nationale, ONU, OTAN,
+  Union européenne, OSCE, CICR, Bundestag —, jamais un témoignage sous droits. Une seule
+  traduction est celle du site, signalée comme telle : la loi allemande du 24 mars 1933,
+  citée en allemand d'après le journal officiel du Reich.
 - **Le piège technique, rencontré trois fois** : un guillemet droit à l'intérieur d'un
   texte français casse le JSON. Écrire les citations avec des guillemets français, ou
   avec un deux-points. Un contrôle passe désormais sur tous les fichiers de contenu.

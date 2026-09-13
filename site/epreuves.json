@@ -1715,6 +1715,741 @@
       ]
     },
     {
+      "id": "EP-H3-A",
+      "discipline": "histoire",
+      "niveau": "3e",
+      "rang": 1,
+      "titre": "Le malgré, la main unique, l'ordre reçu et les deux plans",
+      "sequence": "Thème 1 — L'Europe, un théâtre majeur des guerres totales (1914-1945)",
+      "modules": [
+        "H3-01",
+        "H3-02",
+        "H3-03",
+        "H3-04"
+      ],
+      "duree": "18 min",
+      "jdr": "jdr/JDR-H3-A.json",
+      "items": [
+        {
+          "id": "EP-H3-A-01",
+          "palier": "rappel",
+          "module": "H3-01",
+          "ref": "CLM-H3-001",
+          "enonce": "Que dit Clemenceau du moral des Français le 8 mars 1918 — et que nomme-t-il juste avant ?",
+          "options": [
+            "Qu'il est fragile, et il demande des renforts.",
+            "Qu'il est « immuable » — juste après avoir nommé la fatigue, les mauvaises paroles et la propagande, pour les écarter.",
+            "Qu'il est excellent, et il ne nomme rien : le discours ne parle que de la victoire.",
+            "Qu'il est mauvais, et il en accuse les députés socialistes."
+          ],
+          "juste": 1,
+          "pourquoi": "Le malgré : ce que le discours nie, il le nomme. La liste des « excuses » écartées est la carte de ce qui inquiétait la salle — et la Chambre vote ensuite la confiance par 374 voix contre 41."
+        },
+        {
+          "id": "EP-H3-A-02",
+          "palier": "rappel",
+          "module": "H3-02",
+          "ref": "CLM-H3-002",
+          "enonce": "Que permet la loi allemande du 24 mars 1933 ?",
+          "options": [
+            "Elle dissout le Reichstag et interdit les élections.",
+            "Elle permet au gouvernement de faire les lois hors de la procédure constitutionnelle, y compris des lois qui s'écartent de la Constitution.",
+            "Elle nomme Hitler président du Reich.",
+            "Elle interdit tous les partis autres que le parti nazi."
+          ],
+          "juste": 1,
+          "pourquoi": "Cinq articles : le gouvernement décide des lois (art. 1), elles peuvent s'écarter de la Constitution (art. 2), la loi finit le 1er avril 1937 (art. 5). Le Reichstag n'est pas dissous — il est vidé : sept lois en douze ans, contre 986 décidées par le gouvernement."
+        },
+        {
+          "id": "EP-H3-A-03",
+          "palier": "rappel",
+          "module": "H3-03",
+          "ref": "CLM-H3-003",
+          "enonce": "Que dit l'article 8 du statut du tribunal de Nuremberg de l'ordre reçu ?",
+          "options": [
+            "Qu'il acquitte celui qui a obéi.",
+            "Qu'il ne dégage pas de la responsabilité, mais peut diminuer la peine.",
+            "Qu'il aggrave la peine.",
+            "Qu'il n'est pas pris en compte du tout."
+          ],
+          "juste": 1,
+          "pourquoi": "« Ne le dégagera pas de sa responsabilité » — la faute reste entière ; seule la peine peut bouger, si le tribunal le décide. Sans cette règle, presque tout crime d'un régime de main unique aurait été un ordre, et le seul coupable était mort."
+        },
+        {
+          "id": "EP-H3-A-04",
+          "palier": "rappel",
+          "module": "H3-04",
+          "ref": "CLM-H3-004",
+          "enonce": "Comment l'ordonnance du 9 août 1944 nomme-t-elle Vichy ?",
+          "options": [
+            "« Le gouvernement de l'État français ».",
+            "« L'autorité de fait, se disant gouvernement de l'État français ».",
+            "« La République de Vichy ».",
+            "Elle ne le nomme pas."
+          ],
+          "juste": 1,
+          "pourquoi": "Le nom est refusé et cité entre guillemets ; ses textes sont des « actes dits lois ». De fait, une autorité a gouverné ; de droit, la République « n'a pas cessé d'exister »."
+        },
+        {
+          "id": "EP-H3-A-05",
+          "palier": "discrimination",
+          "module": "H3-01",
+          "ref": "CLM-H3-001",
+          "enonce": "Le discours dit « malgré tout cela, le moral est immuable ». Peut-on en conclure que la fatigue était réelle en 1918 ?",
+          "options": [
+            "Oui : Clemenceau la reconnaît.",
+            "Non : le malgré atteste que la fatigue se disait dans la salle, pas qu'elle était vraie — il faudrait d'autres pièces.",
+            "Oui : il dit qu'elle est une excuse, donc elle existe.",
+            "Non : il dit que le moral est immuable, donc il n'y avait pas de fatigue."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil trouve ce qui était présent dans la salle, pas ce qui était vrai dans le pays. Une négation est une trace de ce qui se disait ; mesurer la fatigue demande d'autres sources — et le discours ne fait pas parler les soldats."
+        },
+        {
+          "id": "EP-H3-A-06",
+          "palier": "discrimination",
+          "module": "H3-02",
+          "ref": "CLM-H3-002",
+          "enonce": "La loi de 1933 fixait sa fin au 1er avril 1937. La date de fin — l'outil de quatrième — permet-elle de dire que le régime a changé en 1937 ?",
+          "options": [
+            "Oui : une date de fin est une date de fin.",
+            "Non : la main qui pouvait faire respecter cette fin était celle qui en profitait — le gouvernement l'a prolongée en 1937, 1939 et 1943.",
+            "Oui : la loi a été abrogée en 1937.",
+            "Non : la loi n'avait pas de date de fin."
+          ],
+          "juste": 1,
+          "pourquoi": "La main unique. Une date de fin ne vaut que si une autre main peut l'exiger. Écrite par celui qui peut l'effacer, elle est un mot."
+        },
+        {
+          "id": "EP-H3-A-07",
+          "palier": "discrimination",
+          "module": "H3-03",
+          "ref": "CLM-H3-003",
+          "enonce": "Le mot « génocide » figure-t-il dans le statut de 1945 ?",
+          "options": [
+            "Oui : c'est le chef d'accusation principal.",
+            "Non : l'extermination des Juifs d'Europe est jugée sous « crimes contre l'humanité » ; le mot entre dans le droit en 1948.",
+            "Oui : il est défini à l'article 6.",
+            "Non : le tribunal ne jugeait pas ces crimes."
+          ],
+          "juste": 1,
+          "pourquoi": "Une catégorie a une date de naissance. « Crime contre l'humanité » date du 8 août 1945 ; « génocide », de la convention de 1948. Le fait précède le mot, et le tribunal a jugé le fait."
+        },
+        {
+          "id": "EP-H3-A-08",
+          "palier": "discrimination",
+          "module": "H3-04",
+          "ref": "CLM-H3-004",
+          "enonce": "L'ordonnance dit que la République « n'a pas cessé d'exister ». Cela permet-il d'écrire que Vichy n'a pas gouverné la France ?",
+          "options": [
+            "Oui : c'est ce que dit le texte.",
+            "Non : « en droit » limite la phrase — de fait, Vichy a gouverné, et la liste des actes annulés à l'article 3 est un inventaire de ce qu'il a fait.",
+            "Oui : tous ses actes sont nuls, donc rien n'a eu lieu.",
+            "Non : l'ordonnance ne parle pas de Vichy."
+          ],
+          "juste": 1,
+          "pourquoi": "De fait, de droit : deux plans, tous deux vrais. Ce qu'une ordonnance annule, il a existé — travail forcé pour l'ennemi, discrimination contre les Juifs. « Nul » ne veut pas dire « n'a pas eu lieu »."
+        },
+        {
+          "id": "EP-H3-A-09",
+          "groupe": "H3-01-T",
+          "palier": "transfert",
+          "module": "H3-01",
+          "ref": "CLM-H3-001",
+          "enonce": "Un communiqué d'entreprise affirme : « contrairement aux rumeurs, aucun licenciement n'est prévu ». Que fait le malgré ?",
+          "options": [
+            "Il conclut qu'il y aura des licenciements.",
+            "Il note que des rumeurs de licenciements circulaient — le communiqué l'atteste — et cherche d'autres pièces pour savoir ce qu'il en est.",
+            "Il conclut qu'il n'y en aura pas : c'est écrit.",
+            "Il cherche qui a signé."
+          ],
+          "juste": 1,
+          "pourquoi": "Le malgré ne dit pas que la chose est vraie ; il dit qu'elle était là. Le communiqué d'aujourd'hui, comme le discours de 1918, nomme ce qu'il écarte."
+        },
+        {
+          "id": "EP-H3-A-09b",
+          "groupe": "H3-01-T",
+          "palier": "transfert",
+          "module": "H3-01",
+          "ref": "CLM-H3-001",
+          "enonce": "Un horaire de train : « départ 8 h 12 ». Le malgré s'applique-t-il ?",
+          "options": [
+            "Oui : tout texte nie quelque chose.",
+            "Non : l'horaire n'écarte rien — l'outil sert devant un texte qui nie ou concède, pas devant une information nue.",
+            "Oui : le train peut être en retard.",
+            "Non : le malgré ne vaut que pour 1918."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil cherche ce qu'un texte écarte ; un horaire n'écarte rien. La dernière réponse se trompe de raison : le malgré voyage jusqu'à un communiqué d'aujourd'hui."
+        },
+        {
+          "id": "EP-H3-A-10",
+          "groupe": "H3-02-T",
+          "palier": "transfert",
+          "module": "H3-02",
+          "ref": "CLM-H3-002",
+          "enonce": "Un règlement de club dit : « le comité peut modifier le présent règlement sans vote de l'assemblée ». Que demande la main unique ?",
+          "options": [
+            "Rien : c'est pratique.",
+            "Qui fait la règle, qui l'applique, qui peut la défaire — et si c'est le même comité pour les trois, plus rien dans le règlement ne l'oblige.",
+            "Combien de membres compte le club.",
+            "Si le comité est sympathique."
+          ],
+          "juste": 1,
+          "pourquoi": "Trois questions, et l'alerte quand c'est la même main. Ce n'est pas une dictature de club : c'est un texte qui ne peut plus rien garantir contre son auteur — y compris sa propre date de fin."
+        },
+        {
+          "id": "EP-H3-A-10b",
+          "groupe": "H3-02-T",
+          "palier": "transfert",
+          "module": "H3-02",
+          "ref": "CLM-H3-002",
+          "enonce": "Une recette de cuisine dit « laisser reposer une heure ». La main unique s'applique-t-elle ?",
+          "options": [
+            "Oui : tout texte a un auteur qui peut le changer.",
+            "Non : une recette n'est pas un texte de pouvoir — personne n'y fait la loi, ne l'applique ni ne la défait.",
+            "Oui : le cuisinier est une main unique.",
+            "Non : la main unique ne vaut qu'en Allemagne."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant un texte de pouvoir — loi, règlement, statut. Une recette ne commande à personne. La dernière réponse se trompe de raison : la main unique voyage jusqu'à un règlement de club."
+        },
+        {
+          "id": "EP-H3-A-11",
+          "groupe": "H3-03-T",
+          "palier": "transfert",
+          "module": "H3-03",
+          "ref": "CLM-H3-003",
+          "enonce": "Un procès de 1998 juge un haut fonctionnaire français pour des déportations de 1942. Il plaide qu'il exécutait des ordres. Que demande l'ordre reçu ?",
+          "options": [
+            "De l'acquitter : il obéissait.",
+            "Ce qu'il a fait, à qui, et ce qu'il savait — l'ordre peut expliquer, il ne dégage pas.",
+            "De juger celui qui donnait les ordres à sa place.",
+            "De vérifier s'il portait un uniforme."
+          ],
+          "juste": 1,
+          "pourquoi": "La règle écrite en 1945 pour Nuremberg est celle qu'une cour française applique en 1998 : la responsabilité est individuelle, et l'ordre reçu n'est pas un abri."
+        },
+        {
+          "id": "EP-H3-A-11b",
+          "groupe": "H3-03-T",
+          "palier": "transfert",
+          "module": "H3-03",
+          "ref": "CLM-H3-003",
+          "enonce": "Un élève a rendu son devoir en retard parce que la consigne disait « pour lundi » et non « pour vendredi ». L'ordre reçu s'applique-t-il ?",
+          "options": [
+            "Oui : il a obéi à une consigne.",
+            "Non : l'outil sert devant un acte grave commis sur ordre, où il s'agit de répondre d'un crime — pas devant un malentendu de consigne.",
+            "Oui : le professeur est responsable.",
+            "Non : l'ordre reçu ne vaut que pour les militaires."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil est fait pour la question de la responsabilité devant un acte grave, pas pour un retard de devoir. La dernière réponse se trompe de raison : l'ordre reçu s'applique à un fonctionnaire civil de 1942."
+        },
+        {
+          "id": "EP-H3-A-12",
+          "groupe": "H3-04-T",
+          "palier": "transfert",
+          "module": "H3-04",
+          "ref": "CLM-H3-004",
+          "enonce": "Une entreprise annonce qu'une note interne « n'a jamais eu de valeur » et l'annule. Que fait de fait, de droit ?",
+          "options": [
+            "Il conclut que la note n'a jamais existé.",
+            "Il sépare les plans : de droit, la note est annulée ; de fait, elle a été appliquée, et l'annulation l'atteste.",
+            "Il conclut que l'entreprise ment.",
+            "Il cherche le prix."
+          ],
+          "juste": 1,
+          "pourquoi": "Un texte qui annule est une pièce sur ce qu'il annule. Le droit ne doit pas effacer le fait, ni le fait annuler le droit."
+        },
+        {
+          "id": "EP-H3-A-12b",
+          "groupe": "H3-04-T",
+          "palier": "transfert",
+          "module": "H3-04",
+          "ref": "CLM-H3-004",
+          "enonce": "Un bulletin météo annonce de la pluie pour demain. De fait, de droit s'applique-t-il ?",
+          "options": [
+            "Oui : la pluie est un fait.",
+            "Non : rien n'y a valeur de droit — l'outil sert devant un texte qui nie ou annule un pouvoir, un acte, une règle.",
+            "Oui : le bulletin peut être annulé.",
+            "Non : de fait, de droit ne vaut que pour 1944."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sépare ce qui a eu lieu de ce qui a valeur ; une prévision n'a ni l'un ni l'autre. La dernière réponse se trompe de raison : de fait, de droit voyage jusqu'à une note d'entreprise."
+        }
+      ]
+    },
+    {
+      "id": "EP-H3-B",
+      "discipline": "histoire",
+      "niveau": "3e",
+      "rang": 2,
+      "titre": "La troisième colonne, le périmètre, le premier pas et le temps du verbe",
+      "sequence": "Thème 2 — Le monde depuis 1945",
+      "modules": [
+        "H3-05",
+        "H3-06",
+        "H3-07",
+        "H3-08"
+      ],
+      "duree": "18 min",
+      "jdr": "jdr/JDR-H3-B.json",
+      "items": [
+        {
+          "id": "EP-H3-B-01",
+          "palier": "rappel",
+          "module": "H3-05",
+          "ref": "CLM-H3-005",
+          "enonce": "Comment la résolution 1514 a-t-elle été adoptée le 14 décembre 1960 ?",
+          "options": [
+            "À l'unanimité.",
+            "Par 89 voix, 0 contre et 9 abstentions — dont la France, le Royaume-Uni, le Portugal, la Belgique, l'Espagne et les États-Unis.",
+            "Par 89 voix contre 9.",
+            "Par la France et le Royaume-Uni, contre l'avis des pays d'Afrique."
+          ],
+          "juste": 1,
+          "pourquoi": "La troisième colonne. Personne contre n'est pas tous pour : presque toutes les puissances coloniales sont dans la colonne des abstentions."
+        },
+        {
+          "id": "EP-H3-B-02",
+          "palier": "rappel",
+          "module": "H3-06",
+          "ref": "CLM-H3-006",
+          "enonce": "Que promet l'article 5 du traité de l'Atlantique Nord (1949) ?",
+          "options": [
+            "Que chaque État enverra ses armées défendre l'État attaqué.",
+            "Qu'une attaque contre l'un sera considérée comme dirigée contre tous, chacun prenant l'action « qu'il jugera nécessaire ».",
+            "Que les États déclareront la guerre à l'URSS.",
+            "Que la France défendra l'Algérie seule."
+          ],
+          "juste": 1,
+          "pourquoi": "L'attaque est commune ; la riposte est décidée par chacun. Et le traité ne nomme aucun ennemi — pas même l'URSS."
+        },
+        {
+          "id": "EP-H3-B-03",
+          "palier": "rappel",
+          "module": "H3-07",
+          "ref": "CLM-H3-007",
+          "enonce": "Quel est le « point limité, mais décisif » de la déclaration du 9 mai 1950 ?",
+          "options": [
+            "Créer l'Union européenne.",
+            "Placer la production franco-allemande de charbon et d'acier sous une Haute Autorité commune, ouverte aux autres pays.",
+            "Signer la paix avec l'Allemagne.",
+            "Créer une monnaie commune."
+          ],
+          "juste": 1,
+          "pourquoi": "Le premier pas. Choisi là où la guerre se fabriquait, pour qu'elle devienne « non seulement impensable, mais matériellement impossible ». L'Union européenne est un horizon d'après, sous un autre nom."
+        },
+        {
+          "id": "EP-H3-B-04",
+          "palier": "rappel",
+          "module": "H3-08",
+          "ref": "CLM-H3-008",
+          "enonce": "Que déclare la Charte de Paris du 21 novembre 1990, et qui l'a signée ?",
+          "options": [
+            "Que la guerre est déclarée à l'Irak — signée par les Douze.",
+            "Que « l'ère de la confrontation et de la division en Europe est révolue » — signée par trente-quatre États, dont l'URSS et la Yougoslavie.",
+            "Que l'Allemagne est réunifiée — signée par les quatre vainqueurs de 1945.",
+            "Que l'URSS est dissoute — signée par ses républiques."
+          ],
+          "juste": 1,
+          "pourquoi": "Un présent — « est révolue » — et trente-quatre mains, dont deux n'existent plus l'année suivante : l'URSS dissoute en décembre 1991, la Yougoslavie en guerre dès juin 1991."
+        },
+        {
+          "id": "EP-H3-B-05",
+          "palier": "discrimination",
+          "module": "H3-05",
+          "ref": "CLM-H3-005",
+          "enonce": "Un texte adopté « sans une voix contre » a-t-il été approuvé par tous ?",
+          "options": [
+            "Oui : personne ne s'y est opposé.",
+            "Non : s'abstenir est un choix — ne pas approuver sans s'opposer — et la liste des abstentions est une pièce.",
+            "Oui : l'abstention compte comme un oui.",
+            "Non : il faut la majorité des deux tiers."
+          ],
+          "juste": 1,
+          "pourquoi": "Un résultat sans ses colonnes est une moitié de pièce. 89 contre 0 disait « personne contre » ; les neuf abstentions disaient qui ne voulait pas dire oui."
+        },
+        {
+          "id": "EP-H3-B-06",
+          "palier": "discrimination",
+          "module": "H3-06",
+          "ref": "CLM-H3-006",
+          "enonce": "L'article 6 de 1949 inclut « les départements français d'Algérie ». Peut-on dire que l'OTAN couvre l'Algérie ?",
+          "options": [
+            "Oui : c'est dans le traité.",
+            "Non, pas sans date : la clause a cessé de s'appliquer le 3 juillet 1962 — un périmètre est une ligne datée.",
+            "Oui : l'Algérie est au nord du tropique du Cancer.",
+            "Non : l'article 6 n'a jamais mentionné l'Algérie."
+          ],
+          "juste": 1,
+          "pourquoi": "Le périmètre. Le trait de 1949 n'est pas celui de 1963 ni celui d'aujourd'hui ; lire un « nous » sans sa date, c'est lire une carte sans sa légende."
+        },
+        {
+          "id": "EP-H3-B-07",
+          "palier": "discrimination",
+          "module": "H3-07",
+          "ref": "CLM-H3-007",
+          "enonce": "La déclaration parle de « Fédération européenne ». Peut-on dire que Schuman a créé une fédération en 1950 ?",
+          "options": [
+            "Oui : c'est écrit dans le texte.",
+            "Non : c'est l'horizon annoncé, pas le pas fait — le pas, c'est le charbon et l'acier, réalisé par le traité de 1951.",
+            "Oui : la CECA est une fédération.",
+            "Non : la déclaration ne parle pas de fédération."
+          ],
+          "juste": 1,
+          "pourquoi": "Le pas se vérifie ; l'horizon se discute. Un texte fondateur jugé sur son horizon est mal lu — la « Fédération européenne » n'a pas eu lieu sous ce nom."
+        },
+        {
+          "id": "EP-H3-B-08",
+          "palier": "discrimination",
+          "module": "H3-08",
+          "ref": "CLM-H3-008",
+          "enonce": "Une charte écrit au présent que « l'ère de la confrontation est révolue ». Est-ce un constat ?",
+          "options": [
+            "Oui : le présent décrit ce qui est.",
+            "Non : le présent d'une déclaration dit ce que ses auteurs tiennent pour acquis et veulent faire tenir ; le constat vient d'après, avec d'autres pièces.",
+            "Oui : trente-quatre États ne peuvent pas se tromper.",
+            "Non : une charte n'a aucune valeur."
+          ],
+          "juste": 1,
+          "pourquoi": "Le temps du verbe classe une phrase : acquis déclaré, promesse. Une déclaration n'a que les deux premiers. Ce qui a suivi — la Yougoslavie, l'URSS — n'était pas dans le texte, et le texte ne pouvait pas le savoir."
+        },
+        {
+          "id": "EP-H3-B-09",
+          "groupe": "H3-05-T",
+          "palier": "transfert",
+          "module": "H3-05",
+          "ref": "CLM-H3-005",
+          "enonce": "Un conseil d'administration « adopte » un budget : 7 pour, 0 contre. Que demande la troisième colonne ?",
+          "options": [
+            "Rien : c'est adopté.",
+            "Combien se sont abstenus, et qui — et combien étaient absents.",
+            "Qui a présidé.",
+            "Le montant du budget."
+          ],
+          "juste": 1,
+          "pourquoi": "Devant tout « adopté », chercher la colonne qui manque. Sept pour sur sept, ou sept pour sur quinze, ce n'est pas la même pièce."
+        },
+        {
+          "id": "EP-H3-B-09b",
+          "groupe": "H3-05-T",
+          "palier": "transfert",
+          "module": "H3-05",
+          "ref": "CLM-H3-005",
+          "enonce": "Un match de football : 2 buts à 1. La troisième colonne s'applique-t-elle ?",
+          "options": [
+            "Oui : il y a trois chiffres possibles.",
+            "Non : un score n'est pas un vote — personne n'y choisit de ne pas se prononcer.",
+            "Oui : les spectateurs se sont abstenus de jouer.",
+            "Non : la troisième colonne ne vaut qu'à l'ONU."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil lit un vote, où l'abstention est un choix ; un score n'en a pas. La dernière réponse se trompe de raison : la troisième colonne voyage jusqu'à un conseil d'administration."
+        },
+        {
+          "id": "EP-H3-B-10",
+          "groupe": "H3-06-T",
+          "palier": "transfert",
+          "module": "H3-06",
+          "ref": "CLM-H3-006",
+          "enonce": "Une association annonce « nos membres bénéficient d'une assurance ». Que fait le périmètre ?",
+          "options": [
+            "Il conclut que tout le monde est assuré.",
+            "Il cherche le texte qui dit qui est membre, à quelle date, et comment on le devient — puis date la liste.",
+            "Il conclut que l'assurance est une promesse vide.",
+            "Il cherche le prix de l'assurance."
+          ],
+          "juste": 1,
+          "pourquoi": "« Nos membres » est un périmètre : trouvez l'article qui trace la ligne — et la date du trait, car la liste change."
+        },
+        {
+          "id": "EP-H3-B-10b",
+          "groupe": "H3-06-T",
+          "palier": "transfert",
+          "module": "H3-06",
+          "ref": "CLM-H3-006",
+          "enonce": "Le périmètre d'un rectangle, en mathématiques. L'outil « le périmètre » s'applique-t-il ?",
+          "options": [
+            "Oui : c'est le même mot.",
+            "Non : l'outil parle d'une ligne tracée par un texte autour d'un « nous » daté — pas d'une longueur à calculer.",
+            "Oui : un rectangle a des membres.",
+            "Non : le périmètre ne vaut que pour l'OTAN."
+          ],
+          "juste": 1,
+          "pourquoi": "Un même mot pour deux choses n'est pas un outil qui s'applique aux deux. La dernière réponse se trompe de raison : le périmètre voyage jusqu'à une association d'aujourd'hui."
+        },
+        {
+          "id": "EP-H3-B-11",
+          "groupe": "H3-07-T",
+          "palier": "transfert",
+          "module": "H3-07",
+          "ref": "CLM-H3-007",
+          "enonce": "Un projet d'établissement annonce « une école où chacun réussit ». Que fait le premier pas ?",
+          "options": [
+            "Il juge le projet sur cette phrase.",
+            "Il cherche l'action limitée, concrète et datée que le projet propose de faire tout de suite — c'est elle qu'on pourra vérifier.",
+            "Il conclut que le projet est irréalisable.",
+            "Il compte les pages."
+          ],
+          "juste": 1,
+          "pourquoi": "Ne jugez pas un texte sur son horizon ; jugez-le sur son pas. Le charbon et l'acier de 1950 se vérifiaient ; « la Fédération européenne », non."
+        },
+        {
+          "id": "EP-H3-B-11b",
+          "groupe": "H3-07-T",
+          "palier": "transfert",
+          "module": "H3-07",
+          "ref": "CLM-H3-007",
+          "enonce": "Un procès-verbal de réunion note ce qui a été dit. Le premier pas s'applique-t-il ?",
+          "options": [
+            "Oui : toute réunion a un premier pas.",
+            "Non : un procès-verbal enregistre, il ne fonde ni n'annonce — l'outil sert devant un texte qui propose un avenir.",
+            "Oui : la première phrase est le premier pas.",
+            "Non : le premier pas ne vaut que pour l'Europe."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil distingue le pas et l'horizon dans un texte qui fonde. Un compte rendu n'annonce rien. La dernière réponse se trompe de raison : le premier pas voyage jusqu'à un projet d'établissement."
+        },
+        {
+          "id": "EP-H3-B-12",
+          "groupe": "H3-08-T",
+          "palier": "transfert",
+          "module": "H3-08",
+          "ref": "CLM-H3-008",
+          "enonce": "Une charte affichée dans le hall dit « l'école est laïque » et « les élèves respecteront… ». Que fait le temps du verbe ?",
+          "options": [
+            "Il conclut que tout est respecté.",
+            "Il classe : le présent dit le principe tenu pour acquis, le futur la promesse — et ni l'un ni l'autre n'est un constat sur ce qui se passe dans les couloirs.",
+            "Il conclut que la charte ment.",
+            "Il cherche qui a signé."
+          ],
+          "juste": 1,
+          "pourquoi": "Soulignez les verbes. Ce qu'ils disent est une volonté et une promesse ; le constat se fait ensuite, dans les couloirs, avec d'autres pièces."
+        },
+        {
+          "id": "EP-H3-B-12b",
+          "groupe": "H3-08-T",
+          "palier": "transfert",
+          "module": "H3-08",
+          "ref": "CLM-H3-008",
+          "enonce": "Un relevé de température : « 18 degrés à midi ». Le temps du verbe s'applique-t-il ?",
+          "options": [
+            "Oui : le présent y est employé.",
+            "Non : un relevé enregistre une mesure — il ne déclare ni ne promet ; l'outil sert devant une déclaration.",
+            "Oui : la température peut changer.",
+            "Non : le temps du verbe ne vaut que pour les chartes."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil classe ce qu'une déclaration tient pour acquis et ce qu'elle promet. Une mesure ne fait ni l'un ni l'autre. La dernière réponse se trompe de raison : le temps du verbe voyage jusqu'à une charte d'établissement — et jusqu'à une constitution."
+        }
+      ]
+    },
+    {
+      "id": "EP-H3-C",
+      "discipline": "histoire",
+      "niveau": "3e",
+      "rang": 3,
+      "titre": "Le à nouveau, la version et l'arrêt sur image",
+      "sequence": "Thème 3 — Françaises et Français dans une République repensée",
+      "modules": [
+        "H3-09",
+        "H3-10",
+        "H3-11"
+      ],
+      "duree": "14 min",
+      "jdr": "jdr/JDR-H3-C.json",
+      "items": [
+        {
+          "id": "EP-H3-C-01",
+          "palier": "rappel",
+          "module": "H3-09",
+          "ref": "CLM-H3-009",
+          "enonce": "Que fait le préambule de la Constitution de 1946 avec les droits de 1789 ?",
+          "options": [
+            "Il les remplace par des droits sociaux.",
+            "Il les « proclame à nouveau », puis ajoute « en outre » des principes « particulièrement nécessaires à notre temps ».",
+            "Il les abroge.",
+            "Il ne les mentionne pas."
+          ],
+          "juste": 1,
+          "pourquoi": "Le à nouveau : ce qui est repris dit la continuité ; ce qui est ajouté — égalité des femmes, asile, emploi, grève, santé, instruction — dit ce que l'époque avait manqué."
+        },
+        {
+          "id": "EP-H3-C-02",
+          "palier": "rappel",
+          "module": "H3-10",
+          "ref": "CLM-H3-010",
+          "enonce": "Comment le président de la République est-il élu selon l'article 6 de la Constitution, dans sa version de 1958 puis dans celle de 1962 ?",
+          "options": [
+            "1958 : au suffrage universel direct ; 1962 : par le Parlement.",
+            "1958 : par un collège d'élus, pour sept ans ; 1962 : au suffrage universel direct, pour sept ans.",
+            "1958 : pour cinq ans ; 1962 : pour sept ans.",
+            "Les deux versions sont identiques."
+          ],
+          "juste": 1,
+          "pourquoi": "La version. Un même numéro, trois textes : le collège de 1958, le suffrage universel direct du référendum de 1962, les cinq ans de 2000. Citer un article, c'est dire laquelle."
+        },
+        {
+          "id": "EP-H3-C-03",
+          "palier": "rappel",
+          "module": "H3-11",
+          "ref": "CLM-H3-011",
+          "enonce": "Le 1er février 1966, que dit le Code civil de la femme mariée ?",
+          "options": [
+            "Qu'elle est l'égale de son mari en tout.",
+            "Qu'elle peut ouvrir un compte et exercer une profession sans son consentement — et que « le mari est le chef de la famille » et choisit la résidence.",
+            "Qu'elle doit obéissance à son mari.",
+            "Qu'elle ne peut pas travailler sans autorisation."
+          ],
+          "juste": 1,
+          "pourquoi": "L'arrêt sur image : la même page tient le neuf (articles 216, 221, 223, entrés ce jour-là) et l'ancien (articles 213 et 215, version de 1942, jusqu'en 1971 et 1976)."
+        },
+        {
+          "id": "EP-H3-C-04",
+          "palier": "discrimination",
+          "module": "H3-09",
+          "ref": "CLM-H3-009",
+          "enonce": "Le préambule de 1946 dit que « la loi garantit à la femme des droits égaux ». Peut-on en conclure que l'égalité existait en 1946 ?",
+          "options": [
+            "Oui : c'est dans la Constitution.",
+            "Non : un préambule proclame ; le Code civil dira encore le mari « chef de la famille » jusqu'en 1971.",
+            "Oui : les femmes votaient depuis 1944.",
+            "Non : le préambule n'est pas en vigueur."
+          ],
+          "juste": 1,
+          "pourquoi": "Proclamer n'est pas appliquer. Le préambule est toujours en vigueur — et l'écart entre ce qu'il proclame et ce que le Code disait se lit article par article."
+        },
+        {
+          "id": "EP-H3-C-05",
+          "palier": "discrimination",
+          "module": "H3-10",
+          "ref": "CLM-H3-010",
+          "enonce": "Pourquoi l'article 20 — « le Gouvernement détermine et conduit la politique de la Nation » — compte-t-il pour comprendre la cohabitation ?",
+          "options": [
+            "Parce qu'il a été réécrit en 1986 pour la permettre.",
+            "Parce qu'il n'a pas changé depuis 1958 : c'est un article inchangé qui a permis une situation nouvelle.",
+            "Parce qu'il nomme la cohabitation.",
+            "Parce qu'il donne tous les pouvoirs au président."
+          ],
+          "juste": 1,
+          "pourquoi": "Ce qui n'a pas bougé a servi à tout ce qui a changé. « Cohabitation » n'est pas dans le texte : c'est un mot d'usage, né en 1986, pour une situation que le texte de 1958 permettait sans la nommer."
+        },
+        {
+          "id": "EP-H3-C-06",
+          "palier": "discrimination",
+          "module": "H3-11",
+          "ref": "CLM-H3-011",
+          "enonce": "Peut-on dire : « en 1965, les femmes obtiennent l'égalité dans le mariage » ?",
+          "options": [
+            "Oui : la loi du 13 juillet 1965 le dit.",
+            "Non : une date de réforme n'est pas une date d'égalité — le mari reste « chef de la famille » jusqu'en 1971, et l'égalité a plusieurs dates (1970, 1976, 1985).",
+            "Oui : le préambule de 1946 la garantissait déjà.",
+            "Non : la loi de 1965 ne concerne pas les femmes."
+          ],
+          "juste": 1,
+          "pourquoi": "Sans l'arrêt sur image, 1965 devient une date d'égalité, et elle n'en est qu'une. Ce qui reste en vigueur compte autant que ce qui entre."
+        },
+        {
+          "id": "EP-H3-C-07",
+          "groupe": "H3-09-T",
+          "palier": "transfert",
+          "module": "H3-09",
+          "ref": "CLM-H3-009",
+          "enonce": "Le règlement intérieur est réécrit : il reprend les anciennes règles et ajoute « le téléphone reste éteint en classe ». Que fait le à nouveau ?",
+          "options": [
+            "Il conclut que rien n'a changé.",
+            "Il sépare le repris de l'ajouté, et lit l'ajout comme une réponse : ce qu'on écrit, c'est ce qui a manqué.",
+            "Il conclut que le règlement est plus sévère.",
+            "Il cherche qui l'a voté."
+          ],
+          "juste": 1,
+          "pourquoi": "Le neuf d'un texte est une pièce sur son époque : un droit ajouté, une règle ajoutée, répondent à quelque chose. Le à nouveau dit la continuité ; le neuf date."
+        },
+        {
+          "id": "EP-H3-C-07b",
+          "groupe": "H3-09-T",
+          "palier": "transfert",
+          "module": "H3-09",
+          "ref": "CLM-H3-009",
+          "enonce": "Une liste de courses : pain, lait, œufs. Le à nouveau s'applique-t-il ?",
+          "options": [
+            "Oui : on peut comparer avec la liste de la semaine dernière.",
+            "Non : une liste de courses ne fonde rien et ne revendique aucune continuité — l'outil sert devant un texte fondateur ou un règlement.",
+            "Oui : les œufs sont nouveaux.",
+            "Non : le à nouveau ne vaut que pour les constitutions."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sépare ce qu'un texte fondateur reprend et ce qu'il ajoute. Une liste de courses n'est ni l'un ni l'autre. La dernière réponse se trompe de raison : le à nouveau voyage jusqu'à un règlement intérieur."
+        },
+        {
+          "id": "EP-H3-C-08",
+          "groupe": "H3-10-T",
+          "palier": "transfert",
+          "module": "H3-10",
+          "ref": "CLM-H3-010",
+          "enonce": "On vous cite « l'article 3 du règlement intérieur ». Que fait la version ?",
+          "options": [
+            "Elle conclut que l'article existe depuis toujours.",
+            "Elle demande quelle version — en vigueur de quand à quand — avant de citer.",
+            "Elle conclut que le règlement a changé.",
+            "Elle cherche qui l'a écrit."
+          ],
+          "juste": 1,
+          "pourquoi": "Citer un texte, c'est citer une version. Le même numéro peut avoir dit trois choses — l'article 6 de la Constitution l'a fait."
+        },
+        {
+          "id": "EP-H3-C-08b",
+          "groupe": "H3-10-T",
+          "palier": "transfert",
+          "module": "H3-10",
+          "ref": "CLM-H3-010",
+          "enonce": "Une lettre manuscrite envoyée en 1962. La version s'applique-t-elle ?",
+          "options": [
+            "Oui : toute lettre a des versions.",
+            "Non : une lettre envoyée n'est pas un texte en vigueur qu'on modifie — l'outil sert devant une règle qui reste en vigueur et change.",
+            "Oui : l'auteur a pu faire un brouillon.",
+            "Non : la version ne vaut que pour la Constitution."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil sert devant un texte en vigueur, dont le numéro reste et le contenu change. Une lettre envoyée est ce qu'elle est. La dernière réponse se trompe de raison : la version voyage jusqu'à un règlement intérieur."
+        },
+        {
+          "id": "EP-H3-C-09",
+          "groupe": "H3-11-T",
+          "palier": "transfert",
+          "module": "H3-11",
+          "ref": "CLM-H3-011",
+          "enonce": "Un nouveau règlement entre en vigueur lundi. Que fait l'arrêt sur image ?",
+          "options": [
+            "Il lit le nouveau règlement.",
+            "Il lit la page entière ce lundi-là : ce qui vient d'entrer, ce qui reste des anciennes règles, et jusqu'à quand.",
+            "Il conclut que tout a changé.",
+            "Il cherche qui l'a signé."
+          ],
+          "juste": 1,
+          "pourquoi": "Pour savoir ce que la règle dit à une date, ne lisez pas la règle nouvelle : lisez la page entière ce jour-là. C'est ainsi qu'une société — et un établissement — change, article par article."
+        },
+        {
+          "id": "EP-H3-C-09b",
+          "groupe": "H3-11-T",
+          "palier": "transfert",
+          "module": "H3-11",
+          "ref": "CLM-H3-011",
+          "enonce": "Une photographie de classe prise en 1966. L'arrêt sur image s'applique-t-il ?",
+          "options": [
+            "Oui : c'est littéralement un arrêt sur image.",
+            "Non : l'outil lit l'état d'un texte de règles à une date — ce qui entre, ce qui reste — pas une image.",
+            "Oui : les élèves ont des dates de naissance.",
+            "Non : l'arrêt sur image ne vaut que pour le Code civil."
+          ],
+          "juste": 1,
+          "pourquoi": "L'outil a pris son nom à l'image et ne s'applique qu'aux textes en vigueur. La dernière réponse se trompe de raison : l'arrêt sur image voyage jusqu'à un règlement de lundi."
+        }
+      ]
+    },
+    {
       "id": "EP-G6-A",
       "discipline": "geographie",
       "niveau": "6e",

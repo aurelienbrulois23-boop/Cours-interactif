@@ -60,7 +60,8 @@ const discipline = params.get('d') || 'mathematiques';
 const niveau = params.get('n') || '6e';
 appliqueCycle(niveau);
 
-const NOMS = { mathematiques: 'Mathématiques', francais: 'Français' };
+const NOMS = { mathematiques: 'Mathématiques', francais: 'Français', histoire: 'Histoire',
+               geographie: 'Géographie', emc: 'EMC', sciences: 'Sciences et technologie' };
 document.getElementById('titre').textContent =
   (NOMS[discipline] || discipline) + ' — entraînement ' + niveau;
 

@@ -84,6 +84,13 @@ const banque = await fetch('epreuves.json').then(r => r.json());
 
 let ep = banque.epreuves.find(e => e.id === params.get('e'));
 if (!ep && params.get('m')) ep = banque.epreuves.find(e => e.modules.includes(params.get('m')));
+if (!ep && (params.get('e') || params.get('m'))) {
+  // Un identifiant qui n'existe pas se dit ; on ne joue pas une autre scène à sa place.
+  cible.innerHTML = `<p class="chapeau">Aucune séquence ne porte l'identifiant
+      « ${esc(params.get('e') || params.get('m'))} ».</p>
+    <p><a href="index.html">Revenir à l'accueil</a></p>`;
+  throw new Error('séquence introuvable');
+}
 if (!ep) ep = banque.epreuves.find(e => e.jdr);
 if (!ep || !ep.jdr) {
   cible.innerHTML = `<p class="chapeau">Aucune situation n'est écrite pour cette séquence.</p>

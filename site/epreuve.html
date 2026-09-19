@@ -145,6 +145,14 @@ const parModule = params.get('m');
 
 let ep = banque.epreuves.find(e => e.id === idDemande);
 if (!ep && parModule) ep = banque.epreuves.find(e => e.modules.includes(parModule));
+if (!ep && (idDemande || parModule)) {
+  // Un identifiant demandé qui n'existe pas se dit : servir une autre
+  // épreuve à sa place ferait passer l'épreuve d'une autre séquence pour la sienne.
+  cible.innerHTML = `<h1>Épreuve introuvable</h1>
+    <p class="chapeau">Aucune épreuve ne porte l'identifiant « ${esc(idDemande || parModule)} ».</p>
+    <p><a href="index.html">Revenir à l'accueil</a></p>`;
+  throw new Error('épreuve introuvable');
+}
 if (!ep) ep = banque.epreuves[0];
 
 appliqueCycle(ep.niveau);

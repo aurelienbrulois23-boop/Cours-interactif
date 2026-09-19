@@ -291,3 +291,20 @@ export function poserContraste(bouton) {
   });
   try { applique(); } catch (e) {}
 }
+
+/* Favicon. Aucune page n'en declarait ; le navigateur demandait alors
+ * /favicon.ico et recevait un 404 a chaque visite. Le glyphe est celui de la
+ * balise du site : un jalon, trait d'appui sur fond de papier. */
+(function () {
+  if (typeof document === 'undefined' || document.querySelector('link[rel~="icon"]')) return;
+  const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
+    + '<rect width="32" height="32" rx="6" fill="#faf7f0"/>'
+    + '<circle cx="16" cy="16" r="11" fill="none" stroke="#2f4858" stroke-width="2.5"/>'
+    + '<path d="M16 9v14M11 14l5-5 5 5" fill="none" stroke="#2f4858" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'
+    + '</svg>';
+  const l = document.createElement('link');
+  l.rel = 'icon';
+  l.type = 'image/svg+xml';
+  l.href = 'data:image/svg+xml,' + encodeURIComponent(svg);
+  document.head.appendChild(l);
+})();

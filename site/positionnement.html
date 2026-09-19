@@ -65,9 +65,10 @@ const discipline = params.get('d') || 'mathematiques';
 const niveau = params.get('n') || '6e';
 appliqueCycle(niveau);
 
-const NOMS = { mathematiques: 'Mathématiques', francais: 'Français' };
+const NOMS = { mathematiques: 'mathématiques', francais: 'français', histoire: 'histoire',
+               geographie: 'géographie', emc: 'EMC', sciences: 'sciences et technologie' };
 document.getElementById('titre').textContent =
-  'Se positionner en ' + (NOMS[discipline] || discipline).toLowerCase() + ' — ' + niveau;
+  'Se positionner en ' + (NOMS[discipline] || discipline) + ' — ' + niveau;
 
 const zone = document.getElementById('zone');
 const liste = pourNiveau(discipline, niveau);
@@ -86,7 +87,7 @@ function demarrer() {
   const d = depart(discipline);
   zone.innerHTML = `
     ${d ? `<div class="rappel-de-soi"><strong>Vous avez déjà un point de départ</strong> en
-        ${esc((NOMS[discipline] || discipline).toLowerCase())} : palier ${d.rang} sur ${liste.length}.
+        ${esc(NOMS[discipline] || discipline)} : palier ${d.rang} sur ${liste.length}.
         Refaire le test le remplacera.</div>` : ''}
     <button class="bouton" id="go">Commencer les six questions</button>`;
   document.getElementById('go').addEventListener('click', () => { palier = Math.ceil(liste.length / 2); tour(); });
